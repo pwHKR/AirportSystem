@@ -17,7 +17,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginController">
   <children>
     <ImageView fitHeight="368.0" fitWidth="626.0" layoutY="28.0" opacity="0.11" pickOnBounds="true"
                preserveRatio="true">
@@ -46,7 +46,7 @@
     <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
       <children>
         <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="408.0" layoutY="-147.0"
-                mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
+                mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
                 style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                 stylesheets="@resources/buttons.css" textAlignment="CENTER"/>
       </children>

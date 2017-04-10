@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="loggedInController">
     <children>
         <ImageView fitHeight="404.0" fitWidth="592.0" layoutX="1.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">
@@ -37,8 +37,8 @@
                 <Image url="@resources/logga.png"/>
             </image>
         </ImageView>
-        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0"
-                styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Log Out"/>
+        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Log Out"/>
         <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
