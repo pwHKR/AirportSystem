@@ -25,6 +25,15 @@
         <Image url="@resources/Serf6yS.jpg" />
       </image>
     </ImageView>
+    <TextField layoutX="177.0" layoutY="184.0" opacity="0.7" prefHeight="27.0" prefWidth="237.0" promptText="Username">
+      <effect>
+        <DropShadow spread="0.55">
+          <color>
+            <Color blue="0.906" green="0.655" red="0.149" fx:id="x2"/>
+          </color>
+        </DropShadow>
+      </effect>
+    </TextField>
     <PasswordField layoutX="175.0" layoutY="236.0" opacity="0.7" prefHeight="27.0" prefWidth="241.0" promptText="Password">
       <effect>
         <DropShadow spread="0.55">
@@ -34,11 +43,6 @@
         </DropShadow>
       </effect>
     </PasswordField>
-    <TextField layoutX="177.0" layoutY="184.0" opacity="0.7" prefHeight="27.0" prefWidth="237.0" promptText="Username">
-      <effect>
-        <DropShadow color="$x1" spread="0.55" />
-      </effect>
-    </TextField>
     <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
       <children>
         <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="408.0" layoutY="-147.0"
@@ -52,8 +56,8 @@
         <Image url="@resources/logga.png" />
       </image>
     </ImageView>
-    <Button layoutX="242.0" layoutY="297.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0"
-            styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Login"/>
+    <Button layoutX="242.0" layoutY="297.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0"
+            prefWidth="104.0" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Login"/>
     <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" styleClass="rich-blue"
             stylesheets="@resources/buttons.css" text="Create new account"/>
     <Button layoutX="401.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="174.0"
