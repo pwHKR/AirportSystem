@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
@@ -16,7 +17,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="590.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loggedInController">
     <children>
-        <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-93.0" layoutY="96.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-132.0" layoutY="79.0" opacity="0.11" pickOnBounds="true"
+                   preserveRatio="true">
             <image>
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg" />
             </image>
@@ -54,11 +56,15 @@
                 <Bloom threshold="0.0" />
             </effect>
         </Label>
-      <TextField layoutX="178.0" layoutY="171.0" prefHeight="25.0" prefWidth="226.0" />
-      <TextField layoutX="178.0" layoutY="221.0" prefHeight="25.0" prefWidth="226.0" />
-      <TextField layoutX="178.0" layoutY="268.0" prefHeight="25.0" prefWidth="226.0" />
-      <Label layoutX="264.0" layoutY="150.0" text="First name" textFill="WHITE" />
-      <Label layoutX="264.0" layoutY="204.0" text="Last name" textFill="WHITE" />
-      <Label layoutX="277.0" layoutY="251.0" text="Label" textFill="WHITE" />
+        <TextField layoutX="51.0" layoutY="167.0" prefHeight="25.0" prefWidth="226.0"/>
+        <TextField layoutX="52.0" layoutY="218.0" prefHeight="25.0" prefWidth="226.0"/>
+        <TextField layoutX="51.0" layoutY="268.0" prefHeight="25.0" prefWidth="226.0"/>
+        <Label layoutX="130.0" layoutY="150.0" text="First name" textFill="WHITE"/>
+        <Label layoutX="131.0" layoutY="201.0" text="Last name" textFill="WHITE"/>
+        <Label layoutX="96.0" layoutY="251.0" text="Social-Security number" textFill="WHITE"/>
+        <CheckBox layoutX="72.0" layoutY="320.0" mnemonicParsing="false" text="Male" textFill="WHITE"
+                  textOverrun="CENTER_WORD_ELLIPSIS"/>
+        <CheckBox layoutX="192.0" layoutY="320.0" mnemonicParsing="false" text="Female" textFill="WHITE"/>
+        <Label layoutX="138.0" layoutY="303.0" text="Gender" textFill="WHITE"/>
     </children>
 </AnchorPane>
