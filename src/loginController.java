@@ -17,6 +17,11 @@ public class loginController implements Initializable {
 
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
     @FXML
     private void help() {
         alert.setHeaderText("Login help");
@@ -40,11 +45,6 @@ public class loginController implements Initializable {
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
-
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
 
     }
 }

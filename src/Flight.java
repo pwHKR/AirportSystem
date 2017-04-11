@@ -8,5 +8,10 @@ public class Flight {
     private String flightStatus;
     private boolean isBuss;
 
-
+    public Flight(Airport airport, Plane plane, String flightStatus, boolean isBuss) {
+        this.airport = airport;
+        this.plane = plane;
+        this.flightStatus = flightStatus;
+        this.isBuss = isBuss;
+    }
 }
