@@ -3,15 +3,25 @@
  */
 public class Flight {
 
-    private Airport airport;
-    private Plane plane;
     private String flightStatus;
-    private boolean isBuss;
+    private String gate;
+    private Airplane airplane;
 
-    public Flight(Airport airport, Plane plane, String flightStatus, boolean isBuss) {
-        this.airport = airport;
-        this.plane = plane;
+
+    public Flight(String flightStatus, String gate, Airplane airplane) {
         this.flightStatus = flightStatus;
-        this.isBuss = isBuss;
+        this.gate = gate;
+        this.airplane = airplane;
     }
+
+    public String getGate() {
+        // TODO implement here
+        return "";
+    }
+
+    public void setGate(String gate) {
+        // TODO implement here
+    }
+
 }
+

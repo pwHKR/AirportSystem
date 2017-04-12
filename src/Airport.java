@@ -1,11 +1,14 @@
-/**
- * Created by woojen on 2017-04-08.
- */
+
 public class Airport {
 
-    private String country; // or enum
-    private String city; // or enum
 
-    // more attributes to come
+    private int runwayAmount;
+    private String name;
+    private boolean allowBigAircraft;
 
+    public Airport(int runwayAmount, String name, boolean allowBigAircraft) {
+        this.runwayAmount = runwayAmount;
+        this.name = name;
+        this.allowBigAircraft = allowBigAircraft;
+    }
 }

@@ -3,17 +3,18 @@
  */
 public class Booking {
 
-    private Customer customer;
+    private int bookingId;
+    private Trip trip;
     private String date;
     private double price;
+    private int passengers;
 
-    private Flight flight;
-
-    public Booking(Customer customer, String date, double price, Flight flight) {
-        this.customer = customer;
+    public Booking(int bookingId, Trip trip, String date, double price, int passengers) {
+        this.bookingId = bookingId;
+        this.trip = trip;
         this.date = date;
         this.price = price;
-        this.flight = flight;
+        this.passengers = passengers;
     }
 
     public void createBooking() {

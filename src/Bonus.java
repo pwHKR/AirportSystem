@@ -3,5 +3,5 @@
  */
 public class Bonus {
 
-    // bonus system with 3 levels
+    private int discount;
 }
