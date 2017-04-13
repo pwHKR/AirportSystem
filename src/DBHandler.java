@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-public class DBHandler {
+public class DBHandler implements DataStorage {
     private final String dbName;
     private final String user;
     private final String password;
