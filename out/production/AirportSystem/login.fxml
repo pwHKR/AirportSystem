@@ -51,7 +51,7 @@
       </image>
     </ImageView>
     <Button layoutX="242.0" layoutY="297.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="104.0" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Login" />
-    <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Create new account" />
+    <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" onAction="#newCustomer" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Create new account" />
     <Button layoutX="401.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="174.0" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Recover Password" />
     <Text fill="WHITE" layoutX="233.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by PSTR-Software AB">
       <font>

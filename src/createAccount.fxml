@@ -15,7 +15,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="590.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loggedInController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0"
+            prefWidth="590.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="newCustomerController">
     <children>
         <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-132.0" layoutY="79.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">
@@ -23,7 +25,8 @@
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg" />
             </image>
         </ImageView>
-        <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
+        <Pane onDragDetected="#createCustomerAccount" prefHeight="110.0" prefWidth="589.0"
+              style="-fx-background-color: #ffffff;">
             <children>
                 <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="308.0" layoutY="-170.0" mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0" style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;" textAlignment="CENTER" />
             </children>
@@ -56,15 +59,29 @@
                 <Bloom threshold="0.0" />
             </effect>
         </Label>
-        <TextField layoutX="51.0" layoutY="167.0" prefHeight="25.0" prefWidth="226.0"/>
-        <TextField layoutX="52.0" layoutY="218.0" prefHeight="25.0" prefWidth="226.0"/>
-        <TextField layoutX="51.0" layoutY="268.0" prefHeight="25.0" prefWidth="226.0"/>
+        <TextField fx:id="firstName" layoutX="51.0" layoutY="167.0" prefHeight="25.0" prefWidth="226.0"/>
+        <TextField fx:id="lastName" layoutX="52.0" layoutY="218.0" prefHeight="25.0" prefWidth="226.0"/>
+        <TextField fx:id="ssn" layoutX="51.0" layoutY="268.0" prefHeight="25.0" prefWidth="226.0"/>
         <Label layoutX="130.0" layoutY="150.0" text="First name" textFill="WHITE"/>
         <Label layoutX="131.0" layoutY="201.0" text="Last name" textFill="WHITE"/>
         <Label layoutX="96.0" layoutY="251.0" text="Social-Security number" textFill="WHITE"/>
-        <CheckBox layoutX="72.0" layoutY="320.0" mnemonicParsing="false" text="Male" textFill="WHITE"
+        <CheckBox fx:id="male" layoutX="72.0" layoutY="320.0" mnemonicParsing="false" text="Male" textFill="WHITE"
                   textOverrun="CENTER_WORD_ELLIPSIS"/>
-        <CheckBox layoutX="192.0" layoutY="320.0" mnemonicParsing="false" text="Female" textFill="WHITE"/>
+        <CheckBox fx:id="female" layoutX="192.0" layoutY="320.0" mnemonicParsing="false" text="Female"
+                  textFill="WHITE"/>
         <Label layoutX="138.0" layoutY="303.0" text="Gender" textFill="WHITE"/>
+        <Button layoutX="96.0" layoutY="364.0" mnemonicParsing="false" onAction="#createCustomerAccount"
+                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@resources/buttons.css"
+                text="OK"/>
+        <TextField fx:id="password" layoutX="301.0" layoutY="167.0" prefHeight="25.0" prefWidth="226.0"/>
+        <Label layoutX="391.0" layoutY="150.0" text="Password" textFill="WHITE"/>
+        <TextField fx:id="email" layoutX="301.0" layoutY="218.0" prefHeight="25.0" prefWidth="226.0"/>
+        <Label layoutX="391.0" layoutY="201.0" text="Email" textFill="WHITE"/>
+        <TextField fx:id="userName" layoutX="301.0" layoutY="268.0" prefHeight="25.0" prefWidth="226.0"/>
+        <Label layoutX="388.0" layoutY="251.0" text="User Name" textFill="WHITE"/>
+        <TextField fx:id="adress" layoutX="301.0" layoutY="316.0" prefHeight="25.0" prefWidth="226.0"/>
+        <Label layoutX="386.0" layoutY="303.0" text="Adress" textFill="WHITE"/>
+        <TextField fx:id="country" layoutX="301.0" layoutY="371.0" prefHeight="25.0" prefWidth="226.0"/>
+        <Label layoutX="383.0" layoutY="356.0" text="Country" textFill="WHITE"/>
     </children>
 </AnchorPane>

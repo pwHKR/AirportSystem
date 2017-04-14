@@ -1,5 +1,4 @@
 import java.io.FileInputStream;
-import java.lang.*;
 import java.lang.System;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -60,6 +59,28 @@ public class DBHandler implements DataStorage {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+
+    public void insertCustomer(Customer customer) {
+
+
+        String command = String.format("INSERT INTO Person values (%s,%s,%s, %s, %s, %s, %d, %d')", customer.getFirstName(),
+                customer.getLastName(), "no", customer.getCountry(), customer.getSsn(),
+                customer.getAdress(), 6, 0);
+
+        String command2 = String.format("INSERT INTO User values (%s, %s,'%s')", customer.getUserName(),
+                customer.getPassword(), customer.geteMail());
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement statement = conn.createStatement();
+            statement.executeUpdate(command);
+            statement.executeUpdate(command2);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+
     }
 
 
