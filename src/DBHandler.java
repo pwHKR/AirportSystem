@@ -100,5 +100,26 @@ public class DBHandler implements DataStorage {
 
     }
 
+    public String printPassword(String UserName) {
 
+        String pass = null;
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT password FROM User WHERE userName = " + UserName + " ");
+
+
+            while (rs.next()) {
+
+                pass = rs.getString("password");
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return pass;
+
+    }
 }

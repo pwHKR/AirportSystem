@@ -20,6 +20,10 @@ public class loginController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        // Temporary method call for testing password accses with username
+
+        loginCheck("lol");
+
     }
 
     @FXML
@@ -66,6 +70,19 @@ public class loginController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+    }
+
+    @FXML
+    private void loginCheck(String username) {
+
+        DBHandler dbh = new DBHandler();
+
+        String test = dbh.printPassword("'lol'");
+
+        alert.setContentText(test);
+        alert.show();
+
+
     }
 
 }
