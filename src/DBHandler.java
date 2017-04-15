@@ -1,9 +1,6 @@
 import java.io.FileInputStream;
 import java.lang.System;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Properties;
 
 public class DBHandler implements DataStorage {
@@ -65,17 +62,44 @@ public class DBHandler implements DataStorage {
     public void insertCustomer(Customer customer) {
 
 
-        String command = String.format("INSERT INTO Person values (%s,%s,%s, %s, %s, %s, %d, %d')", customer.getFirstName(),
-                customer.getLastName(), "no", customer.getCountry(), customer.getSsn(),
-                customer.getAdress(), 6, 0);
 
-        String command2 = String.format("INSERT INTO User values (%s, %s,'%s')", customer.getUserName(),
-                customer.getPassword(), customer.geteMail());
+
+
+
+        /*String command2 = String.format("INSERT INTO User values (%s, %s,'%s')", customer.getUserName(),
+                customer.getPassword(), customer.geteMail()); */
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            Statement statement = conn.createStatement();
-            statement.executeUpdate(command);
-            statement.executeUpdate(command2);
+
+
+            String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
+                    + " VALUES (?,?,? ,?,?,?)";
+
+           /* String query2 = " INSERT INTO User (userName, password, eMail) " +
+                    " VALUES (?,?,?) WHERE userName = Person_systemId ";
+
+            PreparedStatement ps = conn.prepareStatement(query2);
+
+            ps.setString(1,customer.getUserName());
+            ps.setString(2,customer.getPassword());
+            ps.setString(3,customer.geteMail()); */
+
+
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString(1, customer.getFirstName());
+            preparedStmt.setString(2, customer.getLastName());
+            preparedStmt.setInt(3, 1);
+            preparedStmt.setString(4, customer.getCountry());
+            preparedStmt.setString(5, customer.getSsn());
+            preparedStmt.setString(6, customer.getAdress());
+
+
+            preparedStmt.execute();
+            //ps.executeUpdate();
+
+
+            conn.close();
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }

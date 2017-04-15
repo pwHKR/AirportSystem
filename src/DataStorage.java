@@ -7,5 +7,6 @@ public interface DataStorage {
 
     void insertAirplane(int passengerCapacity, String maxSpeed, String maxLuggageWeight, String regNumber);
 
+    void insertCustomer(Customer customer);
 
 }
