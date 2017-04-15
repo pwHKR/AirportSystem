@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f742d119-678c-4efa-a06b-2be71ce06545" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/login.fxml" afterPath="$PROJECT_DIR$/out/production/AirportSystem/login.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBHandler.java" afterPath="$PROJECT_DIR$/src/DBHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStorage.java" afterPath="$PROJECT_DIR$/src/DataStorage.java" />
     </list>
     <ignored path="AirportSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,16 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="newCustomerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/newCustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,17 +60,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="49" />
+            <state relative-caret-position="229">
+              <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1492243599000" expanded="true" signature="1144:1166" ph="SELECT * FRO... Airplane" />
-                <marker date="1492243599000" expanded="true" signature="2625:2739" ph="INSERT INTO Person... " />
-                <marker date="1492243599000" expanded="true" signature="2625:2743" ph="INSERT INTO Person... " />
-                <marker date="1492243599000" expanded="true" signature="2778:2863" ph="INSERT INTO User... " />
+                <marker date="1492246846000" expanded="true" signature="1144:1166" ph="SELECT * FRO... Airplane" />
+                <marker date="1492246846000" expanded="true" signature="2448:2562" ph="INSERT INTO Person... " />
+                <marker date="1492246846000" expanded="true" signature="2448:2566" ph="INSERT INTO Person... " />
+                <marker date="1492246846000" expanded="true" signature="2599:2684" ph="INSERT INTO User... " />
               </folding>
             </state>
           </provider>
@@ -96,6 +86,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Destination.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Destination.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/User.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataStorage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStorage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -216,8 +216,8 @@
         <option value="$PROJECT_DIR$/src/app1.properties" />
         <option value="$PROJECT_DIR$/src/newCustomerController.java" />
         <option value="$PROJECT_DIR$/src/Person.java" />
-        <option value="$PROJECT_DIR$/src/DBHandler.java" />
         <option value="$PROJECT_DIR$/src/DataStorage.java" />
+        <option value="$PROJECT_DIR$/src/DBHandler.java" />
       </list>
     </option>
   </component>
@@ -760,7 +760,7 @@
       <workItem from="1492070801634" duration="413000" />
       <workItem from="1492086471327" duration="2966000" />
       <workItem from="1492184515520" duration="4117000" />
-      <workItem from="1492190053030" duration="31014000" />
+      <workItem from="1492190053030" duration="32624000" />
     </task>
     <task id="LOCAL-00001" summary="New design, added fxml">
       <created>1491826394934</created>
@@ -825,11 +825,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492208483997</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated InsertCustomer method in DBHandler.">
+      <created>1492243970429</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1492243970429</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54458000" />
+    <option name="totallyTimeSpent" value="56068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="18" y="38" width="1284" height="717" extended-state="0" />
@@ -910,7 +917,8 @@
     <MESSAGE value="Added code to DBHandler" />
     <MESSAGE value="Added DataStorage Interface" />
     <MESSAGE value="Added new controller for creating customer accounts. Dosnt work 100%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new controller for creating customer accounts. Dosnt work 100%" />
+    <MESSAGE value="Updated InsertCustomer method in DBHandler." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated InsertCustomer method in DBHandler." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1131,14 +1139,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Destination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1230,6 +1230,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/newCustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -1240,25 +1248,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/Destination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1492243599000" expanded="true" signature="1144:1166" ph="SELECT * FRO... Airplane" />
-            <marker date="1492243599000" expanded="true" signature="2625:2739" ph="INSERT INTO Person... " />
-            <marker date="1492243599000" expanded="true" signature="2625:2743" ph="INSERT INTO Person... " />
-            <marker date="1492243599000" expanded="true" signature="2778:2863" ph="INSERT INTO User... " />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStorage.java">
+    <entry file="file://$PROJECT_DIR$/src/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="229">
+          <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1492246846000" expanded="true" signature="1144:1166" ph="SELECT * FRO... Airplane" />
+            <marker date="1492246846000" expanded="true" signature="2448:2562" ph="INSERT INTO Person... " />
+            <marker date="1492246846000" expanded="true" signature="2448:2566" ph="INSERT INTO Person... " />
+            <marker date="1492246846000" expanded="true" signature="2599:2684" ph="INSERT INTO User... " />
+          </folding>
         </state>
       </provider>
     </entry>

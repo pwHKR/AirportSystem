@@ -62,27 +62,20 @@ public class DBHandler implements DataStorage {
     public void insertCustomer(Customer customer) {
 
 
-
-
-
-
-        /*String command2 = String.format("INSERT INTO User values (%s, %s,'%s')", customer.getUserName(),
-                customer.getPassword(), customer.geteMail()); */
-
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
             String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
                     + " VALUES (?,?,? ,?,?,?)";
 
-           /* String query2 = " INSERT INTO User (userName, password, eMail) " +
-                    " VALUES (?,?,?) WHERE userName = Person_systemId ";
+            String query2 = " INSERT INTO User (userName, password, eMail) " +
+                    " VALUES (?,?,?) ";
 
             PreparedStatement ps = conn.prepareStatement(query2);
 
-            ps.setString(1,customer.getUserName());
-            ps.setString(2,customer.getPassword());
-            ps.setString(3,customer.geteMail()); */
+            ps.setString(1, customer.getUserName());
+            ps.setString(2, customer.getPassword());
+            ps.setString(3, customer.geteMail());
 
 
             PreparedStatement preparedStmt = conn.prepareStatement(query);
@@ -95,7 +88,7 @@ public class DBHandler implements DataStorage {
 
 
             preparedStmt.execute();
-            //ps.executeUpdate();
+            ps.execute();
 
 
             conn.close();
