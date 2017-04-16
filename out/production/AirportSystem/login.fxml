@@ -22,7 +22,8 @@
         <Image url="@resources/Serf6yS.jpg" />
       </image>
     </ImageView>
-    <TextField fx:id="userName" layoutX="177.0" layoutY="184.0" opacity="0.7" prefHeight="27.0" prefWidth="237.0" promptText="Username">
+    <TextField fx:id="userName" layoutX="177.0" layoutY="184.0" opacity="0.7" prefHeight="27.0" prefWidth="237.0"
+               promptText="Username">
       <effect>
         <DropShadow spread="0.55">
           <color>
@@ -31,7 +32,8 @@
         </DropShadow>
       </effect>
     </TextField>
-    <PasswordField fx:id="password" layoutX="175.0" layoutY="236.0" opacity="0.7" prefHeight="27.0" prefWidth="241.0" promptText="Password">
+    <PasswordField fx:id="password" layoutX="175.0" layoutY="236.0" opacity="0.7" prefHeight="27.0" prefWidth="241.0"
+                   promptText="Password">
       <effect>
         <DropShadow spread="0.55">
           <color>
@@ -51,7 +53,8 @@
       </image>
     </ImageView>
     <Button layoutX="242.0" layoutY="297.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="104.0" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Login" />
-    <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" onAction="#newCustomer" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Create new account" />
+    <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" onAction="#newCustomer" styleClass="rich-blue"
+            stylesheets="@resources/buttons.css" text="Create new account"/>
     <Button layoutX="401.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="174.0" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Recover Password" />
     <Text fill="WHITE" layoutX="233.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by PSTR-Software AB">
       <font>

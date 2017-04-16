@@ -49,26 +49,36 @@ public class loginController implements Initializable {
         String Password = password.getText();
         String sentPassword = dbh.printPassword(UserName);
 
+        if (UserName.isEmpty()) {
 
-        if (sentPassword.equals(Password)) {
-
-            Node node = (Node) ae.getSource();
-            Stage stage = (Stage) node.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("customerLoggedIn.fxml"));
-            Parent root = null;
-            try {
-                root = loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-        } else {
-            alert.setContentText("Login failed!");
+            alert.setContentText("You must enter a user name!");
             alert.show();
         }
-    }
 
+        if (UserName.isEmpty() == false) {
+
+
+            if (sentPassword.equals(Password)) {
+
+                Node node = (Node) ae.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("customerLoggedIn.fxml"));
+                Parent root = null;
+                try {
+                    root = loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+
+
+                }
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+            } else {
+                alert.setContentText("Login failed!");
+                alert.show();
+            }
+        }
+    }
 
     @FXML
     private void newCustomer(ActionEvent ae) {
