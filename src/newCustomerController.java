@@ -92,7 +92,8 @@ public class newCustomerController {
 
     }
 
-    @FXML private void help(){
+    @FXML
+    private void help() {
         msg.setHeaderText("Create account help");
         msg.setContentText("In this screen you are able to create a new account and become a customer at PSTR-Airlines." +
                 " Enter the appropriate infromation in each textfield to create an account." +
@@ -100,15 +101,17 @@ public class newCustomerController {
         msg.show();
     }
 
-    @FXML private void checkForDuplicate(){  ///for the male and female checkboxes, two boxes can't be checked at the same time
+    @FXML
+    private void checkForDuplicate() {  ///for the male and female checkboxes, two boxes can't be checked at the same time
         if (female.isSelected()) {
             male.setSelected(false);
         }
-        if(male.isSelected())
+        if (male.isSelected())
             female.setSelected(false);
     }
 
-    @FXML private void returnToLoginScreen(ActionEvent ae){
+    @FXML
+    private void returnToLoginScreen(ActionEvent ae) {
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));

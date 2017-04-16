@@ -1,6 +1,11 @@
+import com.mysql.jdbc.*;
+
 import java.io.FileInputStream;
 import java.lang.System;
 import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class DBHandler implements DataStorage {
@@ -106,8 +111,15 @@ public class DBHandler implements DataStorage {
 
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT password FROM User WHERE userName = " + UserName + " ");
+
+            String query = ("SELECT password FROM User WHERE userName=(?)");
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setString(1, UserName);
+
+            ResultSet rs = ps.executeQuery();
 
 
             while (rs.next()) {

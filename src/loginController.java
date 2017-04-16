@@ -5,6 +5,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import javafx.scene.Node;
@@ -15,14 +17,16 @@ import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
 
+
+    @FXML
+    PasswordField password;
+    @FXML
+    TextField userName;
+
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        // Temporary method call for testing password accses with username
-
-        loginCheck("lol");
 
     }
 
@@ -38,18 +42,31 @@ public class loginController implements Initializable {
     @FXML
     private void login(ActionEvent ae) {
 
-        Node node = (Node) ae.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("customerLoggedIn.fxml"));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
 
+        DBHandler dbh = new DBHandler();
+
+        String UserName = userName.getText();
+        String Password = password.getText();
+        String sentPassword = dbh.printPassword(UserName);
+
+
+        if (sentPassword.equals(Password)) {
+
+            Node node = (Node) ae.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("customerLoggedIn.fxml"));
+            Parent root = null;
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+        } else {
+            alert.setContentText("Login failed!");
+            alert.show();
+        }
     }
 
 
@@ -70,17 +87,6 @@ public class loginController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
-    }
-
-    @FXML
-    private void loginCheck(String username) {
-
-        DBHandler dbh = new DBHandler();
-
-        String test = dbh.printPassword("'lol'");
-
-        alert.setContentText(test);
-        alert.show();
 
 
     }
