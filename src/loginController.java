@@ -47,7 +47,7 @@ public class loginController implements Initializable {
 
         String UserName = userName.getText();
         String Password = password.getText();
-        String sentPassword = dbh.printPassword(UserName);
+        String sentPassword = dbh.matchPassword(UserName);
 
         if (UserName.isEmpty()) {
 

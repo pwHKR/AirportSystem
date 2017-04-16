@@ -55,6 +55,9 @@ public class newCustomerController {
         String Country;
         boolean IsMale;
 
+        boolean isUserFree;
+        boolean isSSNFree;
+
         FirstName = firstName.getText();
         LastName = lastName.getText();
         SSN = ssn.getText();
@@ -75,6 +78,7 @@ public class newCustomerController {
 
 
         DBHandler dbh = new DBHandler();
+
 
         dbh.insertCustomer(customer);
 

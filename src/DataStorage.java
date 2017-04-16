@@ -9,6 +9,7 @@ public interface DataStorage {
 
     void insertCustomer(Customer customer);
 
-    String printPassword(String UserName);
+    String matchPassword(String UserName);
+
 
 }

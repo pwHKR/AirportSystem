@@ -105,7 +105,8 @@ public class DBHandler implements DataStorage {
 
     }
 
-    public String printPassword(String UserName) {
+
+    public String matchPassword(String UserName) {
 
         String pass = null;
 
