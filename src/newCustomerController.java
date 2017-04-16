@@ -55,8 +55,6 @@ public class newCustomerController {
         String Country;
         boolean IsMale;
 
-        boolean isUserFree;
-        boolean isSSNFree;
 
         FirstName = firstName.getText();
         LastName = lastName.getText();

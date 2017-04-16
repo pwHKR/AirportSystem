@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f742d119-678c-4efa-a06b-2be71ce06545" name="Default" comment="Updated Airplane class and its references">
+    <list default="true" id="f742d119-678c-4efa-a06b-2be71ce06545" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/Airplane.class" afterPath="$PROJECT_DIR$/out/production/AirportSystem/Airplane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/DBHandler.class" afterPath="$PROJECT_DIR$/out/production/AirportSystem/DBHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/DataStorage.class" afterPath="$PROJECT_DIR$/out/production/AirportSystem/DataStorage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/loginController.class" afterPath="$PROJECT_DIR$/out/production/AirportSystem/loginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/newCustomerController.class" afterPath="$PROJECT_DIR$/out/production/AirportSystem/newCustomerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBHandler.java" afterPath="$PROJECT_DIR$/src/DBHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStorage.java" afterPath="$PROJECT_DIR$/src/DataStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/loginController.java" afterPath="$PROJECT_DIR$/src/loginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newCustomerController.java" afterPath="$PROJECT_DIR$/src/newCustomerController.java" />
     </list>
     <ignored path="AirportSystem.iws" />
@@ -33,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newCustomerController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="newCustomerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/newCustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="-546">
+              <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -53,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/loginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -225,8 +227,8 @@
         <option value="$PROJECT_DIR$/src/Airplane.java" />
         <option value="$PROJECT_DIR$/src/loginController.java" />
         <option value="$PROJECT_DIR$/src/DBHandler.java" />
-        <option value="$PROJECT_DIR$/src/newCustomerController.java" />
         <option value="$PROJECT_DIR$/src/DataStorage.java" />
+        <option value="$PROJECT_DIR$/src/newCustomerController.java" />
       </list>
     </option>
   </component>
@@ -774,7 +776,7 @@
       <workItem from="1492086471327" duration="2966000" />
       <workItem from="1492184515520" duration="4117000" />
       <workItem from="1492190053030" duration="34432000" />
-      <workItem from="1492353782121" duration="7117000" />
+      <workItem from="1492353782121" duration="7746000" />
     </task>
     <task id="LOCAL-00001" summary="New design, added fxml">
       <created>1491826394934</created>
@@ -888,11 +890,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492355186529</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Renamed printPassword method">
+      <created>1492374479324</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1492374479324</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74695000" />
+    <option name="totallyTimeSpent" value="75324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="110" y="60" width="1280" height="672" extended-state="0" />
@@ -978,7 +987,8 @@
     <MESSAGE value="Implemented User login" />
     <MESSAGE value="Fixed an issue where users could log in with empty fields in user-name and password." />
     <MESSAGE value="Updated Airplane class and its references" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Airplane class and its references" />
+    <MESSAGE value="Renamed printPassword method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed printPassword method" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1323,6 +1333,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/loginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1333,16 +1351,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newCustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/loginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="-546">
+          <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
           <folding />
         </state>
       </provider>
