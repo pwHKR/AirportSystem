@@ -48,9 +48,9 @@ public class DBHandler implements DataStorage {
         }
     }
 
-    public void insertAirplane(int passengerCapacity, String maxSpeed, String maxLuggageWeight, String regNumber) {
-        String command = String.format("INSERT INTO Airplane values (%d, %s, %s, '%s')", passengerCapacity, maxSpeed,
-                maxLuggageWeight, regNumber);
+    public void insertAirplane(Airplane airplane) {
+        String command = String.format("INSERT INTO Airplane values (%d, %s, %d, '%s')", airplane.getPassengerCapacity(),
+                airplane.getMaxSpeed(), airplane.getMaxLuggageWeight(), airplane.getRegNumber());
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
             Statement statement = conn.createStatement();

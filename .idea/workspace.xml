@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f742d119-678c-4efa-a06b-2be71ce06545" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/loginController.class" afterPath="$PROJECT_DIR$/out/production/AirportSystem/loginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/app1.properties" afterPath="$PROJECT_DIR$/out/production/AirportSystem/app1.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportSystem/login.fxml" afterPath="$PROJECT_DIR$/out/production/AirportSystem/login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/loginController.java" afterPath="$PROJECT_DIR$/src/loginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Airplane.java" afterPath="$PROJECT_DIR$/src/Airplane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBHandler.java" afterPath="$PROJECT_DIR$/src/DBHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStorage.java" afterPath="$PROJECT_DIR$/src/DataStorage.java" />
     </list>
     <ignored path="AirportSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,31 +43,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/loginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
+            <state relative-caret-position="124">
               <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Airplane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Airplane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+              <folding>
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#671#672#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#770#771#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Airport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Airport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+            <state relative-caret-position="800">
+              <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1492351210000" expanded="true" signature="1260:1282" ph="SELECT * FRO... Airplane" />
-                <marker date="1492351210000" expanded="true" signature="2564:2678" ph="INSERT INTO Person... " />
-                <marker date="1492351210000" expanded="true" signature="2564:2682" ph="INSERT INTO Person... " />
-                <marker date="1492351210000" expanded="true" signature="2715:2800" ph="INSERT INTO User... " />
-                <marker date="1492351210000" expanded="true" signature="3821:3862" ph="SELECT passw... User" />
-                <marker date="1492351210000" expanded="true" signature="3821:3864" ph="SELECT passw... User" />
-                <marker date="1492351210000" expanded="true" signature="3821:3865" ph="SELECT passw... User" />
-                <marker date="1492351210000" expanded="true" signature="3821:3867" ph="SELECT passw... User" />
+                <marker date="1492354849000" expanded="true" signature="1260:1282" ph="SELECT * FRO... Airplane" />
+                <marker date="1492354849000" expanded="true" signature="2556:2670" ph="INSERT INTO Person... " />
+                <marker date="1492354849000" expanded="true" signature="2556:2674" ph="INSERT INTO Person... " />
+                <marker date="1492354849000" expanded="true" signature="2707:2792" ph="INSERT INTO User... " />
+                <marker date="1492354849000" expanded="true" signature="3813:3854" ph="SELECT passw... User" />
+                <marker date="1492354849000" expanded="true" signature="3813:3856" ph="SELECT passw... User" />
+                <marker date="1492354849000" expanded="true" signature="3813:3857" ph="SELECT passw... User" />
+                <marker date="1492354849000" expanded="true" signature="3813:3859" ph="SELECT passw... User" />
               </folding>
             </state>
           </provider>
@@ -103,31 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Worker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Worker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="158" lean-forward="false" selection-start-line="8" selection-start-column="158" selection-end-line="8" selection-end-column="158" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DataStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -203,7 +211,6 @@
         <option value="$PROJECT_DIR$/src/UserHelp.java" />
         <option value="$PROJECT_DIR$/src/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/Booking.java" />
-        <option value="$PROJECT_DIR$/src/Airplane.java" />
         <option value="$PROJECT_DIR$/src/Flight.java" />
         <option value="$PROJECT_DIR$/src/Destination.java" />
         <option value="$PROJECT_DIR$/src/Airport.java" />
@@ -220,11 +227,12 @@
         <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/src/Person.java" />
         <option value="$PROJECT_DIR$/src/createAccount.fxml" />
-        <option value="$PROJECT_DIR$/src/DataStorage.java" />
         <option value="$PROJECT_DIR$/src/newCustomerController.java" />
-        <option value="$PROJECT_DIR$/src/DBHandler.java" />
         <option value="$PROJECT_DIR$/src/app1.properties" />
         <option value="$PROJECT_DIR$/src/loginController.java" />
+        <option value="$PROJECT_DIR$/src/Airplane.java" />
+        <option value="$PROJECT_DIR$/src/DataStorage.java" />
+        <option value="$PROJECT_DIR$/src/DBHandler.java" />
       </list>
     </option>
   </component>
@@ -785,7 +793,7 @@
       <workItem from="1492086471327" duration="2966000" />
       <workItem from="1492184515520" duration="4117000" />
       <workItem from="1492190053030" duration="34432000" />
-      <workItem from="1492353782121" duration="23000" />
+      <workItem from="1492353782121" duration="937000" />
     </task>
     <task id="LOCAL-00001" summary="New design, added fxml">
       <created>1491826394934</created>
@@ -871,11 +879,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492351403130</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed an issue where users could log in with empty fields in user-name and password.">
+      <created>1492353893586</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1492353893586</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67601000" />
+    <option name="totallyTimeSpent" value="68515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="50" width="1280" height="717" extended-state="0" />
@@ -959,7 +974,8 @@
     <MESSAGE value="Updated InsertCustomer method in DBHandler." />
     <MESSAGE value="Added support for the User table when creating a customer account" />
     <MESSAGE value="Implemented User login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented User login" />
+    <MESSAGE value="Fixed an issue where users could log in with empty fields in user-name and password." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed an issue where users could log in with empty fields in user-name and password." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1181,22 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Airplane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="80" lean-forward="false" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1290,37 +1290,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/loginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        <state relative-caret-position="124">
+          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Airport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Airplane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1492351210000" expanded="true" signature="1260:1282" ph="SELECT * FRO... Airplane" />
-            <marker date="1492351210000" expanded="true" signature="2564:2678" ph="INSERT INTO Person... " />
-            <marker date="1492351210000" expanded="true" signature="2564:2682" ph="INSERT INTO Person... " />
-            <marker date="1492351210000" expanded="true" signature="2715:2800" ph="INSERT INTO User... " />
-            <marker date="1492351210000" expanded="true" signature="3821:3862" ph="SELECT passw... User" />
-            <marker date="1492351210000" expanded="true" signature="3821:3864" ph="SELECT passw... User" />
-            <marker date="1492351210000" expanded="true" signature="3821:3865" ph="SELECT passw... User" />
-            <marker date="1492351210000" expanded="true" signature="3821:3867" ph="SELECT passw... User" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/loginController.java">
+    <entry file="file://$PROJECT_DIR$/src/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="800">
+          <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1492354849000" expanded="true" signature="1260:1282" ph="SELECT * FRO... Airplane" />
+            <marker date="1492354849000" expanded="true" signature="2556:2670" ph="INSERT INTO Person... " />
+            <marker date="1492354849000" expanded="true" signature="2556:2674" ph="INSERT INTO Person... " />
+            <marker date="1492354849000" expanded="true" signature="2707:2792" ph="INSERT INTO User... " />
+            <marker date="1492354849000" expanded="true" signature="3813:3854" ph="SELECT passw... User" />
+            <marker date="1492354849000" expanded="true" signature="3813:3856" ph="SELECT passw... User" />
+            <marker date="1492354849000" expanded="true" signature="3813:3857" ph="SELECT passw... User" />
+            <marker date="1492354849000" expanded="true" signature="3813:3859" ph="SELECT passw... User" />
+          </folding>
         </state>
       </provider>
     </entry>

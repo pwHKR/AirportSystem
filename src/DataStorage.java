@@ -5,7 +5,7 @@ public interface DataStorage {
 
     void printAirplanes();
 
-    void insertAirplane(int passengerCapacity, String maxSpeed, String maxLuggageWeight, String regNumber);
+    void insertAirplane(Airplane airplane);
 
     void insertCustomer(Customer customer);
 

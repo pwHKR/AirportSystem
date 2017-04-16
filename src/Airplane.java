@@ -4,16 +4,31 @@
 public class Airplane {
 
     private int passengerCapacity;
-    private int maxSpeed;
     private int maxLuggageWeight;
+    private String maxSpeed;
+    private String regNumber;
 
-
-    public Airplane(int passengerCapacity, int maxSpeed, int maxLuggageWeight) {
+    public Airplane(int passengerCapacity, int maxLuggageWeight, String maxSpeed, String regNumber) {
         this.passengerCapacity = passengerCapacity;
-        this.maxSpeed = maxSpeed;
         this.maxLuggageWeight = maxLuggageWeight;
+        this.maxSpeed = maxSpeed;
+        this.regNumber = regNumber;
+    }
+
+    public int getPassengerCapacity() {
+        return passengerCapacity;
+    }
+
+    public int getMaxLuggageWeight() {
+        return maxLuggageWeight;
+    }
+
+    public String getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public String getRegNumber() {
+        return regNumber;
     }
 }
-
-
 
