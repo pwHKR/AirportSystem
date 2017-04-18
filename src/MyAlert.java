@@ -1,9 +1,12 @@
+import javafx.scene.control.Alert;
+
 /**
  * Created by woojen on 2017-04-18.
  */
 public class MyAlert {
 
     static javafx.scene.control.Alert msg = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
+    static javafx.scene.control.Alert err = new javafx.scene.control.Alert(Alert.AlertType.ERROR);
 
     public static void helpNewCustomer() {
         msg.setHeaderText("Create account helpNewCustomer");
@@ -22,14 +25,14 @@ public class MyAlert {
     }
 
     public static void emptyUserName() {
-        msg.setContentText("You must enter a user name!");
-        msg.show();
+        err.setContentText("You must enter a user name!");
+        err.show();
     }
 
     public static void loginFail() {
 
 
-        msg.setContentText("Login failed!");
-        msg.show();
+        err.setContentText("Login failed!");
+        err.show();
     }
 }
