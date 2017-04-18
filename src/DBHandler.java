@@ -77,15 +77,14 @@ public class DBHandler implements DataStorage {
 
             String query2 = ("SELECT systemId FROM Person  WHERE ssn =(?)");
 
-            String query3 = " INSERT INTO User (userName, password, eMail,Person_systemId) " +
-                    " VALUES (?,?,?,?) ";
-
+            String query3 = " INSERT INTO User (userName, password, eMail,Person_systemId,typeOfUser) " +
+                    " VALUES (?,?,?,?,?) ";
 
 
             PreparedStatement preparedStmt = conn.prepareStatement(query);
             preparedStmt.setString(1, customer.getFirstName());
             preparedStmt.setString(2, customer.getLastName());
-            preparedStmt.setInt(3, 1);
+            preparedStmt.setBoolean(3, customer.isMale());
             preparedStmt.setString(4, customer.getCountry());
             preparedStmt.setString(5, customer.getSsn());
             preparedStmt.setString(6, customer.getAdress());
@@ -112,7 +111,7 @@ public class DBHandler implements DataStorage {
             ps.setString(2, customer.getPassword());
             ps.setString(3, customer.geteMail());
             ps.setString(4, si);
-
+            ps.setString(5, "Customer");
 
 
             ps.execute();
