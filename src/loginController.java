@@ -23,7 +23,6 @@ public class loginController implements Initializable {
     @FXML
     TextField userName;
 
-    Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -32,11 +31,7 @@ public class loginController implements Initializable {
 
     @FXML
     private void help() {
-        alert.setHeaderText("Login help");
-        alert.setTitle("Help");
-        alert.setContentText("If you do not already have an account, press Create Account \nYou can recover your password" +
-                " if you have lost it by pressing the Recover Password button.");
-        alert.show();
+        MyAlert.helpLogIn();
     }
 
     @FXML
@@ -51,8 +46,7 @@ public class loginController implements Initializable {
 
         if (UserName.isEmpty()) {
 
-            alert.setContentText("You must enter a user name!");
-            alert.show();
+            MyAlert.emptyUserName();
         }
 
         if (UserName.isEmpty() == false) {
@@ -74,8 +68,7 @@ public class loginController implements Initializable {
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
             } else {
-                alert.setContentText("Login failed!");
-                alert.show();
+                MyAlert.loginFail();
             }
         }
     }

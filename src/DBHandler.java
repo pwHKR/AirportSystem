@@ -152,7 +152,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-            e.printStackTrace();
+
         }
         return pass;
 

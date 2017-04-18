@@ -4,13 +4,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
 
-import java.awt.*;
 import java.io.IOException;
 
 /**
@@ -18,7 +15,6 @@ import java.io.IOException;
  */
 public class newCustomerController {
 
-    Alert msg = new Alert(Alert.AlertType.INFORMATION);
 
     @FXML
     TextField firstName;
@@ -96,11 +92,8 @@ public class newCustomerController {
 
     @FXML
     private void help() {
-        msg.setHeaderText("Create account help");
-        msg.setContentText("In this screen you are able to create a new account and become a customer at PSTR-Airlines." +
-                " Enter the appropriate infromation in each textfield to create an account." +
-                " If you run into problems please contact the customer service via phone");
-        msg.show();
+
+        MyAlert.helpNewCustomer();
     }
 
     @FXML
