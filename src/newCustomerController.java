@@ -97,10 +97,14 @@ public class newCustomerController {
     }
 
     @FXML
-    private void checkForDuplicate() {  ///for the male and female checkboxes, two boxes can't be checked at the same time
+    private void maleToFemale() {  ///for the male and female checkboxes, two boxes can't be checked at the same time
         if (female.isSelected()) {
             male.setSelected(false);
         }
+    }
+
+    @FXML
+    private void femaleToMale() {
         if (male.isSelected())
             female.setSelected(false);
     }
