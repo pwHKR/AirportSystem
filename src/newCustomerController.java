@@ -75,7 +75,7 @@ public class newCustomerController {
         Customer customer = new Customer(FirstName, LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
 
 
-        DBHandler dbh = new DBHandler();
+        DataStorage dbh = new DBHandler();
 
 
         dbh.insertCustomer(customer);

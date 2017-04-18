@@ -43,7 +43,7 @@ public class loginController implements Initializable {
     private void login(ActionEvent ae) {
 
 
-        DBHandler dbh = new DBHandler();
+        DataStorage dbh = new DBHandler();
 
         String UserName = userName.getText();
         String Password = password.getText();
