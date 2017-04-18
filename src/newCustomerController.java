@@ -41,6 +41,12 @@ public class newCustomerController {
     @FXML
     private void createCustomerAccount(ActionEvent ae) {
 
+        if (firstName.getText().matches("^[a-öA-Ö]+$") && lastName.getText().matches("^[a-öA-Ö]+$") &&
+                ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]") && email.getText().matches("^[a-öA-Ö]+$")
+                && adress.getText().matches("^[a-öA-Ö]+ \\d+$") && country.getText().matches("^[a-öA-Ö]+$")) {
+
+        }
+
         String FirstName;
         String LastName;
         String SSN;
