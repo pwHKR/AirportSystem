@@ -66,6 +66,8 @@ public class DBHandler implements DataStorage {
 
     public void insertCustomer(Customer customer) {
 
+        String si = null;
+
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
@@ -73,14 +75,11 @@ public class DBHandler implements DataStorage {
             String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
                     + " VALUES (?,?,? ,?,?,?)";
 
-            String query2 = " INSERT INTO User (userName, password, eMail) " +
-                    " VALUES (?,?,?) ";
+            String query2 = ("SELECT systemId FROM Person  WHERE ssn =(?)");
 
-            PreparedStatement ps = conn.prepareStatement(query2);
+            String query3 = " INSERT INTO User (userName, password, eMail,Person_systemId) " +
+                    " VALUES (?,?,?,?) ";
 
-            ps.setString(1, customer.getUserName());
-            ps.setString(2, customer.getPassword());
-            ps.setString(3, customer.geteMail());
 
 
             PreparedStatement preparedStmt = conn.prepareStatement(query);
@@ -93,6 +92,29 @@ public class DBHandler implements DataStorage {
 
 
             preparedStmt.execute();
+
+            PreparedStatement ps2 = conn.prepareStatement(query2);
+
+            ps2.setString(1, customer.getSsn());
+
+            ResultSet rs = ps2.executeQuery();
+
+
+            while (rs.next()) {
+
+                si = rs.getString("systemId");
+            }
+
+
+            PreparedStatement ps = conn.prepareStatement(query3);
+
+            ps.setString(1, customer.getUserName());
+            ps.setString(2, customer.getPassword());
+            ps.setString(3, customer.geteMail());
+            ps.setString(4, si);
+
+
+
             ps.execute();
 
 
