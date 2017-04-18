@@ -9,6 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.lang.*;
+import java.lang.System;
 
 /**
  * Created by woojen on 2017-04-14.
@@ -44,6 +46,8 @@ public class newCustomerController {
         if (firstName.getText().matches("^[a-öA-Ö]+$") && lastName.getText().matches("^[a-öA-Ö]+$") &&
                 ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]") && email.getText().matches("^[a-öA-Ö]+$")
                 && adress.getText().matches("^[a-öA-Ö]+ \\d+$") && country.getText().matches("^[a-öA-Ö]+$")) {
+
+            System.out.print("det blev fel");
 
         }
 
