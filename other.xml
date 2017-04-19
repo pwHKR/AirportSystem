@@ -1,9 +1,0 @@
-<application>
-  <component name="JavaFxSettings">
-    <option name="pathToSceneBuilder" value="/Applications/SceneBuilder.app/Contents/MacOS/SceneBuilder" />
-    <option name="myPathToSceneBuilder" value="/Applications/SceneBuilder.app/Contents/MacOS/SceneBuilder" />
-  </component>
-  <component name="RefactoringSettings">
-    <option name="MOVE_PREVIEW_USAGES" value="false" />
-  </component>
-</application>
