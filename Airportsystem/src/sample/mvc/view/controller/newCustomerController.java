@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -46,15 +47,6 @@ public class newCustomerController {
 
     @FXML
     private void createCustomerAccount(ActionEvent ae) {
-
-        if (firstName.getText().matches("^[a-öA-Ö]+$") && lastName.getText().matches("^[a-öA-Ö]+$") &&
-                ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]") && email.getText().matches("^[a-öA-Ö]+$")
-                && adress.getText().matches("^[a-öA-Ö]+ \\d+$") && country.getText().matches("^[a-öA-Ö]+$")) {
-
-            System.out.print("det blev fel");
-
-        }
-
         String FirstName;
         String LastName;
         String SSN;
@@ -81,26 +73,79 @@ public class newCustomerController {
             IsMale = true;
         }
 
+        if (firstName.getText().matches("^[a-öA-Ö]+$")) {
 
-        Customer customer = new Customer(FirstName, LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
+            if(lastName.getText().matches("^[a-öA-Ö]+$")){
+
+                if (ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")){
+
+                        if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")){
+
+                            if (country.getText().matches("^[a-öA-Ö]+$")){
+                                Customer customer = new Customer(FirstName,
+                                        LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
 
 
-        DataStorage dbh = new DBHandler();
+                                DataStorage dbh = new DBHandler();
 
 
-        dbh.insertCustomer(customer);
+                                dbh.insertCustomer(customer);
 
-        Node node = (Node) ae.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../login.fxml"));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
+                                Node node = (Node) ae.getSource();
+                                Stage stage = (Stage) node.getScene().getWindow();
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("../login.fxml"));
+                                Parent root = null;
+                                try {
+                                    root = loader.load();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                Scene scene = new Scene(root);
+                                stage.setScene(scene);
+
+                            }else {
+                                Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+                                dialog.setTitle("Error");
+                                dialog.setHeaderText("Invalid info");
+                                dialog.setContentText("Your country name can only contain letters.");
+                                dialog.showAndWait();
+
+                            }
+                        }else {
+                            Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+                            dialog.setTitle("Error");
+                            dialog.setHeaderText("Invalid info");
+                            dialog.setContentText("Your address must contain street name and street number.");
+                            dialog.showAndWait();
+
+                        }
+                    }else {
+                        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+                        dialog.setTitle("Error");
+                        dialog.setHeaderText("Invalid info");
+                        dialog.setContentText("Your ssn must be 10 numbers");
+                        dialog.showAndWait();
+
+                }
+            }else {
+                Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+                dialog.setTitle("Error");
+                dialog.setHeaderText("Invalid info");
+                dialog.setContentText("Your last name can only contain letters.");
+                dialog.showAndWait();
+
+            }
+        }else {
+            Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+            dialog.setTitle("Error");
+            dialog.setHeaderText("Invalid info");
+            dialog.setContentText("Your first name can only contain letters.");
+            dialog.showAndWait();
+
         }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+
+
+
 
     }
 
