@@ -1,5 +1,7 @@
 package sample.mvc.model;
 
+import javafx.scene.control.Alert;
+
 import java.io.FileInputStream;
 import java.lang.System;
 import java.sql.*;
@@ -99,53 +101,69 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
+            Statement stmt = conn.createStatement();
 
-            String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
-                    + " VALUES (?,?,? ,?,?,?)";
+            String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + customer.getSsn() + "'";
 
-            String query2 = ("SELECT systemId FROM Person  WHERE ssn =(?)");
+            ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
+            if (!resultSet.next()){
+                String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
+                        + " VALUES (?,?,? ,?,?,?)";
 
-            String query3 = " INSERT INTO User (userName, password, eMail,Person_systemId,typeOfUser) " +
-                    " VALUES (?,?,?,?,?) ";
+                String query2 = ("SELECT systemId FROM Person  WHERE ssn =(?)");
 
-
-            PreparedStatement preparedStmt = conn.prepareStatement(query);
-            preparedStmt.setString(1, customer.getFirstName());
-            preparedStmt.setString(2, customer.getLastName());
-            preparedStmt.setBoolean(3, customer.isMale());
-            preparedStmt.setString(4, customer.getCountry());
-            preparedStmt.setString(5, customer.getSsn());
-            preparedStmt.setString(6, customer.getAdress());
+                String query3 = " INSERT INTO User (userName, password, eMail,Person_systemId,typeOfUser) " +
+                        " VALUES (?,?,?,?,?) ";
 
 
-            preparedStmt.execute();
+                PreparedStatement preparedStmt = conn.prepareStatement(query);
+                preparedStmt.setString(1, customer.getFirstName());
+                preparedStmt.setString(2, customer.getLastName());
+                preparedStmt.setBoolean(3, customer.isMale());
+                preparedStmt.setString(4, customer.getCountry());
+                preparedStmt.setString(5, customer.getSsn());
+                preparedStmt.setString(6, customer.getAdress());
 
-            PreparedStatement ps2 = conn.prepareStatement(query2);
 
-            ps2.setString(1, customer.getSsn());
+                preparedStmt.execute();
 
-            ResultSet rs = ps2.executeQuery();
+                PreparedStatement ps2 = conn.prepareStatement(query2);
+
+                ps2.setString(1, customer.getSsn());
+
+                ResultSet rs = ps2.executeQuery();
 
 
-            while (rs.next()) {
+                while (rs.next()) {
 
-                si = rs.getString("systemId");
+                    si = rs.getString("systemId");
+                }
+
+
+                PreparedStatement ps = conn.prepareStatement(query3);
+
+                ps.setString(1, customer.getUserName());
+                ps.setString(2, customer.getPassword());
+                ps.setString(3, customer.geteMail());
+                ps.setString(4, si);
+                ps.setString(5, "Customer");
+
+
+                ps.execute();
+                conn.close();
+
+            }else{
+                Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+                dialog.setTitle("Error");
+                dialog.setHeaderText("ssn already exists");
+                dialog.setContentText("The ssn you input already exists");
+                dialog.showAndWait();
             }
 
 
-            PreparedStatement ps = conn.prepareStatement(query3);
-
-            ps.setString(1, customer.getUserName());
-            ps.setString(2, customer.getPassword());
-            ps.setString(3, customer.geteMail());
-            ps.setString(4, si);
-            ps.setString(5, "Customer");
 
 
-            ps.execute();
 
-
-            conn.close();
 
         } catch (Exception ex) {
             ex.printStackTrace();

@@ -87,8 +87,6 @@ public class newCustomerController {
 
 
                                 DataStorage dbh = new DBHandler();
-
-
                                 dbh.insertCustomer(customer);
 
                                 Node node = (Node) ae.getSource();
