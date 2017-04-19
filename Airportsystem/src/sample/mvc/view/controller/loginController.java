@@ -1,5 +1,6 @@
 package sample.mvc.view.controller;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -81,7 +82,6 @@ public class loginController implements Initializable {
             }
         }
 
-
         if (sentPassword.equals(Password) && isAdmin == false)
 
         {
@@ -100,6 +100,7 @@ public class loginController implements Initializable {
             Scene scene = new Scene(root);
             stage.setScene(scene);
         }
+
     }
 
 
