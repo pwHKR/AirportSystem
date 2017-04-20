@@ -5,5 +5,5 @@ package sample.mvc.model;
  */
 public class System {
 
-   
+
 }

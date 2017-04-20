@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -20,7 +19,7 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-14.
  */
-public class newCustomerController implements Initializable {
+public class NewUserController implements Initializable {
 
 
     @FXML
@@ -142,55 +141,24 @@ public class newCustomerController implements Initializable {
 
 
                             } else {
-                                Alert dialog = new Alert(Alert.AlertType.INFORMATION);
-                                dialog.setTitle("Error");
-                                dialog.setHeaderText("Invalid info");
-                                dialog.setContentText("Your country name can only contain letters.");
-                                dialog.showAndWait();
-
+                                MyAlert.countryNameErr();
                             }
                         } else {
-                            Alert dialog = new Alert(Alert.AlertType.INFORMATION);
-                            dialog.setTitle("Error");
-                            dialog.setHeaderText("Invalid info");
-                            dialog.setContentText("Your address must contain street name and street number.");
-                            dialog.showAndWait();
-
+                            MyAlert.addressNameErr();
                         }
                     } else {
-                        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
-                        dialog.setTitle("Error");
-                        dialog.setHeaderText("Invalid info");
-                        dialog.setContentText("Email adress must contain ''@'' ");
-                        dialog.showAndWait();
+                        MyAlert.eMailNameErr();
+
+
+                    }
+                } else {
+                    MyAlert.ssnInputErr();
 
                 }
-            } else {
-                Alert dialog = new Alert(Alert.AlertType.INFORMATION);
-                dialog.setTitle("Error");
-                dialog.setHeaderText("Invalid info");
-                dialog.setContentText("Your ssn must be 10 numbers");
-                dialog.showAndWait();
+
 
             }
-        } else {
-            Alert dialog = new Alert(Alert.AlertType.INFORMATION);
-            dialog.setTitle("Error");
-            dialog.setHeaderText("Invalid info");
-            dialog.setContentText("Your last name can only contain letters.");
-            dialog.showAndWait();
-
         }
-
-
-        /*Alert dialog = new Alert(Alert.AlertType.INFORMATION);
-        dialog.setTitle("Error");
-        dialog.setHeaderText("Invalid info");
-        dialog.setContentText("Your first name can only contain letters.");
-        dialog.showAndWait();*/
-
-        }
-
     }
 
     @FXML

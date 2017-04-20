@@ -31,6 +31,48 @@ public class MyAlert {
         err.show();
     }
 
+    public static void countryNameErr() {
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("Your country name can only contain letters.");
+        err.showAndWait();
+    }
+
+    public static void addressNameErr() {
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("Your address must contain street name and street number.");
+        err.showAndWait();
+    }
+
+    public static void eMailNameErr() {
+
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("Email adress must contain ''@'' ");
+        err.showAndWait();
+
+
+    }
+
+    public static void ssnInputErr() {
+
+
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("Your ssn must be 10 numbers");
+        err.showAndWait();
+    }
+
+    public static void nameErr() {
+
+
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("Your name can only contain letters.");
+        err.showAndWait();
+    }
+
     public static void loginFail() {
 
 

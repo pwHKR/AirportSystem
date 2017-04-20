@@ -18,7 +18,7 @@
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.loginController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.LoginController">
     <children>
         <ImageView fitHeight="368.0" fitWidth="626.0" layoutY="28.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">

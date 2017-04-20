@@ -37,12 +37,32 @@ public class AdminController {
     private void newEmployee(ActionEvent ae) {
 
 
-        newCustomerController.setCustomer(false);
+        NewUserController.setCustomer(false);
 
 
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../createAccount.fxml"));
+        Parent root = null;
+        try {
+            root = loader.load();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+
+    }
+
+    @FXML
+    private void addDestination(ActionEvent ae) {
+
+        Node node = (Node) ae.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../createDestination.fxml"));
         Parent root = null;
         try {
             root = loader.load();

@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class loginController implements Initializable {
+public class LoginController implements Initializable {
 
 
     @FXML
@@ -108,7 +108,7 @@ public class loginController implements Initializable {
     private void newCustomer(ActionEvent ae) {
 
 
-        newCustomerController.setCustomer(true);
+        NewUserController.setCustomer(true);
 
 
         Node node = (Node) ae.getSource();

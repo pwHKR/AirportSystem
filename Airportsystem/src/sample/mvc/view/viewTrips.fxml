@@ -13,7 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="591.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.newCustomerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0"
+            prefWidth="591.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.NewUserController">
     <children>
         <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
             <image>
