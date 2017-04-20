@@ -1,6 +1,5 @@
 package sample.mvc.view.controller;
 
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,15 +25,12 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
-
-
     @FXML
     private PasswordField password;
     @FXML
     private TextField userName;
 
     private Path path = Paths.get("logInLog.bin");
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -71,17 +67,12 @@ public class LoginController implements Initializable {
             e.printStackTrace();
         }
 
-
         boolean isAdmin = false;
 
         if (UserName.equals("admin")) {
-
             isAdmin = true;
         }
-
-
         if (UserName.isEmpty()) {
-
             MyAlert.emptyUserName();
         }
 
@@ -98,17 +89,13 @@ public class LoginController implements Initializable {
                     root = loader.load();
                 } catch (IOException e) {
                     e.printStackTrace();
-
-
                 }
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
             }
         }
 
-        if (sentPassword.equals(Password) && isAdmin == false)
-
-        {
+        if (sentPassword.equals(Password) && isAdmin == false) {
 
             Node node = (Node) ae.getSource();
             Stage stage = (Stage) node.getScene().getWindow();
@@ -118,22 +105,16 @@ public class LoginController implements Initializable {
                 root = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
-
-
             }
             Scene scene = new Scene(root);
             stage.setScene(scene);
         }
-
     }
 
 
     @FXML
     private void newCustomer(ActionEvent ae) {
-
-
         NewUserController.setCustomer(true);
-
 
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -141,14 +122,11 @@ public class LoginController implements Initializable {
         Parent root = null;
         try {
             root = loader.load();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
-
     }
-
 }

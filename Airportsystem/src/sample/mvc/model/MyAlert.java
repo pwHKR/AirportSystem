@@ -64,7 +64,7 @@ public class MyAlert {
         err.showAndWait();
     }
 
-    public static void nameErr() {
+    public static void firstNameErr() {
 
 
         err.setTitle("Error");
@@ -73,10 +73,40 @@ public class MyAlert {
         err.showAndWait();
     }
 
+    public static void lastNameErr() {
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("Your last name can only contain letters.");
+        err.showAndWait();
+    }
+
     public static void loginFail() {
 
-
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
         err.setContentText("Login failed!");
         err.show();
+    }
+
+    public static void userNameErr() {
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("The username textfield can't be left empty.");
+        err.show();
+    }
+
+    public static void passwordErr() {
+        err.setTitle("Error");
+        err.setHeaderText("Invalid info");
+        err.setContentText("The password field can't be left empty.");
+        err.show();
+    }
+
+    public static void ssnExistsErr() {
+
+        err.setTitle("Error");
+        err.setHeaderText("ssn already exists");
+        err.setContentText("The ssn you input already exists");
+        err.showAndWait();
     }
 }

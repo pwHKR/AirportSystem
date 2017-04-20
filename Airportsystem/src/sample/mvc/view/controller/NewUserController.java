@@ -93,6 +93,10 @@ public class NewUserController implements Initializable {
 
                             if (country.getText().matches("^[a-öA-Ö]+$")) {
 
+                                if (!userName.getText().isEmpty()) {
+
+                                    if (!password.getText().isEmpty()) {
+
                                 DataStorage dbh = new DBHandler();
 
                                 if (isCustomer == true) {
@@ -138,8 +142,12 @@ public class NewUserController implements Initializable {
                                     Scene scene = new Scene(root);
                                     stage.setScene(scene);
                                 }
-
-
+                                    } else {
+                                        MyAlert.passwordErr();
+                                    }
+                                } else {
+                                    MyAlert.userNameErr();
+                                }
                             } else {
                                 MyAlert.countryNameErr();
                             }
@@ -148,16 +156,15 @@ public class NewUserController implements Initializable {
                         }
                     } else {
                         MyAlert.eMailNameErr();
-
-
                     }
                 } else {
                     MyAlert.ssnInputErr();
-
                 }
-
-
+            } else {
+                MyAlert.lastNameErr();
             }
+        } else {
+            MyAlert.firstNameErr();
         }
     }
 

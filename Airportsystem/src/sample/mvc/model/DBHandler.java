@@ -1,7 +1,5 @@
 package sample.mvc.model;
 
-import javafx.scene.control.Alert;
-
 import java.io.FileInputStream;
 import java.lang.System;
 import java.sql.*;
@@ -124,7 +122,6 @@ public class DBHandler implements DataStorage {
                 preparedStmt.setString(5, customer.getSsn());
                 preparedStmt.setString(6, customer.getAdress());
 
-
                 preparedStmt.execute();
 
                 PreparedStatement ps2 = conn.prepareStatement(query2);
@@ -133,12 +130,10 @@ public class DBHandler implements DataStorage {
 
                 ResultSet rs = ps2.executeQuery();
 
-
                 while (rs.next()) {
 
                     si = rs.getString("systemId");
                 }
-
 
                 PreparedStatement ps = conn.prepareStatement(query3);
 
@@ -148,28 +143,15 @@ public class DBHandler implements DataStorage {
                 ps.setString(4, si);
                 ps.setString(5, typeOfUser);
 
-
                 ps.execute();
                 conn.close();
 
             }else{
-                Alert dialog = new Alert(Alert.AlertType.INFORMATION);
-                dialog.setTitle("Error");
-                dialog.setHeaderText("ssn already exists");
-                dialog.setContentText("The ssn you input already exists");
-                dialog.showAndWait();
+                MyAlert.ssnExistsErr();
             }
-
-
-
-
-
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
-
     }
 
 
@@ -177,11 +159,9 @@ public class DBHandler implements DataStorage {
 
         String pass = null;
 
-
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
             String query = ("SELECT password FROM User WHERE userName=(?)");
-
 
             PreparedStatement ps = conn.prepareStatement(query);
 
@@ -189,17 +169,14 @@ public class DBHandler implements DataStorage {
 
             ResultSet rs = ps.executeQuery();
 
-
             while (rs.next()) {
 
                 pass = rs.getString("password");
             }
 
-
         } catch (SQLException e) {
 
         }
         return pass;
-
     }
 }
