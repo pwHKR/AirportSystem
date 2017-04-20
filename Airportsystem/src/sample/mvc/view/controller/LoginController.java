@@ -27,6 +27,7 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
     @FXML
     private PasswordField password;
+
     @FXML
     private TextField userName;
 
