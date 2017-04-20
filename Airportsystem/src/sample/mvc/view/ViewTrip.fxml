@@ -36,7 +36,7 @@
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="11.0" layoutY="502.0" mnemonicParsing="false" onAction="#returnToLoginScreen" prefHeight="40.0"
-                prefWidth="110.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Return"/>
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
         <Text fill="WHITE" layoutX="455.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0" />

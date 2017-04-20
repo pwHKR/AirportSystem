@@ -16,6 +16,7 @@
 <?import javafx.scene.text.Text?>
 
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.LoginController">
@@ -28,7 +29,7 @@
             </image>
         </ImageView>
         <TextField fx:id="userName" layoutX="177.0" layoutY="184.0" opacity="0.7" prefHeight="27.0" prefWidth="237.0"
-                   promptText="Username">
+                   promptText="Username" stylesheets="@stylesheet.css">
             <effect>
                 <DropShadow spread="0.55">
                     <color>
@@ -38,8 +39,7 @@
             </effect>
         </TextField>
         <PasswordField fx:id="password" layoutX="175.0" layoutY="236.0" opacity="0.7" prefHeight="27.0"
-                       prefWidth="241.0"
-                       promptText="Password">
+                       prefWidth="241.0" promptText="Password">
             <effect>
                 <DropShadow spread="0.55">
                     <color>
@@ -51,10 +51,10 @@
         <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
             <children>
                 <!--suppress XmlPathReference, XmlPathReference -->
-                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="408.0" layoutY="-147.0"
+                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="-170.0"
                         mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
-                        stylesheets="@buttons.css" textAlignment="CENTER"/>
+                        stylesheets="@stylesheet.css" textAlignment="CENTER"/>
             </children>
         </Pane>
         <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true"
@@ -66,13 +66,13 @@
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="242.0" layoutY="297.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0"
-                prefWidth="104.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Login"/>
+                prefWidth="104.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Login"/>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" onAction="#newCustomer" styleClass="rich-blue"
-                stylesheets="@buttons.css" text="Create new account"/>
+                stylesheets="@stylesheet.css" text="Create new account"/>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="401.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="174.0"
-                styleClass="rich-blue" stylesheets="@buttons.css" text="Recover Password"/>
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Recover Password"/>
         <Text fill="WHITE" layoutX="233.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>

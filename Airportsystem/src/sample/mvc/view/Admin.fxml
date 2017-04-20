@@ -16,7 +16,7 @@
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
-            prefWidth="589.0" style="-fx-background-color: #0b4386;" stylesheets="@buttons.css"
+            prefWidth="589.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
             xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.AdminController">
     <children>
@@ -38,7 +38,8 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference -->
-        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Log Out" />
+        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Log Out"/>
         <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0" />
@@ -53,7 +54,7 @@
                 </Reflection>
             </effect>
         </Line>
-        <Label layoutX="189.0" layoutY="110.0" text="ADMIN SCREEN" textFill="WHITE">
+        <Label layoutX="189.0" layoutY="110.0" stylesheets="@stylesheet.css" text="ADMIN SCREEN" textFill="WHITE">
             <font>
                 <Font size="28.0" />
             </font>
@@ -63,18 +64,22 @@
         </Label>
         <!--suppress XmlPathReference -->
         <Button fx:id="addWorker" layoutX="28.0" layoutY="159.0" mnemonicParsing="false" onAction="#newEmployee"
-                prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css"
+                prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Add worker"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="28.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Add Plane" />
+        <Button layoutX="28.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add Plane"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="223.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="View Workers" />
+        <Button layoutX="223.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="View Workers"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="223.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="View Planes" />
+        <Button layoutX="223.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="View Planes"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="408.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Add trip" />
+        <Button layoutX="408.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add trip"/>
         <!--suppress XmlPathReference -->
         <Button layoutX="408.0" layoutY="225.0" mnemonicParsing="false" onAction="#addDestination" prefHeight="40.0"
-                prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Add Destination"/>
+                prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add Destination"/>
     </children>
 </AnchorPane>

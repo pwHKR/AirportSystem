@@ -18,7 +18,7 @@
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0"
-            prefWidth="590.0" style="-fx-background-color: #0b4386;" stylesheets="@buttons.css"
+            prefWidth="590.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
             xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewUserController">
     <children>
@@ -46,7 +46,7 @@
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#returnToLoginScreen" prefHeight="40.0"
-                prefWidth="110.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Return"/>
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
         <Text fill="WHITE" layoutX="452.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>

@@ -42,7 +42,7 @@
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
-                prefWidth="110.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Log Out"/>
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Log Out"/>
         <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
@@ -78,9 +78,9 @@
         </Label>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="28.0" layoutY="179.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="196.0"
-                styleClass="rich-blue" stylesheets="@buttons.css" text="Browse destinations"/>
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Browse destinations"/>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="370.0" layoutY="179.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="183.0"
-                styleClass="rich-blue" stylesheets="@buttons.css" text="View bookings"/>
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="View bookings"/>
     </children>
 </AnchorPane>
