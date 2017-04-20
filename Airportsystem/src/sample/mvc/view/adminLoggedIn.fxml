@@ -15,7 +15,10 @@
 
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="589.0" style="-fx-background-color: #0b4386;" stylesheets="@resources/buttons.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.AdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
+            prefWidth="589.0" style="-fx-background-color: #0b4386;" stylesheets="@buttons.css"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.mvc.view.controller.AdminController">
     <children>
         <ImageView fitHeight="356.0" fitWidth="592.0" layoutX="-2.0" layoutY="55.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -59,7 +62,9 @@
             </effect>
         </Label>
         <!--suppress XmlPathReference -->
-        <Button layoutX="28.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Add worker" />
+        <Button fx:id="addWorker" layoutX="28.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0"
+                prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Add worker"
+                onAction="#newEmployee"/>
         <!--suppress XmlPathReference -->
         <Button layoutX="28.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Add Plane" />
         <!--suppress XmlPathReference -->

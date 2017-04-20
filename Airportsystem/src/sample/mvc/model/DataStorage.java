@@ -9,7 +9,7 @@ public interface DataStorage {
 
     void insertAirplane(Airplane airplane);
 
-    void insertCustomer(Customer customer);
+    void insertUser(User customer, String typeOfUser);
 
     String matchPassword(String UserName);
 
