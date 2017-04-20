@@ -68,7 +68,7 @@ public class LoginController implements Initializable {
 
                 Node node = (Node) ae.getSource();
                 Stage stage = (Stage) node.getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../adminLoggedIn.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../Admin.fxml"));
                 Parent root = null;
                 try {
                     root = loader.load();
@@ -88,7 +88,7 @@ public class LoginController implements Initializable {
 
             Node node = (Node) ae.getSource();
             Stage stage = (Stage) node.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../customerLoggedIn.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Customer.fxml"));
             Parent root = null;
             try {
                 root = loader.load();
@@ -113,7 +113,7 @@ public class LoginController implements Initializable {
 
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../createAccount.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../NewUser.fxml"));
         Parent root = null;
         try {
             root = loader.load();

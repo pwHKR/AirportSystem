@@ -112,7 +112,7 @@ public class NewUserController implements Initializable {
 
                                     Node node = (Node) ae.getSource();
                                     Stage stage = (Stage) node.getScene().getWindow();
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../login.fxml"));
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../Login.fxml"));
                                     Parent root = null;
                                     try {
                                         root = loader.load();
@@ -128,7 +128,7 @@ public class NewUserController implements Initializable {
 
                                     Node node = (Node) ae.getSource();
                                     Stage stage = (Stage) node.getScene().getWindow();
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../adminLoggedIn.fxml"));
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../Admin.fxml"));
                                     Parent root = null;
                                     try {
                                         root = loader.load();
@@ -184,7 +184,7 @@ public class NewUserController implements Initializable {
     private void returnToLoginScreen(ActionEvent ae) {
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Login.fxml"));
         Parent root = null;
         try {
             root = loader.load();

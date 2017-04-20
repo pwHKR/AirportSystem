@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Client.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createDestination.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/loggedInController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/loginController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/newCustomerController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/viewTripsController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewTripsController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/adminLoggedIn.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Admin.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewTripsController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewTripController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createAccount.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewUser.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createDestination.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/AddDestination.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/customerLoggedIn.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Customer.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/login.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Login.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/viewTrips.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewTrip.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/adminLoggedIn.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/adminLoggedIn.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Main.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createAccount.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createAccount.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/customerLoggedIn.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/customerLoggedIn.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/login.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/viewTrips.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/viewTrips.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -72,11 +69,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="1103">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddDestinationController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,14 +113,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createDestination.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createDestination.fxml">
+      <file leaf-file-name="AddDestination.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/AddDestination.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1492690499000" expanded="true" signature="4391:4410" ph="..." />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="48" column="69" lean-forward="false" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
+              <folding />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
@@ -119,29 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-              <folding>
-                <marker date="1492675067000" expanded="true" signature="1207:1229" ph="SELECT * FRO... Airplane" />
-                <marker date="1492675067000" expanded="true" signature="2535:2581" ph="SELECT typeO... User" />
-                <marker date="1492675067000" expanded="true" signature="3183:3242" ph="SELECT * FRO... Person" />
-                <marker date="1492675067000" expanded="true" signature="3382:3504" ph="INSERT INTO Person... " />
-                <marker date="1492675067000" expanded="true" signature="3542:3585" ph="SELECT syste... Person" />
-                <marker date="1492675067000" expanded="true" signature="3624:3744" ph="INSERT INTO User... " />
-                <marker date="1492675067000" expanded="true" signature="5535:5579" ph="SELECT passw... User" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="System.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -181,6 +170,8 @@
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/addDestination.fxml" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java" />
       </list>
     </option>
   </component>
@@ -191,14 +182,14 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="127" />
+    <option name="x" value="177" />
+    <option name="y" value="123" />
     <option name="width" value="1280" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <flattenPackages PackagesPane="false" />
       <showMembers />
       <showModules />
@@ -362,10 +353,6 @@
               <option name="myItemId" value="mvc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -405,7 +392,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -958,7 +945,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492631540346</updated>
-      <workItem from="1492631542090" duration="20202000" />
+      <workItem from="1492631542090" duration="21877000" />
     </task>
     <task id="LOCAL-00001" summary="deleting unused files">
       <created>1492660882903</created>
@@ -1009,14 +996,21 @@
       <option name="project" value="LOCAL" />
       <updated>1492675067730</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Minor change">
+      <created>1492691228906</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1492691228908</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20202000" />
+    <option name="totallyTimeSpent" value="21877000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="127" width="1280" height="741" extended-state="0" />
+    <frame x="177" y="123" width="1280" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1037,11 +1031,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32886904" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3164933" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1080,7 +1074,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="deleting unused files" />
     <MESSAGE value="Admin can add Workers to the system." />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin can add Workers to the system." />
+    <MESSAGE value="Minor change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor change" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1092,7 +1087,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/viewTrips.fxml">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewTrip.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1135,7 +1130,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/login.fxml">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Login.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="67" column="89" lean-forward="true" selection-start-line="67" selection-start-column="81" selection-end-line="67" selection-end-column="89" />
@@ -1146,7 +1141,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createAccount.fxml">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewUser.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1143">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1205,7 +1200,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/adminLoggedIn.fxml">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Admin.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-99">
           <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
@@ -1251,7 +1246,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1259,7 +1254,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1270,19 +1265,6 @@
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/createDestination.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1492690499000" expanded="true" signature="4391:4410" ph="..." />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Administrator.java">
@@ -1317,10 +1299,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/AddDestination.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="48" column="69" lean-forward="false" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="1103">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1384,7 +1387,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
