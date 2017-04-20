@@ -23,7 +23,7 @@ public class DBHandler implements DataStorage {
 
     private Properties loadProperties() {
         Properties appProp = new Properties();
-        try (FileInputStream fis = new FileInputStream("app1.properties")) {
+        try (FileInputStream fis = new FileInputStream("sample/mvc/view/app1.properties")) {
             appProp.load(fis);
         } catch (Exception ex) {
             ex.printStackTrace();

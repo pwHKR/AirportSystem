@@ -75,13 +75,15 @@ public class newCustomerController {
 
         if (firstName.getText().matches("^[a-öA-Ö]+$")) {
 
-            if(lastName.getText().matches("^[a-öA-Ö]+$")){
+            if (lastName.getText().matches("^[a-öA-Ö]+$")) {
 
-                if (ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")){
+                if (ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")) {
 
-                        if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")){
+                    if (email.getText().contains("@")) {
 
-                            if (country.getText().matches("^[a-öA-Ö]+$")){
+                        if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
+
+                            if (country.getText().matches("^[a-öA-Ö]+$")) {
                                 Customer customer = new Customer(FirstName,
                                         LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
 
@@ -101,7 +103,7 @@ public class newCustomerController {
                                 Scene scene = new Scene(root);
                                 stage.setScene(scene);
 
-                            }else {
+                            } else {
                                 Alert dialog = new Alert(Alert.AlertType.INFORMATION);
                                 dialog.setTitle("Error");
                                 dialog.setHeaderText("Invalid info");
@@ -109,7 +111,7 @@ public class newCustomerController {
                                 dialog.showAndWait();
 
                             }
-                        }else {
+                        } else {
                             Alert dialog = new Alert(Alert.AlertType.INFORMATION);
                             dialog.setTitle("Error");
                             dialog.setHeaderText("Invalid info");
@@ -117,33 +119,37 @@ public class newCustomerController {
                             dialog.showAndWait();
 
                         }
-                    }else {
+                    } else {
                         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
                         dialog.setTitle("Error");
                         dialog.setHeaderText("Invalid info");
-                        dialog.setContentText("Your ssn must be 10 numbers");
+                        dialog.setContentText("Email adress must contain ''@'' ");
                         dialog.showAndWait();
-
+                    }
                 }
-            }else {
+            } else {
                 Alert dialog = new Alert(Alert.AlertType.INFORMATION);
                 dialog.setTitle("Error");
                 dialog.setHeaderText("Invalid info");
-                dialog.setContentText("Your last name can only contain letters.");
+                dialog.setContentText("Your ssn must be 10 numbers");
                 dialog.showAndWait();
 
             }
-        }else {
+        } else {
             Alert dialog = new Alert(Alert.AlertType.INFORMATION);
             dialog.setTitle("Error");
             dialog.setHeaderText("Invalid info");
-            dialog.setContentText("Your first name can only contain letters.");
+            dialog.setContentText("Your last name can only contain letters.");
             dialog.showAndWait();
 
         }
-
-
-
+    }
+    {
+        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+        dialog.setTitle("Error");
+        dialog.setHeaderText("Invalid info");
+        dialog.setContentText("Your first name can only contain letters.");
+        dialog.showAndWait();
 
     }
 
