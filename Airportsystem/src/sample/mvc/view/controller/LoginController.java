@@ -17,20 +17,34 @@ import sample.mvc.model.MyAlert;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
 
     @FXML
-    PasswordField password;
+    private PasswordField password;
     @FXML
-    TextField userName;
+    private TextField userName;
+
+    private Path path = Paths.get("logInLog.bin");
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        try {
+            List<String> textLines = Files.readAllLines(path);
+            userName.setText(textLines.get(0));
+            password.setText(textLines.get(1));
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
     }
 
     @FXML
@@ -40,13 +54,23 @@ public class LoginController implements Initializable {
 
     @FXML
     private void login(ActionEvent ae) {
-
-
         DataStorage dbh = new DBHandler();
+        ArrayList<String> loginInformation = new ArrayList<>();
 
         String UserName = userName.getText();
         String Password = password.getText();
+        loginInformation.add(UserName);
+        loginInformation.add(Password);
         String sentPassword = dbh.matchPassword(UserName);
+
+        try {
+            Files.write(path, loginInformation, StandardOpenOption.CREATE);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         boolean isAdmin = false;
 
@@ -124,7 +148,6 @@ public class LoginController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
-
 
     }
 
