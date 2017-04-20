@@ -23,7 +23,7 @@ public class DBHandler implements DataStorage {
 
     private Properties loadProperties() {
         Properties appProp = new Properties();
-        try (FileInputStream fis = new FileInputStream("sample/mvc/view/app1.properties")) {
+        try (FileInputStream fis = new FileInputStream("app1.properties")) {
             appProp.load(fis);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -94,7 +94,7 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public void insertCustomer(Customer customer) {
+    public void insertUser(User customer, String typeOfUser) {
 
         String si = null;
 
@@ -146,7 +146,7 @@ public class DBHandler implements DataStorage {
                 ps.setString(2, customer.getPassword());
                 ps.setString(3, customer.geteMail());
                 ps.setString(4, si);
-                ps.setString(5, "Customer");
+                ps.setString(5, typeOfUser);
 
 
                 ps.execute();

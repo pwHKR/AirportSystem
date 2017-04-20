@@ -108,6 +108,9 @@ public class loginController implements Initializable {
     private void newCustomer(ActionEvent ae) {
 
 
+        newCustomerController.setCustomer(true);
+
+
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../createAccount.fxml"));

@@ -21,7 +21,7 @@
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg" />
             </image>
         </ImageView>
-        <Pane onDragDetected="#createCustomerAccount" prefHeight="107.0" prefWidth="591.0" style="-fx-background-color: #ffffff;">
+        <Pane onDragDetected="#addUser" prefHeight="107.0" prefWidth="591.0" style="-fx-background-color: #ffffff;">
             <children>
                 <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="326.0" layoutY="-171.0" mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0" style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;" textAlignment="CENTER" />
             </children>
@@ -33,7 +33,8 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="11.0" layoutY="502.0" mnemonicParsing="false" onAction="#returnToLoginScreen" prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@resources/buttons.css" text="Return" />
+        <Button layoutX="11.0" layoutY="502.0" mnemonicParsing="false" onAction="#returnToLoginScreen" prefHeight="40.0"
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@buttons.css" text="Return"/>
         <Text fill="WHITE" layoutX="455.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0" />

@@ -3,6 +3,7 @@ package sample.mvc.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,17 +11,16 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.mvc.model.Customer;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.MyAlert;
+import sample.mvc.model.*;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Created by woojen on 2017-04-14.
  */
-public class newCustomerController {
+public class newCustomerController implements Initializable {
 
 
     @FXML
@@ -44,9 +44,18 @@ public class newCustomerController {
     @FXML
     CheckBox male;
 
+    public static boolean isCustomer;
+
+    public static void setCustomer(boolean customer) {
+        isCustomer = customer;
+    }
+
+
+    String typeOfUser;
+
 
     @FXML
-    private void createCustomerAccount(ActionEvent ae) {
+    private void addUser(ActionEvent ae) {
         String FirstName;
         String LastName;
         String SSN;
@@ -84,24 +93,53 @@ public class newCustomerController {
                         if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
 
                             if (country.getText().matches("^[a-öA-Ö]+$")) {
-                                Customer customer = new Customer(FirstName,
-                                        LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
-
 
                                 DataStorage dbh = new DBHandler();
-                                dbh.insertCustomer(customer);
 
-                                Node node = (Node) ae.getSource();
-                                Stage stage = (Stage) node.getScene().getWindow();
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("../login.fxml"));
-                                Parent root = null;
-                                try {
-                                    root = loader.load();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
+                                if (isCustomer == true) {
+                                    User customer = new Customer(FirstName,
+                                            LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
+                                    dbh.insertUser(customer, typeOfUser);
+                                } else if (isCustomer == false) {
+
+                                    User customer = new Employee(FirstName,
+                                            LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
+
+                                    dbh.insertUser(customer, typeOfUser);
                                 }
-                                Scene scene = new Scene(root);
-                                stage.setScene(scene);
+
+
+                                if (isCustomer == true) {
+
+                                    Node node = (Node) ae.getSource();
+                                    Stage stage = (Stage) node.getScene().getWindow();
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../login.fxml"));
+                                    Parent root = null;
+                                    try {
+                                        root = loader.load();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                    Scene scene = new Scene(root);
+                                    stage.setScene(scene);
+                                }
+
+                                if (isCustomer == false) {
+
+
+                                    Node node = (Node) ae.getSource();
+                                    Stage stage = (Stage) node.getScene().getWindow();
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../adminLoggedIn.fxml"));
+                                    Parent root = null;
+                                    try {
+                                        root = loader.load();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                    Scene scene = new Scene(root);
+                                    stage.setScene(scene);
+                                }
+
 
                             } else {
                                 Alert dialog = new Alert(Alert.AlertType.INFORMATION);
@@ -125,7 +163,7 @@ public class newCustomerController {
                         dialog.setHeaderText("Invalid info");
                         dialog.setContentText("Email adress must contain ''@'' ");
                         dialog.showAndWait();
-                    }
+
                 }
             } else {
                 Alert dialog = new Alert(Alert.AlertType.INFORMATION);
@@ -143,13 +181,15 @@ public class newCustomerController {
             dialog.showAndWait();
 
         }
-    }
-    {
-        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+
+
+        /*Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setTitle("Error");
         dialog.setHeaderText("Invalid info");
         dialog.setContentText("Your first name can only contain letters.");
-        dialog.showAndWait();
+        dialog.showAndWait();*/
+
+        }
 
     }
 
@@ -188,4 +228,16 @@ public class newCustomerController {
     }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+
+        if (isCustomer == true) {
+            typeOfUser = "Customer";
+        }
+
+        if (isCustomer == false) {
+            typeOfUser = "Employee";
+        }
+    }
 }
