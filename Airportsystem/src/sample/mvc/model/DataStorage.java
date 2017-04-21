@@ -1,5 +1,7 @@
 package sample.mvc.model;
 
+import javafx.collections.ObservableList;
+
 /**
  * Created by woojen on 2017-04-13.
  */
@@ -16,6 +18,10 @@ public interface DataStorage {
     String printUserType(String Username);
 
     void insertDestination(Destination destination);
+
+    ObservableList<String> getCountries();
+
+    ObservableList<String> getCities();
 
 
 }

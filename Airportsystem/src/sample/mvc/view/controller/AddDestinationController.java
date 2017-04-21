@@ -1,5 +1,7 @@
 package sample.mvc.view.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -17,6 +19,9 @@ import java.util.ResourceBundle;
 public class AddDestinationController implements Initializable {
 
 
+    ObservableList<String> countryList = FXCollections.observableArrayList();
+    ObservableList<String> cityList = FXCollections.observableArrayList();
+
 
     @FXML
     ChoiceBox<String> city;
@@ -32,14 +37,27 @@ public class AddDestinationController implements Initializable {
 
         DataStorage dbh = new DBHandler();
 
-        
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        city = new ChoiceBox<>();
-        airport = new ChoiceBox<>();
+        DataStorage dbHandler = new DBHandler();
 
-        country = new ComboBox<>();
+        // country box code
+
+        countryList = dbHandler.getCountries();
+
+
+        country.setItems(countryList);
+
+        // city box code
+
+        cityList = dbHandler.getCities();
+        city.setItems(cityList);
+
+
     }
 }
+
+

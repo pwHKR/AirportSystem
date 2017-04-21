@@ -1,5 +1,8 @@
 package sample.mvc.model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.FileInputStream;
 import java.lang.System;
 import java.sql.*;
@@ -217,5 +220,66 @@ public class DBHandler implements DataStorage {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public ObservableList<String> getCountries() {
+
+        ObservableList<String> countries = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("SELECT DISTINCT country  FROM AirportSystemdb.Destination ORDER BY country ASC ");
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ResultSet rs = ps.executeQuery(query);
+
+
+            while (rs.next()) {
+
+                countries.add(rs.getString("country"));
+
+            }
+
+
+        } catch (SQLException e) {
+
+        }
+        return countries;
+
+
+    }
+
+    public ObservableList<String> getCities() {
+
+
+        ObservableList<String> cities = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("SELECT DISTINCT city  FROM AirportSystemdb.Destination ORDER BY country ASC ");
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ResultSet rs = ps.executeQuery(query);
+
+
+            while (rs.next()) {
+
+                cities.add(rs.getString("city"));
+
+            }
+
+
+        } catch (SQLException e) {
+
+        }
+        return cities;
+
+
     }
 }
