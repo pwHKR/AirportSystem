@@ -97,51 +97,49 @@ public class NewUserController implements Initializable {
 
                                     if (!password.getText().isEmpty()) {
 
-                                DataStorage dbh = new DBHandler();
+                                        DataStorage dbh = new DBHandler();
 
-                                if (isCustomer == true) {
-                                    User customer = new Customer(FirstName,
-                                            LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
-                                    dbh.insertUser(customer, typeOfUser);
-                                } else if (isCustomer == false) {
+                                        if (isCustomer == true) {
+                                            User customer = new Customer(FirstName,
+                                                    LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
+                                            dbh.insertUser(customer, typeOfUser);
+                                        } else if (isCustomer == false) {
 
-                                    User customer = new Employee(FirstName,
-                                            LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
+                                            User customer = new Employee(FirstName,
+                                                    LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
 
-                                    dbh.insertUser(customer, typeOfUser);
-                                }
-
-
-                                if (isCustomer == true) {
-
-                                    Node node = (Node) ae.getSource();
-                                    Stage stage = (Stage) node.getScene().getWindow();
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../Login.fxml"));
-                                    Parent root = null;
-                                    try {
-                                        root = loader.load();
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                    }
-                                    Scene scene = new Scene(root);
-                                    stage.setScene(scene);
-                                }
-
-                                if (isCustomer == false) {
+                                            dbh.insertUser(customer, typeOfUser);
+                                        }
 
 
-                                    Node node = (Node) ae.getSource();
-                                    Stage stage = (Stage) node.getScene().getWindow();
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../Admin.fxml"));
-                                    Parent root = null;
-                                    try {
-                                        root = loader.load();
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                    }
-                                    Scene scene = new Scene(root);
-                                    stage.setScene(scene);
-                                }
+                                        if (isCustomer == true) {
+
+                                            Node node = (Node) ae.getSource();
+                                            Stage stage = (Stage) node.getScene().getWindow();
+                                            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Login.fxml"));
+                                            Parent root = null;
+                                            try {
+                                                root = loader.load();
+                                            } catch (IOException e) {
+                                                e.printStackTrace();
+                                            }
+                                            Scene scene = new Scene(root);
+                                            stage.setScene(scene);
+                                        }
+
+                                        if (isCustomer == false) {
+                                            Node node = (Node) ae.getSource();
+                                            Stage stage = (Stage) node.getScene().getWindow();
+                                            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Admin.fxml"));
+                                            Parent root = null;
+                                            try {
+                                                root = loader.load();
+                                            } catch (IOException e) {
+                                                e.printStackTrace();
+                                            }
+                                            Scene scene = new Scene(root);
+                                            stage.setScene(scene);
+                                        }
                                     } else {
                                         MyAlert.passwordErr();
                                     }

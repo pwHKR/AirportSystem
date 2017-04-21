@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0"
             prefWidth="590.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
-            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewUserController">
     <children>
         <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0" opacity="0.11" pickOnBounds="true"
@@ -83,7 +83,7 @@
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="250.0" layoutY="362.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="97.0"
                 styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="ADD"/>
-        <DatePicker fx:id="date" layoutX="175.0" layoutY="243.0" prefHeight="25.0" prefWidth="234.0"
+        <DatePicker fx:id="date" editable="false" layoutX="175.0" layoutY="243.0" prefHeight="25.0" prefWidth="234.0"
                     promptText="Select date"/>
         <ChoiceBox fx:id="destination" layoutX="175.0" layoutY="177.0" prefHeight="25.0" prefWidth="234.0"/>
     </children>

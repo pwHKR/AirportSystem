@@ -20,6 +20,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.sql.SQLException;
+import java.sql.SQLNonTransientConnectionException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -50,7 +52,7 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    private void login(ActionEvent ae) {
+    private void login(ActionEvent ae) throws SQLNonTransientConnectionException {
         DataStorage dbh = new DBHandler();
         ArrayList<String> loginInformation = new ArrayList<>();
 
@@ -77,10 +79,10 @@ public class LoginController implements Initializable {
             MyAlert.emptyUserName();
         }
 
+
         if (UserName.isEmpty() == false) {
 
             if (sentPassword.equals(Password) && isAdmin == true) {
-
 
                 Node node = (Node) ae.getSource();
                 Stage stage = (Stage) node.getScene().getWindow();

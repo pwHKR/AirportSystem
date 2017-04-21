@@ -154,6 +154,10 @@ public class DBHandler implements DataStorage {
         }
     }
 
+    public void insertTrip(Trip trip) {
+
+    }
+
 
     public String matchPassword(String UserName) {
 
