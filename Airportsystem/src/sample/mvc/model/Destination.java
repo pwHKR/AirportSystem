@@ -8,7 +8,6 @@ public class Destination {
     private String airport;
 
 
-
     private String city;
     private String country;
 
@@ -25,5 +24,9 @@ public class Destination {
 
     public String getCountry() {
         return country;
+    }
+
+    public String getAirport() {
+        return airport;
     }
 }

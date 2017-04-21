@@ -198,29 +198,40 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public void insertDestination(Destination destination) {
+    public String getDestinationId(Destination destination) {
 
+        String iD = null;
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            Statement stmt = conn.createStatement();
 
-
-            String query = "INSERT INTO Destination (city, country, Airport_name) "
-                    + " VALUES (?,?,?)";
+            String query = "SELECT destinationId FROM Destination WHERE city = ? AND country = ? AND airportName = ? ";
 
             PreparedStatement ps = conn.prepareStatement(query);
 
             ps.setString(1, destination.getCity());
             ps.setString(2, destination.getCountry());
-            ps.setString(3, "Arlanda");
+            ps.setString(3, destination.getAirport());
 
-            ps.execute();
+
+            ResultSet rs = ps.executeQuery();
+
+
+            while (rs.next()) {
+
+                iD = rs.getString("destinationId");
+            }
+
 
         } catch (SQLException e) {
-            e.printStackTrace();
+
         }
+        System.out.println(iD);
+        return iD;
+
+
     }
+
 
     public ObservableList<String> getCountries() {
 
@@ -252,7 +263,7 @@ public class DBHandler implements DataStorage {
 
     }
 
-    public ObservableList<String> getCities() {
+    public ObservableList<String> getCities(String inputCountry) {
 
 
         ObservableList<String> cities = FXCollections.observableArrayList();
@@ -260,18 +271,21 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT city  FROM AirportSystemdb.Destination");
+
+            String query = ("SELECT DISTINCT city FROM AirportSystemdb.Destination WHERE country = '" + inputCountry + "'ORDER BY city ASC");
 
 
-            PreparedStatement ps = conn.prepareStatement(query);
-
-            ResultSet rs = ps.executeQuery(query);
+            Statement stmt = conn.createStatement();
 
 
-            while (rs.next()) {
+            stmt.addBatch(query);
 
-                cities.add(rs.getString("city"));
+            ResultSet resultSet = stmt.executeQuery(query);
 
+
+            while (resultSet.next()) {
+
+                cities.add(resultSet.getString("city"));
             }
 
 
@@ -282,4 +296,41 @@ public class DBHandler implements DataStorage {
 
 
     }
+
+
+    public ObservableList<String> getAirports(String inputCity) {
+
+
+        ObservableList<String> airports = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = ("SELECT DISTINCT airportName FROM AirportSystemdb.Destination WHERE city = '" + inputCity + "'ORDER BY airportName ASC");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                airports.add(resultSet.getString("airportName"));
+            }
+
+
+        } catch (SQLException e) {
+
+        }
+        return airports;
+
+
+    }
+
+
 }

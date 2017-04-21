@@ -109,4 +109,10 @@ public class MyAlert {
         err.setContentText("The ssn you input already exists");
         err.showAndWait();
     }
+
+    public static void requestSent() {
+
+        msg.setContentText("request sent");
+        msg.show();
+    }
 }

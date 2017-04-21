@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Bloom?>
@@ -38,8 +37,8 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
+        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
         <Text fill="WHITE" layoutX="452.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
@@ -83,8 +82,8 @@
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="250.0" layoutY="362.0" mnemonicParsing="false" onAction="#addDestination" prefHeight="41.0"
                 prefWidth="97.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="ADD"/>
-        <ComboBox fx:id="country" layoutX="221.0" layoutY="174.0" prefWidth="150.0"/>
-        <ChoiceBox fx:id="city" layoutX="220.0" layoutY="250.0" prefWidth="150.0"/>
-        <ChoiceBox fx:id="airport" layoutX="224.0" layoutY="324.0" prefWidth="150.0"/>
+        <ComboBox fx:id="country" layoutX="224.0" layoutY="167.0" prefWidth="150.0"/>
+        <ComboBox fx:id="city" layoutX="224.0" layoutY="239.0" onMouseClicked="#setCities" prefWidth="150.0"/>
+        <ComboBox fx:id="airport" layoutX="224.0" layoutY="308.0" onMouseClicked="#setAirports" prefWidth="150.0"/>
     </children>
 </AnchorPane>
