@@ -17,11 +17,12 @@ public interface DataStorage {
 
     String printUserType(String Username);
 
-    void insertDestination(Destination destination);
-
+    String getDestinationId(Destination destination);
     ObservableList<String> getCountries();
 
-    ObservableList<String> getCities();
+    ObservableList<String> getCities(String inputCountry);
+
+    ObservableList<String> getAirports(String inputCity);
 
 
 }

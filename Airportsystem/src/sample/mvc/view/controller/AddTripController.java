@@ -1,10 +1,9 @@
 package sample.mvc.view.controller;
 
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -18,8 +17,9 @@ public class AddTripController implements Initializable {
 
     ArrayList<String> arr = new ArrayList<>();
 
+
     @FXML
-    private ChoiceBox destination;
+    private Label destination;
 
     @FXML
     private DatePicker date;
@@ -35,6 +35,7 @@ public class AddTripController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        destination.setItems(FXCollections.observableArrayList("ass", "ass", "ass"));
+
+      
     }
 }
