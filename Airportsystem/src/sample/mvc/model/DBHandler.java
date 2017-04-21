@@ -260,7 +260,7 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT DISTINCT city  FROM AirportSystemdb.Destination ORDER BY country ASC ");
+            String query = ("SELECT city  FROM AirportSystemdb.Destination");
 
 
             PreparedStatement ps = conn.prepareStatement(query);
