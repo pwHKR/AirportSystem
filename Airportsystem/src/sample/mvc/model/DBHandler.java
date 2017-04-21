@@ -46,7 +46,7 @@ public class DBHandler implements DataStorage {
     }
 
     public void insertAirplane(Airplane airplane) {
-        String command = String.format("INSERT INTO Airplane values (%d, %s, %d, '%s')", airplane.getPassengerCapacity(),
+        String command = String.format("INSERT INTO Airplane values (%s,%d, %s, %d, '%s')", airplane.getModel(), airplane.getPassengerCapacity(),
                 airplane.getMaxSpeed(), airplane.getMaxLuggageWeight(), airplane.getRegNumber());
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
@@ -104,7 +104,7 @@ public class DBHandler implements DataStorage {
             String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + customer.getSsn() + "'";
 
             ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
-            if (!resultSet.next()){
+            if (!resultSet.next()) {
                 String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
                         + " VALUES (?,?,? ,?,?,?)";
 
@@ -122,6 +122,7 @@ public class DBHandler implements DataStorage {
                 preparedStmt.setString(5, customer.getSsn());
                 preparedStmt.setString(6, customer.getAdress());
 
+
                 preparedStmt.execute();
 
                 PreparedStatement ps2 = conn.prepareStatement(query2);
@@ -130,10 +131,12 @@ public class DBHandler implements DataStorage {
 
                 ResultSet rs = ps2.executeQuery();
 
+
                 while (rs.next()) {
 
                     si = rs.getString("systemId");
                 }
+
 
                 PreparedStatement ps = conn.prepareStatement(query3);
 
@@ -143,15 +146,17 @@ public class DBHandler implements DataStorage {
                 ps.setString(4, si);
                 ps.setString(5, typeOfUser);
 
+
                 ps.execute();
                 conn.close();
 
-            }else{
-                MyAlert.ssnExistsErr();
             }
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+
     }
 
     public void insertTrip(Trip trip) {
@@ -163,9 +168,11 @@ public class DBHandler implements DataStorage {
 
         String pass = null;
 
+
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
             String query = ("SELECT password FROM User WHERE userName=(?)");
+
 
             PreparedStatement ps = conn.prepareStatement(query);
 
@@ -173,14 +180,42 @@ public class DBHandler implements DataStorage {
 
             ResultSet rs = ps.executeQuery();
 
+
             while (rs.next()) {
 
                 pass = rs.getString("password");
             }
 
+
         } catch (SQLException e) {
 
         }
         return pass;
+
+    }
+
+
+    public void insertDestination(Destination destination) {
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            Statement stmt = conn.createStatement();
+
+
+            String query = "INSERT INTO Destination (city, country, Airport_name) "
+                    + " VALUES (?,?,?)";
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setString(1, destination.getCity());
+            ps.setString(2, destination.getCountry());
+            ps.setString(3, "Arlanda");
+
+            ps.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

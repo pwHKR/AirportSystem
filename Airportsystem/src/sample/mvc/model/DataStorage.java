@@ -15,5 +15,7 @@ public interface DataStorage {
 
     String printUserType(String Username);
 
+    void insertDestination(Destination destination);
+
 
 }

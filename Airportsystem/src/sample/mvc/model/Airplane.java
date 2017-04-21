@@ -10,11 +10,15 @@ public class Airplane {
     private String maxSpeed;
     private String regNumber;
 
-    public Airplane(int passengerCapacity, int maxLuggageWeight, String maxSpeed, String regNumber) {
+
+    private String model;
+
+    public Airplane(int passengerCapacity, int maxLuggageWeight, String maxSpeed, String regNumber, String model) {
         this.passengerCapacity = passengerCapacity;
         this.maxLuggageWeight = maxLuggageWeight;
         this.maxSpeed = maxSpeed;
         this.regNumber = regNumber;
+        this.model = model;
     }
 
     public int getPassengerCapacity() {
@@ -32,5 +36,16 @@ public class Airplane {
     public String getRegNumber() {
         return regNumber;
     }
+
+    public String getModel() {
+        return model;
+    }
+
+
+    public void setMaxLuggageWeight(int maxLuggageWeight) {
+        this.maxLuggageWeight = maxLuggageWeight;
+    }
 }
+
+
 

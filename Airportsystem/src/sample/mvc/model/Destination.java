@@ -5,13 +5,25 @@ package sample.mvc.model;
  */
 public class Destination {
 
-    private Airport airport;
+    private String airport;
+
+
+
     private String city;
     private String country;
 
-    public Destination(Airport airport, String city, String country) {
+    public Destination(String airport, String city, String country) {
         this.airport = airport;
         this.city = city;
         this.country = country;
+    }
+
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getCountry() {
+        return country;
     }
 }
