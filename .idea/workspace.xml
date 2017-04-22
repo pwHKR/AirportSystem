@@ -4,17 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" line="57" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
+    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="Added SwitchScene Class">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/SwitchScene.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Admin.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Admin.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,8 +132,8 @@
       <file leaf-file-name="ViewWorkersController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="13">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -200,8 +192,8 @@
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java" />
       </list>
     </option>
   </component>
@@ -387,25 +379,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample.mvc" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -863,7 +837,7 @@
       <option name="presentableId" value="Default" />
       <updated>1492631540346</updated>
       <workItem from="1492631542090" duration="21877000" />
-      <workItem from="1492870260203" duration="4175000" />
+      <workItem from="1492870260203" duration="4319000" />
     </task>
     <task id="LOCAL-00001" summary="deleting unused files">
       <created>1492660882903</created>
@@ -970,15 +944,21 @@
       <option name="project" value="LOCAL" />
       <updated>1492861711501</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added SwitchScene Class">
+      <created>1492874999153</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1492874999153</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78587000" />
+    <option name="totallyTimeSpent" value="78731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="33" width="1280" height="738" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -995,7 +975,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1048,7 +1028,8 @@
     <MESSAGE value="Fixed issue #5" />
     <MESSAGE value="Improved AddDestinationController" />
     <MESSAGE value="Added code to LogInController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code to LogInController" />
+    <MESSAGE value="Added SwitchScene Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added SwitchScene Class" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1065,18 +1046,18 @@
         <state relative-caret-position="2737">
           <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
           <folding>
-            <marker date="1492841900000" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
-            <marker date="1492841900000" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
-            <marker date="1492841900000" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
-            <marker date="1492841900000" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
-            <marker date="1492841900000" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
-            <marker date="1492841900000" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
-            <marker date="1492841900000" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
-            <marker date="1492841900000" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
-            <marker date="1492841900000" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
-            <marker date="1492841900000" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
-            <marker date="1492841900000" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
-            <marker date="1492841900000" expanded="true" signature="8821:8982" ph="SELECT Perso... Person" />
+            <marker date="1492875013000" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
+            <marker date="1492875013000" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
+            <marker date="1492875013000" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
+            <marker date="1492875013000" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
+            <marker date="1492875013000" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
+            <marker date="1492875013000" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
+            <marker date="1492875013000" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
+            <marker date="1492875013000" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
+            <marker date="1492875013000" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
+            <marker date="1492875013000" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
+            <marker date="1492875013000" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
+            <marker date="1492875013000" expanded="true" signature="8821:8982" ph="SELECT Perso... Person" />
           </folding>
         </state>
       </provider>
@@ -1316,18 +1297,18 @@
         <state relative-caret-position="2910">
           <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
           <folding>
-            <marker date="1492841900000" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
-            <marker date="1492841900000" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
-            <marker date="1492841900000" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
-            <marker date="1492841900000" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
-            <marker date="1492841900000" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
-            <marker date="1492841900000" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
-            <marker date="1492841900000" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
-            <marker date="1492841900000" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
-            <marker date="1492841900000" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
-            <marker date="1492841900000" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
-            <marker date="1492841900000" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
-            <marker date="1492841900000" expanded="true" signature="8821:8982" ph="SELECT Perso... Person" />
+            <marker date="1492875013000" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
+            <marker date="1492875013000" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
+            <marker date="1492875013000" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
+            <marker date="1492875013000" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
+            <marker date="1492875013000" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
+            <marker date="1492875013000" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
+            <marker date="1492875013000" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
+            <marker date="1492875013000" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
+            <marker date="1492875013000" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
+            <marker date="1492875013000" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
+            <marker date="1492875013000" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
+            <marker date="1492875013000" expanded="true" signature="8821:8982" ph="SELECT Perso... Person" />
           </folding>
         </state>
       </provider>
@@ -1449,7 +1430,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1488,8 +1469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="13">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
