@@ -21,8 +21,6 @@ import java.util.ResourceBundle;
  * Created by Stefan on 2017-04-20.
  */
 public class AddTripController implements Initializable {
-
-
     ArrayList<String> arr = new ArrayList<>();
 
 

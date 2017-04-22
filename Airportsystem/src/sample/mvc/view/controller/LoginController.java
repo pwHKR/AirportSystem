@@ -20,7 +20,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.sql.SQLException;
 import java.sql.SQLNonTransientConnectionException;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +81,11 @@ public class LoginController implements Initializable {
 
         if (UserName.isEmpty() == false) {
 
+            if (sentPassword.equals(Password) == false) {
+
+                MyAlert.loginFail();
+            }
+
             if (sentPassword.equals(Password) && isAdmin == true) {
 
                 Node node = (Node) ae.getSource();
@@ -98,6 +102,7 @@ public class LoginController implements Initializable {
             }
         }
 
+
         if (sentPassword.equals(Password) && isAdmin == false) {
 
             Node node = (Node) ae.getSource();
@@ -112,6 +117,7 @@ public class LoginController implements Initializable {
             Scene scene = new Scene(root);
             stage.setScene(scene);
         }
+        
     }
 
 
