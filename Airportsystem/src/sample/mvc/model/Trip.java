@@ -8,14 +8,14 @@ public class Trip {
     private Double tripPrice;
     private String date;
     private Flight flight;
-    private Destination destination;
+    private Location location;
 
 
-    public Trip(Double tripPrice, String date, Flight flight, Destination destination) {
+    public Trip(Double tripPrice, String date, Flight flight, Location location) {
         this.tripPrice = tripPrice;
         this.date = date;
         this.flight = flight;
-        this.destination = destination;
+        this.location = location;
     }
 
     public Double getTripPrice() {

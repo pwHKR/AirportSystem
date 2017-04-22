@@ -47,7 +47,7 @@ public class AdminController {
 
     @FXML
     private void addDestination(ActionEvent ae) {
-        sw.GoTo(ae, "AddDestination.fxml");
+        sw.GoTo(ae, "AddLocation.fxml");
 
     }
 
