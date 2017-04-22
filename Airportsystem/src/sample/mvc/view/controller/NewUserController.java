@@ -1,5 +1,7 @@
 package sample.mvc.view.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.mvc.model.*;
@@ -21,6 +24,7 @@ import java.util.ResourceBundle;
  */
 public class NewUserController implements Initializable {
 
+    ObservableList<String> countryList = FXCollections.observableArrayList();
 
     @FXML
     TextField firstName;
@@ -37,7 +41,7 @@ public class NewUserController implements Initializable {
     @FXML
     TextField adress;
     @FXML
-    TextField country;
+    ChoiceBox<String> country = new ChoiceBox<>();
     @FXML
     CheckBox female;
     @FXML
@@ -73,7 +77,7 @@ public class NewUserController implements Initializable {
         UserName = userName.getText();
         Email = email.getText();
         Address = adress.getText();
-        Country = country.getText();
+        Country = country.getValue();
 
         if (female.isSelected()) {
             IsMale = false;
@@ -91,7 +95,7 @@ public class NewUserController implements Initializable {
 
                         if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
 
-                            if (country.getText().matches("^[a-öA-Ö]+$")) {
+                            if (country.getValue().matches("^[a-öA-Ö]+$")) {
 
                                 if (!userName.getText().isEmpty()) {
 
@@ -203,6 +207,16 @@ public class NewUserController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        String SelectedCountry = country.getValue();
+
+
+        DataStorage dbh = new DBHandler();
+
+
+        countryList = dbh.getCountries();
+
+        country.setItems(countryList);
 
 
         if (isCustomer == true) {

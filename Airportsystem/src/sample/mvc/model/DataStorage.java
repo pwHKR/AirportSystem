@@ -24,5 +24,7 @@ public interface DataStorage {
 
     ObservableList<String> getAirports(String inputCity);
 
+    ObservableList<String> getWorkers();
+
 
 }

@@ -9,6 +9,7 @@ import java.sql.*;
 import java.util.Properties;
 
 public class DBHandler implements DataStorage {
+
     private final String dbName;
     private final String user;
     private final String password;
@@ -328,6 +329,40 @@ public class DBHandler implements DataStorage {
 
         }
         return airports;
+
+
+    }
+
+    public ObservableList<String> getWorkers() {
+
+
+        ObservableList<String> workers = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = ("SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                workers.add(resultSet.getString("firstName" + "lastName"));
+            }
+
+
+        } catch (SQLException e) {
+
+        }
+        return workers;
 
 
     }

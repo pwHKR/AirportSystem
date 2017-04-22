@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0"
+            prefWidth="815.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.NewUserController">
+    <children>
+        <ImageView fitHeight="658.0" fitWidth="1011.0" layoutX="-66.0" layoutY="76.0" opacity="0.11" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
+            </image>
+        </ImageView>
+        <Pane layoutY="1.0" onDragDetected="#addUser" prefHeight="107.0" prefWidth="815.0"
+              style="-fx-background-color: #ffffff;">
+            <children>
+                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="534.0" layoutY="-171.0"
+                        mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
+                        style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
+                        textAlignment="CENTER"/>
+                <Line disable="false" endX="712.0" endY="-1.0" fill="#3354ff" layoutX="102.0" layoutY="93.0"
+                      startX="-100.0" stroke="#003d99" strokeMiterLimit="10.0" strokeWidth="3.2">
+                    <effect>
+                        <Reflection bottomOpacity="0.3174603174603175" fraction="0.9325396825396824"
+                                    topOpacity="0.8095238095238095">
+                            <input>
+                                <Glow level="0.7088050314465408"/>
+                            </input>
+                        </Reflection>
+                    </effect>
+                </Line>
+            </children>
+        </Pane>
+        <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@resources/logga.png"/>
+            </image>
+        </ImageView>
+        <Button layoutX="14.0" layoutY="655.0" mnemonicParsing="false" onAction="#returnToLoginScreen" prefHeight="40.0"
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
+        <Text fill="WHITE" layoutX="698.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Developed by PSTR-Software AB" wrappingWidth="137.99999571879925">
+            <font>
+                <Font size="11.0"/>
+            </font>
+        </Text>
+        <Label layoutX="376.0" layoutY="108.0" text="Workers" textFill="WHITE">
+            <font>
+                <Font size="28.0"/>
+            </font>
+            <effect>
+                <Bloom threshold="0.0"/>
+            </effect>
+        </Label>
+        <ListView fx:id="workers" layoutX="12.0" layoutY="148.0" prefHeight="474.0" prefWidth="224.0"/>
+    </children>
+</AnchorPane>
