@@ -18,14 +18,17 @@ import sample.mvc.model.Destination;
 import sample.mvc.model.MyAlert;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 
 /**
  * Created by woojen on 2017-04-20.
  */
-public class AddDestinationController implements Initializable {
+public class AddDestinationController implements Initializable, Serializable {
 
 
     ObservableList<String> countryList = FXCollections.observableArrayList();
@@ -40,6 +43,8 @@ public class AddDestinationController implements Initializable {
     ComboBox<String> country;
     @FXML
     ComboBox<String> airport;
+
+    private Path path = Paths.get("dID.bin");
 
     @FXML
     private void addDestination(ActionEvent ae) {
@@ -64,10 +69,6 @@ public class AddDestinationController implements Initializable {
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
-
-
-
-
 
 
     }

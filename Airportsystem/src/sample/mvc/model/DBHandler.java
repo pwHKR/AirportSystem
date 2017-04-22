@@ -355,13 +355,15 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
 
-                workers.add(resultSet.getString("firstName" + "lastName"));
+                workers.add(resultSet.getString("firstName") + " " + resultSet.getString("lastName"));
+
             }
 
 
         } catch (SQLException e) {
 
         }
+
         return workers;
 
 

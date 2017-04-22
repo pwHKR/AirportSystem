@@ -22,6 +22,7 @@ import java.util.ResourceBundle;
  */
 public class AddTripController implements Initializable {
 
+
     ArrayList<String> arr = new ArrayList<>();
 
 
@@ -60,6 +61,6 @@ public class AddTripController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-      
+
     }
 }

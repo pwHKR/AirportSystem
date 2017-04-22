@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0"
             prefWidth="815.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.NewUserController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.ViewWorkersController">
     <children>
         <ImageView fitHeight="658.0" fitWidth="1011.0" layoutX="-66.0" layoutY="76.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">
@@ -24,11 +24,10 @@
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
             </image>
         </ImageView>
-        <Pane layoutY="1.0" onDragDetected="#addUser" prefHeight="107.0" prefWidth="815.0"
-              style="-fx-background-color: #ffffff;">
+        <Pane layoutY="1.0" prefHeight="107.0" prefWidth="815.0" style="-fx-background-color: #ffffff;">
             <children>
                 <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="534.0" layoutY="-171.0"
-                        mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
+                        mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>
                 <Line disable="false" endX="712.0" endY="-1.0" fill="#3354ff" layoutX="102.0" layoutY="93.0"
@@ -50,7 +49,7 @@
                 <Image url="@resources/logga.png"/>
             </image>
         </ImageView>
-        <Button layoutX="14.0" layoutY="655.0" mnemonicParsing="false" onAction="#returnToLoginScreen" prefHeight="40.0"
+        <Button layoutX="14.0" layoutY="655.0" mnemonicParsing="false" onAction="#returnToAdmin" prefHeight="40.0"
                 prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
         <Text fill="WHITE" layoutX="698.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB" wrappingWidth="137.99999571879925">
