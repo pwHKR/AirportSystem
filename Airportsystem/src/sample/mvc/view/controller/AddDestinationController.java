@@ -4,20 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.Destination;
-import sample.mvc.model.MyAlert;
+import sample.mvc.model.*;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.net.URL;
 import java.nio.file.Path;
@@ -30,6 +21,7 @@ import java.util.ResourceBundle;
  */
 public class AddDestinationController implements Initializable, Serializable {
 
+    SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> countryList = FXCollections.observableArrayList();
     private ObservableList<String> cityList = FXCollections.observableArrayList();
@@ -58,17 +50,7 @@ public class AddDestinationController implements Initializable, Serializable {
         MyAlert.requestSent();
 
 
-        Node node = (Node) ae.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../AddTrip.fxml"));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        sw.GoTo(ae, "/AddTrip.fxml");
 
 
     }
@@ -138,17 +120,7 @@ public class AddDestinationController implements Initializable, Serializable {
     @FXML
     private void returnToAdmin(ActionEvent ae) {
 
-        Node node = (Node) ae.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Admin.fxml"));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        sw.GoTo(ae, "Admin.fxml");
 
     }
 

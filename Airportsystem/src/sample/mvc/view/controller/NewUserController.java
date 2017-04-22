@@ -4,18 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import sample.mvc.model.*;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,6 +17,8 @@ import java.util.ResourceBundle;
  * Created by woojen on 2017-04-14.
  */
 public class NewUserController implements Initializable {
+
+    SwitchScene sw = new SwitchScene();
 
     ObservableList<String> countryList = FXCollections.observableArrayList();
 
@@ -118,31 +114,11 @@ public class NewUserController implements Initializable {
 
                                         if (isCustomer == true) {
 
-                                            Node node = (Node) ae.getSource();
-                                            Stage stage = (Stage) node.getScene().getWindow();
-                                            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Login.fxml"));
-                                            Parent root = null;
-                                            try {
-                                                root = loader.load();
-                                            } catch (IOException e) {
-                                                e.printStackTrace();
-                                            }
-                                            Scene scene = new Scene(root);
-                                            stage.setScene(scene);
+                                            sw.GoTo(ae, "Login.fxml");
                                         }
 
                                         if (isCustomer == false) {
-                                            Node node = (Node) ae.getSource();
-                                            Stage stage = (Stage) node.getScene().getWindow();
-                                            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Admin.fxml"));
-                                            Parent root = null;
-                                            try {
-                                                root = loader.load();
-                                            } catch (IOException e) {
-                                                e.printStackTrace();
-                                            }
-                                            Scene scene = new Scene(root);
-                                            stage.setScene(scene);
+                                            sw.GoTo(ae, "Admin.fxml");
                                         }
                                     } else {
                                         MyAlert.passwordErr();
@@ -191,17 +167,7 @@ public class NewUserController implements Initializable {
 
     @FXML
     private void returnToLoginScreen(ActionEvent ae) {
-        Node node = (Node) ae.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Login.fxml"));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        sw.GoTo(ae, "Login.fxml");
     }
 
 
