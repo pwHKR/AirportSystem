@@ -31,18 +31,18 @@ import java.util.ResourceBundle;
 public class AddDestinationController implements Initializable, Serializable {
 
 
-    ObservableList<String> countryList = FXCollections.observableArrayList();
-    ObservableList<String> cityList = FXCollections.observableArrayList();
-    ObservableList<String> airportList = FXCollections.observableArrayList();
+    private ObservableList<String> countryList = FXCollections.observableArrayList();
+    private ObservableList<String> cityList = FXCollections.observableArrayList();
+    private ObservableList<String> airportList = FXCollections.observableArrayList();
 
 
     @FXML
-    ComboBox<String> city;
+    private ComboBox<String> city;
 
     @FXML
-    ComboBox<String> country;
+    private ComboBox<String> country;
     @FXML
-    ComboBox<String> airport;
+    private ComboBox<String> airport;
 
     private Path path = Paths.get("dID.bin");
 
@@ -75,48 +75,63 @@ public class AddDestinationController implements Initializable, Serializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        DataStorage dbHandler = new DBHandler();
 
-        // country box code
-
-        countryList = dbHandler.getCountries();
-
-
-        country.setItems(countryList);
-
-
-    }
-
-    // Get the selected country from the combox and sends its to the db handler
-    @FXML
-    public void setCities(MouseEvent mouseEvent) {
-
-        String SelectedCountry = country.getValue();
-
-
-        DataStorage dbh = new DBHandler();
-
-
-        cityList = dbh.getCities(SelectedCountry);
-
-        city.setItems(cityList);
+        setCountriesLogic();
 
 
     }
 
     @FXML
-    public void setAirports(MouseEvent mouseEvent) {
+    private void updateCountry(ActionEvent ae) {
 
-        String SelectedCity = city.getValue();
-
-
-        DataStorage dbh = new DBHandler();
+        // If country combo box s value is changed after a city already
+        // has been set, the city combo box will update as well
 
 
-        airportList = dbh.getAirports(SelectedCity);
+        if (city.getValue() != null) {
 
-        airport.setItems(airportList);
 
+            setCitiesLogic();
+
+        }
+
+        // If city s combo box s value is changed after a airport already
+        // has been set, the airport combo box  will update as well
+
+
+        if (airport.getValue() != null) {
+
+            setAirportLogic();
+
+
+        }
+    }
+
+    @FXML
+    private void updateCity(ActionEvent ae) {
+
+        if (airport.getValue() != null) {
+
+            setAirportLogic();
+
+
+        }
+
+    }
+
+
+    @FXML
+    private void setCities(MouseEvent mouseEvent) {
+
+        setCitiesLogic();
+
+    }
+
+
+    @FXML
+    private void setAirports(MouseEvent mouseEvent) {
+
+        setAirportLogic();
 
     }
 
@@ -134,6 +149,50 @@ public class AddDestinationController implements Initializable, Serializable {
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
+
+    }
+
+    private void setCountriesLogic() {
+
+        DataStorage dbh = new DBHandler();
+
+
+        countryList = dbh.getCountries();
+
+
+        country.setItems(countryList);
+
+
+    }
+
+    private void setCitiesLogic() {
+
+        String SelectedCountry = country.getValue();
+
+
+        DataStorage dbh = new DBHandler();
+
+
+        cityList = dbh.getCities(SelectedCountry);
+
+        city.setItems(cityList);
+
+
+    }
+
+    private void setAirportLogic() {
+
+
+        String SelectedCity = city.getValue();
+
+
+        DataStorage dbh = new DBHandler();
+
+
+        airportList = dbh.getAirports(SelectedCity);
+
+        airport.setItems(airportList);
+
 
     }
 

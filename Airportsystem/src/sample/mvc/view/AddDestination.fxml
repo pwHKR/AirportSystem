@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0"
             prefWidth="590.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
-            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.AddDestinationController">
     <children>
         <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0" opacity="0.11" pickOnBounds="true"
@@ -82,8 +82,9 @@
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="250.0" layoutY="362.0" mnemonicParsing="false" onAction="#addDestination" prefHeight="41.0"
                 prefWidth="97.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="ADD"/>
-        <ComboBox fx:id="country" layoutX="224.0" layoutY="167.0" prefWidth="150.0"/>
-        <ComboBox fx:id="city" layoutX="224.0" layoutY="239.0" onMouseClicked="#setCities" prefWidth="150.0"/>
+        <ComboBox fx:id="country" layoutX="224.0" layoutY="167.0" onAction="#updateCountry" prefWidth="150.0"/>
+        <ComboBox fx:id="city" layoutX="224.0" layoutY="239.0" onMouseClicked="#setCities" onAction="#updateCity"
+                  prefWidth="150.0"/>
         <ComboBox fx:id="airport" layoutX="224.0" layoutY="308.0" onMouseClicked="#setAirports" prefWidth="150.0"/>
     </children>
 </AnchorPane>

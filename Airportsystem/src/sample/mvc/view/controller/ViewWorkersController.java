@@ -23,10 +23,10 @@ import java.util.ResourceBundle;
  */
 public class ViewWorkersController implements Initializable {
 
-    ObservableList<String> workerlist = FXCollections.observableArrayList();
+    private ObservableList<String> workerlist = FXCollections.observableArrayList();
 
     @FXML
-    ListView<String> workers;
+    private ListView<String> workers;
 
 
     @Override
@@ -35,7 +35,7 @@ public class ViewWorkersController implements Initializable {
 
         workerlist = dbHandler.getWorkers();
 
-        
+
         workers.setItems(workerlist);
 
 
