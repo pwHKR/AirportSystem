@@ -393,7 +393,7 @@ public class DBHandler implements DataStorage {
             while (resultSet.next()) {
 
                 workers.add("Full name: " + resultSet.getString("firstName") + " " + resultSet.getString("lastName") +
-                        "\nSSN: " + resultSet.getString("ssn") + "\nAdress: " + resultSet.getString("adress") + "\nCountry: " + resultSet.getString("countrys") + "\nE-Mail: " + resultSet.getString("email"));
+                        "\nSSN: " + resultSet.getString("ssn") + "\nAdress: " + resultSet.getString("adress") + "\nCountry: " + resultSet.getString("country") + "\nE-Mail: " + resultSet.getString("email"));
 
             }
 

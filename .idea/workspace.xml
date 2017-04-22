@@ -7,8 +7,6 @@
     <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewWorkers.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewWorkers.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,28 +26,38 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="448">
-              <caret line="395" column="149" lean-forward="false" selection-start-line="395" selection-start-column="149" selection-end-line="395" selection-end-column="149" />
+              <caret line="395" column="156" lean-forward="false" selection-start-line="395" selection-start-column="156" selection-end-line="395" selection-end-column="156" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1492875066308" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
-                <marker date="1492875066308" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
-                <marker date="1492875066308" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
-                <marker date="1492875066308" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
-                <marker date="1492875066308" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
-                <marker date="1492875066308" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
-                <marker date="1492875066308" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
-                <marker date="1492875066308" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
-                <marker date="1492875066308" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
-                <marker date="1492875066308" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
-                <marker date="1492875066308" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
-                <marker date="1492875066308" expanded="true" signature="8999:9077" ph="select Perso... User" />
-                <marker date="1492875066308" expanded="true" signature="9698:9802" ph="SELECT * FRO... Person" />
-                <marker date="1492875066308" expanded="true" signature="9698:9850" ph="SELECT * FRO... Person" />
-                <marker date="1492875066308" expanded="true" signature="9698:9854" ph="SELECT * FRO... Person" />
-                <marker date="1492875066308" expanded="true" signature="9698:9895" ph="SELECT * FRO... Person" />
-                <marker date="1492875066308" expanded="true" signature="9698:9929" ph="SELECT * FRO... Person" />
-                <marker date="1492875066308" expanded="true" signature="9698:9931" ph="SELECT * FRO... Person" />
+                <marker date="1492875219945" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
+                <marker date="1492875219945" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
+                <marker date="1492875219945" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
+                <marker date="1492875219945" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
+                <marker date="1492875219945" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
+                <marker date="1492875219945" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
+                <marker date="1492875219945" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
+                <marker date="1492875219945" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
+                <marker date="1492875219945" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
+                <marker date="1492875219945" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
+                <marker date="1492875219945" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
+                <marker date="1492875219945" expanded="true" signature="8999:9077" ph="select Perso... User" />
+                <marker date="1492875219945" expanded="true" signature="9698:9802" ph="SELECT * FRO... Person" />
+                <marker date="1492875219945" expanded="true" signature="9698:9850" ph="SELECT * FRO... Person" />
+                <marker date="1492875219945" expanded="true" signature="9698:9854" ph="SELECT * FRO... Person" />
+                <marker date="1492875219945" expanded="true" signature="9698:9895" ph="SELECT * FRO... Person" />
+                <marker date="1492875219945" expanded="true" signature="9698:9930" ph="SELECT * FRO... Person" />
+                <marker date="1492875219945" expanded="true" signature="9698:9932" ph="SELECT * FRO... Person" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Statement.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/sql/Statement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2093">
+              <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,7 +75,7 @@
       <file leaf-file-name="ViewWorkersController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="343">
               <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
               <folding />
             </state>
@@ -78,14 +86,24 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewWorkers.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
-              <caret line="57" column="64" lean-forward="false" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+              <caret line="69" column="64" lean-forward="false" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
               <folding>
-                <marker date="1492872779041" expanded="true" signature="4062:4079" ph="..." />
+                <marker date="1492875076255" expanded="true" signature="4367:4384" ph="..." />
               </folding>
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataStorage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="28" column="58" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -1802,11 +1820,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492867281550</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="View workers info working now!">
+      <created>1492875077007</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1492875077007</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76627000" />
+    <option name="totallyTimeSpent" value="76804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1902,7 +1927,8 @@
     <MESSAGE value="Fixed issue #5" />
     <MESSAGE value="Improved AddDestinationController" />
     <MESSAGE value="beginning of viewWorkers" />
-    <option name="LAST_COMMIT_MESSAGE" value="beginning of viewWorkers" />
+    <MESSAGE value="View workers info working now!" />
+    <option name="LAST_COMMIT_MESSAGE" value="View workers info working now!" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1914,40 +1940,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2737">
           <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1492875066308" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
-            <marker date="1492875066308" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
-            <marker date="1492875066308" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
-            <marker date="1492875066308" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
-            <marker date="1492875066308" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
-            <marker date="1492875066308" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
-            <marker date="1492875066308" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
-            <marker date="1492875066308" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
-            <marker date="1492875066308" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
-            <marker date="1492875066308" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
-            <marker date="1492875066308" expanded="true" signature="8999:9077" ph="select Perso... User" />
-            <marker date="1492875066308" expanded="true" signature="9698:9802" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9850" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9854" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9895" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9929" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9931" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
+            <marker date="1492875219945" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
+            <marker date="1492875219945" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
+            <marker date="1492875219945" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
+            <marker date="1492875219945" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
+            <marker date="1492875219945" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
+            <marker date="1492875219945" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
+            <marker date="1492875219945" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
+            <marker date="1492875219945" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
+            <marker date="1492875219945" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
+            <marker date="1492875219945" expanded="true" signature="8999:9077" ph="select Perso... User" />
+            <marker date="1492875219945" expanded="true" signature="9698:9802" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9850" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9854" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9895" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9930" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9932" ph="SELECT * FRO... Person" />
           </folding>
         </state>
       </provider>
@@ -2106,6 +2122,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2183,14 +2200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="28" column="58" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Worker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -2250,22 +2259,14 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewWorkers.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
-          <caret line="57" column="64" lean-forward="false" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+          <caret line="69" column="64" lean-forward="false" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
           <folding>
-            <marker date="1492872779041" expanded="true" signature="4062:4079" ph="..." />
+            <marker date="1492875076255" expanded="true" signature="4367:4384" ph="..." />
           </folding>
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewTripController.java">
@@ -2302,30 +2303,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/sql/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2093">
+          <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="58" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="395" column="149" lean-forward="false" selection-start-line="395" selection-start-column="149" selection-end-line="395" selection-end-column="149" />
+          <caret line="395" column="156" lean-forward="false" selection-start-line="395" selection-start-column="156" selection-end-line="395" selection-end-column="156" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1492875066308" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
-            <marker date="1492875066308" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
-            <marker date="1492875066308" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
-            <marker date="1492875066308" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
-            <marker date="1492875066308" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
-            <marker date="1492875066308" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
-            <marker date="1492875066308" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
-            <marker date="1492875066308" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
-            <marker date="1492875066308" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
-            <marker date="1492875066308" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
-            <marker date="1492875066308" expanded="true" signature="8999:9077" ph="select Perso... User" />
-            <marker date="1492875066308" expanded="true" signature="9698:9802" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9850" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9854" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9895" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9929" ph="SELECT * FRO... Person" />
-            <marker date="1492875066308" expanded="true" signature="9698:9931" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="1256:1278" ph="SELECT * FRO... Airplane" />
+            <marker date="1492875219945" expanded="true" signature="2608:2654" ph="SELECT typeO... User" />
+            <marker date="1492875219945" expanded="true" signature="3256:3315" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="3456:3578" ph="INSERT INTO Person... " />
+            <marker date="1492875219945" expanded="true" signature="3616:3659" ph="SELECT syste... Person" />
+            <marker date="1492875219945" expanded="true" signature="3698:3818" ph="INSERT INTO User... " />
+            <marker date="1492875219945" expanded="true" signature="5347:5391" ph="SELECT passw... User" />
+            <marker date="1492875219945" expanded="true" signature="5922:6010" ph="SELECT desti... Destination" />
+            <marker date="1492875219945" expanded="true" signature="6742:6820" ph="SELECT DISTI... Destination" />
+            <marker date="1492875219945" expanded="true" signature="7389:7498" ph="SELECT DISTI... Destination" />
+            <marker date="1492875219945" expanded="true" signature="8105:8222" ph="SELECT DISTI... Destination" />
+            <marker date="1492875219945" expanded="true" signature="8999:9077" ph="select Perso... User" />
+            <marker date="1492875219945" expanded="true" signature="9698:9802" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9850" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9854" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9895" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9930" ph="SELECT * FRO... Person" />
+            <marker date="1492875219945" expanded="true" signature="9698:9932" ph="SELECT * FRO... Person" />
           </folding>
         </state>
       </provider>
