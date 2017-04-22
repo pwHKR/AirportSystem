@@ -45,7 +45,7 @@ public class AddDestinationController implements Initializable, Serializable {
 
         Destination destination = new Destination(airport.getValue(), city.getValue(), country.getValue());
 
-        destinationId = dbh.getDestinationId(destination); // Denna måste till AddTripController
+        destinationId = dbh.getLocationId(destination); // Denna måste till AddTripController
 
         MyAlert.requestSent();
 

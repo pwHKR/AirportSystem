@@ -36,7 +36,7 @@ public class ViewWorkersController implements Initializable {
 
         String choice = workers.getSelectionModel().getSelectedItem();
         infolist = dbHandler.getWorkerinfo(choice);
-        workerInfo.setText(infolist.toString());
+        workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
 
 
     }

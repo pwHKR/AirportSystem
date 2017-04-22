@@ -17,7 +17,7 @@ public interface DataStorage {
 
     String printUserType(String Username);
 
-    String getDestinationId(Destination destination);
+    String getLocationId(Destination destination);
     ObservableList<String> getCountries();
 
     ObservableList<String> getCities(String inputCountry);

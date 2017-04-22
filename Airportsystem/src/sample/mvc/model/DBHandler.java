@@ -199,14 +199,14 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public String getDestinationId(Destination destination) {
+    public String getLocationId(Destination destination) {
 
         String iD = null;
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
-            String query = "SELECT destinationId FROM Destination WHERE city = ? AND country = ? AND airportName = ? ";
+            String query = "SELECT locationId FROM Location WHERE city = ? AND country = ? AND airportName = ? ";
 
             PreparedStatement ps = conn.prepareStatement(query);
 
@@ -220,7 +220,7 @@ public class DBHandler implements DataStorage {
 
             while (rs.next()) {
 
-                iD = rs.getString("destinationId");
+                iD = rs.getString("locationId");
             }
 
 
@@ -241,7 +241,7 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT DISTINCT country  FROM AirportSystemdb.Destination ORDER BY country ASC ");
+            String query = ("SELECT DISTINCT country  FROM AirportSystemdb.Location ORDER BY country ASC ");
 
 
             PreparedStatement ps = conn.prepareStatement(query);
@@ -273,7 +273,7 @@ public class DBHandler implements DataStorage {
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
-            String query = ("SELECT DISTINCT city FROM AirportSystemdb.Destination WHERE country = '" + inputCountry + "'ORDER BY city ASC");
+            String query = ("SELECT DISTINCT city FROM AirportSystemdb.Location WHERE country = '" + inputCountry + "'ORDER BY city ASC");
 
 
             Statement stmt = conn.createStatement();
@@ -308,7 +308,7 @@ public class DBHandler implements DataStorage {
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
-            String query = ("SELECT DISTINCT airportName FROM AirportSystemdb.Destination WHERE city = '" + inputCity + "'ORDER BY airportName ASC");
+            String query = ("SELECT DISTINCT airportName FROM AirportSystemdb.Location WHERE city = '" + inputCity + "'ORDER BY airportName ASC");
 
 
             Statement stmt = conn.createStatement();
@@ -391,6 +391,7 @@ public class DBHandler implements DataStorage {
 
 
             while (resultSet.next()) {
+
 
                 workers.add("Full name: " + resultSet.getString("firstName") + " " + resultSet.getString("lastName") +
                         "\nSSN: " + resultSet.getString("ssn") + "\nAdress: " + resultSet.getString("adress") + "\nCountry: " + resultSet.getString("country") + "\nE-Mail: " + resultSet.getString("email"));

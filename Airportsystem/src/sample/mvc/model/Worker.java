@@ -12,4 +12,6 @@ public abstract class Worker extends User {
         super(firstName, lastName, isMale, country, ssn, adress, eMail, userName, password);
 
     }
+
+
 }
