@@ -3,18 +3,34 @@ package sample.mvc.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import sample.mvc.model.DBHandler;
+import sample.mvc.model.DataStorage;
 import sample.mvc.model.SwitchScene;
 
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CustomerController implements Initializable {
 
     SwitchScene sw = new SwitchScene();
+    private Path path = Paths.get("logInLog.bin");
+    private DataStorage dbh = new DBHandler();
 
     @FXML
     private void logout(ActionEvent ae) {
 
+        try {
+            List<String> textLines = Files.readAllLines(path);
+            String userName = textLines.get(0);
+            dbh.setUserOffline(userName);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
         sw.GoTo(ae, "Login.fxml");
     }
 

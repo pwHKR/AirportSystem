@@ -29,5 +29,7 @@ public interface DataStorage {
     ObservableList<String> getWorkerinfo(String selected);
 
 
+    void setUserOnline(String userName);
 
+    void setUserOffline(String userName);
 }

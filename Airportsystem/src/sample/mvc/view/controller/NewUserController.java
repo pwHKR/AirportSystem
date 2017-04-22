@@ -91,7 +91,7 @@ public class NewUserController implements Initializable {
 
                         if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
 
-                            if (country.getValue().matches("^[a-öA-Ö]+$")) {
+                            //if (country.getValue().matches("^[a-öA-Ö]+$")) {
 
                                 if (!userName.getText().isEmpty()) {
 
@@ -126,9 +126,9 @@ public class NewUserController implements Initializable {
                                 } else {
                                     MyAlert.userNameErr();
                                 }
-                            } else {
+                            /*} else {
                                 MyAlert.countryNameErr();
-                            }
+                            }*/
                         } else {
                             MyAlert.addressNameErr();
                         }

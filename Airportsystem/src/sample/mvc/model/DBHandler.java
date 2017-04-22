@@ -177,7 +177,6 @@ public class DBHandler implements DataStorage {
 
             String query = ("SELECT password FROM User WHERE userName=(?)");
 
-
             PreparedStatement ps = conn.prepareStatement(query);
 
             ps.setString(1, UserName);
@@ -192,7 +191,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         return pass;
 
@@ -406,6 +405,36 @@ public class DBHandler implements DataStorage {
         return workers;
 
 
+    }
+
+
+    public void setUserOnline(String userName) {
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = "UPDATE AirportSystemdb.User SET User.online = 1 WHERE User.userName = ?;";
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setString(1, userName);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void setUserOffline(String userName) {
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = "UPDATE AirportSystemdb.User SET User.online = 0 WHERE User.userName = ?;";
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setString(1, userName);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

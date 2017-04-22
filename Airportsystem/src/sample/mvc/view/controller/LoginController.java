@@ -42,6 +42,7 @@ public class LoginController implements Initializable {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
+
     }
 
     @FXML
@@ -59,6 +60,7 @@ public class LoginController implements Initializable {
         loginInformation.add(UserName);
         loginInformation.add(Password);
         String sentPassword = dbh.matchPassword(UserName);
+
 
         try {
             Files.write(path, loginInformation, StandardOpenOption.CREATE);
@@ -95,6 +97,7 @@ public class LoginController implements Initializable {
         if (sentPassword.equals(Password) && isAdmin == false) {
 
             sw.GoTo(ae, "Customer.fxml");
+            dbh.setUserOnline(UserName);
         }
 
     }
