@@ -199,7 +199,7 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public String getLocationId(Destination destination) {
+    public String getLocationId(Location location) {
 
         String iD = null;
 
@@ -210,9 +210,9 @@ public class DBHandler implements DataStorage {
 
             PreparedStatement ps = conn.prepareStatement(query);
 
-            ps.setString(1, destination.getCity());
-            ps.setString(2, destination.getCountry());
-            ps.setString(3, destination.getAirport());
+            ps.setString(1, location.getCity());
+            ps.setString(2, location.getCountry());
+            ps.setString(3, location.getAirport());
 
 
             ResultSet rs = ps.executeQuery();

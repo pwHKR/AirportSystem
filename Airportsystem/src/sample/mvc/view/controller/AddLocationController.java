@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-20.
  */
-public class AddDestinationController implements Initializable, Serializable {
+public class AddLocationController implements Initializable, Serializable {
 
     SwitchScene sw = new SwitchScene();
 
@@ -43,7 +43,7 @@ public class AddDestinationController implements Initializable, Serializable {
         String destinationId;
         DataStorage dbh = new DBHandler();
 
-        Destination destination = new Destination(airport.getValue(), city.getValue(), country.getValue());
+        Location destination = new Location(airport.getValue(), city.getValue(), country.getValue());
 
         destinationId = dbh.getLocationId(destination); // Denna måste till AddTripController
 

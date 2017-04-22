@@ -3,7 +3,7 @@ package sample.mvc.model;
 /**
  * Created by woojen on 2017-04-12.
  */
-public class Destination {
+public class Location {
 
     private String airport;
 
@@ -11,7 +11,7 @@ public class Destination {
     private String city;
     private String country;
 
-    public Destination(String airport, String city, String country) {
+    public Location(String airport, String city, String country) {
         this.airport = airport;
         this.city = city;
         this.country = country;
