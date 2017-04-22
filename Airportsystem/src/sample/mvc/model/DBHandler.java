@@ -379,7 +379,7 @@ public class DBHandler implements DataStorage {
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
-            String query = ("SELECT * FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND AirportSystemdb.User = '" + selected + "' AND AirportSystemdb.User.typeOfUser = 'Employee'");
+            String query = ("SELECT * FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND AirportSystemdb.User.typeOfUser = 'Employee' AND AirportSystemdb.User.Person_systemId = '" + Integer.parseInt(selected) + "'");
 
 
             Statement stmt = conn.createStatement();
@@ -392,7 +392,8 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
 
-                workers.add(resultSet.getString("*")); //hej
+                workers.add("Full name: " + resultSet.getString("firstName") + " " + resultSet.getString("lastName") +
+                        "\nSSN: " + resultSet.getString("ssn") + "\nAdress: " + resultSet.getString("adress") + "\nCountry: " + resultSet.getString("countrys") + "\nE-Mail: " + resultSet.getString("email"));
 
             }
 
