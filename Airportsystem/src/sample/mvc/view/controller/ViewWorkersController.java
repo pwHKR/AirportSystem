@@ -4,12 +4,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
-import sample.mvc.model.SwitchScene;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -18,12 +24,25 @@ import java.util.ResourceBundle;
  */
 public class ViewWorkersController implements Initializable {
 
-    SwitchScene sw = new SwitchScene();
-
     private ObservableList<String> workerlist = FXCollections.observableArrayList();
+    private ObservableList<String> infolist = FXCollections.observableArrayList();
 
     @FXML
     private ListView<String> workers;
+
+    @FXML
+    private TextArea workerInfo;
+
+    @FXML
+    private void getWorkerInfo() {
+        DataStorage dbHandler = new DBHandler();
+
+        String choice = workers.getSelectionModel().getSelectedItem();
+        infolist = dbHandler.getWorkerinfo(choice);
+        workerInfo.setText(infolist.toString());
+
+
+    }
 
 
     @Override
@@ -41,7 +60,17 @@ public class ViewWorkersController implements Initializable {
     @FXML
     private void returnToAdmin(ActionEvent ae) {
 
-        sw.GoTo(ae, "Admin.fxml");
+        Node node = (Node) ae.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Admin.fxml"));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
 
     }
 }
