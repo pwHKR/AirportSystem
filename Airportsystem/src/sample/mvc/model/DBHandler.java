@@ -342,7 +342,8 @@ public class DBHandler implements DataStorage {
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
-            String query = ("SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'");
+            //"SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'"
+            String query = ("select Person_systemId from AirportSystemdb.User where typeOfUser = 'Employee'");
 
 
             Statement stmt = conn.createStatement();
@@ -355,7 +356,43 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
 
-                workers.add(resultSet.getString("firstName") + " " + resultSet.getString("lastName"));
+                workers.add(resultSet.getString("Person_systemId"));
+
+            }
+
+
+        } catch (SQLException e) {
+
+        }
+
+        return workers;
+
+
+    }
+
+    public ObservableList<String> getWorkerinfo(String selected) {
+
+
+        ObservableList<String> workers = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = ("SELECT * FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND AirportSystemdb.User = '" + selected + "' AND AirportSystemdb.User.typeOfUser = 'Employee'");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                workers.add(resultSet.getString("*")); //hej
 
             }
 

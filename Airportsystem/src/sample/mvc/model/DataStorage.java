@@ -26,5 +26,8 @@ public interface DataStorage {
 
     ObservableList<String> getWorkers();
 
+    ObservableList<String> getWorkerinfo(String selected);
+
+
 
 }

@@ -10,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
@@ -24,9 +25,24 @@ import java.util.ResourceBundle;
 public class ViewWorkersController implements Initializable {
 
     private ObservableList<String> workerlist = FXCollections.observableArrayList();
+    private ObservableList<String> infolist = FXCollections.observableArrayList();
 
     @FXML
     private ListView<String> workers;
+
+    @FXML
+    private TextArea workerInfo;
+
+    @FXML
+    private void getWorkerInfo() {
+        DataStorage dbHandler = new DBHandler();
+
+        String choice = workers.getSelectionModel().getSelectedItem();
+        infolist = dbHandler.getWorkerinfo(choice);
+        workerInfo.setText(infolist.toString());
+
+
+    }
 
 
     @Override
