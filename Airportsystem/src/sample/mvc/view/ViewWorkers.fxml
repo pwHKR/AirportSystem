@@ -72,7 +72,7 @@
         <TextArea fx:id="workerInfo" editable="false" layoutX="577.0" layoutY="148.0" prefHeight="474.0"
                   prefWidth="224.0"/>
         <Button layoutX="298.0" layoutY="577.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="203.0"
-                styleClass="rich-blue" text="Kick Selected"/>
+                styleClass="rich-blue" text="Kick Selected" onAction="#kickWorker"/>
         <Text fill="WHITE" layoutX="91.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System ID"
               wrappingWidth="65.845703125"/>
         <Text fill="WHITE" layoutX="656.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Worker info"

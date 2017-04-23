@@ -437,5 +437,25 @@ public class DBHandler implements DataStorage {
         }
     }
 
+    public void removeWorker(int sysId) {
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            //"SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'"
+            String query = ("DELETE * FROM AirportSystemdb.User, AirportSystemdb.Person WHERE Person.systemId = User.Person_systemId AND AirportSystemdb.User.Person_systemId = " + sysId + "");
+
+
+            Statement stmt = conn.createStatement();
+
+            stmt.executeQuery(query);
+
+
+        } catch (SQLException e) {
+
+        }
+
+    }
+
 
 }

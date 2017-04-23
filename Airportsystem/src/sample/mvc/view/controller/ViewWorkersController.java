@@ -38,6 +38,17 @@ public class ViewWorkersController implements Initializable {
         infolist = dbHandler.getWorkerinfo(choice);
         workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
 
+    }
+
+    @FXML
+    private void kickWorker() {
+        DataStorage dbHandler = new DBHandler();
+        int id = Integer.parseInt(workers.getSelectionModel().getSelectedItem());
+
+        dbHandler.removeWorker(id);
+
+        workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
+
 
     }
 
