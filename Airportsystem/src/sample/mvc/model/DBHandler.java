@@ -224,7 +224,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         System.out.println(iD);
         return iD;
@@ -256,7 +256,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         return countries;
 
@@ -290,7 +290,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         return cities;
 
@@ -325,7 +325,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         return airports;
 
@@ -361,7 +361,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
 
         return workers;
@@ -399,7 +399,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
 
         return workers;
@@ -461,7 +461,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
 
     }
@@ -480,12 +480,16 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
 
         return amount;
     }
 
+    @Override
+    public boolean isUserOnline(String userName) {
+        return false;
+    }
 
 
 }

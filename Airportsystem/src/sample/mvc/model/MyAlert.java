@@ -115,4 +115,20 @@ public class MyAlert {
         msg.setContentText("request sent");
         msg.show();
     }
+
+    public static void helpAdmin() {
+        msg.setHeaderText("Start help");
+        msg.setTitle("Help");
+        msg.setContentText("You are now logged in, click on one of the buttons to get to the next page where you can " +
+                "continue to do your work.");
+        msg.show();
+    }
+
+    public static void helpViewWorkers() {
+        msg.setHeaderText("View worker help");
+        msg.setTitle("Help");
+        msg.setContentText("In the left window you can see the workers system-ID. By clicking their id´s you will be able to see" +
+                "more information in the right window. You can click Kick selected to remove any of the employees.");
+        msg.show();
+    }
 }

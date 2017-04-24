@@ -3,9 +3,11 @@ package sample.mvc.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
+import sample.mvc.model.MyAlert;
 import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
@@ -19,7 +21,9 @@ public class AdminController implements Initializable {
     SwitchScene sw = new SwitchScene();
 
     @FXML
-    Label online;  ///label för antalet online användare
+    private Label online;  ///label för antalet online användare
+    @FXML
+    private Button helpButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -59,6 +63,11 @@ public class AdminController implements Initializable {
     private void addDestination(ActionEvent ae) {
         sw.GoTo(ae, "AddLocation.fxml");
 
+    }
+
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        MyAlert.helpAdmin();
     }
 
 

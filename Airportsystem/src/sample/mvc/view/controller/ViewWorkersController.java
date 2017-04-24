@@ -5,10 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
+import sample.mvc.model.MyAlert;
 import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
@@ -29,6 +31,9 @@ public class ViewWorkersController implements Initializable {
 
     @FXML
     private TextArea workerInfo;
+
+    @FXML
+    private Button helpButton;
 
     @FXML
     private void getWorkerInfo() {
@@ -72,5 +77,10 @@ public class ViewWorkersController implements Initializable {
 
         sw.GoTo(ae, "Admin.fxml");
 
+    }
+
+    @FXML
+    private void setHelpButton(ActionEvent ae) {
+        MyAlert.helpViewWorkers();
     }
 }

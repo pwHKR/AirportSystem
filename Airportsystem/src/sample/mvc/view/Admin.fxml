@@ -17,7 +17,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
-            xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.AdminController">
     <children>
         <ImageView fitHeight="356.0" fitWidth="592.0" layoutX="-2.0" layoutY="55.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
@@ -28,8 +28,9 @@
         </ImageView>
         <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
             <children>
-                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="309.0" layoutY="-170.0"
-                        mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
+                <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="309.0"
+                        layoutY="-170.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
+                        prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>
             </children>

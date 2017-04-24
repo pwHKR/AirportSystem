@@ -37,6 +37,7 @@ public interface DataStorage {
 
     int getUsersOnline();
 
+    boolean isUserOnline(String userName);
 }
 
 
