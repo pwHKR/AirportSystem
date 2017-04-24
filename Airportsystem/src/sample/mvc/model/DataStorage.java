@@ -18,6 +18,7 @@ public interface DataStorage {
     String printUserType(String Username);
 
     String getLocationId(Location location);
+
     ObservableList<String> getCountries();
 
     ObservableList<String> getCities(String inputCountry);
@@ -33,4 +34,9 @@ public interface DataStorage {
     void setUserOffline(String userName);
 
     void removeWorker(String sysId);
+
+    int getUsersOnline();
+
 }
+
+
