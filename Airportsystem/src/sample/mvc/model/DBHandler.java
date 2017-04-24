@@ -437,7 +437,7 @@ public class DBHandler implements DataStorage {
         }
     }
 
-    public void removeWorker(int sysId) {
+    public void removeWorker(String sysId) {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
@@ -446,11 +446,15 @@ public class DBHandler implements DataStorage {
             //String query = ("DELETE FROM AirportSystemdb.User, AirportSystemdb.Person WHERE AirportSystemdb.User.Person_systemId = " + sysId + "");
 
             System.out.println(sysId);
-            PreparedStatement st = conn.prepareStatement("DELETE FROM AirportSystemdb.User WHERE AirportSystemdb.User.Person_systemId = ?;");
-            PreparedStatement pst = conn.prepareStatement("DELETE FROM AirportSystemdb.Person WHERE AirportSystemdb.Person.systemId = ?;");
 
-            st.setInt(1, sysId);
-            pst.setInt(1, sysId);
+            String q1 = "DELETE FROM AirportSystemdb.User WHERE AirportSystemdb.User.Person_systemId = ?;";
+            String q2 = "DELETE FROM AirportSystemdb.Person WHERE AirportSystemdb.Person.systemId = ?;";
+
+            PreparedStatement st = conn.prepareStatement(q1);
+            PreparedStatement pst = conn.prepareStatement(q2);
+
+            st.setString(1, sysId);
+            pst.setString(1, sysId);
 
             st.executeUpdate();
             pst.executeUpdate();

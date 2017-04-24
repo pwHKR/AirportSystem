@@ -11,7 +11,7 @@ public class MyAlert {
     static javafx.scene.control.Alert err = new javafx.scene.control.Alert(Alert.AlertType.ERROR);
 
     public static void helpNewCustomer() {
-        msg.setHeaderText("Create account helpNewCustomer");
+        msg.setHeaderText("Create account help");
         msg.setContentText("In this screen you are able to create a new account and become a customer at PSTR-Airlines." +
                 " Enter the appropriate infromation in each textfield to create an account." +
                 " If you run into problems please contact the customer service via phone");
@@ -19,7 +19,7 @@ public class MyAlert {
     }
 
     public static void helpLogIn() {
-        msg.setHeaderText("Login helpNewCustomer");
+        msg.setHeaderText("Login help");
         msg.setTitle("Help");
         msg.setContentText("If you do not already have an account, press Create Account \nYou can recover your password" +
                 " if you have lost it by pressing the Recover Password button.");

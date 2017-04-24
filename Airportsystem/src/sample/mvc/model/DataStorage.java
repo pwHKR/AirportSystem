@@ -32,5 +32,5 @@ public interface DataStorage {
 
     void setUserOffline(String userName);
 
-    void removeWorker(int sysId);
+    void removeWorker(String sysId);
 }
