@@ -443,12 +443,17 @@ public class DBHandler implements DataStorage {
 
 
             //"SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'"
-            String query = ("DELETE * FROM AirportSystemdb.User, AirportSystemdb.Person WHERE Person.systemId = User.Person_systemId AND AirportSystemdb.User.Person_systemId = " + sysId + "");
+            //String query = ("DELETE FROM AirportSystemdb.User, AirportSystemdb.Person WHERE AirportSystemdb.User.Person_systemId = " + sysId + "");
 
+            System.out.println(sysId);
+            PreparedStatement st = conn.prepareStatement("DELETE FROM AirportSystemdb.User WHERE AirportSystemdb.User.Person_systemId = ?;");
+            PreparedStatement pst = conn.prepareStatement("DELETE FROM AirportSystemdb.Person WHERE AirportSystemdb.Person.systemId = ?;");
 
-            Statement stmt = conn.createStatement();
+            st.setInt(1, sysId);
+            pst.setInt(1, sysId);
 
-            stmt.executeQuery(query);
+            st.executeUpdate();
+            pst.executeUpdate();
 
 
         } catch (SQLException e) {
