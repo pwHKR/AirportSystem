@@ -9,7 +9,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import sample.mvc.model.*;
 
-import java.io.Serializable;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -19,7 +18,7 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-20.
  */
-public class AddLocationController implements Initializable, Serializable {
+public class AddLocationController implements Initializable {
 
     SwitchScene sw = new SwitchScene();
 

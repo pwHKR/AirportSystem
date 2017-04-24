@@ -17,7 +17,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
-            xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.AdminController">
     <children>
         <ImageView fitHeight="356.0" fitWidth="592.0" layoutX="-2.0" layoutY="55.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
@@ -73,15 +73,15 @@
         <Button layoutX="28.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
                 styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add Plane"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="223.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="View Workers" onAction="#viewWorkers"/>
+        <Button layoutX="223.0" layoutY="159.0" mnemonicParsing="false" onAction="#viewWorkers" prefHeight="40.0"
+                prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="View Workers"/>
         <!--suppress XmlPathReference -->
         <Button layoutX="223.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="View Planes"/>
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="PSTR"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="408.0" layoutY="225.0" mnemonicParsing="false" prefHeight="41.0" onAction="#addDestination"
-                prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add Destination"/>
+        <Button layoutX="408.0" layoutY="225.0" mnemonicParsing="false" onAction="#addDestination" prefHeight="41.0"
+                prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="New PSTR"/>
         <Button layoutX="408.0" layoutY="159.0" mnemonicParsing="false" onAction="#addTrip" prefHeight="41.0"
-                prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add trip"/>
+                prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Server"/>
     </children>
 </AnchorPane>
