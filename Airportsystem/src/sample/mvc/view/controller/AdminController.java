@@ -81,6 +81,6 @@ public class AdminController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         DataStorage dbhandler = new DBHandler();
 
-        // online.setText(String.valueOf(dbhandler.getUsersOnline()));
+        //online.setText(String.valueOf(dbhandler.getUsersOnline()));
     }
 }
