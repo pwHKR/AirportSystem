@@ -34,9 +34,10 @@ public class AdminController implements Initializable {
 
 
     @FXML
-    private void addTrip(ActionEvent ae) {
+    private void viewServer(ActionEvent ae) {
 
-        sw.GoTo(ae, "AddTrip.fxml");
+        sw.GoTo(ae, "Server.fxml");
+
     }
 
     @FXML
@@ -89,6 +90,6 @@ public class AdminController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         DataStorage dbhandler = new DBHandler();
 
-        //online.setText(String.valueOf(dbhandler.getUsersOnline()));
+        //online.setText(String.valueOf(dbhandler.getUsersOnlineCount()));
     }
 }

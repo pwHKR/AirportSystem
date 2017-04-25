@@ -38,7 +38,7 @@ public class LoginController implements Initializable {
 
         DataStorage dbhandler = new DBHandler();
 
-        System.out.println(dbhandler.getUsersOnline());
+        System.out.println(dbhandler.getUsersOnlineCount());
 
         try {
             List<String> textLines = Files.readAllLines(path);

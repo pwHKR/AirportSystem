@@ -72,7 +72,6 @@ public class DBHandler implements DataStorage {
         return LocationInfo;
 
 
-
     }
 
     public void insertAirplane(Airplane airplane, String select) {
@@ -506,7 +505,7 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public int getUsersOnline() {
+    public int getUsersOnlineCount() {
         int amount = 0;
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
@@ -629,5 +628,73 @@ public class DBHandler implements DataStorage {
 
     }
 
+    public ObservableList<String> getSystemVariables() {
 
+        ObservableList<String> SystemVariables = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = ("SHOW GLOBAL STATUS WHERE VALUE > 0;");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                SystemVariables.add(resultSet.getString("Variable_name") + ": " +
+                        resultSet.getString("value") + "\n");
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return SystemVariables;
+    }
+
+
+    public ObservableList<String> getUsersOnline() {
+
+        ObservableList<String> UsersOnline = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = ("SELECT userName FROM User WHERE online = 1");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                UsersOnline.add("" + resultSet.getString("userName") + "" + "\n");
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return UsersOnline;
+
+
+    }
 }

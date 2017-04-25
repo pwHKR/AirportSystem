@@ -35,7 +35,7 @@ public interface DataStorage {
 
     void removeWorker(String sysId);
 
-    int getUsersOnline();
+    int getUsersOnlineCount();
 
     boolean isUserOnline(String userName);
 
@@ -44,6 +44,10 @@ public interface DataStorage {
     ObservableList<String> getPSTR();
 
     ObservableList<String> getPSTRLocationInfo(String selected);
+
+    ObservableList<String> getSystemVariables();
+
+    ObservableList<String> getUsersOnline();
 }
 
 
