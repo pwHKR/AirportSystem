@@ -35,6 +35,11 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        DataStorage dbhandler = new DBHandler();
+
+        System.out.println(dbhandler.getUsersOnline());
+
         try {
             List<String> textLines = Files.readAllLines(path);
             userName.setText(textLines.get(0));

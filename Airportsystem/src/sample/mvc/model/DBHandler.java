@@ -471,12 +471,16 @@ public class DBHandler implements DataStorage {
         int amount = 0;
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String q1 = "SELECT count(*) FROM AirportSystemdb.User WHERE AirportSystemdb.online = 1";
+            String q1 = "SELECT count(*) FROM AirportSystemdb.User WHERE AirportSystemdb.User.online = 1";
 
-            PreparedStatement st = conn.prepareStatement(q1);
+            Statement st = conn.createStatement();
 
+            ResultSet resultSet = st.executeQuery(q1);
 
-            amount = st.executeUpdate();
+            while (resultSet.next()) {
+                amount = resultSet.getInt("count(*)");
+            }
+
 
 
         } catch (SQLException e) {
