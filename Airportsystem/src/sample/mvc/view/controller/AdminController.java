@@ -60,8 +60,14 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    private void addDestination(ActionEvent ae) {
-        sw.GoTo(ae, "AddLocation.fxml");
+    private void viewPSTR(ActionEvent ae) {
+        sw.GoTo(ae, "ViewPSTR.fxml");
+    }
+
+
+    @FXML
+    private void addPSTR(ActionEvent ae) {
+        sw.GoTo(ae, "NewPSTR.fxml");
 
     }
 
@@ -75,6 +81,6 @@ public class AdminController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         DataStorage dbhandler = new DBHandler();
 
-        online.setText(String.valueOf(dbhandler.getUsersOnline()));
+        // online.setText(String.valueOf(dbhandler.getUsersOnline()));
     }
 }

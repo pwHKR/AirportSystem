@@ -342,7 +342,7 @@ public class DBHandler implements DataStorage {
 
 
             //"SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'"
-            String query = ("select Person_systemId from AirportSystemdb.User where typeOfUser = 'Employee'");
+            String query = ("SELECT Person_systemId FROM AirportSystemdb.User WHERE typeOfUser = 'Employee'");
 
 
             Statement stmt = conn.createStatement();
@@ -482,7 +482,6 @@ public class DBHandler implements DataStorage {
             }
 
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -493,6 +492,102 @@ public class DBHandler implements DataStorage {
     @Override
     public boolean isUserOnline(String userName) {
         return false;
+    }
+
+
+    public void AddLocationPSTR(String IdPSTR, String locationId) {
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = "UPDATE AirportSystemdb.Location SET Location.PSTR_idPSTR = ? WHERE Location.locationId = ?;";
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setString(1, IdPSTR);
+            ps.setString(2, locationId);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public ObservableList<String> getPSTR() {
+
+
+        ObservableList<String> pstr = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            //"SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'"
+            String query = ("SELECT PSTR_idPSTR  FROM AirportSystemdb.Location WHERE PSTR_idPSTR > 0");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                pstr.add(resultSet.getString("PSTR_idPSTR"));
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return pstr;
+
+
+    }
+
+
+    public ObservableList<String> getPSTRLocationInfo(String selected) {
+
+
+        ObservableList<String> LocationInfo = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = (" SELECT * FROM AirportSystemdb.Location where PSTR_idPSTR = '" + Integer.parseInt(selected) + "'");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+
+                LocationInfo.add("City: " + resultSet.getString("city") +
+                        "\nCountry: " + resultSet.getString("country") + "\nAirport: " + resultSet.getString("airportName"));
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        
+        return LocationInfo;
+
+
     }
 
 

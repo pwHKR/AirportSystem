@@ -38,6 +38,12 @@ public interface DataStorage {
     int getUsersOnline();
 
     boolean isUserOnline(String userName);
+
+    void AddLocationPSTR(String IdPSTR, String locationId);
+
+    ObservableList<String> getPSTR();
+
+    ObservableList<String> getPSTRLocationInfo(String selected);
 }
 
 

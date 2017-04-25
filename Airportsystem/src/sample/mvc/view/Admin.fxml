@@ -28,9 +28,8 @@
         </ImageView>
         <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
             <children>
-                <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="309.0"
-                        layoutY="-170.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
-                        prefWidth="278.0"
+                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="309.0" layoutY="-170.0"
+                        mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>
             </children>
@@ -44,7 +43,7 @@
         <!--suppress XmlPathReference -->
         <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
                 prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Log Out"/>
-        <Text fill="WHITE" layoutX="441.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
+        <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0" />
@@ -78,14 +77,12 @@
         <Button layoutX="223.0" layoutY="159.0" mnemonicParsing="false" onAction="#viewWorkers" prefHeight="40.0"
                 prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="View Workers"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="223.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="PSTR"/>
+        <Button layoutX="223.0" layoutY="225.0" mnemonicParsing="false" onAction="#viewPSTR" prefHeight="40.0"
+                prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="PSTR"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="408.0" layoutY="225.0" mnemonicParsing="false" onAction="#addDestination" prefHeight="41.0"
+        <Button layoutX="408.0" layoutY="225.0" mnemonicParsing="false" onAction="#addPSTR" prefHeight="41.0"
                 prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="New PSTR"/>
         <Button layoutX="408.0" layoutY="159.0" mnemonicParsing="false" onAction="#addTrip" prefHeight="41.0"
                 prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Server"/>
-        <Label layoutX="240.0" layoutY="357.0" text="Users online: " textFill="WHITE"/>
-        <Label fx:id="online" layoutX="324.0" layoutY="357.0" text="0" textFill="WHITE"/>
     </children>
 </AnchorPane>
