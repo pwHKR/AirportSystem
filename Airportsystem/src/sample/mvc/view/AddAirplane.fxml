@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.Glow?>
@@ -19,7 +20,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0"
             prefWidth="590.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
             xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.mvc.view.controller.AddLocationController">
+            fx:controller="sample.mvc.view.controller.AddAirplaneController">
     <children>
         <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">
@@ -37,8 +38,8 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
+        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#returnToAdmin" prefHeight="40.0"
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
         <Text fill="WHITE" layoutX="452.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
@@ -83,20 +84,36 @@
             </font>
         </Label>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="246.0" layoutY="390.0" mnemonicParsing="false" onAction="#addDestination" prefHeight="41.0"
+        <Button layoutX="246.0" layoutY="390.0" mnemonicParsing="false" onAction="#addAirplane" prefHeight="41.0"
                 prefWidth="97.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="ADD"/>
-        <Label layoutX="240.0" layoutY="317.0" text="Regristration" textFill="WHITE">
+        <Label layoutX="240.0" layoutY="317.0" text="Registration" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
             </font>
         </Label>
-        <Label layoutX="214.0" layoutY="216.0" text="Passanger capacity" textFill="WHITE">
+
+        <TextField fx:id="passenger" layoutX="185.0" layoutY="239.0" prefHeight="25.0" prefWidth="226.0"/>
+        <Label layoutX="269.0" layoutY="155.0" text="Model" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
             </font>
         </Label>
-        <TextField fx:id="passanger" layoutX="185.0" layoutY="239.0" prefHeight="25.0" prefWidth="226.0"/>
-        <Label layoutX="215.0" layoutY="150.0" text="Model" textFill="WHITE">
+        <ListView fx:id="pstrId" layoutX="420.0" layoutY="166.0" prefHeight="200.0" prefWidth="132.0"/>
+        <Label layoutX="446.0" layoutY="127.0" text="PSTR " textFill="WHITE">
+            <font>
+                <Font size="28.0"/>
+            </font>
+            <effect>
+                <Bloom threshold="0.0"/>
+            </effect>
+        </Label>
+        <Label layoutX="265.0" layoutY="216.0" text="Passenger" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="maxKG" layoutX="24.0" layoutY="277.0" prefHeight="27.0" prefWidth="103.0"/>
+        <Label layoutX="29.0" layoutY="255.0" text="Luggage kg" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
             </font>

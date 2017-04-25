@@ -33,34 +33,73 @@ public class DBHandler implements DataStorage {
         return appProp;
     }
 
-    public void printAirplanes() {
-        try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM Airplane");
+    public ObservableList<String> getAirplanes(String selected) {
 
-            while (rs.next()) {
-                java.lang.System.out.printf("Passenger capacity: [%d] Airplane top speed --> [%s] Max luggage weight" +
-                                "--> [%s] RegNumber --> [%s]%n",
-                        rs.getInt("passengerCapacity"), rs.getString("maxSpeed"),
-                        rs.getString("maxLuggageWeight"), rs.getString("regnumber"));
+        ObservableList<String> LocationInfo = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = (" SELECT * FROM AirportSystemdb.Airplane where PSTR_idPSTR = '" + Integer.parseInt(selected) + "'");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+
+                LocationInfo.add("\n\nAirplane\n" + "Model: " + resultSet.getString("model") +
+                        "\nPassenger: " + resultSet.getString("passengerCapacity") + "\nMax Speed: " +
+                        resultSet.getString("maxSpeed") + "\nLuggage: " +
+                        resultSet.getString("maxLuggageWeight") + "\nRegistration: " +
+                        resultSet.getString("regNumber"));
+
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
+
+        return LocationInfo;
+
+
+
     }
 
-    public void insertAirplane(Airplane airplane) {
-        String command = String.format("INSERT INTO Airplane values (%s,%d, %s, %d, '%s')", airplane.getModel(), airplane.getPassengerCapacity(),
-                airplane.getMaxSpeed(), airplane.getMaxLuggageWeight(), airplane.getRegNumber());
+    public void insertAirplane(Airplane airplane, String select) {
+
+        int intSelect = Integer.parseInt(select);
+
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            Statement statement = conn.createStatement();
-            int rowsAffected = statement.executeUpdate(command);
 
-            System.out.println("Rows affected:" + rowsAffected);
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            String query = "INSERT INTO Airplane (model, passengerCapacity,maxSpeed , maxLuggageWeight, regNumber, PSTR_idPSTR) "
+                    + " VALUES (?,?,? ,?,?,?)";
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setString(1, airplane.getModel());
+            ps.setInt(2, airplane.getPassengerCapacity());
+            ps.setString(3, airplane.getMaxSpeed());
+            ps.setInt(4, airplane.getMaxLuggageWeight());
+            ps.setString(5, airplane.getRegNumber());
+            ps.setInt(6, intSelect);
+
+            ps.execute();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -584,7 +623,7 @@ public class DBHandler implements DataStorage {
             e.printStackTrace();
         }
 
-        
+
         return LocationInfo;
 
 

@@ -24,6 +24,7 @@ public class ViewPSTRController implements Initializable {
 
     private ObservableList<String> pstrLocationList = FXCollections.observableArrayList();
     private ObservableList<String> infoList = FXCollections.observableArrayList();
+    private ObservableList<String> airplaneList = FXCollections.observableArrayList();
 
     @FXML
     private ListView<String> pstrLocations;
@@ -40,7 +41,9 @@ public class ViewPSTRController implements Initializable {
 
         String choice = pstrLocations.getSelectionModel().getSelectedItem();
         infoList = dbHandler.getPSTRLocationInfo(choice);
-        locationInfo.setText(infoList.toString().replace("[", "").replace("]", ""));
+        airplaneList = dbHandler.getAirplanes(choice);
+        locationInfo.setText(infoList.toString().replace("[", "").replace("]", "")
+                + airplaneList.toString().replace("[", "").replace("]", ""));
 
     }
 

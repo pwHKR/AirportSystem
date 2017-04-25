@@ -72,6 +72,14 @@ public class AdminController implements Initializable {
     }
 
     @FXML
+    private void addAirplane(ActionEvent ae) {
+        sw.GoTo(ae, "AddAirplane.fxml");
+
+    }
+
+
+
+    @FXML
     private void helpFunction(ActionEvent ae) {
         MyAlert.helpAdmin();
     }

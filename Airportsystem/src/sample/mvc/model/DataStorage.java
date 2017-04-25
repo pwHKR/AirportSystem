@@ -7,9 +7,9 @@ import javafx.collections.ObservableList;
  */
 public interface DataStorage {
 
-    void printAirplanes();
+    ObservableList<String> getAirplanes(String selected);
 
-    void insertAirplane(Airplane airplane);
+    void insertAirplane(Airplane airplane, String select);
 
     void insertUser(User customer, String typeOfUser);
 
