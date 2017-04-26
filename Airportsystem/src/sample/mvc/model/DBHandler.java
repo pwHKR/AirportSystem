@@ -119,7 +119,7 @@ public class DBHandler implements DataStorage {
 
             while (rs.next()) {
 
-                userType = rs.getString("password");
+                userType = rs.getString("typeOfUser");
             }
 
 

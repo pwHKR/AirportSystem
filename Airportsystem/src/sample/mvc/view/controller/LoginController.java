@@ -66,6 +66,8 @@ public class LoginController implements Initializable {
         loginInformation.add(Password);
         String sentPassword = dbh.matchPassword(UserName);
 
+        String typeOfUser; // Variable for holding typeOfUser information from resultset(DB)
+
 
         try {
             Files.write(path, loginInformation, StandardOpenOption.CREATE);
@@ -76,6 +78,14 @@ public class LoginController implements Initializable {
         }
 
         boolean isAdmin = false;
+        boolean isEmployee = false;
+
+        typeOfUser = dbh.printUserType(UserName);
+
+
+        if (typeOfUser.equals("Employee")) {
+            isEmployee = true;
+        }
 
         if (UserName.equals("admin")) {
             isAdmin = true;
@@ -98,12 +108,21 @@ public class LoginController implements Initializable {
         }
 
 
-        if (sentPassword.equals(Password) && isAdmin == false) {
+        if (sentPassword.equals(Password) && isAdmin == false && isEmployee == false) {
 
             dbh.setUserOnline(UserName);
             sw.GoTo(ae, "Customer.fxml");
 
         }
+
+
+        if (sentPassword.equals(Password) && isAdmin == false && isEmployee == true) {
+
+            dbh.setUserOnline(UserName);
+            sw.GoTo(ae, "Employee.fxml");
+
+        }
+
 
     }
 
