@@ -95,4 +95,22 @@ public class SwitchScene {
     public void setUserLoggedOut(boolean userLoggedOut) {
         this.userLoggedOut = userLoggedOut;
     }
+
+
+    public void goToUnLogged(ActionEvent ae, String fxmlFile) {
+
+        Node node = (Node) ae.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlFile + ""));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+    }
+
 }

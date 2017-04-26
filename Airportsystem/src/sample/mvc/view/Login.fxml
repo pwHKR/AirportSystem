@@ -68,7 +68,7 @@
         <Button layoutX="242.0" layoutY="297.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0"
                 prefWidth="104.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Login"/>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" onAction="#newCustomer" styleClass="rich-blue"
+        <Button layoutX="10.0" layoutY="343.0" mnemonicParsing="false" onAction="#newUser" styleClass="rich-blue"
                 stylesheets="@stylesheet.css" text="Create new account"/>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="401.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="174.0"

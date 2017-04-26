@@ -109,9 +109,9 @@ public class LoginController implements Initializable {
 
 
     @FXML
-    private void newCustomer(ActionEvent ae) {
+    private void newUser(ActionEvent ae) {
         NewUserController.setCustomer(true);
 
-        sw.GoTo(ae, "NewUser.fxml");
+        sw.goToUnLogged(ae, "NewUser.fxml");
     }
 }

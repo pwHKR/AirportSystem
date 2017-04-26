@@ -114,7 +114,7 @@ public class NewUserController implements Initializable {
 
                                         if (isCustomer == true) {
 
-                                            sw.GoTo(ae, "Login.fxml");
+                                            sw.goToUnLogged(ae, "Login.fxml");
                                         }
 
                                         if (isCustomer == false) {
@@ -167,7 +167,7 @@ public class NewUserController implements Initializable {
 
     @FXML
     private void returnToLoginScreen(ActionEvent ae) {
-        sw.GoTo(ae, "Login.fxml");
+        sw.goToUnLogged(ae, "Login.fxml");
     }
 
 
