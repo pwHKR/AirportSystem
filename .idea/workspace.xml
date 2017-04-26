@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Customer.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Customer.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +51,12 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="137" column="32" lean-forward="false" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
-              <folding />
+              <caret line="145" column="32" lean-forward="false" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
+              <folding>
+                <marker date="1493208899000" expanded="true" signature="3673:3745" ph="{...}" />
+                <marker date="1493208899000" expanded="true" signature="3782:4047" ph="{...}" />
+                <marker date="1493208899000" expanded="true" signature="4090:4444" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="303">
-              <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+              <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -1167,11 +1168,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493206067373</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Minor Update">
+      <created>1493208873801</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1493208873801</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138317000" />
+    <option name="totallyTimeSpent" value="138372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="0" />
@@ -1191,7 +1199,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1610,45 +1618,45 @@
         <state relative-caret-position="10800">
           <caret line="726" column="52" lean-forward="false" selection-start-line="726" selection-start-column="10" selection-end-line="726" selection-end-column="52" />
           <folding>
-            <marker date="1493206018000" expanded="true" signature="1296:1391" ph="SELECT * FRO... Airplane" />
-            <marker date="1493206018000" expanded="true" signature="2370:2515" ph="INSERT INTO Airplane... " />
-            <marker date="1493206018000" expanded="true" signature="2370:2517" ph="INSERT INTO Airplane... " />
-            <marker date="1493206018000" expanded="true" signature="3206:3252" ph="SELECT typeO... User" />
-            <marker date="1493206018000" expanded="true" signature="3854:3913" ph="SELECT * FRO... Person" />
-            <marker date="1493206018000" expanded="true" signature="4054:4176" ph="INSERT INTO Person... " />
-            <marker date="1493206018000" expanded="true" signature="4214:4257" ph="SELECT syste... Person" />
-            <marker date="1493206018000" expanded="true" signature="4296:4416" ph="INSERT INTO User... " />
-            <marker date="1493206018000" expanded="true" signature="5945:5989" ph="SELECT passw... User" />
-            <marker date="1493206018000" expanded="true" signature="10917:11371" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="11421:11825" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="11528:11599" ph="UPDATE Airpo... " />
-            <marker date="1493206018000" expanded="true" signature="11876:12280" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="11983:12054" ph="UPDATE Airpo... " />
-            <marker date="1493206018000" expanded="true" signature="12325:13341" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="12419:12734" ph="//..." />
-            <marker date="1493206018000" expanded="true" signature="12801:12880" ph="DELETE FROM " />
-            <marker date="1493206018000" expanded="true" signature="12909:12985" ph="DELETE FROM " />
-            <marker date="1493206018000" expanded="true" signature="13381:13918" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="13510:13589" ph="SELECT count... User" />
-            <marker date="1493206018000" expanded="true" signature="13983:14766" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="14189:14245" ph="SELECT onlin... User" />
-            <marker date="1493206018000" expanded="true" signature="14189:14264" ph="SELECT onlin... User" />
-            <marker date="1493206018000" expanded="true" signature="14834:15298" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="14942:15000" ph="UPDATE Airpo... " />
-            <marker date="1493206018000" expanded="true" signature="14942:15032" ph="UPDATE Airpo... " />
-            <marker date="1493206018000" expanded="true" signature="15345:16167" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="15712:15761" ph="SELECT PSTR_... Location" />
-            <marker date="1493206018000" expanded="true" signature="15712:15783" ph="SELECT PSTR_... Location" />
-            <marker date="1493206018000" expanded="true" signature="16241:17066" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="16439:16534" ph="SELECT * FRO... Location" />
-            <marker date="1493206018000" expanded="true" signature="17123:17832" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="17322:17341" ph="SHOW Global " />
-            <marker date="1493206018000" expanded="true" signature="17322:17356" ph="SHOW Global " />
-            <marker date="1493206018000" expanded="true" signature="17322:17359" ph="SHOW Global " />
-            <marker date="1493206018000" expanded="true" signature="17886:18535" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="18081:18123" ph="SELECT userN... User" />
-            <marker date="1493206018000" expanded="true" signature="18590:18997" ph="{...}" />
-            <marker date="1493206018000" expanded="true" signature="18738:18814" ph="UPDATE User " />
+            <marker date="1493208899000" expanded="true" signature="1296:1391" ph="SELECT * FRO... Airplane" />
+            <marker date="1493208899000" expanded="true" signature="2370:2515" ph="INSERT INTO Airplane... " />
+            <marker date="1493208899000" expanded="true" signature="2370:2517" ph="INSERT INTO Airplane... " />
+            <marker date="1493208899000" expanded="true" signature="3206:3252" ph="SELECT typeO... User" />
+            <marker date="1493208899000" expanded="true" signature="3854:3913" ph="SELECT * FRO... Person" />
+            <marker date="1493208899000" expanded="true" signature="4054:4176" ph="INSERT INTO Person... " />
+            <marker date="1493208899000" expanded="true" signature="4214:4257" ph="SELECT syste... Person" />
+            <marker date="1493208899000" expanded="true" signature="4296:4416" ph="INSERT INTO User... " />
+            <marker date="1493208899000" expanded="true" signature="6328:6372" ph="SELECT passw... User" />
+            <marker date="1493208899000" expanded="true" signature="11300:11754" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="11804:12208" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="11911:11982" ph="UPDATE Airpo... " />
+            <marker date="1493208899000" expanded="true" signature="12259:12663" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="12366:12437" ph="UPDATE Airpo... " />
+            <marker date="1493208899000" expanded="true" signature="12708:13724" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="12802:13117" ph="//..." />
+            <marker date="1493208899000" expanded="true" signature="13184:13263" ph="DELETE FROM " />
+            <marker date="1493208899000" expanded="true" signature="13292:13368" ph="DELETE FROM " />
+            <marker date="1493208899000" expanded="true" signature="13764:14301" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="13893:13972" ph="SELECT count... User" />
+            <marker date="1493208899000" expanded="true" signature="14366:15149" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="14572:14628" ph="SELECT onlin... User" />
+            <marker date="1493208899000" expanded="true" signature="14572:14647" ph="SELECT onlin... User" />
+            <marker date="1493208899000" expanded="true" signature="15217:15681" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="15325:15383" ph="UPDATE Airpo... " />
+            <marker date="1493208899000" expanded="true" signature="15325:15415" ph="UPDATE Airpo... " />
+            <marker date="1493208899000" expanded="true" signature="15728:16550" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="16095:16144" ph="SELECT PSTR_... Location" />
+            <marker date="1493208899000" expanded="true" signature="16095:16166" ph="SELECT PSTR_... Location" />
+            <marker date="1493208899000" expanded="true" signature="16624:17449" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="16822:16917" ph="SELECT * FRO... Location" />
+            <marker date="1493208899000" expanded="true" signature="17506:18215" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="17705:17724" ph="SHOW Global " />
+            <marker date="1493208899000" expanded="true" signature="17705:17739" ph="SHOW Global " />
+            <marker date="1493208899000" expanded="true" signature="17705:17742" ph="SHOW Global " />
+            <marker date="1493208899000" expanded="true" signature="18269:18918" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="18464:18506" ph="SELECT userN... User" />
+            <marker date="1493208899000" expanded="true" signature="18973:19380" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="19121:19197" ph="UPDATE User " />
           </folding>
         </state>
       </provider>
@@ -1680,8 +1688,12 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
-          <caret line="137" column="32" lean-forward="false" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
-          <folding />
+          <caret line="145" column="32" lean-forward="false" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
+          <folding>
+            <marker date="1493208899000" expanded="true" signature="3673:3745" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="3782:4047" ph="{...}" />
+            <marker date="1493208899000" expanded="true" signature="4090:4444" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1714,7 +1726,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
-          <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
           <folding />
         </state>
       </provider>
