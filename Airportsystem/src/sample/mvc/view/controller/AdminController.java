@@ -90,6 +90,6 @@ public class AdminController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         DataStorage dbhandler = new DBHandler();
 
-        //online.setText(String.valueOf(dbhandler.getUsersOnlineCount()));
+        online.setText("Online: " + String.valueOf(dbhandler.getUsersOnlineCount()));
     }
 }
