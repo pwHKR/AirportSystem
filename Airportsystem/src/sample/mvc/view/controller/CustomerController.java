@@ -48,6 +48,7 @@ public class CustomerController implements Initializable {
         isOnline = sw.checkIfOnline(); // code for testing user inactivity
 
         System.out.println(isOnline); // code for testing user inactivity
+
         try {
             List<String> textLines = Files.readAllLines(path);
             String userName = textLines.get(0);
@@ -56,6 +57,5 @@ public class CustomerController implements Initializable {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
-
     }
 }

@@ -60,10 +60,7 @@ public class DBHandler implements DataStorage {
                         resultSet.getString("maxSpeed") + "\nLuggage: " +
                         resultSet.getString("maxLuggageWeight") + "\nRegistration: " +
                         resultSet.getString("regNumber"));
-
             }
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
