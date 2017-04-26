@@ -222,9 +222,11 @@ public class DBHandler implements DataStorage {
             ResultSet rs = ps.executeQuery();
 
 
-            while (rs.next()) {
+            if (rs.next()) {
 
                 pass = rs.getString("password");
+            } else {
+                return pass;
             }
 
 
@@ -409,27 +411,16 @@ public class DBHandler implements DataStorage {
 
     public ObservableList<String> getWorkerinfo(String selected) {
 
-
         ObservableList<String> workers = FXCollections.observableArrayList();
-
-
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-
 
             String query = ("SELECT * FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND AirportSystemdb.User.typeOfUser = 'Employee' AND AirportSystemdb.User.Person_systemId = '" + Integer.parseInt(selected) + "'");
 
-
             Statement stmt = conn.createStatement();
-
-
             stmt.addBatch(query);
-
             ResultSet resultSet = stmt.executeQuery(query);
 
-
             while (resultSet.next()) {
-
-
                 workers.add("Full name: " + resultSet.getString("firstName") + " " + resultSet.getString("lastName") +
                         "\nSSN: " + resultSet.getString("ssn") + "\nAdress: " + resultSet.getString("adress") + "\nCountry: " + resultSet.getString("country") + "\nE-Mail: " + resultSet.getString("email"));
 

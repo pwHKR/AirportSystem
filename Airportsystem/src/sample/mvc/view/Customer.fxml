@@ -14,8 +14,9 @@
 <?import javafx.scene.text.Text?>
 
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
-            prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
+            prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.101"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.CustomerController">
     <children>
         <ImageView fitHeight="404.0" fitWidth="592.0" layoutX="1.0" opacity="0.11" pickOnBounds="true"
@@ -68,7 +69,7 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <Label alignment="CENTER" layoutX="270.0" layoutY="144.0" text="Label" textFill="WHITE">
+        <Label fx:id="nameLabel" alignment="CENTER" layoutX="270.0" layoutY="144.0" text="Label" textFill="WHITE">
             <font>
                 <Font size="19.0"/>
             </font>

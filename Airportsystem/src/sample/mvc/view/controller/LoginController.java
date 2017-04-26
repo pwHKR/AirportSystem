@@ -84,7 +84,6 @@ public class LoginController implements Initializable {
             MyAlert.emptyUserName();
         }
 
-
         if (UserName.isEmpty() == false) {
 
             if (sentPassword.equals(Password) == false) {
