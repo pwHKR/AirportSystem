@@ -69,12 +69,20 @@ public class SwitchScene {
                 // Therefore admin is always online according to java (but not to the datastorage)
             } else {
                 isOnline = dbh.isUserOnline(userName);
+
+                if (isOnline == true) {
+
+                    dbh.updateTimeStampUser(textLines.get(0));
+
+                }
+
             }
 
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
         return isOnline;
 

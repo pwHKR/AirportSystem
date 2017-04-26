@@ -732,4 +732,23 @@ public class DBHandler implements DataStorage {
 
 
     }
+
+    public void updateTimeStampUser(String userName) {
+
+        System.out.println(userName);
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = "UPDATE User SET time = current_timestamp where userName = '" + userName + "'";
+
+            Statement stmt = conn.createStatement();
+
+            stmt.executeUpdate(query);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
