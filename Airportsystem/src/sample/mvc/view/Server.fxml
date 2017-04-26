@@ -68,7 +68,8 @@
         </Label>
         <TextArea fx:id="serverVariables" editable="false" layoutX="311.0" layoutY="154.0" prefHeight="474.0"
                   prefWidth="325.0"/>
-        <TextArea fx:id="onlineUsers" layoutX="37.0" layoutY="257.0" prefHeight="200.0" prefWidth="200.0"/>
+        <TextArea fx:id="onlineUsers" editable="false" layoutX="37.0" layoutY="257.0" prefHeight="200.0"
+                  prefWidth="200.0"/>
         <Label layoutX="48.0" layoutY="223.0" text="Online" textFill="WHITE">
             <font>
                 <Font size="28.0"/>

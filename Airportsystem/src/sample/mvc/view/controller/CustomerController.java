@@ -63,7 +63,7 @@ public class CustomerController implements Initializable {
     @FXML
     private void testMethod(ActionEvent ae) {
 
-        sw.GoTo(ae, "testa.fxml");
+        sw.GoTo(ae, "test.fxml");
 
     }
 
