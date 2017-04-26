@@ -4,7 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" line="57" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="" />
+    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/Airportsystem.iml" afterPath="$PROJECT_DIR$/Airportsystem/Airportsystem.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6544">
-              <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+            <state relative-caret-position="222">
+              <caret line="199" column="39" selection-start-line="199" selection-start-column="39" selection-end-line="199" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -112,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
@@ -125,7 +130,7 @@
       <file leaf-file-name="NewUserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="1547">
               <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding />
             </state>
@@ -215,8 +220,8 @@
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
       </list>
     </option>
   </component>
@@ -446,11 +451,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-5.1.41" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -914,7 +919,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493211577264</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="You can no longer have the same username as anyone else">
+      <created>1493211651471</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1493211651471</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -931,7 +943,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32176656" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32176656" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3118741" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1372,26 +1384,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="112" column="37" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6544">
-          <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1416,6 +1412,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="199" column="39" selection-start-line="199" selection-start-column="39" selection-end-line="199" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1496,7 +1508,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mysql-connector-java-5.1.41-bin1</last-edited>
+          <last-edited>mysql-connector-java-5.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

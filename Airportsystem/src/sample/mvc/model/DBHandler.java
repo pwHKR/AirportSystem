@@ -141,14 +141,10 @@ public class DBHandler implements DataStorage {
             Statement stmt = conn.createStatement();
 
             String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + customer.getSsn() + "'";
-
-
             ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
-
-
             if (!resultSet.next()) {
 
-                String checkUserName = "SELECT * FROM Person WHERE userName= '" + customer.getUserName() + "'";
+                String checkUserName = "SELECT * FROM AirportSystemdb.User WHERE userName= '" + customer.getUserName() + "'";
                 ResultSet resultset1 = stmt.executeQuery(checkUserName);
 
                 if (!resultset1.next()) {
@@ -198,11 +194,10 @@ public class DBHandler implements DataStorage {
                 ps.execute();
                 conn.close();
                 } else {
-                    MyAlert.ssnExistsErr();
+                    MyAlert.userNameExists();
                 }
-
             } else {
-                MyAlert.userNameExists();
+                MyAlert.ssnExistsErr();
             }
 
         } catch (Exception ex) {
