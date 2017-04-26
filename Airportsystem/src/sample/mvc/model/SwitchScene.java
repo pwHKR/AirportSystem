@@ -8,12 +8,33 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 
 /**
  * Created by woojen on 2017-04-22.
  */
 public class SwitchScene {
+
+    boolean userLoggedOut; // If the user logged out voluntary or not
+
+
     public void GoTo(ActionEvent ae, String fxmlFile) {
+
+        boolean isOnline;
+
+        isOnline = checkIfOnline();
+
+        if (isOnline == false && userLoggedOut == false) {
+
+            MyAlert.logoutInactivity();
+            fxmlFile = "Login.fxml";
+
+        }
+
+
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlFile + ""));
@@ -28,5 +49,42 @@ public class SwitchScene {
 
     }
 
+    public boolean checkIfOnline() {
 
+        Path path = Paths.get("../view/logInLog.bin");
+
+        boolean isOnline = false;
+
+        DataStorage dbh = new DBHandler();
+
+        try {
+            List<String> textLines = Files.readAllLines(path);
+
+            String userName = textLines.get(0);
+
+
+            if (textLines.get(0).matches("admin")) {
+
+                isOnline = true; // Admin cant be logged out beacuse of inactivity.
+                // Therefore admin is always online according to java (but not to the datastorage)
+            } else {
+                isOnline = dbh.isUserOnline(userName);
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return isOnline;
+
+    }
+
+    public boolean isUserLoggedOut() {
+        return userLoggedOut;
+    }
+
+    public void setUserLoggedOut(boolean userLoggedOut) {
+        this.userLoggedOut = userLoggedOut;
+    }
 }

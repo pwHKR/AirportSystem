@@ -17,6 +17,8 @@ import java.util.ResourceBundle;
 
 public class CustomerController implements Initializable {
 
+    boolean isOnline;
+
     SwitchScene sw = new SwitchScene();
     private Path path = Paths.get("logInLog.bin");
     private DataStorage dbh = new DBHandler();
@@ -27,7 +29,9 @@ public class CustomerController implements Initializable {
         try {
             List<String> textLines = Files.readAllLines(path);
             String userName = textLines.get(0);
+
             dbh.setUserOffline(userName);
+            sw.setUserLoggedOut(true); // User has voluntary logged out
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -36,6 +40,11 @@ public class CustomerController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+
+        isOnline = sw.checkIfOnline(); // code for testing user inactivity
+
+        System.out.println(isOnline); // code for testing user inactivity
 
     }
 }

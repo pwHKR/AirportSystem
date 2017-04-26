@@ -529,9 +529,44 @@ public class DBHandler implements DataStorage {
 
     @Override
     public boolean isUserOnline(String userName) {
-        return false;
-    }
 
+
+        System.out.println(userName);
+
+        boolean isOnline = false;
+        int tinyInt = 0;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String q1 = "SELECT online FROM AirportSystemdb.User where userName = '" + userName + "'";
+
+            System.out.println(q1);
+
+            Statement statement = conn.prepareStatement(q1);
+
+
+            ResultSet rs = statement.executeQuery(q1);
+
+
+            while (rs.next()) {
+                tinyInt = rs.getInt("online");
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        if (tinyInt == 0) {
+            isOnline = false;
+        }
+
+        if (tinyInt == 1) {
+            isOnline = true;
+        }
+
+
+        return isOnline;
+    }
 
     public void AddLocationPSTR(String IdPSTR, String locationId) {
 

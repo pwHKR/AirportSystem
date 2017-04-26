@@ -101,8 +101,9 @@ public class LoginController implements Initializable {
 
         if (sentPassword.equals(Password) && isAdmin == false) {
 
-            sw.GoTo(ae, "Customer.fxml");
             dbh.setUserOnline(UserName);
+            sw.GoTo(ae, "Customer.fxml");
+
         }
 
     }

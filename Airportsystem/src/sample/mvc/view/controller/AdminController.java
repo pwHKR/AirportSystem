@@ -79,7 +79,6 @@ public class AdminController implements Initializable {
     }
 
 
-
     @FXML
     private void helpFunction(ActionEvent ae) {
         MyAlert.helpAdmin();

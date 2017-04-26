@@ -131,4 +131,14 @@ public class MyAlert {
                 "more information in the right window. You can click Kick selected to remove any of the employees.");
         msg.show();
     }
+
+
+    public static void logoutInactivity() {
+        msg.setHeaderText("Logged out");
+        msg.setTitle("Logged out");
+        msg.setContentText("You have been logged out due to inactivity");
+        msg.show();
+    }
+
+
 }
