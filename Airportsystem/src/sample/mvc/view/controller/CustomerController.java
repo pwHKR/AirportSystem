@@ -58,4 +58,13 @@ public class CustomerController implements Initializable {
             ioe.printStackTrace();
         }
     }
+
+
+    @FXML
+    private void testMethod(ActionEvent ae) {
+
+        sw.GoTo(ae, "testa.fxml");
+
+    }
+
 }
