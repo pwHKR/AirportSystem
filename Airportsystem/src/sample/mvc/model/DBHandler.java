@@ -145,8 +145,17 @@ public class DBHandler implements DataStorage {
 
             String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + customer.getSsn() + "'";
 
+
             ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
+
+
             if (!resultSet.next()) {
+
+                String checkUserName = "SELECT * FROM Person WHERE userName= '" + customer.getUserName() + "'";
+                ResultSet resultset1 = stmt.executeQuery(checkUserName);
+
+                if (!resultset1.next()) {
+
                 String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
                         + " VALUES (?,?,? ,?,?,?)";
 
@@ -191,7 +200,12 @@ public class DBHandler implements DataStorage {
 
                 ps.execute();
                 conn.close();
+                } else {
+                    MyAlert.ssnExistsErr();
+                }
 
+            } else {
+                MyAlert.userNameExists();
             }
 
         } catch (Exception ex) {

@@ -110,6 +110,14 @@ public class MyAlert {
         err.showAndWait();
     }
 
+    public static void userNameExists() {
+
+        err.setTitle("Error");
+        err.setHeaderText("Username already exists");
+        err.setContentText("The Username you input already exists");
+        err.showAndWait();
+    }
+
     public static void requestSent() {
 
         msg.setContentText("request sent");
