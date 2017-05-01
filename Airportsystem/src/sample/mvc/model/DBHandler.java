@@ -124,7 +124,7 @@ public class DBHandler implements DataStorage {
 
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         return userType;
 
@@ -747,5 +747,25 @@ public class DBHandler implements DataStorage {
             e.printStackTrace();
         }
 
+    }
+
+
+    public ObservableList<String> searchForUser(int systemId) {
+        ObservableList<String> userInformation = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String q1 = "SELECT User.userName, User.password from AirportSystemdb.User where AirportSystemdb.User.Person_systemId ='" + systemId + "'";
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(q1);
+            ResultSet resultSet = stmt.executeQuery(q1);
+
+            while (resultSet.next()) {
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userInformation;
     }
 }

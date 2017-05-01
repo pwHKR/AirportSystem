@@ -50,6 +50,8 @@ public interface DataStorage {
     ObservableList<String> getUsersOnline();
 
     void updateTimeStampUser(String userName); // Last activity by user
+
+    ObservableList<String> searchForUser(int systemId);
 }
 
 

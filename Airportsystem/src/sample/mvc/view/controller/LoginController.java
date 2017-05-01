@@ -3,22 +3,16 @@ package sample.mvc.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.MyAlert;
-import sample.mvc.model.SwitchScene;
+import sample.mvc.model.*;
 
-import java.io.IOException;
+import java.lang.System;
 import java.net.URL;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.sql.SQLNonTransientConnectionException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -33,21 +27,20 @@ public class LoginController implements Initializable {
 
     private Path path = Paths.get("logInLog.bin");
 
+    DataStorage dbh = new DBHandler();
+    LocalFileStorage local = new LocalFileStorage();
+
+    @FXML
+    private Button recoverPasswordButton;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         DataStorage dbhandler = new DBHandler();
 
         System.out.println(dbhandler.getUsersOnlineCount());
-
-        try {
-            List<String> textLines = Files.readAllLines(path);
-            userName.setText(textLines.get(0));
-            password.setText(textLines.get(1));
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-
+        userName.setText(local.getCurrentUsersUserName());
+        password.setText(local.getCurrentUsersPassword());
     }
 
     @FXML
@@ -57,25 +50,15 @@ public class LoginController implements Initializable {
 
     @FXML
     private void login(ActionEvent ae) throws SQLNonTransientConnectionException {
-        DataStorage dbh = new DBHandler();
-        ArrayList<String> loginInformation = new ArrayList<>();
 
         String UserName = userName.getText();
         String Password = password.getText();
-        loginInformation.add(UserName);
-        loginInformation.add(Password);
+        local.saveUser(UserName, Password); //saves username and password to localfile
+
         String sentPassword = dbh.matchPassword(UserName);
 
         String typeOfUser; // Variable for holding typeOfUser information from resultset(DB)
 
-
-        try {
-            Files.write(path, loginInformation, StandardOpenOption.CREATE);
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         boolean isAdmin = false;
         boolean isEmployee = false;
@@ -122,8 +105,6 @@ public class LoginController implements Initializable {
             sw.GoTo(ae, "Employee.fxml");
 
         }
-
-
     }
 
 
@@ -132,5 +113,10 @@ public class LoginController implements Initializable {
         NewUserController.setCustomer(true);
 
         sw.goToUnLogged(ae, "NewUser.fxml");
+    }
+
+    @FXML
+    private void recoverPassword(ActionEvent event) {
+        sw.gotopasswordRecovery(event);
     }
 }
