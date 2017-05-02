@@ -7,7 +7,7 @@ import javafx.collections.ObservableList;
  */
 public interface DataStorage {
 
-    ObservableList<String> getAirplanes(String selected);
+    ObservableList<String> getAirplaneRegNumber(String selected);
 
     void insertAirplane(Airplane airplane, String select);
 
@@ -52,6 +52,10 @@ public interface DataStorage {
     void updateTimeStampUser(String userName); // Last activity by user
 
     ObservableList<String> searchForUser(int systemId);
+
+    ObservableList<String> getAllAirplaneRegNumbers();
+
+    ObservableList<String> getAirplaneInfo(String regNumber);
 }
 
 

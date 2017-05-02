@@ -41,10 +41,9 @@ public class ViewPSTRController implements Initializable {
 
         String choice = pstrLocations.getSelectionModel().getSelectedItem();
         infoList = dbHandler.getPSTRLocationInfo(choice);
-        airplaneList = dbHandler.getAirplanes(choice);
+        airplaneList = dbHandler.getAirplaneRegNumber(choice);
         locationInfo.setText(infoList.toString().replace("[", "").replace("]", "")
                 + airplaneList.toString().replace("[", "").replace("]", ""));
-
     }
 
     @Override

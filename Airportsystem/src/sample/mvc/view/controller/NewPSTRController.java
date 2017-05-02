@@ -36,12 +36,14 @@ public class NewPSTRController implements Initializable {
     @FXML
     private ComboBox<String> airport;
 
+    private DataStorage dbh = new DBHandler();
+
 
     @FXML
     private void addPSTRLocation(ActionEvent ae) {
         String locationId;
         String IdPSTR;
-        DataStorage dbh = new DBHandler();
+
 
         Location location = new Location(airport.getValue(), city.getValue(), country.getValue());
 
@@ -130,12 +132,7 @@ public class NewPSTRController implements Initializable {
     }
 
     private void setCountriesLogic() {
-
-        DataStorage dbh = new DBHandler();
-
-
         countryList = dbh.getCountries();
-
 
         country.setItems(countryList);
 
@@ -145,9 +142,6 @@ public class NewPSTRController implements Initializable {
     private void setCitiesLogic() {
 
         String SelectedCountry = country.getValue();
-
-
-        DataStorage dbh = new DBHandler();
 
 
         cityList = dbh.getCities(SelectedCountry);
@@ -161,9 +155,6 @@ public class NewPSTRController implements Initializable {
 
 
         String SelectedCity = city.getValue();
-
-
-        DataStorage dbh = new DBHandler();
 
 
         airportList = dbh.getAirports(SelectedCity);

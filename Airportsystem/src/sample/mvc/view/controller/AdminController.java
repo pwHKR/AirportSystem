@@ -24,6 +24,10 @@ public class AdminController implements Initializable {
     private Label online;  ///label för antalet online användare
     @FXML
     private Button helpButton;
+    @FXML
+    private Button addTripButton;
+    @FXML
+    private Button addFlightButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -90,5 +94,15 @@ public class AdminController implements Initializable {
         DataStorage dbhandler = new DBHandler();
 
         online.setText("Online: " + String.valueOf(dbhandler.getUsersOnlineCount()));
+    }
+
+    @FXML
+    public void addTrip(ActionEvent ae) {
+        sw.GoTo(ae, "AddTrip.fxml");
+    }
+
+    @FXML
+    public void addFlight(ActionEvent ae) {
+        sw.GoTo(ae, "AddFlight.fxml");
     }
 }

@@ -33,7 +33,7 @@ public class DBHandler implements DataStorage {
         return appProp;
     }
 
-    public ObservableList<String> getAirplanes(String selected) {
+    public ObservableList<String> getAirplaneRegNumber(String selected) {
 
         ObservableList<String> LocationInfo = FXCollections.observableArrayList();
 
@@ -767,5 +767,53 @@ public class DBHandler implements DataStorage {
             e.printStackTrace();
         }
         return userInformation;
+    }
+
+
+    public ObservableList<String> getAllAirplaneRegNumbers() {
+        ObservableList<String> airPlanes = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = ("SELECT regNumber FROM AirportSystemdb.Airplane;");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                airPlanes.add(resultSet.getString("regNumber"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return airPlanes;
+    }
+
+
+    public ObservableList<String> getAirplaneInfo(String regNumber) {
+        ObservableList<String> airPlanes = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = ("SELECT * FROM AirportSystemdb.Airplane WHERE regNumber = '" + regNumber + "';");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+
+
+                airPlanes.add("Model: " + resultSet.getString("model") +
+                        "\nPassenger Capacity:: " + resultSet.getString("passengerCapacity") + "" +
+                        "\nMax Speed:: " + resultSet.getString("maxSpeed") +
+                        "\nMax Luggage Weight: " + resultSet.getString("maxLuggageWeight") +
+                        "\nReg Number: " + resultSet.getString("regNumber"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return airPlanes;
     }
 }
