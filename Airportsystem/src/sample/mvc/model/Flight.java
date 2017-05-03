@@ -7,23 +7,33 @@ public class Flight {
 
     private String flightStatus;
     private String gate;
-    private Airplane airplane;
+    private String regNumber;
 
 
-    public Flight(String flightStatus, String gate, Airplane airplane) {
+    public Flight(String flightStatus, String gate, String regNumber) {
         this.flightStatus = flightStatus;
         this.gate = gate;
-        this.airplane = airplane;
+        this.regNumber = regNumber;
     }
 
     public String getGate() {
-        // TODO implement here
-        return "";
+        return gate;
     }
 
-    public void setGate(String gate) {
-        // TODO implement here
+    public String getFlightStatus() {
+        return flightStatus;
     }
 
+    public void setFlightStatus(String flightStatus) {
+        this.flightStatus = flightStatus;
+    }
+
+    public String getRegNumber() {
+        return regNumber;
+    }
+
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
+    }
 }
 

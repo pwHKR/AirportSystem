@@ -816,4 +816,27 @@ public class DBHandler implements DataStorage {
         }
         return airPlanes;
     }
+
+
+    public void insertFlight(Flight flight) {
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = "INSERT INTO Flight (flightStatus, gate, Airplane_regNumber) "
+                    + " VALUES (?,?,?)";
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setString(1, flight.getFlightStatus());
+            ps.setString(2, flight.getGate());
+            ps.setString(3, flight.getRegNumber());
+
+            ps.execute();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

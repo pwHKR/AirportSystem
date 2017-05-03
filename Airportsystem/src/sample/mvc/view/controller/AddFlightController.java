@@ -8,8 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
+import sample.mvc.model.Flight;
 import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
@@ -26,9 +28,14 @@ public class AddFlightController implements Initializable {
     @FXML
     private TextArea informationField;
     @FXML
+    private TextField gateField;
+    @FXML
+    private TextField statusField;
+    @FXML
     private ListView<String> regField;
 
     private ObservableList<String> airPlaneInfoList = FXCollections.observableArrayList();
+    private String choice;
 
     private ObservableList<String> airPlanes = FXCollections.observableArrayList();
     DataStorage dbh = new DBHandler();
@@ -59,6 +66,10 @@ public class AddFlightController implements Initializable {
 
     @FXML
     public void addFlight(ActionEvent ae) {
+        Flight flight = new Flight(statusField.getText(), gateField.getText(), regField.getSelectionModel().getSelectedItem());
+        dbh.insertFlight(flight);
 
+        statusField.clear();
+        gateField.clear();
     }
 }
