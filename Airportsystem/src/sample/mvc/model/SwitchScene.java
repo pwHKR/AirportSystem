@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class SwitchScene {
 
-    private boolean userLoggedOut; //Checks if the user logged out voluntary or not
+    private boolean userLoggedOut; //Checks if the user logged out voluntarily or not
 
 
     public void GoTo(ActionEvent ae, String fxmlFile) {

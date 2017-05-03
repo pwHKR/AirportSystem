@@ -839,4 +839,71 @@ public class DBHandler implements DataStorage {
             e.printStackTrace();
         }
     }
+
+    public ObservableList<Integer> getAllFlightIds() {
+        ObservableList<Integer> flightIds = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("SELECT flightId FROM AirportSystemdb.Flight;");
+            Statement stmt = conn.createStatement();
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                flightIds.add(resultSet.getInt("flightId"));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return flightIds;
+    }
+
+    public ObservableList<String> getCountriesWithPstr() {
+        ObservableList<String> countries = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("SELECT country FROM AirportSystemdb.Location WHERE PSTR_idPSTR IS NOT NULL;");
+            Statement stmt = conn.createStatement();
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                countries.add(resultSet.getString("country"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return countries;
+    }
+
+    public ObservableList<String> matchCityWithCountry(String country) {
+        ObservableList<String> cities = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("SELECT city FROM AirportSystemdb.Location WHERE country = '" + country + "' AND PSTR_idPSTR IS NOT NULL;");
+            Statement stmt = conn.createStatement();
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                cities.add(resultSet.getString("city"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return cities;
+    }
 }

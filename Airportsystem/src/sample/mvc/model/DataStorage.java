@@ -58,6 +58,12 @@ public interface DataStorage {
     ObservableList<String> getAirplaneInfo(String regNumber);
 
     void insertFlight(Flight flight);
+
+    ObservableList<Integer> getAllFlightIds();
+
+    ObservableList<String> getCountriesWithPstr();
+
+    ObservableList<String> matchCityWithCountry(String country);
 }
 
 
