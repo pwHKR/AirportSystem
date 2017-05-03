@@ -57,7 +57,7 @@ public interface DataStorage {
 
     ObservableList<String> getAirplaneInfo(String regNumber);
 
-    void insertFlight(Flight flight);
+    void insertFlight(Flight flight, boolean newFlightStatus);
 
     ObservableList<Integer> getAllFlightIds();
 

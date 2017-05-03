@@ -149,50 +149,50 @@ public class DBHandler implements DataStorage {
 
                 if (!resultset1.next()) {
 
-                String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
-                        + " VALUES (?,?,? ,?,?,?)";
+                    String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
+                            + " VALUES (?,?,? ,?,?,?)";
 
-                String query2 = ("SELECT systemId FROM Person  WHERE ssn =(?)");
+                    String query2 = ("SELECT systemId FROM Person  WHERE ssn =(?)");
 
-                String query3 = " INSERT INTO User (userName, password, eMail,Person_systemId,typeOfUser) " +
-                        " VALUES (?,?,?,?,?) ";
-
-
-                PreparedStatement preparedStmt = conn.prepareStatement(query);
-                preparedStmt.setString(1, customer.getFirstName());
-                preparedStmt.setString(2, customer.getLastName());
-                preparedStmt.setBoolean(3, customer.isMale());
-                preparedStmt.setString(4, customer.getCountry());
-                preparedStmt.setString(5, customer.getSsn());
-                preparedStmt.setString(6, customer.getAdress());
+                    String query3 = " INSERT INTO User (userName, password, eMail,Person_systemId,typeOfUser) " +
+                            " VALUES (?,?,?,?,?) ";
 
 
-                preparedStmt.execute();
-
-                PreparedStatement ps2 = conn.prepareStatement(query2);
-
-                ps2.setString(1, customer.getSsn());
-
-                ResultSet rs = ps2.executeQuery();
-
-
-                while (rs.next()) {
-
-                    si = rs.getString("systemId");
-                }
+                    PreparedStatement preparedStmt = conn.prepareStatement(query);
+                    preparedStmt.setString(1, customer.getFirstName());
+                    preparedStmt.setString(2, customer.getLastName());
+                    preparedStmt.setBoolean(3, customer.isMale());
+                    preparedStmt.setString(4, customer.getCountry());
+                    preparedStmt.setString(5, customer.getSsn());
+                    preparedStmt.setString(6, customer.getAdress());
 
 
-                PreparedStatement ps = conn.prepareStatement(query3);
+                    preparedStmt.execute();
 
-                ps.setString(1, customer.getUserName());
-                ps.setString(2, customer.getPassword());
-                ps.setString(3, customer.geteMail());
-                ps.setString(4, si);
-                ps.setString(5, typeOfUser);
+                    PreparedStatement ps2 = conn.prepareStatement(query2);
+
+                    ps2.setString(1, customer.getSsn());
+
+                    ResultSet rs = ps2.executeQuery();
 
 
-                ps.execute();
-                conn.close();
+                    while (rs.next()) {
+
+                        si = rs.getString("systemId");
+                    }
+
+
+                    PreparedStatement ps = conn.prepareStatement(query3);
+
+                    ps.setString(1, customer.getUserName());
+                    ps.setString(2, customer.getPassword());
+                    ps.setString(3, customer.geteMail());
+                    ps.setString(4, si);
+                    ps.setString(5, typeOfUser);
+
+
+                    ps.execute();
+                    conn.close();
                 } else {
                     MyAlert.userNameExists();
                 }
@@ -818,27 +818,41 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public void insertFlight(Flight flight) {
+    public void insertFlight(Flight flight, boolean newFlightStatus) {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
-            String query = "INSERT INTO Flight (flightStatus, gate, Airplane_regNumber) "
-                    + " VALUES (?,?,?)";
+            if (newFlightStatus) {
+                String query = "INSERT INTO Flight (flightStatus, gate, Airplane_regNumber) "
+                        + " VALUES (?,?,?)";
 
-            PreparedStatement ps = conn.prepareStatement(query);
+                PreparedStatement ps = conn.prepareStatement(query);
 
-            ps.setString(1, flight.getFlightStatus());
-            ps.setString(2, flight.getGate());
-            ps.setString(3, flight.getRegNumber());
+                ps.setString(1, flight.getFlightStatus());
+                ps.setString(2, flight.getGate());
+                ps.setString(3, flight.getRegNumber());
 
-            ps.execute();
+                ps.execute();
+
+            } else {
+                String query = "INSERT INTO Flight (gate, Airplane_regNumber) "
+                        + " VALUES (?,?)";
+
+                PreparedStatement ps = conn.prepareStatement(query);
+                ps.setString(1, flight.getGate());
+                ps.setString(2, flight.getRegNumber());
+
+                ps.execute();
+
+            }
 
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 
     public ObservableList<Integer> getAllFlightIds() {
         ObservableList<Integer> flightIds = FXCollections.observableArrayList();

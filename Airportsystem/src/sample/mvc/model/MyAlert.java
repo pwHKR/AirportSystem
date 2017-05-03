@@ -149,4 +149,13 @@ public class MyAlert {
     }
 
 
+    public static void generalError() {
+        msg.setHeaderText("Error");
+        msg.setTitle("Error");
+        msg.setContentText("Error");
+        msg.showAndWait();
+    }
+
+
+
 }
