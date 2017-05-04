@@ -23,25 +23,25 @@ public class NewUserController implements Initializable {
     ObservableList<String> countryList = FXCollections.observableArrayList();
 
     @FXML
-    TextField firstName;
+    private TextField firstName;
     @FXML
-    TextField lastName;
+    private TextField lastName;
     @FXML
-    TextField ssn;
+    private TextField ssn;
     @FXML
-    TextField password;
+    private TextField password;
     @FXML
-    TextField userName;
+    private TextField userName;
     @FXML
-    TextField email;
+    private TextField email;
     @FXML
-    TextField adress;
+    private TextField adress;
     @FXML
-    ChoiceBox<String> country = new ChoiceBox<>();
+    private ChoiceBox<String> country = new ChoiceBox<>();
     @FXML
-    CheckBox female;
+    private CheckBox female;
     @FXML
-    CheckBox male;
+    private CheckBox male;
 
     public static boolean isCustomer;
 
@@ -50,30 +50,30 @@ public class NewUserController implements Initializable {
     }
 
 
-    String typeOfUser;
+    private String typeOfUser;
 
 
     @FXML
     private void addUser(ActionEvent ae) {
-        String FirstName;
-        String LastName;
-        String SSN;
-        String Password;
-        String UserName;
-        String Email;
-        String Address;
-        String Country;
+        String stringFirstName;
+        String stringLastName;
+        String stringSSN;
+        String stringPassword;
+        String stringUserName;
+        String stringEmail;
+        String stringAddress;
+        String stringCountry;
         boolean IsMale;
 
 
-        FirstName = firstName.getText();
-        LastName = lastName.getText();
-        SSN = ssn.getText();
-        Password = password.getText();
-        UserName = userName.getText();
-        Email = email.getText();
-        Address = adress.getText();
-        Country = country.getValue();
+        stringFirstName = firstName.getText();
+        stringLastName = lastName.getText();
+        stringSSN = ssn.getText();
+        stringPassword = password.getText();
+        stringUserName = userName.getText();
+        stringEmail = email.getText();
+        stringAddress = adress.getText();
+        stringCountry = country.getValue();
 
         if (female.isSelected()) {
             IsMale = false;
@@ -100,13 +100,13 @@ public class NewUserController implements Initializable {
                                         DataStorage dbh = new DBHandler();
 
                                         if (isCustomer == true) {
-                                            User customer = new Customer(FirstName,
-                                                    LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
+                                            User customer = new Customer(stringFirstName,
+                                                    stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
                                             dbh.insertUser(customer, typeOfUser);
                                         } else if (isCustomer == false) {
 
-                                            User customer = new Employee(FirstName,
-                                                    LastName, IsMale, Country, SSN, Address, Email, UserName, Password);
+                                            User customer = new Employee(stringFirstName,
+                                                    stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
 
                                             dbh.insertUser(customer, typeOfUser);
                                         }

@@ -117,6 +117,6 @@ public class LoginController implements Initializable {
 
     @FXML
     private void recoverPassword(ActionEvent event) {
-        sw.gotopasswordRecovery(event);
+        sw.goToUnLogged(event, "passwordRecovery.fxml");
     }
 }
