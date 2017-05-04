@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
@@ -16,7 +17,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.CustomerController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.BillingController">
     <children>
         <ImageView fitHeight="404.0" fitWidth="592.0" layoutX="1.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">
@@ -41,7 +42,7 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
+        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0"
                 prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="back"/>
         <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
@@ -61,8 +62,11 @@
             </effect>
         </Line>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="42.0" layoutY="166.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="126.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Deposit"/>
-        <TextField layoutX="42.0" layoutY="131.0" prefHeight="27.0" prefWidth="125.0"/>
+        <Button fx:id="depositButton" layoutX="42.0" layoutY="166.0" mnemonicParsing="false" onAction="#deposit"
+                prefHeight="40.0" prefWidth="126.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
+                text="Deposit"/>
+        <TextField fx:id="amountTextField" layoutX="42.0" layoutY="131.0" prefHeight="27.0" prefWidth="125.0"/>
+        <Label fx:id="balanceLabel" layoutX="371.0" layoutY="123.0" prefHeight="17.0" prefWidth="87.0"
+               textFill="#8bff32"/>
     </children>
 </AnchorPane>

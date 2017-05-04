@@ -920,4 +920,98 @@ public class DBHandler implements DataStorage {
         }
         return cities;
     }
+
+    public void setBalance(double balance, int systemId) {
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = "UPDATE AirportSystemdb.Person\n" +
+                    "SET\n" +
+                    "balance = ?\n" +
+                    "WHERE systemId = ?;";
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setDouble(1, balance);
+            ps.setInt(2, systemId);
+
+            ps.execute();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public int getIdFromUserName(String userName) {
+
+
+        int systemId = 0;
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = "SELECT Person_systemId FROM AirportSystemdb.User WHERE userName ='" + userName + "'";
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+
+            ResultSet resultSet = ps.executeQuery(query);
+
+            while (resultSet.next()) {
+                systemId = resultSet.getInt("Person_systemId");
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return systemId;
+
+
+    }
+
+    public String getBalanceFromId(int systemId) {
+
+        Double balance = null;
+        String stringBalance;
+        String stringSystemId = Integer.toString(systemId);
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = "SELECT balance FROM AirportSystemdb.Person WHERE systemId =" + stringSystemId + "";
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+
+            ResultSet resultSet = ps.executeQuery(query);
+
+            while (resultSet.next()) {
+                balance = resultSet.getDouble("balance");
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        stringBalance = Double.toString(balance);
+
+
+        return stringBalance;
+
+    }
+
 }

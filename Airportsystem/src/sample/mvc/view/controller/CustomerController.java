@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 
 public class CustomerController implements Initializable {
 
-    boolean isOnline;
+    private boolean isOnline;
 
     SwitchScene sw = new SwitchScene();
     private Path path = Paths.get("logInLog.bin");
@@ -65,6 +65,12 @@ public class CustomerController implements Initializable {
 
         sw.GoTo(ae, "test.fxml");
 
+    }
+
+    @FXML
+    private void goToBilling(ActionEvent ae) {
+
+        sw.GoTo(ae, "Billing.fxml");
     }
 
 }

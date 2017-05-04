@@ -64,6 +64,12 @@ public interface DataStorage {
     ObservableList<String> getCountriesWithPstr();
 
     ObservableList<String> matchCityWithCountry(String country);
+
+    void setBalance(double balance, int systemId);
+
+    int getIdFromUserName(String userName);
+
+    String getBalanceFromId(int systemId);
 }
 
 

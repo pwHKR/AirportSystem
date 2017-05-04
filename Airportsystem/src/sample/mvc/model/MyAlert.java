@@ -157,5 +157,12 @@ public class MyAlert {
     }
 
 
+    public static void depositMsg() {
+        msg.setHeaderText("Deposit successful");
+        msg.setTitle("Your account has been credited");
+        msg.setContentText("You will receive your bill on the mail within 7 days");
+        msg.showAndWait();
+    }
+
 
 }
