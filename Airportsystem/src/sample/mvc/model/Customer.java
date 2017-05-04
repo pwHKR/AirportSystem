@@ -5,10 +5,8 @@ package sample.mvc.model;
  */
 public class Customer extends User {
 
-    private int customerId;
-
-    public Customer(String firstName, String lastName, boolean isMale, String country, String ssn, String adress, String eMail, String userName, String password) {
-        super(firstName, lastName, isMale, country, ssn, adress, eMail, userName, password);
+    public Customer(String firstName, String lastName, boolean isMale, String country, String ssn, String address, String eMail, String userName, String password) {
+        super(firstName, lastName, isMale, country, ssn, address, eMail, userName, password);
 
     }
 }

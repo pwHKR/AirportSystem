@@ -186,7 +186,7 @@ public class DBHandler implements DataStorage {
 
                     ps.setString(1, customer.getUserName());
                     ps.setString(2, customer.getPassword());
-                    ps.setString(3, customer.geteMail());
+                    ps.setString(3, customer.getEmail());
                     ps.setString(4, si);
                     ps.setString(5, typeOfUser);
 

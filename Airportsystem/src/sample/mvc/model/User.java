@@ -13,20 +13,20 @@ public abstract class User extends Person {
 
 
     public User(String firstName, String lastName, boolean isMale,
-                String country, String ssn, String adress,
+                String country, String ssn, String address,
                 String eMail, String userName, String password) {
-        super(firstName, lastName, isMale, country, ssn, adress);
+        super(firstName, lastName, isMale, country, ssn, address);
         this.eMail = eMail;
         this.userName = userName;
         this.password = password;
     }
 
 
-    public String geteMail() {
+    public String getEmail() {
         return eMail;
     }
 
-    public void seteMail(String eMail) {
+    public void setEmail(String eMail) {
         this.eMail = eMail;
     }
 
