@@ -203,20 +203,15 @@ public class DBHandler implements DataStorage {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
-
     }
 
     public void insertTrip(Trip trip) {
 
     }
 
-
     public String matchPassword(String UserName) {
 
         String pass = null;
-
-
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
             String query = ("SELECT password FROM User WHERE userName=(?)");
@@ -226,7 +221,6 @@ public class DBHandler implements DataStorage {
             ps.setString(1, UserName);
 
             ResultSet rs = ps.executeQuery();
-
 
             if (rs.next()) {
 
@@ -1012,6 +1006,56 @@ public class DBHandler implements DataStorage {
 
         return stringBalance;
 
+    }
+
+
+    public void insertTrip(Trip trip, int locationId) {
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query = "INSERT INTO AirportSystemdb.Trip (price, date, Flight_flightId) "
+                    + " VALUES (?,?,?)";
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setDouble(1, trip.getTripPrice());
+            ps.setString(2, trip.getDate());
+            ps.setInt(3, trip.getFlightID());
+
+            ps.execute();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public int getLocationId(String country, String city) {
+        int locationId = 0;
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = "SELECT locationId FROM AirportSystemdb.Location WHERE country ='" + country + "' AND city ='" + city + "'";
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+
+            ResultSet resultSet = ps.executeQuery(query);
+
+            while (resultSet.next()) {
+                locationId = resultSet.getInt("locationId");
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        //stringBalance = Double.toString(balance);
+
+
+        return locationId;
     }
 
 }

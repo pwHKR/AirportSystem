@@ -70,6 +70,12 @@ public interface DataStorage {
     int getIdFromUserName(String userName);
 
     String getBalanceFromId(int systemId);
+
+    void insertTrip(Trip trip, int locationId);
+
+    int getLocationId(String country, String city);
+
+
 }
 
 

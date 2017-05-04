@@ -13,8 +13,6 @@ import java.util.List;
  */
 public class LocalFileStorage {
     private Path path = Paths.get("logInLog.bin");
-    DataStorage dbh = new DBHandler();  //can be useful to have even if this class works with local-files
-
     public void saveUser(String userName, String password) {
 
         ArrayList<String> saveList = new ArrayList<>();

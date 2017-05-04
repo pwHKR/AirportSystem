@@ -164,5 +164,12 @@ public class MyAlert {
         msg.showAndWait();
     }
 
+    public static void noDateError() {
+        err.setTitle("Error");
+        err.setHeaderText("no date selected");
+        err.setContentText("You have to enter a date");
+        err.showAndWait();
+    }
+
 
 }

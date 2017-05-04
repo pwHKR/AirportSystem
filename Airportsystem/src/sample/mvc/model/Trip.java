@@ -7,25 +7,25 @@ public class Trip {
 
     private Double tripPrice;
     private String date;
-    private Flight flight;
-    private Location location;
+    private int flightID;
 
 
-    public Trip(Double tripPrice, String date, Flight flight, Location location) {
+    public Trip(Double tripPrice, String date, int flightID) {
         this.tripPrice = tripPrice;
         this.date = date;
-        this.flight = flight;
-        this.location = location;
+        this.flightID = flightID;
     }
 
     public Double getTripPrice() {
-        // TODO implement here
-        return null;
+        return tripPrice;
     }
 
-    public void setTripPrice(Double value) {
-        // TODO implement here
+    public String getDate() {
+        return date;
     }
 
+    public int getFlightID() {
+        return flightID;
+    }
 }
 

@@ -10,10 +10,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.SwitchScene;
+import sample.mvc.model.*;
 
+import java.lang.System;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,6 +25,7 @@ public class AddTripController implements Initializable {
     private ObservableList<Integer> flightIdList = FXCollections.observableArrayList();
     private ObservableList<String> pstrCountryList = FXCollections.observableArrayList();
     private ObservableList<String> cityMatchesCountryList = FXCollections.observableArrayList();
+    private ObservableList<String> countryList = FXCollections.observableArrayList();
     private DataStorage dbh = new DBHandler();
     private String choice;
 
@@ -50,8 +50,17 @@ public class AddTripController implements Initializable {
     private ComboBox<Integer> flightChoice;
 
     @FXML
-    private void addTrip() {
-        //Trip trip = new Trip(Double.parseDouble(price.getText()),date.toString(),); ///// still to do
+    private void addTrip(ActionEvent ae) {
+
+        int locationId = dbh.getLocationId(fromCountryField.getValue(), fromCityField.getValue());
+        Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(), flightChoice.getValue());
+
+        System.out.println(flightChoice.getValue());
+        if (dateField.getValue().toString() != null) {
+            dbh.insertTrip(trip, locationId);
+        } else {
+            MyAlert.noDateError();
+        }
 
     }
 
@@ -71,6 +80,8 @@ public class AddTripController implements Initializable {
     public void pickFlightId(MouseEvent me) {
         flightIdList = dbh.getAllFlightIds();
         flightChoice.setItems(flightIdList);
+
+
     }
 
     @FXML
@@ -84,17 +95,24 @@ public class AddTripController implements Initializable {
         choice = fromCountryField.getValue();
         cityMatchesCountryList = dbh.matchCityWithCountry(choice);
         fromCityField.setItems(cityMatchesCountryList);
+
     }
 
     @FXML
     public void pickCountryFieldTo(MouseEvent me) {
+        countryList = dbh.getCountries();
+
+        toCountryField.setItems(countryList);
 
     }
 
     @FXML
     public void pickCityFieldTo(MouseEvent me) {
+        String SelectedCountry = toCountryField.getValue();
+
+        cityMatchesCountryList = dbh.getCities(SelectedCountry);
+
+        toCityField.setItems(cityMatchesCountryList);
 
     }
-    //@FXML
-    //public void pick
 }
