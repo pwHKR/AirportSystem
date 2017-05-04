@@ -882,7 +882,7 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT country FROM AirportSystemdb.Location WHERE PSTR_idPSTR IS NOT NULL;");
+            String query = ("SELECT DISTINCT country FROM AirportSystemdb.Location WHERE PSTR_idPSTR IS NOT NULL;");
             Statement stmt = conn.createStatement();
 
             stmt.addBatch(query);
