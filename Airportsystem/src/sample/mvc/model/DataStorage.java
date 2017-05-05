@@ -75,6 +75,10 @@ public interface DataStorage {
 
     int getLocationId(String country, String city);
 
+    Airplane getAirplaneObject(String regNumber);
+
+    int getLastFlightId();
+
 
 }
 

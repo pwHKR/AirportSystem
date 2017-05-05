@@ -8,12 +8,14 @@ public class Trip {
     private Double tripPrice;
     private String date;
     private int flightID;
+    private int ticketAmount;
 
 
-    public Trip(Double tripPrice, String date, int flightID) {
+    public Trip(Double tripPrice, String date, int flightID, int ticketAmount) {
         this.tripPrice = tripPrice;
         this.date = date;
         this.flightID = flightID;
+        this.ticketAmount = ticketAmount;
     }
 
     public Double getTripPrice() {
@@ -26,6 +28,15 @@ public class Trip {
 
     public int getFlightID() {
         return flightID;
+    }
+
+
+    public int getTicketAmount() {
+        return ticketAmount;
+    }
+
+    public void setTicketAmount(int ticketAmount) {
+        this.ticketAmount = ticketAmount;
     }
 }
 

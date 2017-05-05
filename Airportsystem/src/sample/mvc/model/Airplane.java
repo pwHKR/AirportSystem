@@ -1,9 +1,11 @@
 package sample.mvc.model;
 
+import java.io.Serializable;
+
 /**
  * Created by woojen on 2017-04-12.
  */
-public class Airplane {
+public class Airplane implements Serializable {
 
     private int passengerCapacity;
     private int maxLuggageWeight;

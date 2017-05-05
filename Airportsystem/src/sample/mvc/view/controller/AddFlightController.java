@@ -19,6 +19,8 @@ public class AddFlightController implements Initializable {
     private MyAlert myAlert = new MyAlert();
     private DataStorage dbh = new DBHandler();
     private SwitchScene sw = new SwitchScene();
+    private LocalFileStorage local = new LocalFileStorage();
+    private Airplane airplane;
 
     @FXML
     private Button addButton;
@@ -35,6 +37,9 @@ public class AddFlightController implements Initializable {
 
     @FXML
     private CheckBox statusCheckBox;
+
+    @FXML
+    TextField ticketAmount;
 
 
     private ObservableList<String> airPlaneInfoList = FXCollections.observableArrayList();
@@ -92,7 +97,12 @@ public class AddFlightController implements Initializable {
         if (noError) {
 
             Flight flight = new Flight(statusField.getText(), gateField.getText(), regField.getSelectionModel().getSelectedItem());
-            dbh.insertFlight(flight, newFlightStatus);
+            //dbh.insertFlight(flight, newFlightStatus);
+            local.saveFlightToFile(flight);
+            airplane = dbh.getAirplaneObject(flight.getRegNumber());
+            local.saveAirplaneToFile(airplane);
+
+            sw.GoTo(ae, "AddTrip.fxml");
         }
 
         statusField.clear();

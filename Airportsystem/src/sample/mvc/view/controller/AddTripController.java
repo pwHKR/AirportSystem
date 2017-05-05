@@ -24,7 +24,12 @@ public class AddTripController implements Initializable {
 
     private MyAlert myAlert = new MyAlert();
 
-    private ObservableList<Integer> flightIdList = FXCollections.observableArrayList();
+    private LocalFileStorage local = new LocalFileStorage();
+
+    private Airplane airplane;
+    private Flight flight;
+
+
     private ObservableList<String> pstrCountryList = FXCollections.observableArrayList();
     private ObservableList<String> cityMatchesCountryList = FXCollections.observableArrayList();
     private ObservableList<String> countryList = FXCollections.observableArrayList();
@@ -49,16 +54,27 @@ public class AddTripController implements Initializable {
     private ComboBox<String> toCountryField;
 
     @FXML
-    private ComboBox<Integer> flightChoice;
+    private TextField flightChoice;
+
+    @FXML
+    private TextField ticketAmount;
+
+    @FXML
+    private TextField model;
+
+    @FXML
+    private TextField maxSpeed;
 
     @FXML
     private void addTrip(ActionEvent ae) {
 
         int locationId = dbh.getLocationId(fromCountryField.getValue(), fromCityField.getValue());
-        Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(), flightChoice.getValue());
+        Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(),
+                dbh.getLastFlightId() + 1, airplane.getPassengerCapacity());
 
 
         if (dateField.getValue().toString() != null) {
+            dbh.insertFlight(local.readFlightFromFile(), false);
             dbh.insertTrip(trip, locationId);
         } else {
             myAlert.noDateError();
@@ -75,16 +91,20 @@ public class AddTripController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        // Flight for this trip has not been inserted to DataStorage yet(therefor +1)
+        flightChoice.setText(String.valueOf(dbh.getLastFlightId() + 1));
+
+        airplane = local.readAirplaneFromFile();
+
+        ticketAmount.setText(String.valueOf(airplane.getPassengerCapacity()));
+        model.setText(airplane.getModel());
+        maxSpeed.setText(airplane.getMaxSpeed());
+
+
+
 
     }
 
-    @FXML
-    private void pickFlightId(MouseEvent me) {
-        flightIdList = dbh.getAllFlightIds();
-        flightChoice.setItems(flightIdList);
-
-
-    }
 
     @FXML
     private void pickCountryFrom(MouseEvent me) {

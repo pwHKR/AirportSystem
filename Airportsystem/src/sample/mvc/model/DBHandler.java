@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
+import java.lang.*;
 import java.sql.*;
 import java.util.Properties;
 
@@ -835,6 +836,7 @@ public class DBHandler implements DataStorage {
 
                 ps.execute();
 
+
             }
 
 
@@ -1009,14 +1011,15 @@ public class DBHandler implements DataStorage {
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
 
-            String query = "INSERT INTO AirportSystemdb.Trip (price, date, Flight_flightId) "
-                    + " VALUES (?,?,?)";
+            String query = "INSERT INTO AirportSystemdb.Trip (price, date, Flight_flightId,ticketAmount) "
+                    + " VALUES (?,?,?,?)";
 
             PreparedStatement ps = conn.prepareStatement(query);
 
             ps.setDouble(1, trip.getTripPrice());
             ps.setString(2, trip.getDate());
             ps.setInt(3, trip.getFlightID());
+            ps.setInt(4, trip.getTicketAmount());
 
             ps.execute();
 
@@ -1053,5 +1056,66 @@ public class DBHandler implements DataStorage {
 
         return locationId;
     }
+
+
+    public Airplane getAirplaneObject(String regNumber) {
+
+        Airplane airplane = null;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = ("SELECT * FROM AirportSystemdb.Airplane WHERE regNumber = '" + regNumber + "';");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+
+                airplane = new Airplane(resultSet.getInt("passengerCapacity"),
+                        resultSet.getInt("maxLuggageWeight"), resultSet.getString("maxSpeed"),
+                        regNumber, resultSet.getString("model"));
+
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return airplane;
+    }
+
+    public int getLastFlightId() {
+
+        int flightId = 0;
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("SELECT Max(flightId) as lastId From AirportSystemdb.Flight;");
+
+            java.lang.System.out.println(query);
+
+            Statement stmt = conn.createStatement();
+
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                flightId = resultSet.getInt("lastId");
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return flightId;
+
+    }
+
+
+
 
 }

@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
             prefWidth="589.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
-            xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.EmployeeController">
     <children>
         <ImageView fitHeight="356.0" fitWidth="592.0" layoutX="-2.0" layoutY="55.0" opacity="0.11" pickOnBounds="true"
@@ -65,7 +65,7 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <Button fx:id="addWorker" layoutX="28.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0"
+        <Button layoutX="28.0" layoutY="159.0" mnemonicParsing="false" onAction="#addTrip" prefHeight="40.0"
                 prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add trip"/>
         <Button layoutX="408.0" layoutY="158.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
                 styleClass="rich-blue" stylesheets="@stylesheet.css" text="Flight status"/>

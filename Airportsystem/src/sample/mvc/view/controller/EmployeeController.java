@@ -38,5 +38,12 @@ public class EmployeeController {
 
     }
 
+    @FXML
+    private void addTrip(ActionEvent ae) {
+
+        sw.GoTo(ae, "AddFlight.fxml");
+
+    }
+
 
 }
