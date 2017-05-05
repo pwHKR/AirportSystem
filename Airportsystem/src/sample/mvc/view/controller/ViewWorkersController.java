@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
  */
 public class ViewWorkersController implements Initializable {
 
+    MyAlert myAlert = new MyAlert();
     SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> workerlist = FXCollections.observableArrayList();
@@ -81,6 +82,6 @@ public class ViewWorkersController implements Initializable {
 
     @FXML
     private void setHelpButton(ActionEvent ae) {
-        MyAlert.helpViewWorkers();
+        myAlert.helpViewWorkers();
     }
 }

@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
  */
 public class AdminController implements Initializable {
 
+    MyAlert myAlert = new MyAlert();
     SwitchScene sw = new SwitchScene();
 
     @FXML
@@ -85,7 +86,7 @@ public class AdminController implements Initializable {
 
     @FXML
     private void helpFunction(ActionEvent ae) {
-        MyAlert.helpAdmin();
+        myAlert.helpAdmin();
     }
 
 

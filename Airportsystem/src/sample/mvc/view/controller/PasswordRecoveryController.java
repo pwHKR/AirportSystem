@@ -37,7 +37,7 @@ public class PasswordRecoveryController implements Initializable {
     }
 
     @FXML
-    public void passwordRecovery(ActionEvent ae) {
+    private void passwordRecovery(ActionEvent ae) {
         if (idText.getLength() > 0) {
             int id = Integer.parseInt(idText.getText());
             dbhandler.searchForUser(id);
@@ -46,12 +46,12 @@ public class PasswordRecoveryController implements Initializable {
     }
 
     @FXML
-    public void goBack(ActionEvent ae) {
+    private void goBack(ActionEvent ae) {
         sw.goToUnLogged(ae, "Login.fxml");
     }
 
     @FXML
-    public void save(ActionEvent ae) {
+    private void save(ActionEvent ae) {
 
     }
 }

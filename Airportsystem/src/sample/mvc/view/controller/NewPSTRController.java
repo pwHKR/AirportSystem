@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -19,6 +20,7 @@ import java.util.ResourceBundle;
  */
 public class NewPSTRController implements Initializable {
 
+    MyAlert myAlert = new MyAlert();
     SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> countryList = FXCollections.observableArrayList();
@@ -27,7 +29,7 @@ public class NewPSTRController implements Initializable {
 
 
     @FXML
-    TextField LabelIdPSTR;
+    private TextField LabelIdPSTR;
     @FXML
     private ComboBox<String> city;
 
@@ -42,19 +44,19 @@ public class NewPSTRController implements Initializable {
     @FXML
     private void addPSTRLocation(ActionEvent ae) {
         String locationId;
-        String IdPSTR;
+        String idPSTR;
 
 
         Location location = new Location(airport.getValue(), city.getValue(), country.getValue());
 
         locationId = dbh.getLocationId(location);
 
-        IdPSTR = LabelIdPSTR.getText();
+        idPSTR = LabelIdPSTR.getText();
 
-        dbh.AddLocationPSTR(IdPSTR, locationId);
+        dbh.AddLocationPSTR(idPSTR, locationId);
 
 
-        MyAlert.requestSent();
+        myAlert.requestSent();
 
 
         sw.GoTo(ae, "/Admin.fxml");

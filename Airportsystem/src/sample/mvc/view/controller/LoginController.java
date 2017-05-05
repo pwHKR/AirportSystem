@@ -8,7 +8,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import sample.mvc.model.*;
 
-import java.lang.System;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,6 +16,7 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
+    MyAlert myAlert = new MyAlert();
     SwitchScene sw = new SwitchScene();
 
     @FXML
@@ -38,14 +38,14 @@ public class LoginController implements Initializable {
 
         DataStorage dbhandler = new DBHandler();
 
-        System.out.println(dbhandler.getUsersOnlineCount());
+
         userName.setText(local.getCurrentUsersUserName());
         password.setText(local.getCurrentUsersPassword());
     }
 
     @FXML
     private void help() {
-        MyAlert.helpLogIn();
+        myAlert.helpLogIn();
     }
 
     @FXML
@@ -74,14 +74,14 @@ public class LoginController implements Initializable {
             isAdmin = true;
         }
         if (UserName.isEmpty()) {
-            MyAlert.emptyUserName();
+            myAlert.emptyUserName();
         }
 
         if (UserName.isEmpty() == false) {
 
             if (sentPassword.equals(Password) == false) {
 
-                MyAlert.loginFail();
+                myAlert.loginFail();
             }
 
             if (sentPassword.equals(Password) && isAdmin == true) {

@@ -12,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import sample.mvc.model.*;
 
-import java.lang.System;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -22,6 +21,9 @@ import java.util.ResourceBundle;
 public class AddTripController implements Initializable {
 
     private SwitchScene sw = new SwitchScene();
+
+    MyAlert myAlert = new MyAlert();
+
     private ObservableList<Integer> flightIdList = FXCollections.observableArrayList();
     private ObservableList<String> pstrCountryList = FXCollections.observableArrayList();
     private ObservableList<String> cityMatchesCountryList = FXCollections.observableArrayList();
@@ -55,11 +57,11 @@ public class AddTripController implements Initializable {
         int locationId = dbh.getLocationId(fromCountryField.getValue(), fromCityField.getValue());
         Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(), flightChoice.getValue());
 
-        System.out.println(flightChoice.getValue());
+
         if (dateField.getValue().toString() != null) {
             dbh.insertTrip(trip, locationId);
         } else {
-            MyAlert.noDateError();
+            myAlert.noDateError();
         }
 
     }
@@ -77,7 +79,7 @@ public class AddTripController implements Initializable {
     }
 
     @FXML
-    public void pickFlightId(MouseEvent me) {
+    private void pickFlightId(MouseEvent me) {
         flightIdList = dbh.getAllFlightIds();
         flightChoice.setItems(flightIdList);
 
@@ -85,13 +87,13 @@ public class AddTripController implements Initializable {
     }
 
     @FXML
-    public void pickCountryFrom(MouseEvent me) {
+    private void pickCountryFrom(MouseEvent me) {
         pstrCountryList = dbh.getCountriesWithPstr();
         fromCountryField.setItems(pstrCountryList);
     }
 
     @FXML
-    public void pickCityFrom(MouseEvent me) {
+    private void pickCityFrom(MouseEvent me) {
         choice = fromCountryField.getValue();
         cityMatchesCountryList = dbh.matchCityWithCountry(choice);
         fromCityField.setItems(cityMatchesCountryList);
@@ -99,7 +101,7 @@ public class AddTripController implements Initializable {
     }
 
     @FXML
-    public void pickCountryFieldTo(MouseEvent me) {
+    private void pickCountryFieldTo(MouseEvent me) {
         countryList = dbh.getCountries();
 
         toCountryField.setItems(countryList);
@@ -107,7 +109,7 @@ public class AddTripController implements Initializable {
     }
 
     @FXML
-    public void pickCityFieldTo(MouseEvent me) {
+    private void pickCityFieldTo(MouseEvent me) {
         String SelectedCountry = toCountryField.getValue();
 
         cityMatchesCountryList = dbh.getCities(SelectedCountry);

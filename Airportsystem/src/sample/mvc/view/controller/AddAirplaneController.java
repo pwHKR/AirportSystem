@@ -25,17 +25,17 @@ public class AddAirplaneController implements Initializable {
     private ObservableList<String> pstrLocationList = FXCollections.observableArrayList();
 
     @FXML
-    ListView pstrId;
+    private ListView pstrId;
     @FXML
-    TextField model;
+    private TextField model;
     @FXML
-    TextField passenger;
+    private TextField passenger;
     @FXML
-    TextField speed;
+    private TextField speed;
     @FXML
-    TextField reg;
+    private TextField reg;
     @FXML
-    TextField maxKG;
+    private TextField maxKG;
 
 
     @Override

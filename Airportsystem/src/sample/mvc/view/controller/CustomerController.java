@@ -45,10 +45,6 @@ public class CustomerController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
 
-        isOnline = sw.checkIfOnline(); // code for testing user inactivity
-
-        System.out.println(isOnline); // code for testing user inactivity
-
         try {
             List<String> textLines = Files.readAllLines(path);
             String userName = textLines.get(0);
