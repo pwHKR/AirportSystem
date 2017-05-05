@@ -51,7 +51,7 @@ public interface DataStorage {
 
     void updateTimeStampUser(String userName); // Last activity by user
 
-    ObservableList<String> searchForUser(int systemId);
+    ObservableList<String> searchForPassword(String userName);
 
     ObservableList<String> getAllAirplaneRegNumbers();
 

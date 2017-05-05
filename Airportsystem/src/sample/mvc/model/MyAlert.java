@@ -171,5 +171,25 @@ public class MyAlert {
         err.showAndWait();
     }
 
+    public void noInformationInDatabase() {
+        err.setTitle("Error");
+        err.setHeaderText("No information in database");
+        err.setContentText("Sorry we couldn't find your user information in our database.");
+        err.showAndWait();
+    }
 
+    public void recoverPasswordHelp() {
+        msg.setTitle("Information");
+        msg.setHeaderText("Recover Password");
+        msg.setContentText("To recover your password you have to fill in the username field and press recover password and the " +
+                "program will display your password in the text area.");
+        msg.showAndWait();
+    }
+
+    public void informationSaved() {
+        msg.setTitle("Information");
+        msg.setHeaderText("Your information has been saved");
+        msg.setContentText("You can now go back to previous screen and log in");
+        msg.showAndWait();
+    }
 }

@@ -204,7 +204,6 @@ public class LocalFileStorage {
             e.printStackTrace();
         }
 
-
         if (input != null) {
             try {
                 input.close();
@@ -212,8 +211,6 @@ public class LocalFileStorage {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
         }
         return record;
 

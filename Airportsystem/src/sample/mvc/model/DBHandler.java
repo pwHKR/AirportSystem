@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
-import java.lang.*;
 import java.sql.*;
 import java.util.Properties;
 
@@ -741,21 +740,22 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public ObservableList<String> searchForUser(int systemId) {
+    public ObservableList<String> searchForPassword(String userName) {
         ObservableList<String> userInformation = FXCollections.observableArrayList();
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            String q1 = "SELECT User.userName, User.password from AirportSystemdb.User where AirportSystemdb.User.Person_systemId ='" + systemId + "'";
+            String q1 = "SELECT password from AirportSystemdb.User WHERE userName = '" + userName + "';";
 
             Statement stmt = conn.createStatement();
             stmt.addBatch(q1);
             ResultSet resultSet = stmt.executeQuery(q1);
 
             while (resultSet.next()) {
-
+                userInformation.add(resultSet.getString("password"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
+
         }
         return userInformation;
     }
@@ -1114,8 +1114,4 @@ public class DBHandler implements DataStorage {
         return flightId;
 
     }
-
-
-
-
 }
