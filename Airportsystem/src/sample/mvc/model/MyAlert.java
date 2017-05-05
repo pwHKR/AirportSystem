@@ -7,10 +7,10 @@ import javafx.scene.control.Alert;
  */
 public class MyAlert {
 
-    static javafx.scene.control.Alert msg = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
-    static javafx.scene.control.Alert err = new javafx.scene.control.Alert(Alert.AlertType.ERROR);
+    private javafx.scene.control.Alert msg = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
+    private javafx.scene.control.Alert err = new javafx.scene.control.Alert(Alert.AlertType.ERROR);
 
-    public static void helpNewCustomer() {
+    public void helpNewCustomer() {
         msg.setHeaderText("Create account help");
         msg.setContentText("In this screen you are able to create a new account and become a customer at PSTR-Airlines." +
                 " Enter the appropriate infromation in each textfield to create an account." +
@@ -18,7 +18,7 @@ public class MyAlert {
         msg.show();
     }
 
-    public static void helpLogIn() {
+    public void helpLogIn() {
         msg.setHeaderText("Login help");
         msg.setTitle("Help");
         msg.setContentText("If you do not already have an account, press Create Account \nYou can recover your password" +
@@ -26,26 +26,26 @@ public class MyAlert {
         msg.show();
     }
 
-    public static void emptyUserName() {
+    public void emptyUserName() {
         err.setContentText("You must enter a user name!");
         err.show();
     }
 
-    public static void countryNameErr() {
+    public void countryNameErr() {
         err.setTitle("Error");
         err.setHeaderText("Invalid info");
         err.setContentText("Your country name can only contain letters.");
         err.showAndWait();
     }
 
-    public static void addressNameErr() {
+    public void addressNameErr() {
         err.setTitle("Error");
         err.setHeaderText("Invalid info");
         err.setContentText("Your address must contain street name and street number.");
         err.showAndWait();
     }
 
-    public static void eMailNameErr() {
+    public void eMailNameErr() {
 
         err.setTitle("Error");
         err.setHeaderText("Invalid info");
@@ -55,7 +55,7 @@ public class MyAlert {
 
     }
 
-    public static void ssnInputErr() {
+    public void ssnInputErr() {
 
 
         err.setTitle("Error");
@@ -64,7 +64,7 @@ public class MyAlert {
         err.showAndWait();
     }
 
-    public static void firstNameErr() {
+    public void firstNameErr() {
 
 
         err.setTitle("Error");
@@ -73,14 +73,14 @@ public class MyAlert {
         err.showAndWait();
     }
 
-    public static void lastNameErr() {
+    public void lastNameErr() {
         err.setTitle("Error");
         err.setHeaderText("Invalid info");
         err.setContentText("Your last name can only contain letters.");
         err.showAndWait();
     }
 
-    public static void loginFail() {
+    public void loginFail() {
 
         err.setTitle("Error");
         err.setHeaderText("Invalid info");
@@ -88,21 +88,21 @@ public class MyAlert {
         err.show();
     }
 
-    public static void userNameErr() {
+    public void userNameErr() {
         err.setTitle("Error");
         err.setHeaderText("Invalid info");
         err.setContentText("The username textfield can't be left empty.");
         err.show();
     }
 
-    public static void passwordErr() {
+    public void passwordErr() {
         err.setTitle("Error");
         err.setHeaderText("Invalid info");
         err.setContentText("The password field can't be left empty.");
         err.show();
     }
 
-    public static void ssnExistsErr() {
+    public void ssnExistsErr() {
 
         err.setTitle("Error");
         err.setHeaderText("ssn already exists");
@@ -110,7 +110,7 @@ public class MyAlert {
         err.showAndWait();
     }
 
-    public static void userNameExists() {
+    public void userNameExists() {
 
         err.setTitle("Error");
         err.setHeaderText("Username already exists");
@@ -118,13 +118,13 @@ public class MyAlert {
         err.showAndWait();
     }
 
-    public static void requestSent() {
+    public void requestSent() {
 
         msg.setContentText("request sent");
         msg.show();
     }
 
-    public static void helpAdmin() {
+    public void helpAdmin() {
         msg.setHeaderText("Start help");
         msg.setTitle("Help");
         msg.setContentText("You are now logged in, click on one of the buttons to get to the next page where you can " +
@@ -132,7 +132,7 @@ public class MyAlert {
         msg.show();
     }
 
-    public static void helpViewWorkers() {
+    public void helpViewWorkers() {
         msg.setHeaderText("View worker help");
         msg.setTitle("Help");
         msg.setContentText("In the left window you can see the workers system-ID. By clicking their id´s you will be able to see" +
@@ -141,7 +141,7 @@ public class MyAlert {
     }
 
 
-    public static void logoutInactivity() {
+    public void logoutInactivity() {
         msg.setHeaderText("Logged out");
         msg.setTitle("Logged out");
         msg.setContentText("You have been logged out due to inactivity");
@@ -149,7 +149,7 @@ public class MyAlert {
     }
 
 
-    public static void generalError() {
+    public void generalError() {
         msg.setHeaderText("Error");
         msg.setTitle("Error");
         msg.setContentText("Error");
@@ -157,14 +157,14 @@ public class MyAlert {
     }
 
 
-    public static void depositMsg() {
-        msg.setHeaderText("Deposit successful");
-        msg.setTitle("Your account has been credited");
+    public void depositMsg(String ammount) {
+        msg.setHeaderText("Your account has been credited with +" + ammount + " sek");
+        msg.setTitle("Deposit successful");
         msg.setContentText("You will receive your bill on the mail within 7 days");
         msg.showAndWait();
     }
 
-    public static void noDateError() {
+    public void noDateError() {
         err.setTitle("Error");
         err.setHeaderText("no date selected");
         err.setContentText("You have to enter a date");

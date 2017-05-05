@@ -18,9 +18,10 @@ import java.util.ResourceBundle;
  */
 public class NewUserController implements Initializable {
 
+    MyAlert myAlert = new MyAlert();
     SwitchScene sw = new SwitchScene();
 
-    ObservableList<String> countryList = FXCollections.observableArrayList();
+    private ObservableList<String> countryList = FXCollections.observableArrayList();
 
     @FXML
     private TextField firstName;
@@ -121,35 +122,35 @@ public class NewUserController implements Initializable {
                                             sw.GoTo(ae, "Admin.fxml");
                                         }
                                     } else {
-                                        MyAlert.passwordErr();
+                                        myAlert.passwordErr();
                                     }
                                 } else {
-                                    MyAlert.userNameErr();
+                                    myAlert.userNameErr();
                                 }
                             /*} else {
-                                MyAlert.countryNameErr();
+                                myAlert.countryNameErr();
                             }*/
                         } else {
-                            MyAlert.addressNameErr();
+                            myAlert.addressNameErr();
                         }
                     } else {
-                        MyAlert.eMailNameErr();
+                        myAlert.eMailNameErr();
                     }
                 } else {
-                    MyAlert.ssnInputErr();
+                    myAlert.ssnInputErr();
                 }
             } else {
-                MyAlert.lastNameErr();
+                myAlert.lastNameErr();
             }
         } else {
-            MyAlert.firstNameErr();
+            myAlert.firstNameErr();
         }
     }
 
     @FXML
     private void help() {
 
-        MyAlert.helpNewCustomer();
+        myAlert.helpNewCustomer();
     }
 
     @FXML

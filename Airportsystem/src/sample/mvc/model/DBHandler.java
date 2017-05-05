@@ -4,11 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
-import java.lang.System;
 import java.sql.*;
 import java.util.Properties;
 
 public class DBHandler implements DataStorage {
+
+    MyAlert myAlert = new MyAlert();
 
     private final String dbName;
     private final String user;
@@ -194,10 +195,10 @@ public class DBHandler implements DataStorage {
                     ps.execute();
                     conn.close();
                 } else {
-                    MyAlert.userNameExists();
+                    myAlert.userNameExists();
                 }
             } else {
-                MyAlert.ssnExistsErr();
+                myAlert.ssnExistsErr();
             }
 
         } catch (Exception ex) {
@@ -266,7 +267,7 @@ public class DBHandler implements DataStorage {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println(iD);
+
         return iD;
 
 
@@ -474,7 +475,6 @@ public class DBHandler implements DataStorage {
             //"SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'"
             //String query = ("DELETE FROM AirportSystemdb.User, AirportSystemdb.Person WHERE AirportSystemdb.User.Person_systemId = " + sysId + "");
 
-            System.out.println(sysId);
 
             String q1 = "DELETE FROM AirportSystemdb.User WHERE AirportSystemdb.User.Person_systemId = ?;";
             String q2 = "DELETE FROM AirportSystemdb.Person WHERE AirportSystemdb.Person.systemId = ?;";
@@ -522,8 +522,6 @@ public class DBHandler implements DataStorage {
     public boolean isUserOnline(String userName) {
 
 
-        System.out.println(userName);
-
         boolean isOnline = false;
         int tinyInt = 0;
 
@@ -531,7 +529,6 @@ public class DBHandler implements DataStorage {
 
             String q1 = "SELECT online FROM AirportSystemdb.User where userName = '" + userName + "'";
 
-            System.out.println(q1);
 
             Statement statement = conn.prepareStatement(q1);
 
@@ -726,7 +723,6 @@ public class DBHandler implements DataStorage {
 
     public void updateTimeStampUser(String userName) {
 
-        System.out.println(userName);
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 

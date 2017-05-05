@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import sample.mvc.model.*;
 
 import java.net.URL;
+import java.util.InputMismatchException;
 import java.util.ResourceBundle;
 
 /**
@@ -16,6 +17,7 @@ import java.util.ResourceBundle;
 public class BillingController implements Initializable {
 
 
+    MyAlert myAlert = new MyAlert();
     SwitchScene sw = new SwitchScene();
     LocalFileStorage lfs = new LocalFileStorage();
     DataStorage dbh = new DBHandler();
@@ -50,19 +52,48 @@ public class BillingController implements Initializable {
         balance = Double.parseDouble(stringBalance);
 
         stringDepositAmount = amountTextField.getText();
-        depositAmount = Double.parseDouble(stringDepositAmount);
-
-        setBalanceTo = balance + depositAmount;
 
 
-        dbh.setBalance(setBalanceTo, systemId);
+        // If statement will "cath" numbers with digits first and then either "f", "F", "d" or "D"
+        if (!stringDepositAmount.endsWith("f") && !stringDepositAmount.endsWith("F")
+                && !stringDepositAmount.endsWith("d") && !stringDepositAmount.endsWith("D")) {
 
-        MyAlert.depositMsg();
 
-        updateBalance();
+            try {
+                depositAmount = Double.parseDouble(stringDepositAmount);
 
+                setBalanceTo = balance + depositAmount;
+
+
+                dbh.setBalance(setBalanceTo, systemId);
+
+                myAlert.depositMsg(stringDepositAmount);
+
+                updateBalance();
+            } catch (NumberFormatException e) {
+
+                myAlert.generalError();
+                amountTextField.clear();
+
+            } catch (InputMismatchException i) {
+
+                myAlert.generalError();
+                amountTextField.clear();
+
+            }
+
+        }
+
+        // if String number contains digits first and then either "f", "F", "d" or "D" as last char in the sequence
+        else {
+
+            myAlert.generalError();
+            amountTextField.clear();
+
+        }
 
     }
+
 
     @FXML
     private void goBack(ActionEvent ae) {

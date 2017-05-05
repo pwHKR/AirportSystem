@@ -20,6 +20,7 @@ import java.util.ResourceBundle;
  */
 public class AddLocationController implements Initializable {
 
+    MyAlert myAlert = new MyAlert();
     SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> countryList = FXCollections.observableArrayList();
@@ -46,7 +47,7 @@ public class AddLocationController implements Initializable {
 
         destinationId = dbh.getLocationId(destination); // Denna måste till AddTripController
 
-        MyAlert.requestSent();
+        myAlert.requestSent();
 
 
         sw.GoTo(ae, "/AddTrip.fxml");

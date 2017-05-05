@@ -15,6 +15,9 @@ import java.util.ResourceBundle;
  * Created by Tobias Åkesson on 2017-05-02.
  */
 public class AddFlightController implements Initializable {
+
+    MyAlert myAlert = new MyAlert();
+
     @FXML
     private Button addButton;
     @FXML
@@ -58,7 +61,7 @@ public class AddFlightController implements Initializable {
     }
 
     @FXML
-    public void returnToAdmin(ActionEvent ae) {
+    private void returnToAdmin(ActionEvent ae) {
         sw.GoTo(ae, "Admin.fxml");
     }
 
@@ -69,7 +72,7 @@ public class AddFlightController implements Initializable {
 
         if (gateField.getText().isEmpty() || regField.getSelectionModel().isEmpty()) {
 
-            MyAlert.generalError();
+            myAlert.generalError();
 
             noError = false;
         }

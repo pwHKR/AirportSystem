@@ -18,6 +18,8 @@ import java.util.List;
  */
 public class SwitchScene {
 
+    MyAlert myAlert = new MyAlert();
+
     private boolean userLoggedOut; //Checks if the user logged out voluntarily or not
 
 
@@ -29,7 +31,7 @@ public class SwitchScene {
 
         if (isOnline == false && userLoggedOut == false) {
 
-            MyAlert.logoutInactivity();
+            myAlert.logoutInactivity();
             fxmlFile = "Login.fxml";
 
         }
