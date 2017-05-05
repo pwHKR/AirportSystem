@@ -16,8 +16,10 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
-    MyAlert myAlert = new MyAlert();
-    SwitchScene sw = new SwitchScene();
+    private MyAlert myAlert = new MyAlert();
+    private SwitchScene sw = new SwitchScene();
+    private DataStorage dbh = new DBHandler();
+    private LocalFileStorage local = new LocalFileStorage();
 
     @FXML
     private PasswordField password;
@@ -27,16 +29,12 @@ public class LoginController implements Initializable {
 
     private Path path = Paths.get("logInLog.bin");
 
-    DataStorage dbh = new DBHandler();
-    LocalFileStorage local = new LocalFileStorage();
 
     @FXML
     private Button recoverPasswordButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        DataStorage dbhandler = new DBHandler();
 
 
         userName.setText(local.getCurrentUsersUserName());

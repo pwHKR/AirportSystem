@@ -16,7 +16,9 @@ import java.util.ResourceBundle;
  */
 public class AddFlightController implements Initializable {
 
-    MyAlert myAlert = new MyAlert();
+    private MyAlert myAlert = new MyAlert();
+    private DataStorage dbh = new DBHandler();
+    private SwitchScene sw = new SwitchScene();
 
     @FXML
     private Button addButton;
@@ -39,8 +41,7 @@ public class AddFlightController implements Initializable {
     private String choice;
 
     private ObservableList<String> airPlanes = FXCollections.observableArrayList();
-    DataStorage dbh = new DBHandler();
-    SwitchScene sw = new SwitchScene();
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -16,8 +16,9 @@ import java.util.List;
  * Created by Stefan on 2017-04-25.
  */
 public class EmployeeController {
+
     private DataStorage dbh = new DBHandler();
-    SwitchScene sw = new SwitchScene();
+    private SwitchScene sw = new SwitchScene();
     private Path path = Paths.get("logInLog.bin");
 
     @FXML

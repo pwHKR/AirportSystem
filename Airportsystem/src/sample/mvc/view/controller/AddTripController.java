@@ -22,7 +22,7 @@ public class AddTripController implements Initializable {
 
     private SwitchScene sw = new SwitchScene();
 
-    MyAlert myAlert = new MyAlert();
+    private MyAlert myAlert = new MyAlert();
 
     private ObservableList<Integer> flightIdList = FXCollections.observableArrayList();
     private ObservableList<String> pstrCountryList = FXCollections.observableArrayList();

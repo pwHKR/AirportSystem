@@ -20,8 +20,8 @@ import java.util.ResourceBundle;
  */
 public class AddLocationController implements Initializable {
 
-    MyAlert myAlert = new MyAlert();
-    SwitchScene sw = new SwitchScene();
+    private MyAlert myAlert = new MyAlert();
+    private SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> countryList = FXCollections.observableArrayList();
     private ObservableList<String> cityList = FXCollections.observableArrayList();

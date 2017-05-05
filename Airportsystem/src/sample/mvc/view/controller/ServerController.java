@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
  */
 public class ServerController implements Initializable {
 
-    SwitchScene sw = new SwitchScene();
+    private SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> ServerVariablesList = FXCollections.observableArrayList();
     private ObservableList<String> OnlineUsersList = FXCollections.observableArrayList();

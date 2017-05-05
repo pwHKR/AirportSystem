@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
  */
 public class ViewPSTRController implements Initializable {
 
-    SwitchScene sw = new SwitchScene();
+    private SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> pstrLocationList = FXCollections.observableArrayList();
     private ObservableList<String> infoList = FXCollections.observableArrayList();

@@ -5,7 +5,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -20,8 +19,8 @@ import java.util.ResourceBundle;
  */
 public class NewPSTRController implements Initializable {
 
-    MyAlert myAlert = new MyAlert();
-    SwitchScene sw = new SwitchScene();
+    private MyAlert myAlert = new MyAlert();
+    private SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> countryList = FXCollections.observableArrayList();
     private ObservableList<String> cityList = FXCollections.observableArrayList();

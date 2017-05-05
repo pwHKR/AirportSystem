@@ -20,11 +20,11 @@ public class CustomerController implements Initializable {
 
     private boolean isOnline;
 
-    SwitchScene sw = new SwitchScene();
+    private SwitchScene sw = new SwitchScene();
     private Path path = Paths.get("logInLog.bin");
     private DataStorage dbh = new DBHandler();
     @FXML
-    Label nameLabel;
+    private Label nameLabel;
 
     @FXML
     private void logout(ActionEvent ae) {

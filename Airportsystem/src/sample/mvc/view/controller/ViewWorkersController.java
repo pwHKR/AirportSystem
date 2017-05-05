@@ -21,8 +21,8 @@ import java.util.ResourceBundle;
  */
 public class ViewWorkersController implements Initializable {
 
-    MyAlert myAlert = new MyAlert();
-    SwitchScene sw = new SwitchScene();
+    private MyAlert myAlert = new MyAlert();
+    private SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> workerlist = FXCollections.observableArrayList();
     private ObservableList<String> infolist = FXCollections.observableArrayList();

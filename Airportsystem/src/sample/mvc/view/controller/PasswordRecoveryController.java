@@ -27,9 +27,9 @@ public class PasswordRecoveryController implements Initializable {
     @FXML
     private TextField idText;
 
-    DataStorage dbhandler = new DBHandler();
-    SwitchScene sw = new SwitchScene();
-    LocalFileStorage localFileStorage = new LocalFileStorage();
+    private DataStorage dbhandler = new DBHandler();
+    private SwitchScene sw = new SwitchScene();
+    private LocalFileStorage localFileStorage = new LocalFileStorage();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

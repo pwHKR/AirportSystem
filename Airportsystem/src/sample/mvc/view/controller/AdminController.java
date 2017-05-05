@@ -18,8 +18,8 @@ import java.util.ResourceBundle;
  */
 public class AdminController implements Initializable {
 
-    MyAlert myAlert = new MyAlert();
-    SwitchScene sw = new SwitchScene();
+    private MyAlert myAlert = new MyAlert();
+    private SwitchScene sw = new SwitchScene();
 
     @FXML
     private Label online;  ///label för antalet online användare

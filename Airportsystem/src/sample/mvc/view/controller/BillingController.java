@@ -17,10 +17,10 @@ import java.util.ResourceBundle;
 public class BillingController implements Initializable {
 
 
-    MyAlert myAlert = new MyAlert();
-    SwitchScene sw = new SwitchScene();
-    LocalFileStorage lfs = new LocalFileStorage();
-    DataStorage dbh = new DBHandler();
+    private MyAlert myAlert = new MyAlert();
+    private SwitchScene sw = new SwitchScene();
+    private LocalFileStorage lfs = new LocalFileStorage();
+    private DataStorage dbh = new DBHandler();
 
 
     private int systemId;

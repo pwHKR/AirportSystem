@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class SwitchScene {
 
-    MyAlert myAlert = new MyAlert();
+    private MyAlert myAlert = new MyAlert();
 
     private boolean userLoggedOut; //Checks if the user logged out voluntarily or not
 
@@ -90,9 +90,10 @@ public class SwitchScene {
 
     }
 
-    public boolean isUserLoggedOut() {
+    // not used, remove?
+    /*public boolean isUserLoggedOut() {
         return userLoggedOut;
-    }
+    }*/
 
     public void setUserLoggedOut(boolean userLoggedOut) {
         this.userLoggedOut = userLoggedOut;

@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class DBHandler implements DataStorage {
 
-    MyAlert myAlert = new MyAlert();
+    private MyAlert myAlert = new MyAlert();
 
     private final String dbName;
     private final String user;
