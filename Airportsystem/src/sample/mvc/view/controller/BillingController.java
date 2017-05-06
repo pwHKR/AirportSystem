@@ -3,6 +3,7 @@ package sample.mvc.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sample.mvc.model.*;
@@ -29,6 +30,10 @@ public class BillingController implements Initializable {
     private Label balanceLabel;
     @FXML
     private TextField amountTextField;
+    @FXML
+    private Button withdrawButton;
+    @FXML
+    private Button helpButton;
 
 
     @Override
@@ -106,5 +111,60 @@ public class BillingController implements Initializable {
 
         balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
 
+    }
+
+    @FXML
+    private void withdraw(ActionEvent ae) {
+        String stringBalance;
+        double balance;
+
+        String withdrawAmountText;
+        double withdrawAmount;
+        double setBalanceTo;
+
+        stringBalance = dbh.getBalanceFromId(systemId);
+        balance = Double.parseDouble(stringBalance);
+        withdrawAmountText = amountTextField.getText();
+
+
+        // If statement will "cath" numbers with digits first and then either "f", "F", "d" or "D"
+        if (!withdrawAmountText.endsWith("f") && !withdrawAmountText.endsWith("F")
+                && !withdrawAmountText.endsWith("d") && !withdrawAmountText.endsWith("D")) {
+
+            try {
+                withdrawAmount = Double.parseDouble(withdrawAmountText);
+                setBalanceTo = balance - withdrawAmount;
+                if (balance > withdrawAmount) {
+                    dbh.setBalance(setBalanceTo, systemId);
+                    myAlert.withdrawMsg(withdrawAmountText);
+                    updateBalance();
+                } else {
+                    myAlert.withdrawErr();
+                }
+            } catch (NumberFormatException e) {
+
+                myAlert.generalError();
+                amountTextField.clear();
+
+            } catch (InputMismatchException i) {
+
+                myAlert.generalError();
+                amountTextField.clear();
+
+            }
+        }
+
+        // if String number contains digits first and then either "f", "F", "d" or "D" as last char in the sequence
+        else {
+
+            myAlert.generalError();
+            amountTextField.clear();
+
+        }
+    }
+
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        myAlert.billingHelp();
     }
 }

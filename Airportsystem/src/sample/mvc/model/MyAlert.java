@@ -157,8 +157,8 @@ public class MyAlert {
     }
 
 
-    public void depositMsg(String ammount) {
-        msg.setHeaderText("Your account has been credited with +" + ammount + " sek");
+    public void depositMsg(String amount) {
+        msg.setHeaderText("Your account has been credited with +" + amount + " sek");
         msg.setTitle("Deposit successful");
         msg.setContentText("You will receive your bill on the mail within 7 days");
         msg.showAndWait();
@@ -190,6 +190,28 @@ public class MyAlert {
         msg.setTitle("Information");
         msg.setHeaderText("Your information has been saved");
         msg.setContentText("You can now go back to previous screen and log in");
+        msg.showAndWait();
+    }
+
+    public void withdrawMsg(String amount) {
+        msg.setHeaderText("You withdrew -" + amount + " sek");
+        msg.setTitle("Withdraw successful");
+        msg.setContentText("The money has been sent to your bank account");
+        msg.showAndWait();
+    }
+
+    public void withdrawErr() {
+        err.setHeaderText("Withdraw failed");
+        err.setTitle("You can't withdraw that much");
+        err.setContentText("You don't have that much money to withdraw");
+        err.showAndWait();
+    }
+
+    public void billingHelp() {
+        msg.setHeaderText("Manage your account billings");
+        msg.setTitle("Withdraw or deposit money to your account");
+        msg.setContentText("Enter the amount of money you wish to withdraw/deposit in the field below then click the button to " +
+                "send your request");
         msg.showAndWait();
     }
 }
