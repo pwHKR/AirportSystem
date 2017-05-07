@@ -80,6 +80,8 @@ public interface DataStorage {
     int getLastFlightId();
 
     ObservableList<String> getTrips();
+
+
 }
 
 

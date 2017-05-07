@@ -92,5 +92,8 @@
         <Button fx:id="addFlightButton" layoutX="223.0" layoutY="296.0" mnemonicParsing="false" onAction="#addFlight"
                 prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Add Flight"/>
+        <Button fx:id="browseTripsButton" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" onAction="#browseTrips"
+                prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
+                text="Browse Trips"/>
     </children>
 </AnchorPane>

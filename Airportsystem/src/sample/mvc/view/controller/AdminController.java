@@ -29,6 +29,8 @@ public class AdminController implements Initializable {
     private Button addTripButton;
     @FXML
     private Button addFlightButton;
+    @FXML
+    private Button browseTripsButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -98,12 +100,17 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    public void addTrip(ActionEvent ae) {
+    private void addTrip(ActionEvent ae) {
         sw.GoTo(ae, "AddTrip.fxml");
     }
 
     @FXML
-    public void addFlight(ActionEvent ae) {
+    private void addFlight(ActionEvent ae) {
         sw.GoTo(ae, "AddFlight.fxml");
+    }
+
+    @FXML
+    private void browseTrips(ActionEvent ae) {
+        sw.GoTo(ae, "ViewTrip.fxml");
     }
 }

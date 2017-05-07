@@ -10,8 +10,6 @@ import sample.mvc.model.*;
 
 import java.lang.System;
 import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.SQLNonTransientConnectionException;
 import java.util.ResourceBundle;
 
@@ -27,9 +25,6 @@ public class LoginController implements Initializable {
 
     @FXML
     private TextField userName;
-
-    private Path path = Paths.get("logInLog.bin");
-
 
     @FXML
     private Button recoverPasswordButton;
@@ -67,7 +62,6 @@ public class LoginController implements Initializable {
         boolean isEmployee = false;
 
         typeOfUser = dbh.printUserType(UserName);
-
 
         if (typeOfUser.equals("Employee")) {
             isEmployee = true;

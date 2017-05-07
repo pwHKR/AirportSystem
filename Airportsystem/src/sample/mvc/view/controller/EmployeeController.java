@@ -2,6 +2,7 @@ package sample.mvc.view.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
 import sample.mvc.model.SwitchScene;
@@ -20,6 +21,9 @@ public class EmployeeController {
     private DataStorage dbh = new DBHandler();
     private SwitchScene sw = new SwitchScene();
     private Path path = Paths.get("logInLog.bin");
+
+    @FXML
+    private Button browseTripsButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -45,5 +49,8 @@ public class EmployeeController {
 
     }
 
-
+    @FXML
+    private void browseTrips(ActionEvent ae) {
+        sw.GoTo(ae, "ViewTrip.fxml");
+    }
 }

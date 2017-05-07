@@ -116,5 +116,29 @@ public class SwitchScene {
 
     }
 
+    /*public void goToCheckUserType(ActionEvent event, String fxmlFile1, String userType){
+        boolean isOnline;
 
+        isOnline = checkIfOnline();
+
+        if (isOnline == false && userLoggedOut == false) {
+
+            myAlert.logoutInactivity();
+            fxmlFile = "Login.fxml";
+
+        }
+
+
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlFile + ""));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }*/
 }
