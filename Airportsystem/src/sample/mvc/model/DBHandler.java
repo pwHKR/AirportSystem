@@ -1114,4 +1114,38 @@ public class DBHandler implements DataStorage {
         return flightId;
 
     }
+
+    public ObservableList<String> getTrips() {
+
+
+        ObservableList<String> trips = FXCollections.observableArrayList();
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("Select Location.city, Location.country from Location;");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                trips.add(resultSet.getString("city") + " " + resultSet.getString("country"));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return trips;
+
+
+    }
 }

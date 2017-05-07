@@ -59,7 +59,7 @@ public class BillingController implements Initializable {
         stringDepositAmount = amountTextField.getText();
 
 
-        // If statement will "cath" numbers with digits first and then either "f", "F", "d" or "D"
+        // If statement will "catch" numbers with digits first and then either "f", "F", "d" or "D"
         if (!stringDepositAmount.endsWith("f") && !stringDepositAmount.endsWith("F")
                 && !stringDepositAmount.endsWith("d") && !stringDepositAmount.endsWith("D")) {
 

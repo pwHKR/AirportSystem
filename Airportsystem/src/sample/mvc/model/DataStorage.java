@@ -78,6 +78,8 @@ public interface DataStorage {
     Airplane getAirplaneObject(String regNumber);
 
     int getLastFlightId();
+
+    ObservableList<String> getTrips();
 }
 
 
