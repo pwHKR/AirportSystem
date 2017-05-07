@@ -1123,7 +1123,7 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("Select Location.city, Location.country from Location;");
+            String query = ("Select Location.city, Location.country from Location");
 
 
             Statement stmt = conn.createStatement();

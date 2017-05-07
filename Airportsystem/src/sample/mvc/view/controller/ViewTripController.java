@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import sample.mvc.model.DBHandler;
@@ -22,6 +23,7 @@ import java.util.ResourceBundle;
 public class ViewTripController implements Initializable {
 
     private ObservableList<String> trips = FXCollections.observableArrayList();
+    private ObservableList<String> choices = FXCollections.observableArrayList("Name", "Date", "Price");
     private SwitchScene switchScene = new SwitchScene();
     private DataStorage dbh = new DBHandler();
     private LocalFileStorage local = new LocalFileStorage();
@@ -31,11 +33,14 @@ public class ViewTripController implements Initializable {
     private ListView<String> listView;
     @FXML
     private Button returnButton;
+    @FXML
+    private ChoiceBox<String> choiceBox;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-
+        choiceBox.setItems(choices);
         trips = dbh.getTrips();
 
         listView.setItems(trips);
