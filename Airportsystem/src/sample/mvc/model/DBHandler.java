@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
+import java.lang.*;
 import java.sql.*;
 import java.util.Properties;
 
@@ -1146,6 +1147,50 @@ public class DBHandler implements DataStorage {
 
         return trips;
 
-
     }
+
+
+    public ObservableList<String> getFilteredResults(String input, String choice) {
+
+        ObservableList<String> trips = FXCollections.observableArrayList();
+        String query = ("");
+
+
+        switch (choice) {
+
+            case "Price Ascending":
+                query = ("");
+                break;
+            case "Price Descening":
+                query = ("");
+                break;
+            case "Name":
+                query = ("SELECT Location.city, Location.country FROM Location WHERE Location.city = '" + input + "'");
+                break;
+            case "Date":
+                query = ("");
+                break;
+
+
+        }
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                trips.add(resultSet.getString("country"));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return trips;
+    }
+
+
 }

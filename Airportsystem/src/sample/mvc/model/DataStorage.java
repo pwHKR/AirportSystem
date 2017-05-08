@@ -81,6 +81,8 @@ public interface DataStorage {
 
     ObservableList<String> getTrips();
 
+    ObservableList<String> getFilteredResults(String input, String choice);
+
 
 }
 

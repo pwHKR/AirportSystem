@@ -63,7 +63,8 @@
         <TextField layoutX="191.0" layoutY="111.0" prefHeight="25.0" prefWidth="209.0" promptText="Search Field" />
         <ListView fx:id="listView" layoutX="17.0" layoutY="158.0" onMouseClicked="#checkSelected" prefHeight="334.0" prefWidth="218.0" />
         <TextArea fx:id="textArea" editable="false" layoutX="377.0" layoutY="228.0" prefHeight="264.0" prefWidth="200.0" />
-      <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="352.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="352.0" layoutY="141.0" pickOnBounds="true"
+                   preserveRatio="true" onMouseClicked="#filterSearch">
          <image>
             <Image url="@resources/magnify.png" />
          </image>
