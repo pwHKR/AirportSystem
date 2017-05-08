@@ -52,10 +52,7 @@ public class AddTripController implements Initializable {
 
     @FXML
     private TextField priceField;
-    @FXML
-    private ComboBox<String> fromCountryField;
-    @FXML
-    private ComboBox<String> fromCityField;
+
     @FXML
     private ComboBox<String> toCityField;
     @FXML
@@ -80,14 +77,26 @@ public class AddTripController implements Initializable {
     @FXML
     private void addTrip(ActionEvent ae) {
 
-        int locationId = dbh.getLocationId(fromCountryField.getValue(), fromCityField.getValue());
+        int from;
+        int to;
+
+
+
         Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(),
                 dbh.getLastFlightId() + 1, airplane.getPassengerCapacity());
 
+        String choiceFrom = pstrLocation.getSelectionModel().getSelectedItem();
+        from = dbh.getLocationIdFromPstrId(Integer.parseInt(choiceFrom));
+
+        Location location = new Location(toAirportField.getValue(), toCityField.getValue(), toCountryField.getValue());
+
+        String choiceTo = dbh.getLocationId(location);
+        to = Integer.parseInt(choiceTo);
+
 
         if (dateField.getValue().toString() != null) {
-            dbh.insertFlight(local.readFlightFromFile(), false);
-            dbh.insertTrip(trip, locationId);
+            dbh.insertFlight(local.readFlightFromFile(), false);// FIXME: 2017-05
+            dbh.insertTrip(trip, from, to);
         } else {
             myAlert.noDateError();
         }
@@ -125,19 +134,7 @@ public class AddTripController implements Initializable {
     }
 
 
-    @FXML
-    private void pickCountryFrom(MouseEvent me) {
-        pstrCountryList = dbh.getCountriesWithPstr();
-        fromCountryField.setItems(pstrCountryList);
-    }
 
-    @FXML
-    private void pickCityFrom(MouseEvent me) {
-        choice = fromCountryField.getValue();
-        cityMatchesCountryList = dbh.matchCityWithCountry(choice);
-        fromCityField.setItems(cityMatchesCountryList);
-
-    }
 
     @FXML
     private void pickCountryFieldTo(MouseEvent me) {

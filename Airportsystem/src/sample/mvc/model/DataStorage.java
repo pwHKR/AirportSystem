@@ -71,7 +71,7 @@ public interface DataStorage {
 
     String getBalanceFromId(int systemId);
 
-    void insertTrip(Trip trip, int locationId);
+    void insertTrip(Trip trip, int locationIdFrom, int locationIdTo);
 
     int getLocationId(String country, String city);
 
@@ -81,7 +81,11 @@ public interface DataStorage {
 
     ObservableList<String> getTrips();
 
-    ObservableList<String> getFilteredResults(String input, String choice);
+    int getLocationIdFromPstrId(int pstrId);
+
+    int getMaxTripId();
+
+    //void linkTrip(Trip trip, Location)
 
 
 }
