@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import sample.mvc.model.*;
 
@@ -33,8 +30,19 @@ public class AddTripController implements Initializable {
     private ObservableList<String> pstrCountryList = FXCollections.observableArrayList();
     private ObservableList<String> cityMatchesCountryList = FXCollections.observableArrayList();
     private ObservableList<String> countryList = FXCollections.observableArrayList();
+    private ObservableList<String> airportList = FXCollections.observableArrayList();
+    private ObservableList<String> pstrLocationList = FXCollections.observableArrayList();
+    private ObservableList<String> infoList = FXCollections.observableArrayList();
     private DataStorage dbh = new DBHandler();
     private String choice;
+
+
+    @FXML
+    private ListView<String> pstrLocation;
+
+    @FXML
+    private TextArea locationInfo;
+
 
     @FXML
     private Button addButton;
@@ -52,6 +60,10 @@ public class AddTripController implements Initializable {
     private ComboBox<String> toCityField;
     @FXML
     private ComboBox<String> toCountryField;
+
+
+    @FXML
+    private ComboBox<String> toAirportField;
 
     @FXML
     private TextField flightChoice;
@@ -100,6 +112,13 @@ public class AddTripController implements Initializable {
         model.setText(airplane.getModel());
         maxSpeed.setText(airplane.getMaxSpeed());
 
+        pstrLocationList = dbh.getPSTR();
+
+
+        pstrLocation.setItems(pstrLocationList);
+
+
+
 
 
 
@@ -137,4 +156,27 @@ public class AddTripController implements Initializable {
         toCityField.setItems(cityMatchesCountryList);
 
     }
+
+    @FXML
+    private void pickAirportFieldTo(MouseEvent me) {
+        String selectedCity = toCityField.getValue();
+
+        airportList = dbh.getAirports(selectedCity);
+
+        toAirportField.setItems(airportList);
+
+    }
+
+    @FXML
+    private void getLocationInfo() {
+        DataStorage dbHandler = new DBHandler();
+
+        String choice = pstrLocation.getSelectionModel().getSelectedItem();
+        infoList = dbHandler.getPSTRLocationInfo(choice);
+        locationInfo.setText(infoList.toString().replace("[", "").replace
+                ("]", ""));
+    }
+
+
+
 }

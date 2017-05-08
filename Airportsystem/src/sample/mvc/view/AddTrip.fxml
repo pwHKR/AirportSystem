@@ -4,6 +4,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.Glow?>
@@ -64,7 +66,7 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <TextField fx:id="priceField" layoutX="259.0" layoutY="404.0" prefHeight="27.0" prefWidth="66.0"/>
+        <TextField fx:id="priceField" layoutX="345.0" layoutY="352.0" prefHeight="27.0" prefWidth="66.0"/>
         <Label layoutX="41.0" layoutY="133.0" text="FlightID" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
@@ -75,19 +77,17 @@
                 <Font size="18.0"/>
             </font>
         </Label>
-        <Label layoutX="210.0" layoutY="406.0" text="Price" textFill="WHITE">
+        <Label layoutX="356.0" layoutY="329.0" text="Price" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
             </font>
         </Label>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button fx:id="addButton" layoutX="244.0" layoutY="320.0" mnemonicParsing="false" onAction="#addTrip"
+        <Button fx:id="addButton" layoutX="241.0" layoutY="345.0" mnemonicParsing="false" onAction="#addTrip"
                 prefHeight="41.0" prefWidth="97.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css"
                 text="ADD"/>
         <DatePicker fx:id="dateField" editable="false" layoutX="178.0" layoutY="186.0" prefHeight="25.0"
                     prefWidth="234.0" promptText="Select date"/>
-        <ComboBox fx:id="fromCountryField" layoutX="36.0" layoutY="285.0" onMouseClicked="#pickCountryFrom"
-                  prefHeight="27.0" prefWidth="114.0" promptText="Country"/>
         <ComboBox fx:id="toCountryField" layoutX="426.0" layoutY="285.0" onMouseClicked="#pickCountryFieldTo"
                   prefHeight="27.0" prefWidth="114.0" promptText="Country"/>
         <Label layoutX="66.0" layoutY="247.0" text="From" textFill="WHITE">
@@ -100,13 +100,9 @@
                 <Font size="18.0"/>
             </font>
         </Label>
-        <ComboBox fx:id="fromCityField" layoutX="37.0" layoutY="327.0" onMouseClicked="#pickCityFrom" prefHeight="27.0"
-                  prefWidth="114.0" promptText="City"/>
         <ComboBox fx:id="toCityField" layoutX="428.0" layoutY="327.0" onMouseClicked="#pickCityFieldTo"
                   prefHeight="27.0" prefWidth="114.0" promptText="City"/>
-        <ComboBox fx:id="toAirportField" layoutX="428.0" layoutY="365.0" onMouseClicked="#pickCityFieldTo"
-                  prefHeight="27.0" prefWidth="114.0" promptText="Airport"/>
-        <ComboBox fx:id="fromAirportField" layoutX="36.0" layoutY="365.0" onMouseClicked="#pickCityFieldTo"
+        <ComboBox fx:id="toAirportField" layoutX="428.0" layoutY="365.0" onMouseClicked="#pickAirportFieldTo"
                   prefHeight="27.0" prefWidth="114.0" promptText="Airport"/>
         <TextField fx:id="flightChoice" editable="false" layoutX="41.0" layoutY="166.0" prefHeight="27.0"
                    prefWidth="66.0"/>
@@ -130,5 +126,8 @@
                 <Font size="18.0"/>
             </font>
         </Label>
+        <ListView fx:id="pstrLocation" layoutX="63.0" layoutY="278.0" onMouseClicked="#getLocationInfo"
+                  prefHeight="41.0" prefWidth="51.0"/>
+        <TextArea fx:id="locationInfo" layoutX="10.0" layoutY="334.0" prefHeight="90.0" prefWidth="200.0"/>
     </children>
 </AnchorPane>
