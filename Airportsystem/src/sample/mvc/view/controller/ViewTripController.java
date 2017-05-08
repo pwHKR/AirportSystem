@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
@@ -37,20 +34,20 @@ public class ViewTripController implements Initializable {
     @FXML
     private Button returnButton;
     @FXML
-    private ChoiceBox<String> choiceBox;
+    private ComboBox<String> comboBox;
     @FXML
     private TextField textField;
 
     @FXML
     private void filterSearch() {
-        trips = dbh.getFilteredResults(textField.getText(), choiceBox.getSelectionModel().getSelectedItem());
+        trips = dbh.getFilteredResults(textField.getText(), comboBox.getValue());
         listView.setItems(trips);
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        choiceBox.setItems(choices);
+        comboBox.setItems(choices);
         trips = dbh.getTrips();
 
         listView.setItems(trips);
