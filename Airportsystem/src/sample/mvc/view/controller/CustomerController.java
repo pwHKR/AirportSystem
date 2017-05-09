@@ -3,6 +3,7 @@ package sample.mvc.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
@@ -25,6 +26,8 @@ public class CustomerController implements Initializable {
     private DataStorage dbh = new DBHandler();
     @FXML
     private Label nameLabel;
+    @FXML
+    private Button viewBookingButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -69,4 +72,13 @@ public class CustomerController implements Initializable {
         sw.GoTo(ae, "Billing.fxml");
     }
 
+    @FXML
+    private void viewBookings(ActionEvent ae) {
+        sw.GoTo(ae, "ViewBookings.fxml");
+    }
+
+    @FXML
+    private void setHelpButton(ActionEvent ae) {
+
+    }
 }

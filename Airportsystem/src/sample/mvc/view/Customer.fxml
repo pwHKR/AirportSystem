@@ -81,8 +81,9 @@
         <Button layoutX="28.0" layoutY="179.0" mnemonicParsing="false" onAction="#goToViewTrips" prefHeight="67.0"
                 prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Browse Trips"/>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="370.0" layoutY="179.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="196.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="View bookings"/>
+        <Button fx:id="viewBookingButton" layoutX="370.0" layoutY="179.0" mnemonicParsing="false"
+                onAction="#viewBookings" prefHeight="67.0" prefWidth="196.0" styleClass="rich-blue"
+                stylesheets="@stylesheet.css" text="View bookings"/>
         <Button layoutX="370.0" layoutY="269.0" mnemonicParsing="false" onAction="#goToBilling" prefHeight="67.0"
                 prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Billing"/>
     </children>

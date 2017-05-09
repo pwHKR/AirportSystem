@@ -214,4 +214,20 @@ public class MyAlert {
                 "send your request");
         msg.showAndWait();
     }
+
+    public void searchHelp() {
+        msg.setHeaderText("Welcome to the main function of the PSTR booking system");
+        msg.setTitle("Search for locations and book your trip.");
+        msg.setContentText("This is where you can see what trips we are offering, enter a location name in the search field below and click" +
+                "the search button");
+        msg.showAndWait();
+    }
+
+    public void viewBookingsHelp() {
+        msg.setHeaderText("You can see your bookings below");
+        msg.setTitle("View bookings");
+        msg.setContentText("In this window you are able to see your bookings. Click one of your bookings to see detailed information" +
+                "and click edit to be able to edit/cancel your booking");
+        msg.showAndWait();
+    }
 }

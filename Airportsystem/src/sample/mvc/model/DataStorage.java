@@ -85,6 +85,8 @@ public interface DataStorage {
 
     int getMaxTripId();
 
+    ObservableList<String> getFilteredResults(String input, String choice);
+
     //void linkTrip(Trip trip, Location)
 
 
