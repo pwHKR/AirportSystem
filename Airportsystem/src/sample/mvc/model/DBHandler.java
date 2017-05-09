@@ -208,7 +208,6 @@ public class DBHandler implements DataStorage {
     }
 
 
-
     public String matchPassword(String UserName) {
 
         String pass = null;
@@ -1080,7 +1079,6 @@ public class DBHandler implements DataStorage {
     }
 
 
-
     public Airplane getAirplaneObject(String regNumber) {
 
         Airplane airplane = null;
@@ -1258,5 +1256,55 @@ public class DBHandler implements DataStorage {
 
     }
 
+    public ObservableList<String> getFilteredResults(String input, String choice) {
+        ObservableList<String> trips = FXCollections.observableArrayList();
+        String query = ("");
+
+        switch (choice) {
+
+            case "Price Ascending":
+                query = ("");
+                break;
+            case "Price Descending":
+                query = ("");
+                break;
+
+            case "Name":
+                if (input.isEmpty())
+                    query = ("SELECT Location.city, Location.country FROM Location ORDER by city ASC ");
+                else
+                    query = ("SELECT Location.city, Location.country FROM Location WHERE Location.city LIKE'" + input + "' ORDER by city ASC");
+                break;
+
+            case "Date":
+                query = ("");
+                break;
+
+            default:
+                query = ("SELECT Location.city, Location.country FROM Location WHERE Location.city LIKE'" + input + "'");
+                break;
+
+        }
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                trips.add(resultSet.getString("city") + " " + resultSet.getString("country"));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return trips;
+    }
+
+
 }
+
 

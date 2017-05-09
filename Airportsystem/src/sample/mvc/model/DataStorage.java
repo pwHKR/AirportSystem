@@ -73,7 +73,6 @@ public interface DataStorage {
 
     void insertTrip(Trip trip, int locationIdFrom, int locationIdTo);
 
-
     Airplane getAirplaneObject(String regNumber);
 
     int getLastFlightId();
@@ -86,7 +85,7 @@ public interface DataStorage {
 
     Location getLocationObject(int locationId);
 
-    //ObservableList<String> getFilteredResults(String input, String choice);
+    ObservableList<String> getFilteredResults(String input, String choice);
 
 
 }
