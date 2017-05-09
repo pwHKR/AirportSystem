@@ -230,4 +230,12 @@ public class MyAlert {
                 "and click edit to be able to edit/cancel your booking");
         msg.showAndWait();
     }
+
+    public void helpCustomer() {
+        msg.setHeaderText("This is the main menu");
+        msg.setTitle("Main menu");
+        msg.setContentText("This is where you choose what you want to do, you can click on any of the buttons to enter the next page where " +
+                "you will be able to continue.");
+        msg.showAndWait();
+    }
 }

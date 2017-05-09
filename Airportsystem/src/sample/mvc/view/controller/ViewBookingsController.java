@@ -30,6 +30,7 @@ public class ViewBookingsController implements Initializable {
     LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

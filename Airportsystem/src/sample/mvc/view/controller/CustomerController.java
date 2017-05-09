@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
+import sample.mvc.model.MyAlert;
 import sample.mvc.model.SwitchScene;
 
 import java.io.IOException;
@@ -28,6 +29,8 @@ public class CustomerController implements Initializable {
     private Label nameLabel;
     @FXML
     private Button viewBookingButton;
+    @FXML
+    private Button helpButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -80,5 +83,11 @@ public class CustomerController implements Initializable {
     @FXML
     private void setHelpButton(ActionEvent ae) {
 
+    }
+
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        MyAlert myAlert = new MyAlert();
+        myAlert.helpCustomer();
     }
 }
