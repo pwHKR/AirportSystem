@@ -77,7 +77,7 @@ public interface DataStorage {
 
     int getLastFlightId();
 
-    ObservableList<String> getTrips();
+    ObservableList<String> getTripList();
 
     int getLocationIdFromPstrId(int pstrId);
 

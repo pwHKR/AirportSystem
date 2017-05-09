@@ -1136,7 +1136,7 @@ public class DBHandler implements DataStorage {
 
     }
 
-    public ObservableList<String> getTrips() {
+    public ObservableList<String> getTripList() {
 
 
         ObservableList<String> trips = FXCollections.observableArrayList();
@@ -1144,7 +1144,8 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT Location.city, Location.country FROM Location");
+            String query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
+                    "Location.locationId = Trip_has_Location.Location_locationId;");
 
 
             Statement stmt = conn.createStatement();
@@ -1263,17 +1264,30 @@ public class DBHandler implements DataStorage {
         switch (choice) {
 
             case "Price Ascending":
-                query = ("");
+                if (input.isEmpty())
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId ORDER by price ASC;");
+                else
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY price ASC;");
                 break;
+
             case "Price Descending":
-                query = ("");
+                if (input.isEmpty())
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId ORDER by price DESC;");
+                else
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY price DESC;");
                 break;
 
             case "Name":
                 if (input.isEmpty())
-                    query = ("SELECT Location.city, Location.country FROM Location ORDER by city ASC ");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId ORDER by city ASC;");
                 else
-                    query = ("SELECT Location.city, Location.country FROM Location WHERE Location.city LIKE'" + input + "' ORDER by city ASC");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY city ASC;");
                 break;
 
             case "Date":
@@ -1281,7 +1295,12 @@ public class DBHandler implements DataStorage {
                 break;
 
             default:
-                query = ("SELECT Location.city, Location.country FROM Location WHERE Location.city LIKE'" + input + "'");
+                if (input.isEmpty())
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId");
+                else
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%'");
                 break;
 
         }

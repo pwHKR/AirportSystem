@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 public class ViewTripController implements Initializable {
 
     private ObservableList<String> trips = FXCollections.observableArrayList();
-    private ObservableList<String> choices = FXCollections.observableArrayList("Date", "Name", "Price Descending", "Price Ascending");
+    private ObservableList<String> choices = FXCollections.observableArrayList("", "Date", "Name", "Price Descending", "Price Ascending");
 
     private SwitchScene switchScene = new SwitchScene();
     private DataStorage dbh = new DBHandler();
@@ -31,21 +31,21 @@ public class ViewTripController implements Initializable {
     @FXML
     private Button returnButton;
     @FXML
-    private ComboBox<String> choiceBox;
+    private ComboBox<String> comboBox;
     @FXML
     private TextField textField;
 
     @FXML
     private void filterSearch() {
-        trips = dbh.getFilteredResults(textField.getText(), choiceBox.getSelectionModel().getSelectedItem());
+        trips = dbh.getFilteredResults(textField.getText(), comboBox.getValue());
         listView.setItems(trips);
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        choiceBox.setItems(choices);
-        trips = dbh.getTrips();
+        comboBox.setItems(choices);
+        trips = dbh.getTripList();
 
         listView.setItems(trips);
     }
