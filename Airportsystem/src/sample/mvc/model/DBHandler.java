@@ -207,9 +207,7 @@ public class DBHandler implements DataStorage {
         }
     }
 
-    public void insertTrip(Trip trip) {
 
-    }
 
     public String matchPassword(String UserName) {
 
@@ -1081,33 +1079,6 @@ public class DBHandler implements DataStorage {
 
     }
 
-    public int getLocationId(String country, String city) {
-        int locationId = 0;
-        try (Connection conn = DriverManager.getConnection(connectionURL)) {
-
-            String query = "SELECT locationId FROM AirportSystemdb.Location WHERE country ='" + country + "' AND city ='" + city + "'";
-
-
-            PreparedStatement ps = conn.prepareStatement(query);
-
-
-            ResultSet resultSet = ps.executeQuery(query);
-
-            while (resultSet.next()) {
-                locationId = resultSet.getInt("locationId");
-            }
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-        //stringBalance = Double.toString(balance);
-
-
-        return locationId;
-    }
 
 
     public Airplane getAirplaneObject(String regNumber) {
@@ -1255,6 +1226,36 @@ public class DBHandler implements DataStorage {
         }
 
         return tripId;
+    }
+
+    public Location getLocationObject(int locationId) {
+
+
+        Location location = null;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = ("SELECT city, country, airportName FROM AirportSystemdb.Location where locationId = '" + locationId + "';");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+
+                location = new Location(resultSet.getString("city"),
+                        resultSet.getString("country"), resultSet.getString("airportName"));
+
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return location;
+
+
     }
 
 }

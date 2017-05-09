@@ -32,6 +32,7 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
         local.saveAirplaneToFile(dbh.getAirplaneObject("1254"));
         Airplane airplane = local.readAirplaneFromFile();
         System.out.println(airplane.getModel());

@@ -73,7 +73,6 @@ public interface DataStorage {
 
     void insertTrip(Trip trip, int locationIdFrom, int locationIdTo);
 
-    int getLocationId(String country, String city);
 
     Airplane getAirplaneObject(String regNumber);
 
@@ -85,9 +84,9 @@ public interface DataStorage {
 
     int getMaxTripId();
 
-    //ObservableList<String> getFilteredResults(String input, String choice);
+    Location getLocationObject(int locationId);
 
-    //void linkTrip(Trip trip, Location)
+    //ObservableList<String> getFilteredResults(String input, String choice);
 
 
 }
