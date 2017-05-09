@@ -1034,7 +1034,7 @@ public class DBHandler implements DataStorage {
                     "Location_locationId,\n" +
                     "isStart)\n" +
                     "VALUES\n" +
-                    "(?,?,?)";
+                    "(?,?,?);";
             java.lang.System.out.println("query2:" + query2);
             PreparedStatement ps2 = conn.prepareStatement(query2);
 
@@ -1050,7 +1050,7 @@ public class DBHandler implements DataStorage {
                     "Location_locationId,\n" +
                     "isStart)\n" +
                     "VALUES\n" +
-                    "(?,?,?)";
+                    "(?,?,?);";
 
             java.lang.System.out.println("qurey4:" + query4);
 

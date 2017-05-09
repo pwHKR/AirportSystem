@@ -5,12 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.LocalFileStorage;
-import sample.mvc.model.SwitchScene;
+import sample.mvc.model.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,6 +37,8 @@ public class ViewTripController implements Initializable {
     private ComboBox<String> comboBox;
     @FXML
     private TextField textField;
+    @FXML
+    private Button helpButton;
 
     @FXML
     private void filterSearch() {
@@ -55,7 +57,6 @@ public class ViewTripController implements Initializable {
 
     @FXML
     private void goBack(ActionEvent ae) {
-        System.out.println(userType);
         //switchScene.goToCheckUserType(ae, "Customer");
 
         if (userType.matches("Admin")) {
@@ -73,5 +74,11 @@ public class ViewTripController implements Initializable {
     private void checkSelected(MouseEvent ae) {
         //String listViewChoice = listView.getSelectionModel().getSelectedItem();
 
+    }
+
+    @FXML
+    private void helpFunction(ActionEvent actionEvent) {
+        MyAlert myAlert = new MyAlert();
+        myAlert.searchHelp();
     }
 }
