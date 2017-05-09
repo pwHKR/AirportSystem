@@ -43,7 +43,7 @@ public class ViewTripController implements Initializable {
 
     @FXML
     private void filterSearch() {
-        trips = dbh.getFilteredResults(textField.getText(), choiceBox.getSelectionModel().getSelectedItem());
+        // trips = dbh.getFilteredResults(textField.getText(), choiceBox.getSelectionModel().getSelectedItem());
         listView.setItems(trips);
     }
 

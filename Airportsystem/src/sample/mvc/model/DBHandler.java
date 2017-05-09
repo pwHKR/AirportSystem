@@ -1028,28 +1028,39 @@ public class DBHandler implements DataStorage {
 
             tripId = getMaxTripId();
 
+            ps.close();
 
-            String query2 = "INSERT INTO AirportSystemdb.Trip_has_Location\n" +
-                    "(Trip_tripId,\n" +
-                    "Location_locationId,\n" +
-                    "isStart)\n" +
-                    "VALUES\n" +
+
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            String query2 = "INSERT INTO AirportSystemdb.Trip_has_Location" +
+                    "(Trip_tripId," +
+                    "Location_locationId," +
+                    "isStart)" +
+                    "VALUES" +
                     "(?,?,?)";
             java.lang.System.out.println("query2:" + query2);
             PreparedStatement ps2 = conn.prepareStatement(query2);
 
             ps2.setInt(1, tripId);
+
             ps2.setInt(2, locationIdFrom);
             ps2.setInt(3, 1);
 
             ps2.execute();
 
 
-            String query4 = "INSERT INTO AirportSystemdb.Trip_has_Location\n" +
-                    "(Trip_tripId,\n" +
-                    "Location_locationId,\n" +
-                    "isStart)\n" +
-                    "VALUES\n" +
+            String query4 = "INSERT INTO AirportSystemdb.Trip_has_Location" +
+                    "(Trip_tripId," +
+                    "Location_locationId," +
+                    "isStart)" +
+                    "VALUES" +
                     "(?,?,?)";
 
             java.lang.System.out.println("qurey4:" + query4);
@@ -1228,15 +1239,15 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = "SELECT Max(tripId) AS iD FROM AirportSystemdb.Trip";
+            String query = "SELECT Max(tripId) FROM AirportSystemdb.Trip";
 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet resultSet = ps.executeQuery(query);
 
-            ps.execute();
 
             while (resultSet.next()) {
-                tripId = resultSet.getInt("Id");
+                tripId = resultSet.getInt("Max(tripId)");
+
             }
 
         } catch (SQLException e) {
