@@ -1144,8 +1144,8 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip WHERE isStart = 0 AND\n" +
-                    "Location.locationId = Trip_has_Location.Location_locationId;");
+            String query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
+                    "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0;");
 
 
             Statement stmt = conn.createStatement();
@@ -1266,29 +1266,29 @@ public class DBHandler implements DataStorage {
 
             case "Price Ascending":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip WHERE isStart = 0 AND\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId ORDER BY price ASC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
+                            " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by price ASC;");
                 else
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY price ASC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
+                            " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by price ASC;");
                 break;
 
             case "Price Descending":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip WHERE isStart = 0 AND\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId ORDER BY price DESC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
+                            " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by price DESC;");
                 else
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY price DESC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
+                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER by price DESC ");
                 break;
 
             case "Name":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location WHERE isStart = 0 AND\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId ORDER BY city ASC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
+                            " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by city ASC;");
                 else
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY city ASC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
+                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER by city ASC ");
                 break;
 
             case "Date":
@@ -1297,13 +1297,14 @@ public class DBHandler implements DataStorage {
 
             default:
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location WHERE isStart = 0 AND\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
+                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0;");
                 else
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%'");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
+                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%'");
                 break;
 
+            //LIKE'%" + input + "%'
         }
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
