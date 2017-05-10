@@ -56,6 +56,7 @@ public class SearchLocationController implements Initializable {
         listView.setItems(trips);
 
 
+
     }
 
     @FXML
@@ -87,6 +88,7 @@ public class SearchLocationController implements Initializable {
         String choice = listView.getSelectionModel().getSelectedItems().toString()
                 .replaceAll("[^0-9.]", "");
         System.out.println(choice);
+
 
         trip = dbh.getTripObject(choice);
 

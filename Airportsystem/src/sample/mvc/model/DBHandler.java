@@ -1314,7 +1314,7 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
                 trips.add(resultSet.getString("city") + " " + resultSet.getString("country") +
-                        "" + resultSet.getInt("tripId"));
+                        "" + String.valueOf(resultSet.getInt("Trip_tripId")));
             }
 
 
