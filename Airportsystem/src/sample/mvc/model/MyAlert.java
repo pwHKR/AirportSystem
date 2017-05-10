@@ -51,8 +51,6 @@ public class MyAlert {
         err.setHeaderText("Invalid info");
         err.setContentText("Email adress must contain ''@'' ");
         err.showAndWait();
-
-
     }
 
     public void ssnInputErr() {
