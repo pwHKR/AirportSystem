@@ -8,7 +8,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import sample.mvc.model.*;
 
-import java.lang.System;
 import java.net.URL;
 import java.sql.SQLNonTransientConnectionException;
 import java.util.ResourceBundle;
@@ -35,7 +34,6 @@ public class LoginController implements Initializable {
 
         local.saveAirplaneToFile(dbh.getAirplaneObject("1254"));
         Airplane airplane = local.readAirplaneFromFile();
-        System.out.println(airplane.getModel());
 
 
         userName.setText(local.getCurrentUsersUserName());

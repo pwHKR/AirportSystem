@@ -1394,6 +1394,72 @@ public class DBHandler implements DataStorage {
 
     }
 
+    public int getTripId(String flightId) {
+
+        int tripId = 0;
+
+        String query = "SELECT tripId FROM AirportSystemdb.Trip where Flight_flightId = '" + flightId + "';";
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                tripId = resultSet.getInt("tripId");
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return tripId;
+
+
+    }
+
+    public Location getTripFromLocation(int tripID) {
+
+        Location location = null;
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement stmt = conn.createStatement();
+
+
+            String query = "SELECT city, country, airportName FROM AirportSystemdb.Trip_has_Location," +
+                    " AirportSystemdb.Location, AirportSystemdb.Trip where Trip.tripId = Trip_has_Location.Trip_tripId and " +
+                    " Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 1" +
+                    " and tripId = '" + tripID + "'";
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                location = new Location(resultSet.getString("airportName"),
+                        resultSet.getString("city"), resultSet.getString("country"));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return location;
+    }
+
 
 }
 
