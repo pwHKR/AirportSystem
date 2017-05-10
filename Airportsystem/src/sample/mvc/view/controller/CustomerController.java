@@ -31,6 +31,8 @@ public class CustomerController implements Initializable {
     private Button viewBookingButton;
     @FXML
     private Button helpButton;
+    @FXML
+    private Label onlineLabel;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -59,6 +61,10 @@ public class CustomerController implements Initializable {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
+
+        DataStorage dbhandler = new DBHandler();
+
+        onlineLabel.setText("Online: " + String.valueOf(dbhandler.getUsersOnlineCount()));
     }
 
 

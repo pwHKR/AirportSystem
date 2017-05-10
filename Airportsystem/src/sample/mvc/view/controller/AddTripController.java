@@ -105,7 +105,7 @@ public class AddTripController implements Initializable {
 
     @FXML
     private void returnToAdmin(ActionEvent ae) {
-        sw.GoTo(ae, "Admin.fxml");
+
 
     }
 

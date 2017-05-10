@@ -18,16 +18,17 @@
             xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.EmployeeController">
     <children>
-        <ImageView fitHeight="356.0" fitWidth="592.0" layoutX="-2.0" layoutY="55.0" opacity="0.11" pickOnBounds="true"
-                   preserveRatio="true">
+        <ImageView fx:id="OnlineLabel" fitHeight="356.0" fitWidth="592.0" layoutX="-2.0" layoutY="55.0" opacity="0.11"
+                   pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@resources/AAEAAQAAAAAAAAcWAAAAJGYwYWNkM2RlLTI4YTAtNDAwNy1iNmEwLTdhMzhlMGFkZWQyZQ.jpg"/>
             </image>
         </ImageView>
         <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
             <children>
-                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="309.0" layoutY="-170.0"
-                        mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
+                <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="309.0"
+                        layoutY="-170.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
+                        prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>
             </children>
@@ -74,5 +75,7 @@
         <Button fx:id="browseTripsButton" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#browseTrips"
                 prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Browse Trips"/>
+        <Label fx:id="onlineLabel" layoutX="265.0" layoutY="328.0" prefHeight="17.0" prefWidth="75.0" text="Online: "
+               textFill="GREY"/>
     </children>
 </AnchorPane>

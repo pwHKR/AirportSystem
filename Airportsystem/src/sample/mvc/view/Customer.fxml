@@ -89,5 +89,7 @@
                 prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Billing"/>
         <Button fx:id="newBooking" layoutX="28.0" layoutY="258.0" mnemonicParsing="false" prefHeight="67.0"
                 prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Book a Trip"/>
+        <Label fx:id="onlineLabel" layoutX="468.0" layoutY="122.0" prefHeight="22.0" prefWidth="69.0" text="Online: "
+               textFill="GREY"/>
     </children>
 </AnchorPane>

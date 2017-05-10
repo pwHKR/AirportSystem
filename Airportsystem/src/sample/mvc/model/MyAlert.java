@@ -236,4 +236,11 @@ public class MyAlert {
                 "you will be able to continue.");
         msg.showAndWait();
     }
+
+    public void helpEmployee() {
+        msg.setHeaderText("This is the main menu for employees");
+        msg.setTitle("Main menu");
+        msg.setContentText("Choose what you want to do by clicking one of the buttons then you are able to continue your work.");
+        msg.showAndWait();
+    }
 }

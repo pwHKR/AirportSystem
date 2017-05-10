@@ -63,8 +63,6 @@ public class SearchLocationController implements Initializable {
     @FXML
     private void goBack(ActionEvent ae) {
 
-        //switchScene.goToCheckUserType(ae, "Customer");
-
         if (userType.matches("Admin")) {
             switchScene.GoTo(ae, "Admin.fxml");
         }

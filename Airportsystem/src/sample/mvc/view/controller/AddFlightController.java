@@ -21,6 +21,7 @@ public class AddFlightController implements Initializable {
     private SwitchScene sw = new SwitchScene();
     private LocalFileStorage local = new LocalFileStorage();
     private Airplane airplane;
+    private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
     @FXML
     private Button addButton;
@@ -68,7 +69,15 @@ public class AddFlightController implements Initializable {
 
     @FXML
     private void returnToAdmin(ActionEvent ae) {
-        sw.GoTo(ae, "Admin.fxml");
+        if (userType.matches("Admin")) {
+            sw.GoTo(ae, "Admin.fxml");
+        }
+        if (userType.matches("Customer")) {
+            sw.GoTo(ae, "Customer.fxml");
+        }
+        if (userType.matches("Employee")) {
+            sw.GoTo(ae, "Employee.fxml");
+        }
     }
 
     @FXML
