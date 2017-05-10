@@ -554,13 +554,13 @@ public class DBHandler implements DataStorage {
         return isOnline;
     }
 
-    public void AddLocationPSTR(String IdPSTR, String locationId) {
+    public void AddLocationPSTR(String idPSTR, String locationId) {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
             String query = "UPDATE AirportSystemdb.Location SET Location.PSTR_idPSTR = ? WHERE Location.locationId = ?;";
             PreparedStatement ps = conn.prepareStatement(query);
 
-            ps.setString(1, IdPSTR);
+            ps.setString(1, idPSTR);
             ps.setString(2, locationId);
 
             ps.executeUpdate();
@@ -1144,7 +1144,7 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
+            String query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip WHERE isStart = 0 AND\n" +
                     "Location.locationId = Trip_has_Location.Location_locationId;");
 
 
@@ -1158,7 +1158,8 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
 
-                trips.add(resultSet.getString("city") + " " + resultSet.getString("country"));
+                trips.add(resultSet.getString("city") + " " + resultSet.getString("country") +
+                        resultSet.getInt("tripId"));
 
             }
 
@@ -1265,8 +1266,8 @@ public class DBHandler implements DataStorage {
 
             case "Price Ascending":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId ORDER by price ASC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip WHERE isStart = 0 AND\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId ORDER BY price ASC;");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
                             "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY price ASC;");
@@ -1274,8 +1275,8 @@ public class DBHandler implements DataStorage {
 
             case "Price Descending":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId ORDER by price DESC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip WHERE isStart = 0 AND\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId ORDER BY price DESC;");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip where isStart = 0 and\n" +
                             "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY price DESC;");
@@ -1283,8 +1284,8 @@ public class DBHandler implements DataStorage {
 
             case "Name":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
-                            "Location.locationId = Trip_has_Location.Location_locationId ORDER by city ASC;");
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location WHERE isStart = 0 AND\n" +
+                            "Location.locationId = Trip_has_Location.Location_locationId ORDER BY city ASC;");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
                             "Location.locationId = Trip_has_Location.Location_locationId AND Location.city LIKE'%" + input + "%' ORDER BY city ASC;");
@@ -1296,7 +1297,7 @@ public class DBHandler implements DataStorage {
 
             default:
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location WHERE isStart = 0 AND\n" +
                             "Location.locationId = Trip_has_Location.Location_locationId");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location where isStart = 0 and\n" +
@@ -1312,7 +1313,8 @@ public class DBHandler implements DataStorage {
             ResultSet resultSet = stmt.executeQuery(query);
 
             while (resultSet.next()) {
-                trips.add(resultSet.getString("city") + " " + resultSet.getString("country"));
+                trips.add(resultSet.getString("city") + " " + resultSet.getString("country") +
+                        "" + resultSet.getInt("tripId"));
             }
 
 
@@ -1324,6 +1326,76 @@ public class DBHandler implements DataStorage {
     }
 
 
+    public Trip getTripObject(String tripId) {
+
+        Trip trip = null;
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = ("SELECT price, Trip.date, ticketAmount FROM AirportSystemdb.Trip where tripId = '" + tripId + "';");
+
+
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                trip = new Trip(resultSet.getDouble("price"), resultSet.getString("date"),
+                        getFlightId(tripId), resultSet.getInt("ticketAmount"));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return trip;
+
+
+    }
+
+
+    public int getFlightId(String tripId) {
+
+        int flightId = 0;
+
+        String query = "SELECT Flight_flightId FROM AirportSystemdb.Trip where tripId = '" + tripId + "';";
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement stmt = conn.createStatement();
+
+
+            stmt.addBatch(query);
+
+            ResultSet resultSet = stmt.executeQuery(query);
+
+
+            while (resultSet.next()) {
+
+                flightId = resultSet.getInt("Flight_flightId");
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return flightId;
+
+
+    }
+
+
 }
+
+
 
 

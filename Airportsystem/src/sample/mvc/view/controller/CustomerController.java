@@ -65,7 +65,7 @@ public class CustomerController implements Initializable {
     @FXML
     private void goToViewTrips(ActionEvent ae) {
 
-        sw.GoTo(ae, "ViewTrip.fxml");
+        sw.GoTo(ae, "SearchLocation.fxml");
 
     }
 
