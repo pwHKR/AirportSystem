@@ -28,6 +28,7 @@ public class SearchLocationController implements Initializable {
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
     private Trip trip;
+    private Location location;
 
     @FXML
     private ListView<String> listView;
@@ -54,6 +55,7 @@ public class SearchLocationController implements Initializable {
 
 
         listView.setItems(trips);
+
 
 
     }
@@ -84,14 +86,29 @@ public class SearchLocationController implements Initializable {
     @FXML
     private void checkSelected(MouseEvent me) {
 
+        int tripId;
+
+
+
         String choice = listView.getSelectionModel().getSelectedItems().toString()
                 .replaceAll("[^0-9.]", "");
         System.out.println(choice);
 
+
         trip = dbh.getTripObject(choice);
 
+        tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
+
+        location = dbh.getTripFromLocation(tripId);
+
+
+
+
+
         textArea.setText("Date: " + trip.getDate() + "\nPrice: " + String.valueOf(trip.getTripPrice()) + "SEK\n" +
-                "Tickets left: " + String.valueOf(trip.getTicketAmount()));
+                "Tickets left: " + String.valueOf(trip.getTicketAmount()) + "\n\n\tFrom: \n"
+                + "Airport: " + location.getAirport() + "\nCity: " + location.getCity() +
+                "\nCountry: " + location.getCountry());
 
 
     }

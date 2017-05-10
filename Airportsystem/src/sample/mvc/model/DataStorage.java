@@ -89,6 +89,10 @@ public interface DataStorage {
 
     Trip getTripObject(String tripId);
 
+    int getTripId(String flightId);
+
+    Location getTripFromLocation(int tripID);
+
 
 }
 
