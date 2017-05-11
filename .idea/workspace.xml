@@ -4,12 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/Airportsystem.iml" afterPath="$PROJECT_DIR$/Airportsystem/Airportsystem.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java" />
-    </list>
+    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
-              <caret line="265" column="43" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="43" />
+              <caret line="268" column="43" selection-start-line="268" selection-start-column="16" selection-end-line="268" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -1059,7 +1054,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494502126772</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="minor changes fixed datepicker error handling">
+      <created>1494508209206</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1494508209206</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1575,7 +1577,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
-          <caret line="265" column="43" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="43" />
+          <caret line="268" column="43" selection-start-line="268" selection-start-column="16" selection-end-line="268" selection-end-column="43" />
           <folding />
         </state>
       </provider>
