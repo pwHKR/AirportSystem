@@ -80,15 +80,13 @@
         </Label>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button layoutX="28.0" layoutY="179.0" mnemonicParsing="false" onAction="#goToViewTrips" prefHeight="67.0"
-                prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Search Destination"/>
+                prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Book Trip"/>
         <!--suppress XmlPathReference, XmlPathReference -->
         <Button fx:id="viewBookingButton" layoutX="370.0" layoutY="179.0" mnemonicParsing="false"
                 onAction="#viewBookings" prefHeight="67.0" prefWidth="196.0" styleClass="rich-blue"
                 stylesheets="@stylesheet.css" text="View bookings"/>
         <Button layoutX="370.0" layoutY="269.0" mnemonicParsing="false" onAction="#goToBilling" prefHeight="67.0"
                 prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Billing"/>
-        <Button fx:id="newBooking" layoutX="28.0" layoutY="258.0" mnemonicParsing="false" prefHeight="67.0"
-                prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Book a Trip"/>
         <Label fx:id="onlineLabel" layoutX="468.0" layoutY="122.0" prefHeight="22.0" prefWidth="69.0" text="Online: "
                textFill="GREY"/>
     </children>

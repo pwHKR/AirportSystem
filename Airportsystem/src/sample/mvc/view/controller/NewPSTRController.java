@@ -66,6 +66,8 @@ public class NewPSTRController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        LabelIdPSTR.setText(String.valueOf(dbh.getMaxPstrId() + 1));
+
         setCountriesLogic();
 
 

@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
  */
 public class SearchLocationController implements Initializable {
 
+
     private ObservableList<String> trips = FXCollections.observableArrayList();
     private ObservableList<String> choices = FXCollections.observableArrayList("", "Date", "Name", "Price Descending", "Price Ascending");
 
@@ -40,10 +41,14 @@ public class SearchLocationController implements Initializable {
     private TextField textField;
     @FXML
     private TextArea textArea;
+    private int removeIndexNum;
 
     @FXML
     private void filterSearch() {
+
         trips = dbh.getFilteredResults(textField.getText(), comboBox.getValue());
+
+
         listView.setItems(trips);
     }
 
@@ -53,9 +58,16 @@ public class SearchLocationController implements Initializable {
         comboBox.setItems(choices);
         trips = dbh.getTripList();
 
+        removeIndexNum = Integer.parseInt(trips.get(0));
+
+        System.out.println(removeIndexNum);
+
+        trips.remove(0, 1);
+
+
+
 
         listView.setItems(trips);
-
 
 
     }
@@ -84,20 +96,23 @@ public class SearchLocationController implements Initializable {
     @FXML
     private void checkSelected(MouseEvent me) {
 
+
         int tripId;
 
 
+        //String choice = listView.getSelectionModel().getSelectedItems().toString()
+        //  .replaceAll("[^0-9.]", "");
 
-        String choice = listView.getSelectionModel().getSelectedItems().toString()
-                .replaceAll("[^0-9.]", "");
+        int choice = listView.getSelectionModel().getSelectedIndex() + removeIndexNum;
         System.out.println(choice);
 
+        String stringChoice = String.valueOf(choice);
 
-        trip = dbh.getTripObject(choice);
+        trip = dbh.getTripObject(stringChoice);
 
         tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
 
-        location = dbh.getTripFromLocation(tripId);
+        location = dbh.getFromLocationObject(tripId);
 
 
 
@@ -108,6 +123,29 @@ public class SearchLocationController implements Initializable {
                 + "Airport: " + location.getAirport() + "\nCity: " + location.getCity() +
                 "\nCountry: " + location.getCountry());
 
+
+    }
+
+    @FXML
+    private void newBooking(ActionEvent ae) {
+
+        int tripId;
+
+        int choice = listView.getSelectionModel().getSelectedIndex() + removeIndexNum;
+        System.out.println(choice);
+
+        String stringChoice = String.valueOf(choice);
+
+        trip = dbh.getTripObject(stringChoice);
+
+        tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
+
+        Booking booking = new Booking(tripId);
+
+
+        local.saveBookingIdToFile(booking);
+
+        switchScene.GoTo(ae, "NewBooking.fxml");
 
     }
 }

@@ -93,8 +93,8 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <Button layoutX="254.0" layoutY="452.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Book -&gt;"/>
+        <Button layoutX="235.0" layoutY="511.0" mnemonicParsing="false" onAction="#newBooking" prefHeight="40.0"
+                prefWidth="137.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Book Trip"/>
         <ComboBox fx:id="comboBox" layoutX="252.0" layoutY="141.0" prefHeight="9.0" prefWidth="86.0"/>
     </children>
 </AnchorPane>

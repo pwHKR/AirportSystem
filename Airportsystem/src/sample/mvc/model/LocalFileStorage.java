@@ -18,6 +18,7 @@ public class LocalFileStorage {
     private Path path = Paths.get("logInLog.bin");
     private Path pathAirplane = Paths.get("obj.ser");
     private Path pathFlight = Paths.get("obj2.ser");
+    private Path pathBooking = Paths.get("obj3.ser");
 
     public void saveUser(String userName, String password) {
 
@@ -214,5 +215,85 @@ public class LocalFileStorage {
         }
         return record;
     }
+
+    public void saveBookingIdToFile(Booking booking) {
+
+        ObjectOutputStream output = null;
+
+
+        try {
+
+
+            output = new ObjectOutputStream(Files.newOutputStream(pathBooking));
+        } catch (IOException e) {
+
+        }
+
+        try {
+            output.writeObject(booking);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (output != null) {
+
+            try {
+                output.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+
+    public Booking readBookingIdFromFile() {
+
+        ObjectInputStream input = null;
+
+
+        try {
+            input = new ObjectInputStream(Files.newInputStream(pathBooking));
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Booking record = null;
+        try {
+
+            while (true) { // loop until there is an end of EOFExeption
+
+                record = (Booking) input.readObject();
+
+
+            }
+
+
+        } catch (EOFException e) {
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        if (input != null) {
+            try {
+                input.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return record;
+    }
+
+
+
+
 
 }

@@ -91,7 +91,9 @@ public interface DataStorage {
 
     int getTripId(String flightId);
 
-    Location getTripFromLocation(int tripID);
+    Location getFromLocationObject(int tripID);
+
+    public int getMaxPstrId();
 
 
 }

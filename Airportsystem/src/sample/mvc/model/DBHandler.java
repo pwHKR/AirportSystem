@@ -557,6 +557,15 @@ public class DBHandler implements DataStorage {
     public void AddLocationPSTR(String idPSTR, String locationId) {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String insertQuery = "INSERT INTO AirportSystemdb.PSTR (idPSTR) VALUES (?)";
+
+            PreparedStatement insertStatement = conn.prepareStatement(insertQuery);
+            insertStatement.setInt(1, Integer.valueOf(idPSTR));
+
+            insertStatement.execute();
+
+
             String query = "UPDATE AirportSystemdb.Location SET Location.PSTR_idPSTR = ? WHERE Location.locationId = ?;";
             PreparedStatement ps = conn.prepareStatement(query);
 
@@ -1138,6 +1147,8 @@ public class DBHandler implements DataStorage {
 
     public ObservableList<String> getTripList() {
 
+        boolean once = false;
+        int removeIndexNum = 0;
 
         ObservableList<String> trips = FXCollections.observableArrayList();
 
@@ -1158,14 +1169,35 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
 
-                trips.add(resultSet.getString("city") + " " + resultSet.getString("country") +
-                        resultSet.getInt("tripId"));
+                for (int i = 0; i < resultSet.getInt("tripId") && !once; i++) {
+
+                    trips.add(i, "");
+
+                    removeIndexNum++;
+
+
+                }
+
+
+                once = true;
+
+
+                trips.add(resultSet.getInt("tripId"), resultSet.getString("city") + " " +
+                        resultSet.getString("country")
+                );
 
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+
+        trips.remove(0, removeIndexNum);
+
+        trips.add(0, String.valueOf(removeIndexNum));
+
+
 
         return trips;
 
@@ -1259,6 +1291,8 @@ public class DBHandler implements DataStorage {
     }
 
     public ObservableList<String> getFilteredResults(String input, String choice) {
+
+
         ObservableList<String> trips = FXCollections.observableArrayList();
         String query = ("");
 
@@ -1288,7 +1322,7 @@ public class DBHandler implements DataStorage {
                             " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by city ASC;");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
-                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER by city ASC ");
+                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city LIKE'%" + input + "%'ORDER by city ASC;");
                 break;
 
             case "Date":
@@ -1301,7 +1335,7 @@ public class DBHandler implements DataStorage {
                             "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0;");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
-                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%'");
+                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%';");
                 break;
 
             //LIKE'%" + input + "%'
@@ -1313,15 +1347,19 @@ public class DBHandler implements DataStorage {
             stmt.addBatch(query);
             ResultSet resultSet = stmt.executeQuery(query);
 
+
             while (resultSet.next()) {
-                trips.add(resultSet.getString("city") + " " + resultSet.getString("country") +
-                        "" + String.valueOf(resultSet.getInt("Trip_tripId")));
+
+
+                trips.add(resultSet.getString("city") + " "
+                        + resultSet.getString("country"));
             }
 
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
 
         return trips;
     }
@@ -1426,7 +1464,7 @@ public class DBHandler implements DataStorage {
 
     }
 
-    public Location getTripFromLocation(int tripID) {
+    public Location getFromLocationObject(int tripID) {
 
         Location location = null;
 
@@ -1458,6 +1496,30 @@ public class DBHandler implements DataStorage {
         }
 
         return location;
+    }
+
+
+    public int getMaxPstrId() {
+
+        int pstrId = 0;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = "SELECT max(idPSTR) AS idPSTR FROM AirportSystemdb.PSTR;";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet resultSet = ps.executeQuery(query);
+
+
+            while (resultSet.next()) {
+                pstrId = resultSet.getInt("idPSTR");
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return pstrId;
     }
 
 
