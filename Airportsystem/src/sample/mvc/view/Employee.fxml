@@ -68,8 +68,9 @@
         </Label>
         <Button layoutX="28.0" layoutY="159.0" mnemonicParsing="false" onAction="#addTrip" prefHeight="40.0"
                 prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add Trip"/>
-        <Button layoutX="408.0" layoutY="158.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="166.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Change Flight Status"/>
+        <Button fx:id="changeStatusButton" layoutX="408.0" layoutY="158.0" mnemonicParsing="false"
+                onAction="#changeFlightStatus" prefHeight="41.0" prefWidth="166.0" styleClass="rich-blue"
+                stylesheets="@stylesheet.css" text="Change Flight Status"/>
         <Button layoutX="223.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0"
                 styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add Person"/>
         <Button fx:id="browseTripsButton" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#browseTrips"

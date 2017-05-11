@@ -35,6 +35,7 @@ public class AddTripController implements Initializable {
     private ObservableList<String> infoList = FXCollections.observableArrayList();
     private DataStorage dbh = new DBHandler();
     private String choice;
+    private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
 
     @FXML
@@ -101,6 +102,15 @@ public class AddTripController implements Initializable {
             myAlert.noDateError();
         }
 
+        if (userType.matches("Admin")) {
+            sw.GoTo(ae, "Admin.fxml");
+        }
+        if (userType.matches("Customer")) {
+            sw.GoTo(ae, "Customer.fxml");
+        }
+        if (userType.matches("Employee")) {
+            sw.GoTo(ae, "Employee.fxml");
+        }
     }
 
     @FXML

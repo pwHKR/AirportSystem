@@ -33,6 +33,8 @@ public class EmployeeController implements Initializable {
     private Label onlineLabel;
     @FXML
     private Button helpButton;
+    @FXML
+    private Button changeStatusButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -73,5 +75,10 @@ public class EmployeeController implements Initializable {
     private void helpFunction(ActionEvent ae) {
         MyAlert alert = new MyAlert();
         alert.helpEmployee();
+    }
+
+    @FXML
+    private void changeFlightStatus(ActionEvent ae) {
+        sw.GoTo(ae, "ChangeFlightStatus.fxml");
     }
 }

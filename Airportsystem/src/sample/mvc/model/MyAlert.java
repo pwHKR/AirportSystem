@@ -243,4 +243,12 @@ public class MyAlert {
         msg.setContentText("Choose what you want to do by clicking one of the buttons then you are able to continue your work.");
         msg.showAndWait();
     }
+
+    public void helpChangeFlightStatus() {
+        msg.setHeaderText("This is where you change the status of flights");
+        msg.setTitle("Change flight status");
+        msg.setContentText("Click on any of the ID's on your left side and then you will se all information about that flight. You can change the " +
+                "status by writing something in the textfield below.");
+        msg.showAndWait();
+    }
 }

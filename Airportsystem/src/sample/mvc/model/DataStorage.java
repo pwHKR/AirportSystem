@@ -93,9 +93,9 @@ public interface DataStorage {
 
     Location getFromLocationObject(int tripID);
 
-    public int getMaxPstrId();
+    int getMaxPstrId();
 
-
+    //ObservableList<String> matchBookingWithPerson(int systemid);
 }
 
 
