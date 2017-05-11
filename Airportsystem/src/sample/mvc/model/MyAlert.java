@@ -251,4 +251,25 @@ public class MyAlert {
                 "status by writing something in the textfield below.");
         msg.showAndWait();
     }
+
+    public void noPriceError() {
+        err.setHeaderText("No price found");
+        err.setTitle("You have to  add a price");
+        err.setContentText("You have not input a correct price amount, make sure that the text field only contains numbers");
+        err.showAndWait();
+    }
+
+    public void noOriginEror() {
+        err.setHeaderText("Nothing selected");
+        err.setTitle("You have to select a from Id");
+        err.setContentText("You have to select a from id.");
+        err.showAndWait();
+    }
+
+    public void noToCountryCityAirportError() {
+        err.setHeaderText("Nothing selected");
+        err.setTitle("Specify the information");
+        err.setContentText("You have to select a country city and airport to travel to.");
+        err.showAndWait();
+    }
 }

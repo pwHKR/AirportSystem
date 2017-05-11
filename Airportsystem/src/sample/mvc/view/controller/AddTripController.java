@@ -80,9 +80,11 @@ public class AddTripController implements Initializable {
 
         int from;
         int to;
-
-
+        if (toAirportField.toString().matches("Airport")) {
+            if (pstrLocation.getSelectionModel().getSelectedItem() != null) {
         if (dateField.getValue() != null) {
+            if (priceField.getText().matches("^\\d+$")) {
+
 
         Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(),
                 dbh.getLastFlightId() + 1, airplane.getPassengerCapacity());
@@ -96,11 +98,22 @@ public class AddTripController implements Initializable {
         to = Integer.parseInt(choiceTo);
 
 
-            dbh.insertFlight(local.readFlightFromFile(), false);// FIXME: 2017-05
+                dbh.insertFlight(local.readFlightFromFile(), false);
             dbh.insertTrip(trip, from, to);
+
+            } else {
+                myAlert.noPriceError();
+            }
         } else {
             myAlert.noDateError();
         }
+            } else {
+                myAlert.noOriginEror();
+            }
+        } else {
+            myAlert.noToCountryCityAirportError();
+        }
+
 
         if (userType.matches("Admin")) {
             sw.GoTo(ae, "Admin.fxml");
