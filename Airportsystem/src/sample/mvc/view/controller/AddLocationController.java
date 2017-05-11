@@ -1,6 +1,5 @@
 package sample.mvc.view.controller;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,10 +21,6 @@ public class AddLocationController implements Initializable {
 
     private MyAlert myAlert = new MyAlert();
     private SwitchScene sw = new SwitchScene();
-
-    private ObservableList<String> countryList = FXCollections.observableArrayList();
-    private ObservableList<String> cityList = FXCollections.observableArrayList();
-    private ObservableList<String> airportList = FXCollections.observableArrayList();
 
 
     @FXML
@@ -129,7 +124,7 @@ public class AddLocationController implements Initializable {
         DataStorage dbh = new DBHandler();
 
 
-        countryList = dbh.getCountries();
+        ObservableList<String> countryList = dbh.getCountries();
 
 
         country.setItems(countryList);
@@ -145,7 +140,7 @@ public class AddLocationController implements Initializable {
         DataStorage dbh = new DBHandler();
 
 
-        cityList = dbh.getCities(SelectedCountry);
+        ObservableList<String> cityList = dbh.getCities(SelectedCountry);
 
         city.setItems(cityList);
 
@@ -161,7 +156,7 @@ public class AddLocationController implements Initializable {
         DataStorage dbh = new DBHandler();
 
 
-        airportList = dbh.getAirports(SelectedCity);
+        ObservableList<String> airportList = dbh.getAirports(SelectedCity);
 
         airport.setItems(airportList);
 

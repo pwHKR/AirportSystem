@@ -29,7 +29,6 @@ public class SearchLocationController implements Initializable {
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
     private Trip trip;
-    private Location location;
 
     @FXML
     private ListView<String> listView;
@@ -112,7 +111,7 @@ public class SearchLocationController implements Initializable {
 
         tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
 
-        location = dbh.getFromLocationObject(tripId);
+        Location location = dbh.getFromLocationObject(tripId);
 
 
         textArea.setText("Date: " + trip.getDate() + "\nBilling: " + String.valueOf(trip.getTripPrice()) + "SEK\n" +

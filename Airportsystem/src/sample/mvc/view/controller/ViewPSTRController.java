@@ -22,10 +22,6 @@ public class ViewPSTRController implements Initializable {
 
     private SwitchScene sw = new SwitchScene();
 
-    private ObservableList<String> pstrLocationList = FXCollections.observableArrayList();
-    private ObservableList<String> infoList = FXCollections.observableArrayList();
-    private ObservableList<String> airplaneList = FXCollections.observableArrayList();
-
     @FXML
     private ListView<String> pstrLocations;
 
@@ -40,8 +36,8 @@ public class ViewPSTRController implements Initializable {
         DataStorage dbHandler = new DBHandler();
 
         String choice = pstrLocations.getSelectionModel().getSelectedItem();
-        infoList = dbHandler.getPSTRLocationInfo(choice);
-        airplaneList = dbHandler.getAirplaneRegNumber(choice);
+        ObservableList<String> infoList = dbHandler.getPSTRLocationInfo(choice);
+        ObservableList<String> airplaneList = dbHandler.getAirplaneRegNumber(choice);
         locationInfo.setText(infoList.toString().replace("[", "").replace("]", "")
                 + airplaneList.toString().replace("[", "").replace("]", ""));
     }
@@ -50,7 +46,7 @@ public class ViewPSTRController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         DataStorage dbHandler = new DBHandler();
 
-        pstrLocationList = dbHandler.getPSTR();
+        ObservableList<String> pstrLocationList = dbHandler.getPSTR();
 
 
         pstrLocations.setItems(pstrLocationList);

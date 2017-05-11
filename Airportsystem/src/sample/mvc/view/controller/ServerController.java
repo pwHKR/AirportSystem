@@ -20,7 +20,6 @@ public class ServerController implements Initializable {
 
     private SwitchScene sw = new SwitchScene();
 
-    private ObservableList<String> ServerVariablesList = FXCollections.observableArrayList();
     private ObservableList<String> OnlineUsersList = FXCollections.observableArrayList();
 
     @FXML
@@ -42,10 +41,10 @@ public class ServerController implements Initializable {
         DataStorage dbHandler = new DBHandler();
 
         // Server status
-        ServerVariablesList = dbHandler.getSystemVariables();
+        ObservableList<String> serverVariablesList = dbHandler.getSystemVariables();
 
 
-        serverVariables.setText(ServerVariablesList.toString().
+        serverVariables.setText(serverVariablesList.toString().
                 replace("[", "").replace("]", ""));
 
         // Online users

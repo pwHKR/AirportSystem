@@ -1,6 +1,5 @@
 package sample.mvc.view.controller;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,7 +19,6 @@ public class AddFlightController implements Initializable {
     private DataStorage dbh = new DBHandler();
     private SwitchScene sw = new SwitchScene();
     private LocalFileStorage local = new LocalFileStorage();
-    private Airplane airplane;
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
     @FXML
@@ -43,15 +41,12 @@ public class AddFlightController implements Initializable {
     TextField ticketAmount;
 
 
-    private ObservableList<String> airPlaneInfoList = FXCollections.observableArrayList();
     private String choice;
-
-    private ObservableList<String> airPlanes = FXCollections.observableArrayList();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        airPlanes = dbh.getAllAirplaneRegNumbers();
+        ObservableList<String> airPlanes = dbh.getAllAirplaneRegNumbers();
         regField.setItems(airPlanes);
 
     }
@@ -61,7 +56,7 @@ public class AddFlightController implements Initializable {
         String choice = regField.getSelectionModel().getSelectedItem();
         //airPlaneInfoList = dbh.getAirplaneInfo(choice);
         //airplaneList = dbHandler.getAirplaneRegNumber(choice);
-        airPlaneInfoList = dbh.getAirplaneInfo(choice);
+        ObservableList<String> airPlaneInfoList = dbh.getAirplaneInfo(choice);
         informationField.setText(airPlaneInfoList.toString().replace("[", "").replace("]", "")
                 + airPlaneInfoList.toString().replace("[", "").replace("]", ""));
 
@@ -108,7 +103,7 @@ public class AddFlightController implements Initializable {
             Flight flight = new Flight(statusField.getText(), gateField.getText(), regField.getSelectionModel().getSelectedItem());
             //dbh.insertFlight(flight, newFlightStatus);
             local.saveFlightToFile(flight);
-            airplane = dbh.getAirplaneObject(flight.getRegNumber());
+            Airplane airplane = dbh.getAirplaneObject(flight.getRegNumber());
             local.saveAirplaneToFile(airplane);
 
             sw.GoTo(ae, "AddTrip.fxml");

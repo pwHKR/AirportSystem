@@ -1,6 +1,5 @@
 package sample.mvc.view.controller;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,8 +21,6 @@ public class AddAirplaneController implements Initializable {
 
     private SwitchScene sw = new SwitchScene();
 
-    private ObservableList<String> pstrLocationList = FXCollections.observableArrayList();
-
     @FXML
     private ListView pstrId;
     @FXML
@@ -43,7 +40,7 @@ public class AddAirplaneController implements Initializable {
 
         DataStorage dbh = new DBHandler();
 
-        pstrLocationList = dbh.getPSTR();
+        ObservableList<String> pstrLocationList = dbh.getPSTR();
 
         pstrId.setItems(pstrLocationList);
 
