@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,129 +32,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
+      <file leaf-file-name="SearchLocationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="1543" column="0" lean-forward="false" selection-start-line="1543" selection-start-column="0" selection-end-line="1543" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1494509779000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
-                <marker date="1494509779000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
-                <marker date="1494509779000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
-                <marker date="1494509779000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
-                <marker date="1494509779000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
-                <marker date="1494509779000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
-                <marker date="1494509779000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
-                <marker date="1494509779000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
-                <marker date="1494509779000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
-                <marker date="1494509779000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
-                <marker date="1494509779000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
-                <marker date="1494509779000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
-                <marker date="1494509779000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
-                <marker date="1494509779000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
-                <marker date="1494509779000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
-                <marker date="1494509779000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
-                <marker date="1494509779000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
-                <marker date="1494509779000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
-                <marker date="1494509779000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
-                <marker date="1494509779000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
-                <marker date="1494509779000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
-                <marker date="1494509779000" expanded="true" signature="15331:15383" ph="INSERT INTO AirportSystemdb.PSTR... " />
-                <marker date="1494509779000" expanded="true" signature="15605:15695" ph="UPDATE Airpo... " />
-                <marker date="1494509779000" expanded="true" signature="16375:16446" ph="SELECT PSTR_... Location" />
-                <marker date="1494509779000" expanded="true" signature="17102:17197" ph="SELECT * FRO... Location" />
-                <marker date="1494509779000" expanded="true" signature="17985:18019" ph="SHOW GLOBAL " />
-                <marker date="1494509779000" expanded="true" signature="18744:18786" ph="SELECT userN... User" />
-                <marker date="1494509779000" expanded="true" signature="19363:19439" ph="UPDATE User " />
-                <marker date="1494509779000" expanded="true" signature="19885:19962" ph="SELECT passw... User" />
-                <marker date="1494509779000" expanded="true" signature="20601:20647" ph="SELECT regNu... Airplane" />
-                <marker date="1494509779000" expanded="true" signature="21289:21365" ph="SELECT * FRO... Airplane" />
-                <marker date="1494509779000" expanded="true" signature="22326:22430" ph="INSERT INTO Flight... " />
-                <marker date="1494509779000" expanded="true" signature="22755:22843" ph="INSERT INTO Flight... " />
-                <marker date="1494509779000" expanded="true" signature="23402:23445" ph="SELECT fligh... Flight" />
-                <marker date="1494509779000" expanded="true" signature="24074:24157" ph="SELECT DISTI... Location" />
-                <marker date="1494509779000" expanded="true" signature="24798:24901" ph="SELECT city Location" />
-                <marker date="1494509779000" expanded="true" signature="25443:25585" ph="UPDATE Airpo... " />
-                <marker date="1494509779000" expanded="true" signature="26036:26119" ph="SELECT Perso... User" />
-                <marker date="1494509779000" expanded="true" signature="26764:26823" ph="SELECT balan... Person" />
-                <marker date="1494509779000" expanded="true" signature="27470:27589" ph="INSERT INTO AirportSystemdb.Trip... " />
-                <marker date="1494509779000" expanded="true" signature="28132:28356" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
-                <marker date="1494509779000" expanded="true" signature="28657:28881" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
-                <marker date="1494509779000" expanded="true" signature="29440:29516" ph="SELECT * FRO... Airplane" />
-                <marker date="1494509779000" expanded="true" signature="30250:30308" ph="SELECT Max(f... Flight" />
-                <marker date="1494509779000" expanded="true" signature="31001:31075" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="31001:31097" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="31001:31269" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="32259:32344" ph="SELECT locat... Location" />
-                <marker date="1494509779000" expanded="true" signature="32926:32970" ph="SELECT Max(t... Trip" />
-                <marker date="1494509779000" expanded="true" signature="33520:33623" ph="SELECT city,... Location" />
-                <marker date="1494509779000" expanded="true" signature="34434:34729" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="34785:35080" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="35215:35511" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="35567:35890" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="36011:36306" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="36362:36647" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="36362:36654" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="36362:36686" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="36362:36687" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="36882:37158" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="37214:37501" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="37214:37502" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="37214:37517" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="37214:37518" ph="SELECT * FRO... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="38289:38384" ph="SELECT price... Trip" />
-                <marker date="1494509779000" expanded="true" signature="38976:39056" ph="SELECT Fligh... Trip" />
-                <marker date="1494509779000" expanded="true" signature="39619:39701" ph="SELECT tripI... Trip" />
-                <marker date="1494509779000" expanded="true" signature="39678:39701" ph="SELECT Fligh... Trip" />
-                <marker date="1494509779000" expanded="true" signature="40410:40729" ph="SELECT city,... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="40410:40768" ph="SELECT city,... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="40410:40769" ph="SELECT city,... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="40410:40784" ph="SELECT city,... Trip_has_Location" />
-                <marker date="1494509779000" expanded="true" signature="41380:41434" ph="SELECT max(i... PSTR" />
-                <marker date="1494509779000" expanded="true" signature="41968:42040" ph="SELECT fligh... Fligh" />
-                <marker date="1494509779000" expanded="true" signature="41968:42041" ph="SELECT fligh... Flight" />
-                <marker date="1494509779000" expanded="true" signature="41968:42077" ph="SELECT * FRO... Airplane" />
+                <marker date="1494510019000" expanded="true" signature="2919:3219" ph="{...}" />
+                <marker date="1494510019000" expanded="true" signature="3275:3745" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Trip.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Trip.java">
+      <file leaf-file-name="NewBookingController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="323">
+              <caret line="118" column="52" lean-forward="false" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Billing.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Employee.java">
+      <file leaf-file-name="NewBooking.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="260">
+              <caret line="91" column="138" lean-forward="false" selection-start-line="91" selection-start-column="138" selection-end-line="91" selection-end-column="138" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocalFileStorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java">
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="267" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="191">
+              <caret line="1312" column="136" lean-forward="false" selection-start-line="1312" selection-start-column="136" selection-end-line="1312" selection-end-column="136" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1494510019000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
+                <marker date="1494510019000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
+                <marker date="1494510019000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
+                <marker date="1494510019000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
+                <marker date="1494510019000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
+                <marker date="1494510019000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
+                <marker date="1494510019000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
+                <marker date="1494510019000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
+                <marker date="1494510019000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
+                <marker date="1494510019000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
+                <marker date="1494510019000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
+                <marker date="1494510019000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
+                <marker date="1494510019000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
+                <marker date="1494510019000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
+                <marker date="1494510019000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
+                <marker date="1494510019000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
+                <marker date="1494510019000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
+                <marker date="1494510019000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
+                <marker date="1494510019000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
+                <marker date="1494510019000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
+                <marker date="1494510019000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
+                <marker date="1494510019000" expanded="true" signature="15331:15383" ph="INSERT INTO AirportSystemdb.PSTR... " />
+                <marker date="1494510019000" expanded="true" signature="15605:15695" ph="UPDATE Airpo... " />
+                <marker date="1494510019000" expanded="true" signature="16375:16446" ph="SELECT PSTR_... Location" />
+                <marker date="1494510019000" expanded="true" signature="17102:17197" ph="SELECT * FRO... Location" />
+                <marker date="1494510019000" expanded="true" signature="18744:18786" ph="SELECT userN... User" />
+                <marker date="1494510019000" expanded="true" signature="19363:19439" ph="UPDATE User " />
+                <marker date="1494510019000" expanded="true" signature="19885:19962" ph="SELECT passw... User" />
+                <marker date="1494510019000" expanded="true" signature="20601:20647" ph="SELECT regNu... Airplane" />
+                <marker date="1494510019000" expanded="true" signature="21289:21365" ph="SELECT * FRO... Airplane" />
+                <marker date="1494510019000" expanded="true" signature="22326:22430" ph="INSERT INTO Flight... " />
+                <marker date="1494510019000" expanded="true" signature="22755:22843" ph="INSERT INTO Flight... " />
+                <marker date="1494510019000" expanded="true" signature="23402:23445" ph="SELECT fligh... Flight" />
+                <marker date="1494510019000" expanded="true" signature="24074:24157" ph="SELECT DISTI... Location" />
+                <marker date="1494510019000" expanded="true" signature="24798:24901" ph="SELECT city Location" />
+                <marker date="1494510019000" expanded="true" signature="25443:25585" ph="UPDATE Airpo... " />
+                <marker date="1494510019000" expanded="true" signature="26036:26119" ph="SELECT Perso... User" />
+                <marker date="1494510019000" expanded="true" signature="26764:26823" ph="SELECT balan... Person" />
+                <marker date="1494510019000" expanded="true" signature="27470:27589" ph="INSERT INTO AirportSystemdb.Trip... " />
+                <marker date="1494510019000" expanded="true" signature="28132:28356" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+                <marker date="1494510019000" expanded="true" signature="28657:28881" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+                <marker date="1494510019000" expanded="true" signature="29440:29516" ph="SELECT * FRO... Airplane" />
+                <marker date="1494510019000" expanded="true" signature="30250:30308" ph="SELECT Max(f... Flight" />
+                <marker date="1494510019000" expanded="true" signature="31001:31269" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494510019000" expanded="true" signature="32259:32344" ph="SELECT locat... Location" />
+                <marker date="1494510019000" expanded="true" signature="32926:32970" ph="SELECT Max(t... Trip" />
+                <marker date="1494510019000" expanded="true" signature="33520:33623" ph="SELECT city,... Location" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Flight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Flight.java">
+      <file leaf-file-name="ViewWorkersController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -165,65 +152,34 @@
       <file leaf-file-name="DataStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BillingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewBookingController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Airplane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Airplane.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+              <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Billing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java">
+      <file leaf-file-name="AddTripController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="103" column="37" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
+            <state relative-caret-position="-10">
+              <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
               <folding>
-                <element signature="e#1160#1161#0" expanded="true" />
-                <element signature="e#1193#1194#0" expanded="true" />
-                <element signature="e#1245#1246#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
-                <element signature="e#1326#1327#0" expanded="true" />
-                <element signature="e#1359#1360#0" expanded="true" />
-                <element signature="e#1411#1412#0" expanded="true" />
-                <element signature="e#1455#1456#0" expanded="true" />
-                <element signature="e#1492#1493#0" expanded="true" />
-                <element signature="e#1525#1526#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
-                <element signature="e#1621#1622#0" expanded="true" />
-                <element signature="e#1696#1697#0" expanded="true" />
+                <marker date="1494510019000" expanded="true" signature="4157:4164" ph="{...}" />
+                <marker date="1494510019000" expanded="true" signature="4230:4327" ph="{...}" />
+                <marker date="1494510019000" expanded="true" signature="4387:4576" ph="{...}" />
+                <marker date="1494510019000" expanded="true" signature="4639:4802" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app1.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/app1.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -323,10 +279,10 @@
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
       </list>
     </option>
@@ -338,10 +294,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="156" />
-    <option name="y" value="23" />
-    <option name="width" value="1102" />
-    <option name="height" value="722" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="727" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -359,105 +314,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Changed Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Airportsystem">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Airportsystem">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminController" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -530,6 +386,105 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminController" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Airportsystem">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Airportsystem">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,10 +526,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/Airportsystem.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -667,6 +618,668 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/Airportsystem.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java</PATH>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
       </FILE-GROUP>
     </UpdatedFiles>
   </component>
@@ -1485,42 +2098,66 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267114000" />
+    <option name="totallyTimeSpent" value="268623000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="156" y="23" width="1102" height="722" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="727" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32575756" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.49707174" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078101" sideWeight="0.50725955" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23556231" sideWeight="0.13359375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078101" sideWeight="0.49274048" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23583461" sideWeight="0.4863884" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23556231" sideWeight="0.86640626" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29483283" sideWeight="0.846875" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18693285" sideWeight="0.82743365" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.82965934" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771823" sideWeight="0.49637023" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18693285" sideWeight="0.17256637" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969605" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18693285" sideWeight="0.17034069" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078101" sideWeight="0.50725955" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32575756" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893497" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078101" sideWeight="0.49274048" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23583461" sideWeight="0.4863884" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18693285" sideWeight="0.82743365" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771823" sideWeight="0.49637023" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18693285" sideWeight="0.17256637" order="6" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1617,37 +2254,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/AddLocation.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/AddTrip.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-          <folding>
-            <marker date="1494237526000" expanded="true" signature="6283:6304" ph="..." />
-            <marker date="1494237526000" expanded="true" signature="6283:6321" ph="..." />
-            <marker date="1494237526000" expanded="true" signature="6626:6642" ph="..." />
-          </folding>
+          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Bonus.java">
@@ -1668,7 +2295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3210">
           <caret line="214" column="26" lean-forward="false" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1676,22 +2302,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#667#668#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Billing.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/typeOfUserLog.bin" />
@@ -1711,14 +2333,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/SearchLocation.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java">
@@ -1733,7 +2355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1754,21 +2375,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewPSTR.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="69" column="99" lean-forward="false" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="99" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="13" column="84" lean-forward="false" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1782,9 +2402,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-10">
+          <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
+          <folding>
+            <marker date="1494510019000" expanded="true" signature="4157:4164" ph="{...}" />
+            <marker date="1494510019000" expanded="true" signature="4230:4327" ph="{...}" />
+            <marker date="1494510019000" expanded="true" signature="4387:4576" ph="{...}" />
+            <marker date="1494510019000" expanded="true" signature="4639:4802" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1792,19 +2417,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewTrip.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewTripController.java">
@@ -1827,8 +2451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="227">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1841,44 +2465,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="388" column="22" lean-forward="false" selection-start-line="388" selection-start-column="22" selection-end-line="388" selection-end-column="22" />
-          <folding>
-            <element signature="e#17232#17233#0" expanded="false" />
-            <element signature="e#17274#17275#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ListView.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewPSTR.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="415" column="0" lean-forward="false" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
@@ -1905,10 +2511,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="30" />
+        <state relative-caret-position="285">
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding>
-            <marker date="1494509779000" expanded="true" signature="2288:2294" ph="{...}" />
+            <marker date="1494510019000" expanded="true" signature="2919:3219" ph="{...}" />
+            <marker date="1494510019000" expanded="true" signature="3275:3745" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1917,7 +2524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1929,27 +2535,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-          <folding>
-            <marker date="1494509779000" expanded="true" signature="5486:5505" ph="..." />
-            <marker date="1494509779000" expanded="true" signature="5486:5519" ph="..." />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#525#526#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1957,7 +2546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1965,7 +2553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1973,29 +2560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="103" column="37" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
-          <folding>
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1245#1246#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-            <element signature="e#1621#1622#0" expanded="true" />
-            <element signature="e#1696#1697#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2003,7 +2567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2017,110 +2580,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="15">
+          <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="1543" column="0" lean-forward="false" selection-start-line="1543" selection-start-column="0" selection-end-line="1543" selection-end-column="0" />
+        <state relative-caret-position="191">
+          <caret line="1312" column="136" lean-forward="false" selection-start-line="1312" selection-start-column="136" selection-end-line="1312" selection-end-column="136" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494509779000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
-            <marker date="1494509779000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
-            <marker date="1494509779000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
-            <marker date="1494509779000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
-            <marker date="1494509779000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
-            <marker date="1494509779000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
-            <marker date="1494509779000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
-            <marker date="1494509779000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
-            <marker date="1494509779000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
-            <marker date="1494509779000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
-            <marker date="1494509779000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
-            <marker date="1494509779000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
-            <marker date="1494509779000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
-            <marker date="1494509779000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
-            <marker date="1494509779000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
-            <marker date="1494509779000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
-            <marker date="1494509779000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
-            <marker date="1494509779000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
-            <marker date="1494509779000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
-            <marker date="1494509779000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
-            <marker date="1494509779000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
-            <marker date="1494509779000" expanded="true" signature="15331:15383" ph="INSERT INTO AirportSystemdb.PSTR... " />
-            <marker date="1494509779000" expanded="true" signature="15605:15695" ph="UPDATE Airpo... " />
-            <marker date="1494509779000" expanded="true" signature="16375:16446" ph="SELECT PSTR_... Location" />
-            <marker date="1494509779000" expanded="true" signature="17102:17197" ph="SELECT * FRO... Location" />
-            <marker date="1494509779000" expanded="true" signature="17985:18019" ph="SHOW GLOBAL " />
-            <marker date="1494509779000" expanded="true" signature="18744:18786" ph="SELECT userN... User" />
-            <marker date="1494509779000" expanded="true" signature="19363:19439" ph="UPDATE User " />
-            <marker date="1494509779000" expanded="true" signature="19885:19962" ph="SELECT passw... User" />
-            <marker date="1494509779000" expanded="true" signature="20601:20647" ph="SELECT regNu... Airplane" />
-            <marker date="1494509779000" expanded="true" signature="21289:21365" ph="SELECT * FRO... Airplane" />
-            <marker date="1494509779000" expanded="true" signature="22326:22430" ph="INSERT INTO Flight... " />
-            <marker date="1494509779000" expanded="true" signature="22755:22843" ph="INSERT INTO Flight... " />
-            <marker date="1494509779000" expanded="true" signature="23402:23445" ph="SELECT fligh... Flight" />
-            <marker date="1494509779000" expanded="true" signature="24074:24157" ph="SELECT DISTI... Location" />
-            <marker date="1494509779000" expanded="true" signature="24798:24901" ph="SELECT city Location" />
-            <marker date="1494509779000" expanded="true" signature="25443:25585" ph="UPDATE Airpo... " />
-            <marker date="1494509779000" expanded="true" signature="26036:26119" ph="SELECT Perso... User" />
-            <marker date="1494509779000" expanded="true" signature="26764:26823" ph="SELECT balan... Person" />
-            <marker date="1494509779000" expanded="true" signature="27470:27589" ph="INSERT INTO AirportSystemdb.Trip... " />
-            <marker date="1494509779000" expanded="true" signature="28132:28356" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
-            <marker date="1494509779000" expanded="true" signature="28657:28881" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
-            <marker date="1494509779000" expanded="true" signature="29440:29516" ph="SELECT * FRO... Airplane" />
-            <marker date="1494509779000" expanded="true" signature="30250:30308" ph="SELECT Max(f... Flight" />
-            <marker date="1494509779000" expanded="true" signature="31001:31075" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="31001:31097" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="31001:31269" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="32259:32344" ph="SELECT locat... Location" />
-            <marker date="1494509779000" expanded="true" signature="32926:32970" ph="SELECT Max(t... Trip" />
-            <marker date="1494509779000" expanded="true" signature="33520:33623" ph="SELECT city,... Location" />
-            <marker date="1494509779000" expanded="true" signature="34434:34729" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="34785:35080" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="35215:35511" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="35567:35890" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="36011:36306" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="36362:36647" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="36362:36654" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="36362:36686" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="36362:36687" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="36882:37158" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="37214:37501" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="37214:37502" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="37214:37517" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="37214:37518" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="38289:38384" ph="SELECT price... Trip" />
-            <marker date="1494509779000" expanded="true" signature="38976:39056" ph="SELECT Fligh... Trip" />
-            <marker date="1494509779000" expanded="true" signature="39619:39701" ph="SELECT tripI... Trip" />
-            <marker date="1494509779000" expanded="true" signature="39678:39701" ph="SELECT Fligh... Trip" />
-            <marker date="1494509779000" expanded="true" signature="40410:40729" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="40410:40768" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="40410:40769" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="40410:40784" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494509779000" expanded="true" signature="41380:41434" ph="SELECT max(i... PSTR" />
-            <marker date="1494509779000" expanded="true" signature="41968:42040" ph="SELECT fligh... Fligh" />
-            <marker date="1494509779000" expanded="true" signature="41968:42041" ph="SELECT fligh... Flight" />
-            <marker date="1494509779000" expanded="true" signature="41968:42077" ph="SELECT * FRO... Airplane" />
+            <marker date="1494510019000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
+            <marker date="1494510019000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
+            <marker date="1494510019000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
+            <marker date="1494510019000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
+            <marker date="1494510019000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
+            <marker date="1494510019000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
+            <marker date="1494510019000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
+            <marker date="1494510019000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
+            <marker date="1494510019000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
+            <marker date="1494510019000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
+            <marker date="1494510019000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
+            <marker date="1494510019000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
+            <marker date="1494510019000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
+            <marker date="1494510019000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
+            <marker date="1494510019000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
+            <marker date="1494510019000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
+            <marker date="1494510019000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
+            <marker date="1494510019000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
+            <marker date="1494510019000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
+            <marker date="1494510019000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
+            <marker date="1494510019000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
+            <marker date="1494510019000" expanded="true" signature="15331:15383" ph="INSERT INTO AirportSystemdb.PSTR... " />
+            <marker date="1494510019000" expanded="true" signature="15605:15695" ph="UPDATE Airpo... " />
+            <marker date="1494510019000" expanded="true" signature="16375:16446" ph="SELECT PSTR_... Location" />
+            <marker date="1494510019000" expanded="true" signature="17102:17197" ph="SELECT * FRO... Location" />
+            <marker date="1494510019000" expanded="true" signature="18744:18786" ph="SELECT userN... User" />
+            <marker date="1494510019000" expanded="true" signature="19363:19439" ph="UPDATE User " />
+            <marker date="1494510019000" expanded="true" signature="19885:19962" ph="SELECT passw... User" />
+            <marker date="1494510019000" expanded="true" signature="20601:20647" ph="SELECT regNu... Airplane" />
+            <marker date="1494510019000" expanded="true" signature="21289:21365" ph="SELECT * FRO... Airplane" />
+            <marker date="1494510019000" expanded="true" signature="22326:22430" ph="INSERT INTO Flight... " />
+            <marker date="1494510019000" expanded="true" signature="22755:22843" ph="INSERT INTO Flight... " />
+            <marker date="1494510019000" expanded="true" signature="23402:23445" ph="SELECT fligh... Flight" />
+            <marker date="1494510019000" expanded="true" signature="24074:24157" ph="SELECT DISTI... Location" />
+            <marker date="1494510019000" expanded="true" signature="24798:24901" ph="SELECT city Location" />
+            <marker date="1494510019000" expanded="true" signature="25443:25585" ph="UPDATE Airpo... " />
+            <marker date="1494510019000" expanded="true" signature="26036:26119" ph="SELECT Perso... User" />
+            <marker date="1494510019000" expanded="true" signature="26764:26823" ph="SELECT balan... Person" />
+            <marker date="1494510019000" expanded="true" signature="27470:27589" ph="INSERT INTO AirportSystemdb.Trip... " />
+            <marker date="1494510019000" expanded="true" signature="28132:28356" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+            <marker date="1494510019000" expanded="true" signature="28657:28881" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+            <marker date="1494510019000" expanded="true" signature="29440:29516" ph="SELECT * FRO... Airplane" />
+            <marker date="1494510019000" expanded="true" signature="30250:30308" ph="SELECT Max(f... Flight" />
+            <marker date="1494510019000" expanded="true" signature="31001:31269" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494510019000" expanded="true" signature="32259:32344" ph="SELECT locat... Location" />
+            <marker date="1494510019000" expanded="true" signature="32926:32970" ph="SELECT Max(t... Trip" />
+            <marker date="1494510019000" expanded="true" signature="33520:33623" ph="SELECT city,... Location" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-550">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="91" column="138" lean-forward="false" selection-start-line="91" selection-start-column="138" selection-end-line="91" selection-end-column="138" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="118" column="52" lean-forward="false" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import sample.mvc.model.*;
 
 import java.net.URL;
@@ -50,12 +49,12 @@ public class NewBookingController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
 
             zeroToNineteenList.add(i);
         }
 
-        for (int i = 1; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
 
             oneToNineteenList.add(i);
         }
@@ -63,6 +62,9 @@ public class NewBookingController implements Initializable {
 
         childTicket.setItems(zeroToNineteenList);
         adultTicket.setItems(oneToNineteenList);
+
+        childTicket.setValue(0);
+        adultTicket.setValue(0);
 
         booking = local.readBookingIdFromFile();
         tripId = booking.getTripId();
@@ -92,32 +94,33 @@ public class NewBookingController implements Initializable {
 
     }
 
-    @FXML
-    private void setChildTicket(MouseEvent me) {
-
+    private int getChildTicket() {
         int ticketAmount;
 
         ticketAmount = childTicket.getValue();
 
-        totalPriceArea.setText("Child tickets: " + ticketAmount + "\nBilling: " + ticketAmount + "*" +
-                String.valueOf(billing.getChildPrice(trip.getTripPrice()) + "= " +
-                        billing.getChildTotalPrice(trip.getTripPrice(), ticketAmount)));
-
+        return ticketAmount;
     }
 
-    @FXML
-    private void setAdultTicket(MouseEvent me) {
+    private int getAdultTicket() {
 
         int ticketAmount;
 
         ticketAmount = adultTicket.getValue();
 
-        totalPriceArea.setText("Adult tickets: " + ticketAmount + "\nBilling: " + ticketAmount + "*" +
-                String.valueOf(trip.getTripPrice()) + "= " +
-                billing.getAdultTotalPrice(trip.getTripPrice(), ticketAmount));
-
-
+        return ticketAmount;
     }
+
+    @FXML
+    private void showBookingInfo() {
+
+        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nBilling: " + getAdultTicket() + "X" +
+                String.valueOf(trip.getTripPrice()) + "= " +
+                billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
+                "\nChild tickets: " + getChildTicket() + "\nBilling: " + getChildTicket() + "X" + String.valueOf(trip.getTripPrice()) + "= "
+                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()));
+    }
+
 
     @FXML
     private void returnToSearchLocation(ActionEvent ae) {

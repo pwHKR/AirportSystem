@@ -49,7 +49,7 @@ public class Billing {
         double adultPrice;
         double totalPrice;
 
-        adultPrice = getChildPrice(tripPrice);
+        adultPrice = 2 * getChildPrice(tripPrice); // dum lösning men funkar
 
         totalPrice = adultPrice * TicketAmount;
 

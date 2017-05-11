@@ -1309,8 +1309,10 @@ public class DBHandler implements DataStorage {
 
             case "Billing Descending":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
                             " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by price DESC;");
+
+
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
                             "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER by price DESC ");
