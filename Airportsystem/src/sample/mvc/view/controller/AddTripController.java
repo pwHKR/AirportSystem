@@ -28,11 +28,6 @@ public class AddTripController implements Initializable {
 
 
     private ObservableList<String> pstrCountryList = FXCollections.observableArrayList();
-    private ObservableList<String> cityMatchesCountryList = FXCollections.observableArrayList();
-    private ObservableList<String> countryList = FXCollections.observableArrayList();
-    private ObservableList<String> airportList = FXCollections.observableArrayList();
-    private ObservableList<String> pstrLocationList = FXCollections.observableArrayList();
-    private ObservableList<String> infoList = FXCollections.observableArrayList();
     private DataStorage dbh = new DBHandler();
     private String choice;
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
@@ -144,7 +139,7 @@ public class AddTripController implements Initializable {
         model.setText(airplane.getModel());
         maxSpeed.setText(airplane.getMaxSpeed());
 
-        pstrLocationList = dbh.getPSTR();
+        ObservableList<String> pstrLocationList = dbh.getPSTR();
 
         pstrLocation.setItems(pstrLocationList);
 
@@ -155,7 +150,7 @@ public class AddTripController implements Initializable {
 
     @FXML
     private void pickCountryFieldTo(MouseEvent me) {
-        countryList = dbh.getCountries();
+        ObservableList<String> countryList = dbh.getCountries();
 
         toCountryField.setItems(countryList);
 
@@ -165,7 +160,7 @@ public class AddTripController implements Initializable {
     private void pickCityFieldTo(MouseEvent me) {
         String SelectedCountry = toCountryField.getValue();
 
-        cityMatchesCountryList = dbh.getCities(SelectedCountry);
+        ObservableList<String> cityMatchesCountryList = dbh.getCities(SelectedCountry);
 
         toCityField.setItems(cityMatchesCountryList);
 
@@ -175,7 +170,7 @@ public class AddTripController implements Initializable {
     private void pickAirportFieldTo(MouseEvent me) {
         String selectedCity = toCityField.getValue();
 
-        airportList = dbh.getAirports(selectedCity);
+        ObservableList<String> airportList = dbh.getAirports(selectedCity);
 
         toAirportField.setItems(airportList);
 
@@ -186,7 +181,7 @@ public class AddTripController implements Initializable {
         DataStorage dbHandler = new DBHandler();
 
         String choice = pstrLocation.getSelectionModel().getSelectedItem();
-        infoList = dbHandler.getPSTRLocationInfo(choice);
+        ObservableList<String> infoList = dbHandler.getPSTRLocationInfo(choice);
         locationInfo.setText(infoList.toString().replace("[", "").replace
                 ("]", ""));
     }

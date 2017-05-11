@@ -21,8 +21,6 @@ public class NewUserController implements Initializable {
     private MyAlert myAlert = new MyAlert();
     private SwitchScene sw = new SwitchScene();
 
-    private ObservableList<String> countryList = FXCollections.observableArrayList();
-
     @FXML
     private TextField firstName;
     @FXML
@@ -181,7 +179,7 @@ public class NewUserController implements Initializable {
         DataStorage dbh = new DBHandler();
 
 
-        countryList = dbh.getCountries();
+        ObservableList<String> countryList = dbh.getCountries();
 
         country.setItems(countryList);
 

@@ -12,16 +12,13 @@ public class DBHandler implements DataStorage {
 
     private MyAlert myAlert = new MyAlert();
 
-    private final String dbName;
-    private final String user;
-    private final String password;
     private final String connectionURL;
 
     public DBHandler() {
         Properties p = loadProperties();
-        dbName = p.getProperty("dbName");
-        user = p.getProperty("user");
-        password = p.getProperty("password");
+        String dbName = p.getProperty("dbName");
+        String user = p.getProperty("user");
+        String password = p.getProperty("password");
         connectionURL = "jdbc:mysql://46.101.88.25/" + dbName + "?user=" + user + "&password=" + password + "&useSSL=false";
     }
 

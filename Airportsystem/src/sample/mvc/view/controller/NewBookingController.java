@@ -35,14 +35,10 @@ public class NewBookingController implements Initializable {
     @FXML
     private Label balanceLabel;
     @FXML
+
     private TextField luggageField;
-    private Booking booking;
     private Trip trip;
-    private Flight flight;
-    private Airplane airplane;
-    private int tripId;
-    private int systemId;
-    private int flightId;
+    private double totalTripPrice;
 
 
     @Override
@@ -66,8 +62,8 @@ public class NewBookingController implements Initializable {
         childTicket.setValue(0);
         adultTicket.setValue(0);
 
-        booking = local.readBookingIdFromFile();
-        tripId = booking.getTripId();
+        Booking booking = local.readBookingIdFromFile();
+        int tripId = booking.getTripId();
 
         String stringTripId = String.valueOf(tripId);
 
@@ -76,11 +72,11 @@ public class NewBookingController implements Initializable {
 
         bookingListView.setItems(tripInfoList);
 
-        flightId = trip.getFlightID();
+        int flightId = trip.getFlightID();
 
-        flight = dbh.getFlightObject(flightId);
+        Flight flight = dbh.getFlightObject(flightId);
 
-        airplane = dbh.getAirplaneObject(flight.getRegNumber());
+        Airplane airplane = dbh.getAirplaneObject(flight.getRegNumber());
 
         tripInfoList.add("Date: " + trip.getDate() + "\nTicket price: " + trip.getTripPrice() +
                 "\nLuggage Max (kilo): " + airplane.getMaxLuggageWeight());
@@ -88,7 +84,7 @@ public class NewBookingController implements Initializable {
 
         totalPriceArea.setText("Child 0-10 50% of ticket billing");
 
-        systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName()); // Get systemID of the current user
+        int systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName());
         balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
 
 
@@ -114,11 +110,16 @@ public class NewBookingController implements Initializable {
     @FXML
     private void showBookingInfo() {
 
-        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nBilling: " + getAdultTicket() + "X" +
+        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nBilling: " + getAdultTicket() + " X " +
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
-                "\nChild tickets: " + getChildTicket() + "\nBilling: " + getChildTicket() + "X" + String.valueOf(trip.getTripPrice()) + "= "
+                "\nChild tickets: " + getChildTicket() + "\nBilling: " + getChildTicket() + " X " + String.valueOf(trip.getTripPrice() / 2) + "= "
                 + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()));
+
+        tripInfoList.clear();
+        totalTripPrice = (billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()));
+        tripInfoList.add("Date: " + trip.getDate() + "\nTicket price: " + totalTripPrice);
+        bookingListView.setItems(tripInfoList);
     }
 
 

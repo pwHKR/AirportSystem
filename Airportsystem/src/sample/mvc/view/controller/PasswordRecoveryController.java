@@ -35,7 +35,6 @@ public class PasswordRecoveryController implements Initializable {
     private SwitchScene sw = new SwitchScene();
     private LocalFileStorage localFileStorage = new LocalFileStorage();
     private MyAlert alert = new MyAlert();
-    private ObservableList<String> userInformation = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -45,7 +44,7 @@ public class PasswordRecoveryController implements Initializable {
     @FXML
     private void passwordRecovery(ActionEvent ae) {
         if (!idText.getText().isEmpty()) {
-            userInformation = dbhandler.searchForPassword(idText.getText());
+            ObservableList<String> userInformation = dbhandler.searchForPassword(idText.getText());
             if (userInformation.size() > 0)
                 informationArea.setText(userInformation.get(0).toString());
             else {

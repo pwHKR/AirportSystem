@@ -35,13 +35,12 @@ public class flightStatusController implements Initializable {
     DataStorage dbh = new DBHandler();
     LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
-    private ObservableList<Integer> flightIds = FXCollections.observableArrayList();
     private ObservableList<String> flightInformation = FXCollections.observableArrayList();
     private int choice;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        flightIds = dbh.getAllFlightIds();
+        ObservableList<Integer> flightIds = dbh.getAllFlightIds();
         flightsView.setItems(flightIds);
     }
 

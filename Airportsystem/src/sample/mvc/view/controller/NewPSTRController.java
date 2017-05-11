@@ -22,10 +22,6 @@ public class NewPSTRController implements Initializable {
     private MyAlert myAlert = new MyAlert();
     private SwitchScene sw = new SwitchScene();
 
-    private ObservableList<String> countryList = FXCollections.observableArrayList();
-    private ObservableList<String> cityList = FXCollections.observableArrayList();
-    private ObservableList<String> airportList = FXCollections.observableArrayList();
-
 
     @FXML
     private TextField LabelIdPSTR;
@@ -135,7 +131,7 @@ public class NewPSTRController implements Initializable {
     }
 
     private void setCountriesLogic() {
-        countryList = dbh.getCountries();
+        ObservableList<String> countryList = dbh.getCountries();
 
         country.setItems(countryList);
 
@@ -147,7 +143,7 @@ public class NewPSTRController implements Initializable {
         String SelectedCountry = country.getValue();
 
 
-        cityList = dbh.getCities(SelectedCountry);
+        ObservableList<String> cityList = dbh.getCities(SelectedCountry);
 
         city.setItems(cityList);
 
@@ -160,7 +156,7 @@ public class NewPSTRController implements Initializable {
         String SelectedCity = city.getValue();
 
 
-        airportList = dbh.getAirports(SelectedCity);
+        ObservableList<String> airportList = dbh.getAirports(SelectedCity);
 
         airport.setItems(airportList);
 
