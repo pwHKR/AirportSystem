@@ -82,6 +82,7 @@ public class AddTripController implements Initializable {
         int to;
 
 
+        if (dateField.getValue() != null) {
 
         Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(),
                 dbh.getLastFlightId() + 1, airplane.getPassengerCapacity());
@@ -95,7 +96,6 @@ public class AddTripController implements Initializable {
         to = Integer.parseInt(choiceTo);
 
 
-        if (dateField.getValue().toString() != null) {
             dbh.insertFlight(local.readFlightFromFile(), false);// FIXME: 2017-05
             dbh.insertTrip(trip, from, to);
         } else {
@@ -133,13 +133,7 @@ public class AddTripController implements Initializable {
 
         pstrLocationList = dbh.getPSTR();
 
-
         pstrLocation.setItems(pstrLocationList);
-
-
-
-
-
 
     }
 
