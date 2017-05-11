@@ -100,8 +100,10 @@
         </Label>
         <ListView fx:id="bookingListView" layoutX="342.0" layoutY="300.0" prefHeight="98.0" prefWidth="200.0"/>
         <TextArea fx:id="totalPriceArea" layoutX="42.0" layoutY="300.0" prefHeight="98.0" prefWidth="226.0"/>
-        <ComboBox fx:id="adultTicket" layoutX="47.0" layoutY="173.0" prefHeight="27.0" prefWidth="55.0"/>
-        <ComboBox fx:id="childTicket" layoutX="137.0" layoutY="173.0" prefHeight="27.0" prefWidth="55.0"/>
+        <ComboBox fx:id="adultTicket" layoutX="47.0" layoutY="173.0" onMouseExited="#setAdultTicket" prefHeight="27.0"
+                  prefWidth="55.0"/>
+        <ComboBox fx:id="childTicket" layoutX="137.0" layoutY="173.0" onMouseExited="#setChildTicket" prefHeight="27.0"
+                  prefWidth="55.0"/>
         <Label layoutX="354.0" layoutY="259.0" text="Your booking" textFill="WHITE">
             <font>
                 <Font size="28.0"/>

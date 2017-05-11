@@ -8,6 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
 import sample.mvc.model.*;
 
 import java.net.URL;
@@ -20,10 +21,11 @@ public class NewBookingController implements Initializable {
 
     private LocalFileStorage local = new LocalFileStorage();
     private DataStorage dbh = new DBHandler();
+    private Price price = new Price();
 
     private ObservableList<String> tripInfoList = FXCollections.observableArrayList();
-    private ObservableList<Integer> oneToTwentyList = FXCollections.observableArrayList();
-    private ObservableList<Integer> zeroToTwentyList = FXCollections.observableArrayList();
+    private ObservableList<Integer> oneToNineteenList = FXCollections.observableArrayList();
+    private ObservableList<Integer> zeroToNineteenList = FXCollections.observableArrayList();
     @FXML
     private ListView<String> bookingListView;
     @FXML
@@ -42,19 +44,19 @@ public class NewBookingController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        for (int i = 0; i == 20; i++) {
+        for (int i = 0; i < 20; i++) {
 
-            zeroToTwentyList.add(i);
+            zeroToNineteenList.add(i);
         }
 
-        for (int i = 1; i == 20; i++) {
+        for (int i = 1; i < 20; i++) {
 
-            oneToTwentyList.add(i);
+            oneToNineteenList.add(i);
         }
 
 
-        childTicket.setItems(zeroToTwentyList);
-        adultTicket.setItems(oneToTwentyList);
+        childTicket.setItems(zeroToNineteenList);
+        adultTicket.setItems(oneToNineteenList);
 
         booking = local.readBookingIdFromFile();
         tripId = booking.getTripId();
@@ -72,7 +74,35 @@ public class NewBookingController implements Initializable {
         systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName()); // Get systemID of the current user
         balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
 
+
     }
 
-    
+    @FXML
+    private void setChildTicket(MouseEvent me) {
+
+        int ticketAmount;
+
+        ticketAmount = childTicket.getSelectionModel().getSelectedItem();
+
+        totalPriceArea.setText("Child tickets: " + ticketAmount + "\nPrice: " + ticketAmount + "*" +
+                String.valueOf(price.getChildPrice(trip.getTripPrice()) + "= " +
+                        price.getChildTotalPrice(trip.getTripPrice(), ticketAmount)));
+
+    }
+
+    @FXML
+    private void setAdultTicket(MouseEvent me) {
+
+        int ticketAmount;
+
+        ticketAmount = adultTicket.getSelectionModel().getSelectedItem();
+
+        totalPriceArea.setText("Adult tickets: " + ticketAmount + "\nPrice: " + ticketAmount + "*" +
+                String.valueOf(trip.getTripPrice()) + "= " +
+                price.getAdultTotalPrice(trip.getTripPrice(), ticketAmount));
+
+
+    }
+
+
 }

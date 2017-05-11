@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Customer.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Customer.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewPSTR.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewPSTR.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/SearchLocation.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/SearchLocation.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,10 +33,10 @@
       <file leaf-file-name="SearchLocationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2054">
-              <caret line="156" column="8" lean-forward="false" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
+            <state relative-caret-position="206">
+              <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="30" />
               <folding>
-                <marker date="1494479625000" expanded="true" signature="2286:2292" ph="{...}" />
+                <marker date="1494481736000" expanded="true" signature="2284:2290" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -54,11 +45,43 @@
       <file leaf-file-name="NewBookingController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="76" column="4" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            <state relative-caret-position="209">
+              <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Price.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="87" column="50" lean-forward="true" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+              <folding>
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#1107#1108#0" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
+                <element signature="e#1177#1178#0" expanded="true" />
+                <element signature="e#1229#1230#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1310#1311#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
+                <element signature="e#1439#1440#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,28 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewBooking.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="36" column="92" lean-forward="false" selection-start-line="36" selection-start-column="92" selection-end-line="36" selection-end-column="92" />
-              <folding>
-                <marker date="1494481655000" expanded="true" signature="4907:5063" ph="..." />
-                <marker date="1494481655000" expanded="true" signature="4923:4973" ph="..." />
-                <marker date="1494481655000" expanded="true" signature="4991:5048" ph="..." />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LocalFileStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="767">
-              <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+              <caret line="267" column="0" lean-forward="true" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,16 +132,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -146,21 +142,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BillingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
+      <file leaf-file-name="NewPSTRController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="29" column="31" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="853">
+              <caret line="68" column="65" lean-forward="false" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewPSTRController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java">
+      <file leaf-file-name="BillingController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="68" column="64" lean-forward="false" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
+            <state relative-caret-position="120">
+              <caret line="29" column="31" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -215,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddDestinationController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Person.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Worker.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewWorkers.fxml" />
@@ -265,6 +260,7 @@
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
       </list>
     </option>
@@ -276,7 +272,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-36" />
+    <option name="x" value="156" />
     <option name="y" value="23" />
     <option name="width" value="1102" />
     <option name="height" value="722" />
@@ -1081,7 +1077,7 @@
       <workItem from="1493885120946" duration="8105000" />
       <workItem from="1493906787259" duration="1495000" />
       <workItem from="1494152314494" duration="3437000" />
-      <workItem from="1494266051876" duration="41786000" />
+      <workItem from="1494266051876" duration="46335000" />
     </task>
     <task id="LOCAL-00001" summary="deleting unused files">
       <created>1492660882903</created>
@@ -1412,14 +1408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1494437304802</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Fixed old issues, added new functions">
+      <created>1494481737180</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1494481737180</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255003000" />
+    <option name="totallyTimeSpent" value="259552000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-36" y="23" width="1102" height="722" extended-state="0" />
+    <frame x="156" y="23" width="1102" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1501,7 +1504,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Minor change" />
     <MESSAGE value="Added code to DBHandler" />
     <MESSAGE value="Switched back to login scene" />
     <MESSAGE value="Destination implemented" />
@@ -1526,7 +1528,8 @@
     <MESSAGE value="Add Trip works!" />
     <MESSAGE value="Added getLocationObject method" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="Fixed old issues, added new functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed old issues, added new functions" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1540,7 +1543,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/NewUserScene.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Worker.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Administrator.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Person.java">
@@ -1705,14 +1707,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1866,88 +1860,80 @@
           <caret line="1327" column="203" lean-forward="true" selection-start-line="1327" selection-start-column="203" selection-end-line="1327" selection-end-column="203" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494476680000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
-            <marker date="1494476680000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
-            <marker date="1494476680000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
-            <marker date="1494476680000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
-            <marker date="1494476680000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
-            <marker date="1494476680000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
-            <marker date="1494476680000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
-            <marker date="1494476680000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
-            <marker date="1494476680000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
-            <marker date="1494476680000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
-            <marker date="1494476680000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
-            <marker date="1494476680000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
-            <marker date="1494476680000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
-            <marker date="1494476680000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
-            <marker date="1494476680000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
-            <marker date="1494476680000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
-            <marker date="1494476680000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
-            <marker date="1494476680000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
-            <marker date="1494476680000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
-            <marker date="1494476680000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
-            <marker date="1494476680000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
-            <marker date="1494476680000" expanded="true" signature="15329:15381" ph="INSERT INTO AirportSystemdb.PSTR... " />
-            <marker date="1494476680000" expanded="true" signature="15599:15689" ph="UPDATE Airpo... " />
-            <marker date="1494476680000" expanded="true" signature="16369:16440" ph="SELECT PSTR_... Location" />
-            <marker date="1494476680000" expanded="true" signature="17096:17191" ph="SELECT * FRO... Location" />
-            <marker date="1494476680000" expanded="true" signature="17979:18013" ph="SHOW GLOBAL " />
-            <marker date="1494476680000" expanded="true" signature="18738:18780" ph="SELECT userN... User" />
-            <marker date="1494476680000" expanded="true" signature="19357:19433" ph="UPDATE User " />
-            <marker date="1494476680000" expanded="true" signature="19879:19956" ph="SELECT passw... User" />
-            <marker date="1494476680000" expanded="true" signature="20595:20641" ph="SELECT regNu... Airplane" />
-            <marker date="1494476680000" expanded="true" signature="21283:21359" ph="SELECT * FRO... Airplane" />
-            <marker date="1494476680000" expanded="true" signature="22320:22424" ph="INSERT INTO Flight... " />
-            <marker date="1494476680000" expanded="true" signature="22749:22837" ph="INSERT INTO Flight... " />
-            <marker date="1494476680000" expanded="true" signature="23396:23439" ph="SELECT fligh... Flight" />
-            <marker date="1494476680000" expanded="true" signature="24068:24151" ph="SELECT DISTI... Location" />
-            <marker date="1494476680000" expanded="true" signature="24792:24895" ph="SELECT city Location" />
-            <marker date="1494476680000" expanded="true" signature="25437:25579" ph="UPDATE Airpo... " />
-            <marker date="1494476680000" expanded="true" signature="26030:26113" ph="SELECT Perso... User" />
-            <marker date="1494476680000" expanded="true" signature="26758:26817" ph="SELECT balan... Person" />
-            <marker date="1494476680000" expanded="true" signature="27464:27583" ph="INSERT INTO AirportSystemdb.Trip... " />
-            <marker date="1494476680000" expanded="true" signature="28126:28350" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
-            <marker date="1494476680000" expanded="true" signature="28651:28875" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
-            <marker date="1494476680000" expanded="true" signature="29434:29510" ph="SELECT * FRO... Airplane" />
-            <marker date="1494476680000" expanded="true" signature="30244:30302" ph="SELECT Max(f... Flight" />
-            <marker date="1494476680000" expanded="true" signature="30995:31069" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="30995:31091" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="30995:31263" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="32245:32330" ph="SELECT locat... Location" />
-            <marker date="1494476680000" expanded="true" signature="32912:32956" ph="SELECT Max(t... Trip" />
-            <marker date="1494476680000" expanded="true" signature="33506:33609" ph="SELECT city,... Location" />
-            <marker date="1494476680000" expanded="true" signature="34418:34713" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="34769:35064" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="35197:35493" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="35549:35872" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="35993:36288" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="36344:36629" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="36344:36636" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="36344:36667" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="36344:36668" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="36863:37139" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="37195:37482" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="37195:37483" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="37195:37498" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="37195:37499" ph="SELECT * FRO... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="38265:38360" ph="SELECT price... Trip" />
-            <marker date="1494476680000" expanded="true" signature="38952:39032" ph="SELECT Fligh... Trip" />
-            <marker date="1494476680000" expanded="true" signature="39595:39677" ph="SELECT tripI... Trip" />
-            <marker date="1494476680000" expanded="true" signature="39654:39677" ph="SELECT Fligh... Trip" />
-            <marker date="1494476680000" expanded="true" signature="40386:40705" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="40386:40744" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="40386:40745" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="40386:40760" ph="SELECT city,... Trip_has_Location" />
-            <marker date="1494476680000" expanded="true" signature="41359:41413" ph="SELECT max(i... PSTR" />
+            <marker date="1494481736000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
+            <marker date="1494481736000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
+            <marker date="1494481736000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
+            <marker date="1494481736000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
+            <marker date="1494481736000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
+            <marker date="1494481736000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
+            <marker date="1494481736000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
+            <marker date="1494481736000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
+            <marker date="1494481736000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
+            <marker date="1494481736000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
+            <marker date="1494481736000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
+            <marker date="1494481736000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
+            <marker date="1494481736000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
+            <marker date="1494481736000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
+            <marker date="1494481736000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
+            <marker date="1494481736000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
+            <marker date="1494481736000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
+            <marker date="1494481736000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
+            <marker date="1494481736000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
+            <marker date="1494481736000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
+            <marker date="1494481736000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
+            <marker date="1494481736000" expanded="true" signature="15331:15383" ph="INSERT INTO AirportSystemdb.PSTR... " />
+            <marker date="1494481736000" expanded="true" signature="15605:15695" ph="UPDATE Airpo... " />
+            <marker date="1494481736000" expanded="true" signature="16375:16446" ph="SELECT PSTR_... Location" />
+            <marker date="1494481736000" expanded="true" signature="17102:17197" ph="SELECT * FRO... Location" />
+            <marker date="1494481736000" expanded="true" signature="17985:18019" ph="SHOW GLOBAL " />
+            <marker date="1494481736000" expanded="true" signature="18744:18786" ph="SELECT userN... User" />
+            <marker date="1494481736000" expanded="true" signature="19363:19439" ph="UPDATE User " />
+            <marker date="1494481736000" expanded="true" signature="19885:19962" ph="SELECT passw... User" />
+            <marker date="1494481736000" expanded="true" signature="20601:20647" ph="SELECT regNu... Airplane" />
+            <marker date="1494481736000" expanded="true" signature="21289:21365" ph="SELECT * FRO... Airplane" />
+            <marker date="1494481736000" expanded="true" signature="22326:22430" ph="INSERT INTO Flight... " />
+            <marker date="1494481736000" expanded="true" signature="22755:22843" ph="INSERT INTO Flight... " />
+            <marker date="1494481736000" expanded="true" signature="23402:23445" ph="SELECT fligh... Flight" />
+            <marker date="1494481736000" expanded="true" signature="24074:24157" ph="SELECT DISTI... Location" />
+            <marker date="1494481736000" expanded="true" signature="24798:24901" ph="SELECT city Location" />
+            <marker date="1494481736000" expanded="true" signature="25443:25585" ph="UPDATE Airpo... " />
+            <marker date="1494481736000" expanded="true" signature="26036:26119" ph="SELECT Perso... User" />
+            <marker date="1494481736000" expanded="true" signature="26764:26823" ph="SELECT balan... Person" />
+            <marker date="1494481736000" expanded="true" signature="27470:27589" ph="INSERT INTO AirportSystemdb.Trip... " />
+            <marker date="1494481736000" expanded="true" signature="28132:28356" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+            <marker date="1494481736000" expanded="true" signature="28657:28881" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+            <marker date="1494481736000" expanded="true" signature="29440:29516" ph="SELECT * FRO... Airplane" />
+            <marker date="1494481736000" expanded="true" signature="30250:30308" ph="SELECT Max(f... Flight" />
+            <marker date="1494481736000" expanded="true" signature="31001:31075" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="31001:31097" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="31001:31269" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="32259:32344" ph="SELECT locat... Location" />
+            <marker date="1494481736000" expanded="true" signature="32926:32970" ph="SELECT Max(t... Trip" />
+            <marker date="1494481736000" expanded="true" signature="33520:33623" ph="SELECT city,... Location" />
+            <marker date="1494481736000" expanded="true" signature="34432:34727" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="34783:35078" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="35211:35507" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="35563:35886" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="36007:36302" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="36358:36643" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="36358:36650" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="36358:36682" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="36358:36683" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="36878:37154" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="37210:37497" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="37210:37498" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="37210:37513" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="37210:37514" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="38285:38380" ph="SELECT price... Trip" />
+            <marker date="1494481736000" expanded="true" signature="38972:39052" ph="SELECT Fligh... Trip" />
+            <marker date="1494481736000" expanded="true" signature="39615:39697" ph="SELECT tripI... Trip" />
+            <marker date="1494481736000" expanded="true" signature="39674:39697" ph="SELECT Fligh... Trip" />
+            <marker date="1494481736000" expanded="true" signature="40406:40725" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="40406:40764" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="40406:40765" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="40406:40780" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494481736000" expanded="true" signature="41376:41430" ph="SELECT max(i... PSTR" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="68" column="64" lean-forward="false" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1961,13 +1947,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="123">
           <caret line="36" column="92" lean-forward="false" selection-start-line="36" selection-start-column="92" selection-end-line="36" selection-end-column="92" />
-          <folding>
-            <marker date="1494481655000" expanded="true" signature="4907:5063" ph="..." />
-            <marker date="1494481655000" expanded="true" signature="4923:4973" ph="..." />
-            <marker date="1494481655000" expanded="true" signature="4991:5048" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -2001,18 +1983,8 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="767">
-          <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+          <caret line="267" column="0" lean-forward="true" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2054">
-          <caret line="156" column="8" lean-forward="false" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
-          <folding>
-            <marker date="1494479625000" expanded="true" signature="2286:2292" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2040,10 +2012,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="30" />
+          <folding>
+            <marker date="1494481736000" expanded="true" signature="2284:2290" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="68" column="65" lean-forward="false" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="87" column="50" lean-forward="true" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+          <folding>
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="76" column="4" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        <state relative-caret-position="209">
+          <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
