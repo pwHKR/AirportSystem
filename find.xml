@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="File '.../Airportsystem/src/sample/mvc/model/MyAlert.java - [Airportsystem]'" />
-    <option name="defaultScopeName" value="File '.../Airportsystem/src/sample/mvc/model/MyAlert.java - [Airportsystem]'" />
-    <option name="SEARCH_SCOPE" value="File '.../Airportsystem/src/sample/mvc/model/MyAlert.java - [Airportsystem]'" />
+    <option name="customScope" value="Project 'AirportSystem'" />
+    <option name="defaultScopeName" value="Project 'AirportSystem'" />
+    <option name="SEARCH_SCOPE" value="Project 'AirportSystem'" />
   </component>
 </application>
