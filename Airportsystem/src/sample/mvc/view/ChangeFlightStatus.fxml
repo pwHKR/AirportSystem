@@ -69,11 +69,13 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <ListView fx:id="flightsView" layoutX="12.0" layoutY="148.0" prefHeight="329.0" prefWidth="224.0"/>
+        <ListView fx:id="flightsView" layoutX="12.0" layoutY="148.0" onMouseClicked="#getFlightInfo" prefHeight="329.0"
+                  prefWidth="224.0"/>
         <TextArea fx:id="flightInformationArea" editable="false" layoutX="553.0" layoutY="148.0" prefHeight="329.0"
                   prefWidth="248.0"/>
-        <Button fx:id="changeStatusButton" layoutX="290.0" layoutY="595.0" mnemonicParsing="false" prefHeight="45.0"
-                prefWidth="203.0" styleClass="rich-blue" text="Kick Selected"/>
+        <Button fx:id="changeStatusButton" layoutX="290.0" layoutY="595.0" mnemonicParsing="false"
+                onAction="#changeStatus" prefHeight="45.0" prefWidth="203.0" styleClass="rich-blue"
+                text="Change status"/>
         <Text fill="WHITE" layoutX="91.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FlightID"
               wrappingWidth="65.845703125"/>
         <Text fill="WHITE" layoutX="641.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0"

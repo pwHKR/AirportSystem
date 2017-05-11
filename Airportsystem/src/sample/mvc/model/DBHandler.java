@@ -858,7 +858,7 @@ public class DBHandler implements DataStorage {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = ("SELECT flightId FROM AirportSystemdb.Flight;");
+            String query = ("SELECT flightId FROM AirportSystemdb.Flight ORDER BY flightId;");
             Statement stmt = conn.createStatement();
 
             stmt.addBatch(query);
@@ -1552,7 +1552,41 @@ public class DBHandler implements DataStorage {
     }
 
 
+    @Override
+    public ObservableList<String> getFlightinformation(int flightId) {
+        ObservableList<String> flights = FXCollections.observableArrayList();
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
+            String query = ("SELECT * FROM AirportSystemdb.Flight WHERE flightId = '" + flightId + "'");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                flights.add("Flight Status: " + resultSet.getString("flightStatus") + "\nGate: " + resultSet.getString("gate") +
+                        "\nAirplanes reg number: " + resultSet.getString("Airplane_regNumber") + "\nflightID: " + resultSet.getString("flightId"));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return flights;
+    }
+
+    public void changeFlightStatus(String newStatus, int flightId) {
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = "UPDATE AirportSystemdb.Flight SET FlightStatus = '" + newStatus + "' WHERE flightId = '" + flightId + "';";
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
 

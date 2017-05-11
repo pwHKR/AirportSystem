@@ -272,4 +272,18 @@ public class MyAlert {
         err.setContentText("You have to select a country city and airport to travel to.");
         err.showAndWait();
     }
+
+    public void errorChangingFlightStatus() {
+        err.setHeaderText("Not enough information selected");
+        err.setTitle("You have not entered enough information");
+        err.setContentText("You have to both select a flight id and write a status in the " +
+                "text field below");
+        err.showAndWait();
+    }
+
+    public void flighStatusChanged() {
+        msg.setHeaderText("Your new status has been sent to the database");
+        msg.setTitle("The flightStatus has been changed");
+        msg.showAndWait();
+    }
 }

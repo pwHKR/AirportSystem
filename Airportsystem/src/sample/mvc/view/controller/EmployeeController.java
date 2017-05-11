@@ -74,11 +74,12 @@ public class EmployeeController implements Initializable {
     @FXML
     private void helpFunction(ActionEvent ae) {
         MyAlert alert = new MyAlert();
-        alert.helpEmployee();
+        alert.helpChangeFlightStatus();
     }
 
     @FXML
     private void changeFlightStatus(ActionEvent ae) {
         sw.GoTo(ae, "ChangeFlightStatus.fxml");
+
     }
 }

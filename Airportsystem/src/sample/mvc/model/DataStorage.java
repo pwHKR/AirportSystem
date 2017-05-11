@@ -98,6 +98,10 @@ public interface DataStorage {
     Flight getFlightObject(int flightId);
 
     //ObservableList<String> matchBookingWithPerson(int systemid);
+
+    ObservableList<String> getFlightinformation(int flightId);
+
+    void changeFlightStatus(String newStatus, int flightId);
 }
 
 
