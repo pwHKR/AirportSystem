@@ -6,4 +6,9 @@ package sample.mvc.model;
 public class Bonus {
 
     private int discount;
+    private int point;
+
+    private enum level {BRONZE, SILVER, GOLD}
+
+    ;
 }

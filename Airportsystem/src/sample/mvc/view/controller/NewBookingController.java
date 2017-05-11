@@ -20,10 +20,11 @@ public class NewBookingController implements Initializable {
     private DataStorage dbh = new DBHandler();
     private Billing billing = new Billing();
     private SwitchScene sw = new SwitchScene();
+    private MyAlert myAlert = new MyAlert();
 
     private ObservableList<String> tripInfoList = FXCollections.observableArrayList();
-    private ObservableList<Integer> oneToNineteenList = FXCollections.observableArrayList();
-    private ObservableList<Integer> zeroToNineteenList = FXCollections.observableArrayList();
+
+    private ObservableList<Integer> zeroToTenList = FXCollections.observableArrayList();
     @FXML
     private ListView<String> bookingListView;
     @FXML
@@ -35,10 +36,14 @@ public class NewBookingController implements Initializable {
     @FXML
     private Label balanceLabel;
     @FXML
-
     private TextField luggageField;
+    private Booking booking;
     private Trip trip;
-    private double totalTripPrice;
+    private Flight flight;
+    private Airplane airplane;
+    private int tripId;
+    private int systemId;
+    private int flightId;
 
 
     @Override
@@ -47,23 +52,18 @@ public class NewBookingController implements Initializable {
 
         for (int i = 0; i < 10; i++) {
 
-            zeroToNineteenList.add(i);
-        }
-
-        for (int i = 0; i < 10; i++) {
-
-            oneToNineteenList.add(i);
+            zeroToTenList.add(i);
         }
 
 
-        childTicket.setItems(zeroToNineteenList);
-        adultTicket.setItems(oneToNineteenList);
+        childTicket.setItems(zeroToTenList);
+        adultTicket.setItems(zeroToTenList);
 
         childTicket.setValue(0);
-        adultTicket.setValue(0);
+        adultTicket.setValue(1);
 
-        Booking booking = local.readBookingIdFromFile();
-        int tripId = booking.getTripId();
+        booking = local.readBookingIdFromFile();
+        tripId = booking.getTripId();
 
         String stringTripId = String.valueOf(tripId);
 
@@ -72,11 +72,11 @@ public class NewBookingController implements Initializable {
 
         bookingListView.setItems(tripInfoList);
 
-        int flightId = trip.getFlightID();
+        flightId = trip.getFlightID();
 
-        Flight flight = dbh.getFlightObject(flightId);
+        flight = dbh.getFlightObject(flightId);
 
-        Airplane airplane = dbh.getAirplaneObject(flight.getRegNumber());
+        airplane = dbh.getAirplaneObject(flight.getRegNumber());
 
         tripInfoList.add("Date: " + trip.getDate() + "\nTicket price: " + trip.getTripPrice() +
                 "\nLuggage Max (kilo): " + airplane.getMaxLuggageWeight());
@@ -84,7 +84,7 @@ public class NewBookingController implements Initializable {
 
         totalPriceArea.setText("Child 0-10 50% of ticket billing");
 
-        int systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName());
+        systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName()); // Get systemID of the current user
         balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
 
 
@@ -110,16 +110,11 @@ public class NewBookingController implements Initializable {
     @FXML
     private void showBookingInfo() {
 
-        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nBilling: " + getAdultTicket() + " X " +
+        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nPrice: " + getAdultTicket() + "X" +
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
-                "\nChild tickets: " + getChildTicket() + "\nBilling: " + getChildTicket() + " X " + String.valueOf(trip.getTripPrice() / 2) + "= "
+                "\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + "X" + String.valueOf(trip.getTripPrice()) + "= "
                 + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()));
-
-        tripInfoList.clear();
-        totalTripPrice = (billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()));
-        tripInfoList.add("Date: " + trip.getDate() + "\nTicket price: " + totalTripPrice);
-        bookingListView.setItems(tripInfoList);
     }
 
 
@@ -130,5 +125,49 @@ public class NewBookingController implements Initializable {
 
     }
 
+    @FXML
+    private void seeTotalPrice() {
+
+        setBilling();
+        totalPriceArea.setText("Total price: " + billing.getTotalPrice() + String.valueOf("\nAdult tickets: " + getAdultTicket() + "\nPrice: " + getAdultTicket() + "X" +
+                String.valueOf(trip.getTripPrice()) + "= " +
+                billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
+                "\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + "X" + String.valueOf(trip.getTripPrice()) + "= "
+                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) +
+                " Extra LuggagePrice: " + billing.calcLuggagePrice(billing.getLuggagePrice())));
+
+
+    }
+
+    @FXML
+    private void confirmBooking(ActionEvent ae) {
+
+        boolean choice;
+
+        setBilling();
+
+        choice = myAlert.confirmBooking(billing.getTotalPrice());
+
+        if (choice) {
+
+            // pay booking
+        } else {
+
+            //return to booking screen
+
+        }
+
+    }
+
+
+    private void setBilling() {
+
+        billing.setLuggagePrice(Double.parseDouble(luggageField.getText()));
+        billing.setTripPrice(trip.getTripPrice());
+        billing.setAdultAmount(adultTicket.getValue());
+        billing.setChildAmount(childTicket.getValue());
+        billing.calcAndSetTotalPrice();
+
+    }
 
 }

@@ -19,8 +19,8 @@
 
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 
-<AnchorPane onMouseMoved="#showBookingInfo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="486.0" prefWidth="590.0" style="-fx-background-color: #0b4386;"
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseMoved="#showBookingInfo" prefHeight="486.0" prefWidth="590.0" style="-fx-background-color: #0b4386;"
             stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewBookingController">
     <children>
@@ -79,8 +79,8 @@
             </font>
         </Label>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="126.0" layoutY="431.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="134.0"
-                styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="Confirm"/>
+        <Button layoutX="126.0" layoutY="431.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="41.0"
+                prefWidth="134.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="Confirm"/>
         <Label layoutX="47.0" layoutY="203.0" text="Adults" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
@@ -100,12 +100,12 @@
             </font>
         </Label>
         <ListView fx:id="bookingListView" layoutX="342.0" layoutY="300.0" prefHeight="98.0" prefWidth="200.0"/>
-        <TextArea fx:id="totalPriceArea" layoutX="42.0" layoutY="300.0" prefHeight="98.0" prefWidth="226.0"
-                  onMouseMoved="#showBookingInfo"/>
-        <ComboBox fx:id="adultTicket" onMouseMoved="#showBookingInfo" layoutX="37.0" layoutY="226.0" prefHeight="27.0"
-                  prefWidth="76.0" promptText="0"/>
-        <ComboBox fx:id="childTicket" onMouseMoved="#showBookingInfo" layoutX="193.0" layoutY="226.0" prefHeight="27.0"
-                  prefWidth="76.0" promptText="0"/>
+        <TextArea fx:id="totalPriceArea" layoutX="42.0" layoutY="300.0" onMouseClicked="#seeTotalPrice"
+                  prefHeight="98.0" prefWidth="226.0"/>
+        <ComboBox fx:id="adultTicket" layoutX="37.0" layoutY="226.0" onMouseReleased="#showBookingInfo"
+                  prefHeight="27.0" prefWidth="76.0" promptText="0"/>
+        <ComboBox fx:id="childTicket" layoutX="193.0" layoutY="226.0" onMouseReleased="#showBookingInfo"
+                  prefHeight="27.0" prefWidth="76.0" promptText="0"/>
         <Label layoutX="354.0" layoutY="259.0" text="Your booking" textFill="WHITE">
             <font>
                 <Font size="28.0"/>
@@ -116,6 +116,14 @@
         </Label>
         <Label fx:id="balanceLabel" layoutX="313.0" layoutY="443.0" prefHeight="17.0" prefWidth="103.0"
                textFill="#50fc06"/>
-        <TextField fx:id="luggageField" layoutX="354.0" layoutY="187.0" prefHeight="27.0" prefWidth="76.0"/>
+        <TextField fx:id="luggageField" layoutX="365.0" layoutY="226.0" prefHeight="27.0" prefWidth="76.0"/>
+        <Label layoutX="350.0" layoutY="186.0" text="Lugguage" textFill="WHITE">
+            <font>
+                <Font size="28.0"/>
+            </font>
+            <effect>
+                <Bloom threshold="0.0"/>
+            </effect>
+        </Label>
     </children>
 </AnchorPane>

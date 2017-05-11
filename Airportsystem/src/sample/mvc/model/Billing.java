@@ -7,15 +7,13 @@ public class Billing {
 
     private double totalPrice;
 
-    private double childPrice;
-
-    private double adultPrice;
-
-    private int childrenAmount;
-
-    private int adultAmount;
+    private double tripPrice;
 
     private double luggagePrice;
+
+    private int childAmount;
+
+    private int adultAmount;
 
 
     public double getChildPrice(Double tripPrice) {
@@ -49,7 +47,7 @@ public class Billing {
         double adultPrice;
         double totalPrice;
 
-        adultPrice = 2 * getChildPrice(tripPrice); // dum lösning men funkar
+        adultPrice = tripPrice; // dum lösning men funkar
 
         totalPrice = adultPrice * TicketAmount;
 
@@ -58,24 +56,36 @@ public class Billing {
 
     }
 
-    public double calculateLuggagePrice(Double kg) {
+    public double calcLuggagePrice(Double kg) {
 
         double price = 0;
 
-        if (kg > 1) {
+        if (kg <= 1) {
+            price = 0;
+        } else
 
-            price = kg * 20;
-        }
+            price = (kg * 20) - 20;
 
         return price;
 
     }
 
 
+    public int getChildAmount() {
+        return childAmount;
+    }
 
+    public void setChildAmount(int childAmount) {
+        this.childAmount = childAmount;
+    }
 
+    public int getAdultAmount() {
+        return adultAmount;
+    }
 
-
+    public void setAdultAmount(int adultAmount) {
+        this.adultAmount = adultAmount;
+    }
 
     public double getTotalPrice() {
         return totalPrice;
@@ -85,30 +95,36 @@ public class Billing {
         this.totalPrice = totalPrice;
     }
 
-    public double getChildPrice() {
-        return childPrice;
+    public double getTripPrice() {
+        return tripPrice;
     }
 
-    public void setChildPrice(double childPrice) {
-        this.childPrice = childPrice;
+    public void setTripPrice(double tripPrice) {
+        this.tripPrice = tripPrice;
     }
 
-    public double getAdultPrice() {
-        return adultPrice;
-    }
 
-    public void setAdultPrice(double adultPrice) {
-        this.adultPrice = adultPrice;
-    }
 
 
     public double getLuggagePrice() {
         return luggagePrice;
     }
 
-    public void setLuggagePrice(Double price) {
+    public void setLuggagePrice(Double luggagePrice) {
 
         this.luggagePrice = luggagePrice;
 
     }
+
+
+    // Call this method only if you have already set the needed instance variables
+    public void calcAndSetTotalPrice() {
+
+        setTotalPrice(getChildTotalPrice(getTripPrice(), getChildAmount()) +
+                getAdultTotalPrice(getTripPrice(), getAdultAmount()) + calcLuggagePrice(getLuggagePrice()));
+
+
+    }
+
+
 }

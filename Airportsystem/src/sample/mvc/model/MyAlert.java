@@ -1,6 +1,9 @@
 package sample.mvc.model;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
+import java.util.Optional;
 
 /**
  * Created by woojen on 2017-04-18.
@@ -9,6 +12,7 @@ public class MyAlert {
 
     private javafx.scene.control.Alert msg = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
     private javafx.scene.control.Alert err = new javafx.scene.control.Alert(Alert.AlertType.ERROR);
+    private Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
 
     public void helpNewCustomer() {
         msg.setHeaderText("Create account help");
@@ -285,5 +289,27 @@ public class MyAlert {
         msg.setHeaderText("Your new status has been sent to the database");
         msg.setTitle("The flightStatus has been changed");
         msg.showAndWait();
+    }
+
+
+    public boolean confirmBooking(double totalPrice) {
+
+        boolean choice;
+
+        alert.setTitle("Confirm booking");
+        alert.setHeaderText("Are you sure you want to confirm your booking?");
+        alert.setContentText("Total price: " + String.valueOf(totalPrice) + " sek");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            // ... user chose OK
+
+            choice = true;
+
+        } else {
+            // ... user chose CANCEL or closed the dialog
+            choice = false;
+        }
+        return choice;
     }
 }
