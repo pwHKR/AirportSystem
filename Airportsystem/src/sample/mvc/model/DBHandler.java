@@ -1298,7 +1298,7 @@ public class DBHandler implements DataStorage {
 
         switch (choice) {
 
-            case "Price Ascending":
+            case "Billing Ascending":
                 if (input.isEmpty())
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
                             " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by price ASC;");
@@ -1307,7 +1307,7 @@ public class DBHandler implements DataStorage {
                             " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by price ASC;");
                 break;
 
-            case "Price Descending":
+            case "Billing Descending":
                 if (input.isEmpty())
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
                             " where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 ORDER by price DESC;");
@@ -1521,6 +1521,35 @@ public class DBHandler implements DataStorage {
 
         return pstrId;
     }
+
+    public Flight getFlightObject(int flightId) {
+
+        Flight flight = null;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = ("SELECT flightStatus, gate, Airplane_regNumber FROM AirportSystemdb.Flight WHERE flightId = '" + flightId + "';");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+
+                flight = new Flight(resultSet.getString("flightStatus"),
+                        resultSet.getString("gate"), resultSet.getString("Airplane_regNumber"));
+
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return flight;
+    }
+
+
 
 
 }

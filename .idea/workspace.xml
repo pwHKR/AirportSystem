@@ -4,7 +4,16 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="" />
+    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,22 +34,196 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddTripController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java">
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="1543" column="0" lean-forward="false" selection-start-line="1543" selection-start-column="0" selection-end-line="1543" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1494509779000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
+                <marker date="1494509779000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
+                <marker date="1494509779000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
+                <marker date="1494509779000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
+                <marker date="1494509779000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
+                <marker date="1494509779000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
+                <marker date="1494509779000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
+                <marker date="1494509779000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
+                <marker date="1494509779000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
+                <marker date="1494509779000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
+                <marker date="1494509779000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
+                <marker date="1494509779000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
+                <marker date="1494509779000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
+                <marker date="1494509779000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
+                <marker date="1494509779000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
+                <marker date="1494509779000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
+                <marker date="1494509779000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
+                <marker date="1494509779000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
+                <marker date="1494509779000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
+                <marker date="1494509779000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
+                <marker date="1494509779000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
+                <marker date="1494509779000" expanded="true" signature="15331:15383" ph="INSERT INTO AirportSystemdb.PSTR... " />
+                <marker date="1494509779000" expanded="true" signature="15605:15695" ph="UPDATE Airpo... " />
+                <marker date="1494509779000" expanded="true" signature="16375:16446" ph="SELECT PSTR_... Location" />
+                <marker date="1494509779000" expanded="true" signature="17102:17197" ph="SELECT * FRO... Location" />
+                <marker date="1494509779000" expanded="true" signature="17985:18019" ph="SHOW GLOBAL " />
+                <marker date="1494509779000" expanded="true" signature="18744:18786" ph="SELECT userN... User" />
+                <marker date="1494509779000" expanded="true" signature="19363:19439" ph="UPDATE User " />
+                <marker date="1494509779000" expanded="true" signature="19885:19962" ph="SELECT passw... User" />
+                <marker date="1494509779000" expanded="true" signature="20601:20647" ph="SELECT regNu... Airplane" />
+                <marker date="1494509779000" expanded="true" signature="21289:21365" ph="SELECT * FRO... Airplane" />
+                <marker date="1494509779000" expanded="true" signature="22326:22430" ph="INSERT INTO Flight... " />
+                <marker date="1494509779000" expanded="true" signature="22755:22843" ph="INSERT INTO Flight... " />
+                <marker date="1494509779000" expanded="true" signature="23402:23445" ph="SELECT fligh... Flight" />
+                <marker date="1494509779000" expanded="true" signature="24074:24157" ph="SELECT DISTI... Location" />
+                <marker date="1494509779000" expanded="true" signature="24798:24901" ph="SELECT city Location" />
+                <marker date="1494509779000" expanded="true" signature="25443:25585" ph="UPDATE Airpo... " />
+                <marker date="1494509779000" expanded="true" signature="26036:26119" ph="SELECT Perso... User" />
+                <marker date="1494509779000" expanded="true" signature="26764:26823" ph="SELECT balan... Person" />
+                <marker date="1494509779000" expanded="true" signature="27470:27589" ph="INSERT INTO AirportSystemdb.Trip... " />
+                <marker date="1494509779000" expanded="true" signature="28132:28356" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+                <marker date="1494509779000" expanded="true" signature="28657:28881" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+                <marker date="1494509779000" expanded="true" signature="29440:29516" ph="SELECT * FRO... Airplane" />
+                <marker date="1494509779000" expanded="true" signature="30250:30308" ph="SELECT Max(f... Flight" />
+                <marker date="1494509779000" expanded="true" signature="31001:31075" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="31001:31097" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="31001:31269" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="32259:32344" ph="SELECT locat... Location" />
+                <marker date="1494509779000" expanded="true" signature="32926:32970" ph="SELECT Max(t... Trip" />
+                <marker date="1494509779000" expanded="true" signature="33520:33623" ph="SELECT city,... Location" />
+                <marker date="1494509779000" expanded="true" signature="34434:34729" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="34785:35080" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="35215:35511" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="35567:35890" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="36011:36306" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="36362:36647" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="36362:36654" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="36362:36686" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="36362:36687" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="36882:37158" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="37214:37501" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="37214:37502" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="37214:37517" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="37214:37518" ph="SELECT * FRO... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="38289:38384" ph="SELECT price... Trip" />
+                <marker date="1494509779000" expanded="true" signature="38976:39056" ph="SELECT Fligh... Trip" />
+                <marker date="1494509779000" expanded="true" signature="39619:39701" ph="SELECT tripI... Trip" />
+                <marker date="1494509779000" expanded="true" signature="39678:39701" ph="SELECT Fligh... Trip" />
+                <marker date="1494509779000" expanded="true" signature="40410:40729" ph="SELECT city,... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="40410:40768" ph="SELECT city,... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="40410:40769" ph="SELECT city,... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="40410:40784" ph="SELECT city,... Trip_has_Location" />
+                <marker date="1494509779000" expanded="true" signature="41380:41434" ph="SELECT max(i... PSTR" />
+                <marker date="1494509779000" expanded="true" signature="41968:42040" ph="SELECT fligh... Fligh" />
+                <marker date="1494509779000" expanded="true" signature="41968:42041" ph="SELECT fligh... Flight" />
+                <marker date="1494509779000" expanded="true" signature="41968:42077" ph="SELECT * FRO... Airplane" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trip.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Trip.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyAlert.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="268" column="43" selection-start-line="268" selection-start-column="16" selection-end-line="268" selection-end-column="43" />
+            <state relative-caret-position="75">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalFileStorage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="267" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Flight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Flight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataStorage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BillingController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewBookingController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Airplane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Airplane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Billing.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="103" column="37" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
+              <folding>
+                <element signature="e#1160#1161#0" expanded="true" />
+                <element signature="e#1193#1194#0" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
+                <element signature="e#1289#1290#0" expanded="true" />
+                <element signature="e#1326#1327#0" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
+                <element signature="e#1411#1412#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1492#1493#0" expanded="true" />
+                <element signature="e#1525#1526#0" expanded="true" />
+                <element signature="e#1577#1578#0" expanded="true" />
+                <element signature="e#1621#1622#0" expanded="true" />
+                <element signature="e#1696#1697#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,9 +263,6 @@
       <find>insertTr</find>
       <find>choiceb</find>
       <find>insertT</find>
-      <find>workerlist</find>
-      <find>combo</find>
-      <find>getAllfl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,6 +277,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Worker.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewWorkers.fxml" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewPSTR.fxml" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/resources/Employee.fxml" />
@@ -126,28 +307,27 @@
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Trip.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/PasswordRecoveryController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/SwitchScene.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewTrip.fxml" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewTripController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewPSTR.fxml" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewBookingsController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Price.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java" />
         <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ChangeFlightStatus.fxml" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/flightStatusController.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" />
-        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java" />
+        <option value="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
       </list>
     </option>
   </component>
@@ -158,21 +338,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="156" />
+    <option name="y" value="23" />
+    <option name="width" value="1102" />
+    <option name="height" value="722" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="PackagesPane" proportions="" version="1">
       <flattenPackages PackagesPane="false" />
@@ -188,79 +359,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample.mvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample.mvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AirportSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Airportsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample.mvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Changed Files">
           <PATH>
@@ -359,6 +457,79 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample.mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample.mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AirportSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Airportsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample.mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,8 +540,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-5.1.41/mysql-connector-java-5.1.41-bin.jar!/" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -382,11 +552,123 @@
       <recent name="sample.mvc.view.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Tobias Åkesson\Desktop\Project 2\AirportSystem\Airportsystem\src\sample\mvc\view" />
       <recent name="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view" />
       <recent name="C:\Users\Tobias Åkesson\Desktop\Project\AirportSystem\Airportsystem\src\sample\mvc\view" />
       <recent name="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/resources" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/Airportsystem.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -408,7 +690,7 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -418,7 +700,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -426,7 +708,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -451,7 +737,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
     </configuration>
@@ -478,6 +768,136 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -494,6 +914,15 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -506,27 +935,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -555,6 +963,22 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
@@ -590,6 +1014,12 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -618,32 +1048,26 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
       <envs />
-      <properties />
-      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
     <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
@@ -664,7 +1088,7 @@
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
     </list>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -674,7 +1098,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -682,11 +1106,7 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -716,7 +1136,7 @@
       <workItem from="1493885120946" duration="8105000" />
       <workItem from="1493906787259" duration="1495000" />
       <workItem from="1494152314494" duration="3437000" />
-      <workItem from="1494266051876" duration="41786000" />
+      <workItem from="1494266051876" duration="53897000" />
     </task>
     <task id="LOCAL-00001" summary="deleting unused files">
       <created>1492660882903</created>
@@ -1047,61 +1467,60 @@
       <option name="project" value="LOCAL" />
       <updated>1494437304802</updated>
     </task>
-    <task id="LOCAL-00048" summary="minor changes fixed datepicker error handling">
-      <created>1494502126772</created>
+    <task id="LOCAL-00048" summary="Fixed old issues, added new functions">
+      <created>1494481737180</created>
       <option name="number" value="00048" />
       <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
-      <updated>1494502126772</updated>
+      <updated>1494481737180</updated>
     </task>
-    <task id="LOCAL-00049" summary="minor changes fixed datepicker error handling">
-      <created>1494508209206</created>
+    <task id="LOCAL-00049" summary="minor changes">
+      <created>1494492514393</created>
       <option name="number" value="00049" />
       <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
-      <updated>1494508209206</updated>
+      <updated>1494492514393</updated>
     </task>
     <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255003000" />
+    <option name="totallyTimeSpent" value="267114000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="156" y="23" width="1102" height="722" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.49707174" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32575756" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23501578" sideWeight="0.12225476" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078101" sideWeight="0.50725955" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23501578" sideWeight="0.8777453" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29605263" sideWeight="0.85212296" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078101" sideWeight="0.49274048" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23583461" sideWeight="0.4863884" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19106881" sideWeight="0.82965934" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18693285" sideWeight="0.82743365" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771823" sideWeight="0.49637023" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18693285" sideWeight="0.17256637" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18693285" sideWeight="0.17034069" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893497" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1118,6 +1537,17 @@
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="text">
+                    <value>
+                      <list>
+                        <option value="" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
               </option>
             </State>
           </value>
@@ -1162,9 +1592,9 @@
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Add Trip works!" />
     <MESSAGE value="Added getLocationObject method" />
+    <MESSAGE value="Fixed old issues, added new functions" />
     <MESSAGE value="minor changes" />
-    <MESSAGE value="minor changes fixed datepicker error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes fixed datepicker error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1178,27 +1608,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Worker.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Administrator.java" />
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java" />
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Airplane.java">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/System.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/AddLocation.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1209,8 +1638,12 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/AddTrip.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="71" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-          <folding />
+          <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+          <folding>
+            <marker date="1494237526000" expanded="true" signature="6283:6304" ph="..." />
+            <marker date="1494237526000" expanded="true" signature="6283:6321" ph="..." />
+            <marker date="1494237526000" expanded="true" signature="6626:6642" ph="..." />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -1220,28 +1653,40 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Bonus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3210">
+          <caret line="214" column="26" lean-forward="false" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#667#668#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Billing.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1253,15 +1698,22 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/SwitchScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/SearchLocation.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
-          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1272,7 +1724,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1280,7 +1732,15 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddLocationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1288,7 +1748,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewPSTRController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="32" />
+          <caret line="38" column="32" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1296,7 +1756,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewPSTR.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
-          <caret line="69" column="99" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="99" />
+          <caret line="69" column="99" lean-forward="false" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="99" />
           <folding />
         </state>
       </provider>
@@ -1304,24 +1764,34 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+          <caret line="13" column="84" lean-forward="false" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddFlightController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="820">
-          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
+          <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewBookingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1329,7 +1799,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ViewTrip.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1340,7 +1810,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewTripController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1350,7 +1820,15 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/PasswordRecoveryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1358,32 +1836,26 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ServerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ListView.java" />
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Employee.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ListView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Trip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="157">
+          <caret line="388" column="22" lean-forward="false" selection-start-line="388" selection-start-column="22" selection-end-line="388" selection-end-column="22" />
+          <folding>
+            <element signature="e#17232#17233#0" expanded="false" />
+            <element signature="e#17274#17275#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1391,7 +1863,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewPSTR.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1399,194 +1871,259 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java" />
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="68" column="64" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
+        <state relative-caret-position="157">
+          <caret line="415" column="0" lean-forward="false" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="-54">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddAirplaneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="24" column="90" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#525#526#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddAirplaneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="29" column="31" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewBookingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/ChangeFlightStatus.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="116" selection-start-line="18" selection-start-column="116" selection-end-line="18" selection-end-column="116" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1537#1538#0" expanded="false" />
-            <element signature="e#1581#1582#0" expanded="false" />
-            <element signature="e#2010#2011#0" expanded="false" />
-            <element signature="e#2064#2065#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+        <state relative-caret-position="435">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="859" column="0" selection-start-line="859" selection-start-column="0" selection-end-line="859" selection-end-column="0" />
+        <state relative-caret-position="206">
+          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1494509779000" expanded="true" signature="2288:2294" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="327">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/flightStatusController.java">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewPSTRController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="853">
+          <caret line="68" column="65" lean-forward="false" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <marker date="1494509779000" expanded="true" signature="5486:5505" ph="..." />
+            <marker date="1494509779000" expanded="true" signature="5486:5519" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Booking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="e#525#526#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="18" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Flight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Trip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Billing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="103" column="37" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
+          <folding>
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1577#1578#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1696#1697#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/Airplane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/LocalFileStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+        <state relative-caret-position="441">
+          <caret line="267" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="268" column="43" selection-start-line="268" selection-start-column="16" selection-end-line="268" selection-end-column="43" />
+        <state relative-caret-position="374">
+          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AddTripController.java">
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/BillingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="1543" column="0" lean-forward="false" selection-start-line="1543" selection-start-column="0" selection-end-line="1543" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1494509779000" expanded="true" signature="1345:1440" ph="SELECT * FRO... Airplane" />
+            <marker date="1494509779000" expanded="true" signature="2416:2563" ph="INSERT INTO Airplane... " />
+            <marker date="1494509779000" expanded="true" signature="3252:3298" ph="SELECT typeO... User" />
+            <marker date="1494509779000" expanded="true" signature="3934:3993" ph="SELECT * FRO... Person" />
+            <marker date="1494509779000" expanded="true" signature="4142:4225" ph="SELECT * FRO... User" />
+            <marker date="1494509779000" expanded="true" signature="4381:4507" ph="INSERT INTO Person... " />
+            <marker date="1494509779000" expanded="true" signature="4549:4592" ph="SELECT syste... Person" />
+            <marker date="1494509779000" expanded="true" signature="4635:4759" ph="INSERT INTO User... " />
+            <marker date="1494509779000" expanded="true" signature="6473:6517" ph="SELECT passw... User" />
+            <marker date="1494509779000" expanded="true" signature="7116:7198" ph="SELECT locat... Location" />
+            <marker date="1494509779000" expanded="true" signature="7919:7994" ph="SELECT DISTI... Location" />
+            <marker date="1494509779000" expanded="true" signature="8595:8701" ph="SELECT DISTI... Location" />
+            <marker date="1494509779000" expanded="true" signature="9340:9454" ph="SELECT DISTI... Location" />
+            <marker date="1494509779000" expanded="true" signature="10263:10341" ph="SELECT Perso... User" />
+            <marker date="1494509779000" expanded="true" signature="10990:11222" ph="SELECT * FRO... Person" />
+            <marker date="1494509779000" expanded="true" signature="12024:12095" ph="UPDATE Airpo... " />
+            <marker date="1494509779000" expanded="true" signature="12479:12550" ph="UPDATE Airpo... " />
+            <marker date="1494509779000" expanded="true" signature="13258:13337" ph="DELETE FROM " />
+            <marker date="1494509779000" expanded="true" signature="13366:13442" ph="DELETE FROM " />
+            <marker date="1494509779000" expanded="true" signature="13967:14046" ph="SELECT count... User" />
+            <marker date="1494509779000" expanded="true" signature="14607:14682" ph="SELECT onlin... User" />
+            <marker date="1494509779000" expanded="true" signature="15331:15383" ph="INSERT INTO AirportSystemdb.PSTR... " />
+            <marker date="1494509779000" expanded="true" signature="15605:15695" ph="UPDATE Airpo... " />
+            <marker date="1494509779000" expanded="true" signature="16375:16446" ph="SELECT PSTR_... Location" />
+            <marker date="1494509779000" expanded="true" signature="17102:17197" ph="SELECT * FRO... Location" />
+            <marker date="1494509779000" expanded="true" signature="17985:18019" ph="SHOW GLOBAL " />
+            <marker date="1494509779000" expanded="true" signature="18744:18786" ph="SELECT userN... User" />
+            <marker date="1494509779000" expanded="true" signature="19363:19439" ph="UPDATE User " />
+            <marker date="1494509779000" expanded="true" signature="19885:19962" ph="SELECT passw... User" />
+            <marker date="1494509779000" expanded="true" signature="20601:20647" ph="SELECT regNu... Airplane" />
+            <marker date="1494509779000" expanded="true" signature="21289:21365" ph="SELECT * FRO... Airplane" />
+            <marker date="1494509779000" expanded="true" signature="22326:22430" ph="INSERT INTO Flight... " />
+            <marker date="1494509779000" expanded="true" signature="22755:22843" ph="INSERT INTO Flight... " />
+            <marker date="1494509779000" expanded="true" signature="23402:23445" ph="SELECT fligh... Flight" />
+            <marker date="1494509779000" expanded="true" signature="24074:24157" ph="SELECT DISTI... Location" />
+            <marker date="1494509779000" expanded="true" signature="24798:24901" ph="SELECT city Location" />
+            <marker date="1494509779000" expanded="true" signature="25443:25585" ph="UPDATE Airpo... " />
+            <marker date="1494509779000" expanded="true" signature="26036:26119" ph="SELECT Perso... User" />
+            <marker date="1494509779000" expanded="true" signature="26764:26823" ph="SELECT balan... Person" />
+            <marker date="1494509779000" expanded="true" signature="27470:27589" ph="INSERT INTO AirportSystemdb.Trip... " />
+            <marker date="1494509779000" expanded="true" signature="28132:28356" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+            <marker date="1494509779000" expanded="true" signature="28657:28881" ph="INSERT INTO AirportSystemdb.Trip_has_Location... " />
+            <marker date="1494509779000" expanded="true" signature="29440:29516" ph="SELECT * FRO... Airplane" />
+            <marker date="1494509779000" expanded="true" signature="30250:30308" ph="SELECT Max(f... Flight" />
+            <marker date="1494509779000" expanded="true" signature="31001:31075" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="31001:31097" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="31001:31269" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="32259:32344" ph="SELECT locat... Location" />
+            <marker date="1494509779000" expanded="true" signature="32926:32970" ph="SELECT Max(t... Trip" />
+            <marker date="1494509779000" expanded="true" signature="33520:33623" ph="SELECT city,... Location" />
+            <marker date="1494509779000" expanded="true" signature="34434:34729" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="34785:35080" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="35215:35511" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="35567:35890" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="36011:36306" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="36362:36647" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="36362:36654" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="36362:36686" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="36362:36687" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="36882:37158" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="37214:37501" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="37214:37502" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="37214:37517" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="37214:37518" ph="SELECT * FRO... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="38289:38384" ph="SELECT price... Trip" />
+            <marker date="1494509779000" expanded="true" signature="38976:39056" ph="SELECT Fligh... Trip" />
+            <marker date="1494509779000" expanded="true" signature="39619:39701" ph="SELECT tripI... Trip" />
+            <marker date="1494509779000" expanded="true" signature="39678:39701" ph="SELECT Fligh... Trip" />
+            <marker date="1494509779000" expanded="true" signature="40410:40729" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="40410:40768" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="40410:40769" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="40410:40784" ph="SELECT city,... Trip_has_Location" />
+            <marker date="1494509779000" expanded="true" signature="41380:41434" ph="SELECT max(i... PSTR" />
+            <marker date="1494509779000" expanded="true" signature="41968:42040" ph="SELECT fligh... Fligh" />
+            <marker date="1494509779000" expanded="true" signature="41968:42041" ph="SELECT fligh... Flight" />
+            <marker date="1494509779000" expanded="true" signature="41968:42077" ph="SELECT * FRO... Airplane" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1666,7 +2203,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mysql-connector-java-5.1.41-bin7</last-edited>
+          <last-edited>mysql-connector-java-5.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

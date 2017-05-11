@@ -3,7 +3,7 @@ package sample.mvc.model;
 /**
  * Created by woojen on 2017-05-11.
  */
-public class Price {
+public class Billing {
 
     private double totalPrice;
 
@@ -11,9 +11,11 @@ public class Price {
 
     private double adultPrice;
 
-    private int ChildrenAmount;
+    private int childrenAmount;
 
-    private int AdultAmount;
+    private int adultAmount;
+
+    private double luggagePrice;
 
 
     public double getChildPrice(Double tripPrice) {
@@ -56,6 +58,24 @@ public class Price {
 
     }
 
+    public double calculateLuggagePrice(Double kg) {
+
+        double price = 0;
+
+        if (kg > 1) {
+
+            price = kg * 20;
+        }
+
+        return price;
+
+    }
+
+
+
+
+
+
 
     public double getTotalPrice() {
         return totalPrice;
@@ -79,5 +99,16 @@ public class Price {
 
     public void setAdultPrice(double adultPrice) {
         this.adultPrice = adultPrice;
+    }
+
+
+    public double getLuggagePrice() {
+        return luggagePrice;
+    }
+
+    public void setLuggagePrice(Double price) {
+
+        this.luggagePrice = luggagePrice;
+
     }
 }

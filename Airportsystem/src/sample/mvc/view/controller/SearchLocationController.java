@@ -20,7 +20,7 @@ public class SearchLocationController implements Initializable {
 
 
     private ObservableList<String> trips = FXCollections.observableArrayList();
-    private ObservableList<String> choices = FXCollections.observableArrayList("", "Date", "Name", "Price Descending", "Price Ascending");
+    private ObservableList<String> choices = FXCollections.observableArrayList("", "Date", "Name", "Billing Descending", "Billing Ascending");
 
     private SwitchScene switchScene = new SwitchScene();
     private DataStorage dbh = new DBHandler();
@@ -115,10 +115,7 @@ public class SearchLocationController implements Initializable {
         location = dbh.getFromLocationObject(tripId);
 
 
-
-
-
-        textArea.setText("Date: " + trip.getDate() + "\nPrice: " + String.valueOf(trip.getTripPrice()) + "SEK\n" +
+        textArea.setText("Date: " + trip.getDate() + "\nBilling: " + String.valueOf(trip.getTripPrice()) + "SEK\n" +
                 "Tickets left: " + String.valueOf(trip.getTicketAmount()) + "\n\n\tFrom: \n"
                 + "Airport: " + location.getAirport() + "\nCity: " + location.getCity() +
                 "\nCountry: " + location.getCountry());

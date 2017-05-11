@@ -95,6 +95,8 @@ public interface DataStorage {
 
     int getMaxPstrId();
 
+    Flight getFlightObject(int flightId);
+
     //ObservableList<String> matchBookingWithPerson(int systemid);
 }
 

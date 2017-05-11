@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
@@ -23,8 +24,8 @@
             xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewBookingController">
     <children>
-        <ImageView fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0" opacity="0.11" pickOnBounds="true"
-                   preserveRatio="true">
+        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0"
+                   opacity="0.11" pickOnBounds="true" preserveRatio="true">
             <image>
                 <!--suppress XmlPathReference, XmlPathReference -->
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
@@ -39,8 +40,8 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button fx:id="returnButton" layoutX="11.0" layoutY="431.0" mnemonicParsing="false" prefHeight="40.0"
-                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
+        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#returnToSearchLocation"
+                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
         <Text fill="WHITE" layoutX="452.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
@@ -100,10 +101,10 @@
         </Label>
         <ListView fx:id="bookingListView" layoutX="342.0" layoutY="300.0" prefHeight="98.0" prefWidth="200.0"/>
         <TextArea fx:id="totalPriceArea" layoutX="42.0" layoutY="300.0" prefHeight="98.0" prefWidth="226.0"/>
-        <ComboBox fx:id="adultTicket" layoutX="47.0" layoutY="173.0" onMouseExited="#setAdultTicket" prefHeight="27.0"
+        <ComboBox fx:id="adultTicket" layoutX="47.0" layoutY="173.0" onMouseEntered="#setAdultTicket" prefHeight="27.0"
                   prefWidth="55.0"/>
-        <ComboBox fx:id="childTicket" layoutX="137.0" layoutY="173.0" onMouseExited="#setChildTicket" prefHeight="27.0"
-                  prefWidth="55.0"/>
+        <ComboBox fx:id="childTicket" layoutX="137.0" layoutY="173.0" onMouseEntered="#setChildTicket" prefHeight="27.0"
+                  prefWidth="55.0" promptText="0"/>
         <Label layoutX="354.0" layoutY="259.0" text="Your booking" textFill="WHITE">
             <font>
                 <Font size="28.0"/>
@@ -114,5 +115,6 @@
         </Label>
         <Label fx:id="balanceLabel" layoutX="313.0" layoutY="443.0" prefHeight="17.0" prefWidth="103.0"
                textFill="#50fc06"/>
+        <TextField fx:id="luggageField" layoutX="354.0" layoutY="187.0" prefHeight="27.0" prefWidth="76.0"/>
     </children>
 </AnchorPane>
