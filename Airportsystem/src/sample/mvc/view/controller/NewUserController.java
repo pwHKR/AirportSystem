@@ -74,11 +74,7 @@ public class NewUserController implements Initializable {
         stringAddress = adress.getText();
         stringCountry = country.getValue();
 
-        if (female.isSelected()) {
-            IsMale = false;
-        } else {
-            IsMale = true;
-        }
+        IsMale = !female.isSelected();
 
         if (firstName.getText().matches("^[a-öA-Ö]+$")) {
 

@@ -126,5 +126,17 @@ public class Billing {
 
     }
 
+    // Call this method only if you have already set the needed instance variables
+    public int getTicketAmount() {
+
+        int totalAmount;
+
+        totalAmount = childAmount + adultAmount;
+
+        return totalAmount;
+
+
+    }
+
 
 }

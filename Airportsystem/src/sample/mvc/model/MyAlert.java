@@ -301,15 +301,17 @@ public class MyAlert {
         alert.setContentText("Total price: " + String.valueOf(totalPrice) + " sek");
 
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK) {
-            // ... user chose OK
-
-            choice = true;
-
-        } else {
-            // ... user chose CANCEL or closed the dialog
-            choice = false;
-        }
+        // ... user chose OK
+// ... user chose CANCEL or closed the dialog
+        choice = result.get() == ButtonType.OK;
         return choice;
+    }
+
+    public void bookingConfirmed() {
+        msg.setHeaderText("Booking confirmed");
+        msg.setTitle("Your booking has been confirmed.");
+        msg.setContentText("Your booking is now completed, thank you for booking with PSTR - airlines");
+        msg.showAndWait();
+
     }
 }

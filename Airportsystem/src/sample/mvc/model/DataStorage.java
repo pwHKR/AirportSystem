@@ -102,6 +102,16 @@ public interface DataStorage {
     ObservableList<String> getFlightinformation(int flightId);
 
     void changeFlightStatus(String newStatus, int flightId);
+
+    int getTicketAmount(int tripId);
+
+    void setTicketAmount(int ticketAmount, int tripId);
+
+    void insertBooking(Booking booking);
+
+    void insertPersonHasBooking(int systemId, int bookingId);
+
+    int getMaxBookingId();
 }
 
 

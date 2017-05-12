@@ -10,5 +10,4 @@ public class Bonus {
 
     private enum level {BRONZE, SILVER, GOLD}
 
-    ;
 }

@@ -62,7 +62,7 @@ public class NewBookingController implements Initializable {
         childTicket.setValue(0);
         adultTicket.setValue(1);
 
-        booking = local.readBookingIdFromFile();
+        booking = local.readTripIdFromBookingFile();
         tripId = booking.getTripId();
 
         String stringTripId = String.valueOf(tripId);
@@ -110,10 +110,10 @@ public class NewBookingController implements Initializable {
     @FXML
     private void showBookingInfo() {
 
-        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nPrice: " + getAdultTicket() + "X" +
+        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nPrice: " + getAdultTicket() + " X " +
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
-                "\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + "X" + String.valueOf(trip.getTripPrice()) + "= "
+                "\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + " X " + String.valueOf(trip.getTripPrice()) + "= "
                 + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()));
     }
 
@@ -142,7 +142,9 @@ public class NewBookingController implements Initializable {
     @FXML
     private void confirmBooking(ActionEvent ae) {
 
-        boolean choice;
+        boolean choice; //boolean from confirm dialog
+        boolean isBalance;
+        int newTotalTicketAmount; // The remaning ticket amount after the booking
 
         setBilling();
 
@@ -150,12 +152,34 @@ public class NewBookingController implements Initializable {
 
         if (choice) {
 
+            isBalance = checkBalance();
+
+            if (isBalance) {
+
+
+                newTotalTicketAmount = dbh.getTicketAmount(tripId) - billing.getTicketAmount();
+
+                dbh.setTicketAmount(newTotalTicketAmount, tripId);
+
+                booking.setPassengers(billing.getTicketAmount());
+                booking.setPrice(billing.getTotalPrice());
+
+                dbh.insertBooking(booking);
+                dbh.insertPersonHasBooking(dbh.getIdFromUserName(local.getCurrentUsersUserName()), dbh.getMaxBookingId());
+                myAlert.bookingConfirmed();
+
+
+            } // DBHandler metods
+            else {
+            } // MyAlert
+
             // pay booking
         } else {
 
             //return to booking screen
 
         }
+
 
     }
 
@@ -167,6 +191,27 @@ public class NewBookingController implements Initializable {
         billing.setAdultAmount(adultTicket.getValue());
         billing.setChildAmount(childTicket.getValue());
         billing.calcAndSetTotalPrice();
+
+    }
+
+    private boolean checkBalance() {
+
+        boolean isBalance = false;
+
+        setBilling();
+
+        double balance = Double.parseDouble(dbh.getBalanceFromId
+                (dbh.getIdFromUserName(local.getCurrentUsersUserName())));
+
+
+        if (balance >= billing.getTotalPrice()) {
+            double newBalance = balance - billing.getTotalPrice();
+            dbh.setBalance(newBalance, dbh.getIdFromUserName(local.getCurrentUsersUserName()));
+
+            isBalance = true;
+        }
+
+        return isBalance;
 
     }
 

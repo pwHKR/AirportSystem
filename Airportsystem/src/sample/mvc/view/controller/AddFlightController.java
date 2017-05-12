@@ -89,14 +89,7 @@ public class AddFlightController implements Initializable {
 
         boolean newFlightStatus;
 
-        if (statusCheckBox.isSelected()) {
-
-            newFlightStatus = true;
-        } else {
-
-            newFlightStatus = false;
-
-        }
+        newFlightStatus = statusCheckBox.isSelected();
 
         if (noError) {
 
