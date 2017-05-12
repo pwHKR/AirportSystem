@@ -125,5 +125,12 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
+        <Button fx:id="cancelButton" layoutX="313.0" layoutY="431.0" mnemonicParsing="false" onAction="#cancelBooking"
+                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css"
+                text="Cancel"/>
+        <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="313.0" layoutY="-166.0"
+                mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
+                style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
+                textAlignment="CENTER"/>
     </children>
 </AnchorPane>

@@ -37,6 +37,8 @@ public class NewBookingController implements Initializable {
     private Label balanceLabel;
     @FXML
     private TextField luggageField;
+    @FXML
+    private Button cancelButton;
     private Booking booking;
     private Trip trip;
     private Flight flight;
@@ -168,10 +170,10 @@ public class NewBookingController implements Initializable {
                 dbh.insertPersonHasBooking(dbh.getIdFromUserName(local.getCurrentUsersUserName()), dbh.getMaxBookingId());
                 myAlert.bookingConfirmed();
 
-
-            } // DBHandler metods
+            }
             else {
-            } // MyAlert
+
+            }
 
             // pay booking
         } else {
@@ -213,6 +215,16 @@ public class NewBookingController implements Initializable {
 
         return isBalance;
 
+    }
+
+    @FXML
+    private void cancelBooking(ActionEvent ae) {
+        sw.gotoCheckUserType(ae, "Admin.fxml", "Customer.fxml", "Employee.fxml");
+    }
+
+    @FXML
+    private void help(ActionEvent ae) {
+        myAlert.bookingConfirmHelp();
     }
 
 }

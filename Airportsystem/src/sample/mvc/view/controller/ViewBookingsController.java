@@ -51,14 +51,6 @@ public class ViewBookingsController implements Initializable {
     private void goBack(ActionEvent ae) {
         SwitchScene sw = new SwitchScene();
 
-        if (userType.matches("Admin")) {
-            sw.GoTo(ae, "Admin.fxml");
-        }
-        if (userType.matches("Customer")) {
-            sw.GoTo(ae, "Customer.fxml");
-        }
-        if (userType.matches("Employee")) {
-            sw.GoTo(ae, "Employee.fxml");
-        }
+        sw.gotoCheckUserType(ae, "Admin.fxml", "Customer.fxml", "Employee.fxml");
     }
 }

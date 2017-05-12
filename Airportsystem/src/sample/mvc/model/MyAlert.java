@@ -314,4 +314,12 @@ public class MyAlert {
         msg.showAndWait();
 
     }
+
+    public void bookingConfirmHelp() {
+        msg.setHeaderText("This is the scene where you have to confirm your booking");
+        msg.setTitle("Confirm your booking");
+        msg.setContentText("Enter how many passengers you want and enter how many kilo's weight you will bring " +
+                "on the airplane then press confirm when you are done.");
+        msg.showAndWait();
+    }
 }

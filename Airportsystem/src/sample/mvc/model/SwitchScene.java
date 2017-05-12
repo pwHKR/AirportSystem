@@ -116,29 +116,59 @@ public class SwitchScene {
 
     }
 
-    /*public void goToCheckUserType(ActionEvent event, String fxmlFile1, String userType){
+    public void gotoCheckUserType(ActionEvent ae, String fxmlAdmin, String fxmlCustomer, String fxmlEmployee) {
         boolean isOnline;
-
+        DataStorage dbh = new DBHandler();
+        LocalFileStorage localFileStorage = new LocalFileStorage();
+        String userType = dbh.printUserType(localFileStorage.getCurrentUsersUserName());
         isOnline = checkIfOnline();
 
+        //checks if the user is online otherwise you will come to startscreen
         if (isOnline == false && userLoggedOut == false) {
-
             myAlert.logoutInactivity();
-            fxmlFile = "Login.fxml";
-
+            fxmlAdmin = "Login.fxml";
+            fxmlEmployee = "Login.fxml";
+            fxmlCustomer = "Login.fxml";
         }
 
-
-        Node node = (Node) event.getSource();
+        Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlFile + ""));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        if (userType.matches("Admin")) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlAdmin + ""));
+            Parent root = null;
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
         }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-    }*/
+
+        if (userType.matches("Employee")) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlEmployee + ""));
+            Parent root = null;
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+        }
+
+        if (userType.matches("Customer")) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlCustomer + ""));
+            Parent root = null;
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+        }
+
+    }
 }
