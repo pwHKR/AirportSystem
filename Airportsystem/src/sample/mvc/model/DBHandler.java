@@ -1300,13 +1300,13 @@ public class DBHandler implements DataStorage {
                             " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 ORDER BY price ASC;");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
-                            " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 ORDER BY price ASC;");
+                            " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER BY price ASC;");
                 break;
 
             case "Billing Descending":
                 if (input.isEmpty())
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
-                            " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 ORDER BY price DESC;");
+                            " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER BY price DESC;");
 
 
                 else
@@ -1686,6 +1686,33 @@ public class DBHandler implements DataStorage {
         }
 
         return bookingId;
+    }
+
+    public ObservableList<String> getUserBookings(String userName) {
+
+        ObservableList<String> trips = FXCollections.observableArrayList();
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = ("select * from Person_has_Booking , User, Booking, Trip, Trip_has_Location, Location " +
+                    "where Person_has_Booking.Person_systemId = User.Person_systemId and Person_has_Booking.Booking_bookingId = Booking.bookingId and Trip.tripId = Booking.Trip_tripId " +
+                    "and Trip_has_Location.Trip_tripId = Trip.tripId and Trip_has_Location.Location_locationId = Location.locationId and userName = '" + userName + "' and isStart = 0;");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                trips.add(resultSet.getString("Location.city") + "             " + resultSet.getString("Location.country") + "             " + resultSet.getString("Booking.date"));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return trips;
+
+
     }
 }
 

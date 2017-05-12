@@ -112,6 +112,8 @@ public interface DataStorage {
     void insertPersonHasBooking(int systemId, int bookingId);
 
     int getMaxBookingId();
+
+    ObservableList<String> getUserBookings(String userName);
 }
 
 

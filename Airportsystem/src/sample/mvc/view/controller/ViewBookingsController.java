@@ -1,5 +1,7 @@
 package sample.mvc.view.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,21 +26,25 @@ public class ViewBookingsController implements Initializable {
     @FXML
     private TextArea detailsArea;
     @FXML
-    private ListView<String> bookingsListView;
+    private ListView<String> idBookingList;
+
+    private ObservableList<String> trips = FXCollections.observableArrayList();
 
     DataStorage dbh = new DBHandler();
     LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        System.out.println(local.getCurrentUsersUserName());
+        trips = dbh.getUserBookings(local.getCurrentUsersUserName());
+        idBookingList.setItems(trips);
     }
 
     @FXML
     private void editBooking(ActionEvent ae) {
-        String choice = bookingsListView.getSelectionModel().getSelectedItem().toString();
+
+        String choice = idBookingList.getSelectionModel().getSelectedItem().toString();
     }
 
     @FXML
