@@ -43,8 +43,6 @@ public class ViewBookingsController implements Initializable {
 
     @FXML
     private void editBooking(ActionEvent ae) {
-
-        String choice = idBookingList.getSelectionModel().getSelectedItem().toString();
     }
 
     @FXML
@@ -58,5 +56,12 @@ public class ViewBookingsController implements Initializable {
         SwitchScene sw = new SwitchScene();
 
         sw.gotoCheckUserType(ae, "Admin.fxml", "Customer.fxml", "Employee.fxml");
+    }
+
+    @FXML
+    private void getInfo() {
+        String choice = idBookingList.getSelectionModel().getSelectedItem().toString();
+        String info = dbh.getBookingInfo(choice, local.getCurrentUsersUserName());
+        detailsArea.setText(info);
     }
 }

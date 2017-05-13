@@ -169,6 +169,7 @@ public class NewBookingController implements Initializable {
                 dbh.insertBooking(booking);
                 dbh.insertPersonHasBooking(dbh.getIdFromUserName(local.getCurrentUsersUserName()), dbh.getMaxBookingId());
                 myAlert.bookingConfirmed();
+                returnToSearchLocation(ae);
 
             }
             else {
