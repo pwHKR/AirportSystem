@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
-import java.lang.*;
 import java.sql.*;
 import java.util.Properties;
 
@@ -1702,7 +1701,8 @@ public class DBHandler implements DataStorage {
             ResultSet resultSet = stmt.executeQuery(query);
 
             while (resultSet.next()) {
-                trips.add(resultSet.getString("Location.city") + "             " + resultSet.getString("Location.country") + "             " + resultSet.getString("Booking.date"));
+                trips.add(resultSet.getString("Location.city") + "             " + resultSet.getString("Location.country") + "             " +
+                        "             " + resultSet.getInt("Booking.bookingId"));
             }
 
 
@@ -1715,21 +1715,23 @@ public class DBHandler implements DataStorage {
 
     }
 
-    public String getBookingInfo(String choice, String userName) {
+
+    public String getBookingInfo(int bookingId) {
 
         String info = "";
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            String query = ("select * from Person_has_Booking , User, Booking, Trip, Trip_has_Location, Location " +
-                    "where Person_has_Booking.Person_systemId = User.Person_systemId and Person_has_Booking.Booking_bookingId = Booking.bookingId and Trip.tripId = Booking.Trip_tripId " +
-                    "and Trip_has_Location.Trip_tripId = Trip.tripId and Trip_has_Location.Location_locationId = Location.locationId and userName = '" + userName + "' and isStart = 0 AND city LIKE;");
+            String query = ("select Booking.* from Person_has_Booking , User, Booking, Trip, Trip_has_Location, Location \n" +
+                    "                    where Person_has_Booking.Person_systemId = User.Person_systemId and Person_has_Booking.Booking_bookingId = Booking.bookingId and Trip.tripId = Booking.Trip_tripId \n" +
+                    "                    and Trip_has_Location.Trip_tripId = Trip.tripId and Trip_has_Location.Location_locationId = Location.locationId and bookingId =  '" + bookingId + "'  and isStart = 0;");
 
             Statement stmt = conn.createStatement();
             stmt.addBatch(query);
             ResultSet resultSet = stmt.executeQuery(query);
 
             while (resultSet.next()) {
-                info = (resultSet.getString("city"));
+                info = (resultSet.getString("date") + "\n" + resultSet.getDouble("totalPrice") +
+                        "\n" + resultSet.getInt("passengerAmount"));
             }
 
 
@@ -1741,6 +1743,8 @@ public class DBHandler implements DataStorage {
 
 
     }
+
+
 }
 
 

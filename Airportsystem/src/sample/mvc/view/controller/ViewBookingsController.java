@@ -11,6 +11,7 @@ import javafx.scene.control.TextArea;
 import sample.mvc.model.*;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -24,11 +25,12 @@ public class ViewBookingsController implements Initializable {
     @FXML
     private Button helpButton;
     @FXML
-    private TextArea detailsArea;
+    private TextArea detailArea;
     @FXML
     private ListView<String> idBookingList;
 
     private ObservableList<String> trips = FXCollections.observableArrayList();
+    private ArrayList<Integer> bookingIds;
 
     DataStorage dbh = new DBHandler();
     LocalFileStorage local = new LocalFileStorage();
@@ -36,8 +38,11 @@ public class ViewBookingsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println(local.getCurrentUsersUserName());
+
         trips = dbh.getUserBookings(local.getCurrentUsersUserName());
+
+
+        //  .replaceAll("[^0-9.]", "");
         idBookingList.setItems(trips);
     }
 
@@ -60,8 +65,13 @@ public class ViewBookingsController implements Initializable {
 
     @FXML
     private void getInfo() {
-        String choice = idBookingList.getSelectionModel().getSelectedItem().toString();
-        String info = dbh.getBookingInfo(choice, local.getCurrentUsersUserName());
-        detailsArea.setText(info);
+
+        String choiceInput = idBookingList.getSelectionModel().getSelectedItems().toString().replaceAll(("\\D+"), "");
+        java.lang.System.out.println(choiceInput);
+
+
+        //String choice = idBookingList.getSelectionModel().getSelectedItem().toString();
+        String info = dbh.getBookingInfo(Integer.parseInt(choiceInput));
+        detailArea.setText(info);
     }
 }

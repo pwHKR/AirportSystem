@@ -115,7 +115,8 @@ public interface DataStorage {
 
     ObservableList<String> getUserBookings(String userName);
 
-    String getBookingInfo(String choice, String userName);
+    String getBookingInfo(int bookingId);
+
 }
 
 
