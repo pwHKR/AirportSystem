@@ -462,6 +462,7 @@ public class DBHandler implements DataStorage {
         }
     }
 
+
     public void removeWorker(String sysId) {
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
@@ -550,6 +551,7 @@ public class DBHandler implements DataStorage {
 
         return isOnline;
     }
+
 
     public void AddLocationPSTR(String idPSTR, String locationId) {
 
@@ -655,6 +657,7 @@ public class DBHandler implements DataStorage {
 
     }
 
+
     public ObservableList<String> getSystemVariables() {
 
         ObservableList<String> SystemVariables = FXCollections.observableArrayList();
@@ -724,6 +727,7 @@ public class DBHandler implements DataStorage {
 
 
     }
+
 
     public void updateTimeStampUser(String userName) {
 
@@ -873,6 +877,7 @@ public class DBHandler implements DataStorage {
         return flightIds;
     }
 
+
     public ObservableList<String> getCountriesWithPstr() {
         ObservableList<String> countries = FXCollections.observableArrayList();
 
@@ -895,6 +900,7 @@ public class DBHandler implements DataStorage {
         return countries;
     }
 
+
     public ObservableList<String> matchCityWithCountry(String country) {
         ObservableList<String> cities = FXCollections.observableArrayList();
 
@@ -916,6 +922,7 @@ public class DBHandler implements DataStorage {
         }
         return cities;
     }
+
 
     public void setBalance(double balance, int systemId) {
 
@@ -943,6 +950,7 @@ public class DBHandler implements DataStorage {
 
 
     }
+
 
     public int getIdFromUserName(String userName) {
 
@@ -975,6 +983,7 @@ public class DBHandler implements DataStorage {
 
 
     }
+
 
     public String getBalanceFromId(int systemId) {
 
@@ -1112,6 +1121,7 @@ public class DBHandler implements DataStorage {
 
         return airplane;
     }
+
 
     public int getLastFlightId() {
 
@@ -1256,6 +1266,7 @@ public class DBHandler implements DataStorage {
         return tripId;
     }
 
+
     public Location getLocationObject(int locationId) {
 
 
@@ -1285,6 +1296,7 @@ public class DBHandler implements DataStorage {
 
 
     }
+
 
     public ObservableList<String> getFilteredResults(String input, String choice) {
 
@@ -1428,6 +1440,7 @@ public class DBHandler implements DataStorage {
 
     }
 
+
     public int getTripId(String flightId) {
 
         int tripId = 0;
@@ -1459,6 +1472,7 @@ public class DBHandler implements DataStorage {
 
 
     }
+
 
     public Location getFromLocationObject(int tripID) {
 
@@ -1755,7 +1769,7 @@ public class DBHandler implements DataStorage {
             ResultSet resultSet = stmt.executeQuery(query);
 
             while (resultSet.next()) {
-                booking = new Booking(resultSet.getInt("Trip_tripId"), resultSet.getString("Date"), resultSet.getDouble("totalPrice"),
+                booking = new Booking(bookingId, resultSet.getString("Date"), resultSet.getDouble("totalPrice"),
                         resultSet.getInt("passengerAmount"));
             }
 
@@ -1766,6 +1780,36 @@ public class DBHandler implements DataStorage {
 
         return booking;
 
+    }
+
+    public void cancelBookingId(int bookingId) {
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+
+            //"SELECT Person.firstName, lastName FROM AirportSystemdb.Person, AirportSystemdb.User WHERE Person.systemId = User.Person_systemId AND User.typeOfUser = 'Employee'"
+            //String query = ("DELETE FROM AirportSystemdb.User, AirportSystemdb.Person WHERE AirportSystemdb.User.Person_systemId = " + sysId + "");
+
+
+            // FIXME: 2017-05-14 siiiiten får mysql syntax error
+            String q1 = "DELETE FROM Booking WHERE AirportSystemdb.Booking.bookingId = ?;";
+            String q2 = "DELETE FROM AirportSystemdb.Person_has_Booking WHERE AirportSystemdb.Person_has_Booking.Booking_bookingId = ?;";
+
+
+            PreparedStatement st = conn.prepareStatement(q1);
+            PreparedStatement pst = conn.prepareStatement(q2);
+
+
+            st.setInt(1, bookingId);
+            pst.setInt(1, bookingId);
+
+
+            st.executeUpdate();
+            pst.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

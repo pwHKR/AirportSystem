@@ -307,6 +307,21 @@ public class MyAlert {
         return choice;
     }
 
+    public boolean confirmCancelBooking() {
+
+        boolean choice;
+
+        alert.setTitle("Confirm Cancel");
+        alert.setHeaderText("Are you sure you want to cancel the booking?");
+        alert.setContentText("Yes or No");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        // ... user chose OK
+// ... user chose CANCEL or closed the dialog
+        choice = result.get() == ButtonType.OK;
+        return choice;
+    }
+
     public void bookingConfirmed() {
         msg.setHeaderText("Booking confirmed");
         msg.setTitle("Your booking has been confirmed.");

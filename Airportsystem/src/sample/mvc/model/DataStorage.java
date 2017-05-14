@@ -119,6 +119,7 @@ public interface DataStorage {
 
     Booking getBookingObject(int bookingId);
 
+    void cancelBookingId(int bookingId);
 }
 
 

@@ -5,9 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
-import sample.mvc.model.Booking;
-import sample.mvc.model.LocalFileStorage;
-import sample.mvc.model.SwitchScene;
+import sample.mvc.model.*;
 
 
 import java.net.URL;
@@ -29,13 +27,28 @@ public class EditBookingController implements Initializable {
 
     SwitchScene sw = new SwitchScene();
     LocalFileStorage local = new LocalFileStorage();
+    DataStorage dbh = new DBHandler();
+    MyAlert myAlert = new MyAlert();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Booking booking = local.readBookingObjectFromFile();
-
+        System.out.println(booking.getTripId());
         bookingInfoArea.setText("");
 
+
+    }
+
+    @FXML
+    private void cancelBooking(ActionEvent ae) {
+        Booking booking = local.readBookingObjectFromFile();
+
+        Boolean choice = myAlert.confirmCancelBooking();
+
+        if (choice == true) {
+            dbh.cancelBookingId(booking.getTripId());
+            sw.GoTo(ae, "ViewBookings.fxml");
+        }
 
     }
 
