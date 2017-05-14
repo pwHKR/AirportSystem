@@ -20,7 +20,7 @@ public class SearchLocationController implements Initializable {
 
 
     private ObservableList<String> trips = FXCollections.observableArrayList();
-    private ObservableList<String> choices = FXCollections.observableArrayList("", "Date", "Name", "Billing Descending", "Billing Ascending");
+    private ObservableList<String> choices = FXCollections.observableArrayList("", "Date", "Name", "Price Descending", "Price Ascending");
 
     private SwitchScene switchScene = new SwitchScene();
     private DataStorage dbh = new DBHandler();

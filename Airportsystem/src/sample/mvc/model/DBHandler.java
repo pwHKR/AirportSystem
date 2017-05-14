@@ -1294,7 +1294,7 @@ public class DBHandler implements DataStorage {
 
         switch (choice) {
 
-            case "Billing Ascending":
+            case "Price Ascending":
                 if (input.isEmpty())
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
                             " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 ORDER BY price ASC;");
@@ -1303,15 +1303,13 @@ public class DBHandler implements DataStorage {
                             " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER BY price ASC;");
                 break;
 
-            case "Billing Descending":
+            case "Price Descending":
                 if (input.isEmpty())
-                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
-                            " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER BY price DESC;");
-
-
+                    query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
+                            " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 ORDER BY price DESC ;");
                 else
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip " +
-                            "where Trip.tripId = Trip_has_Location.Trip_tripId and Location.locationId = Trip_has_Location.Location_locationId and Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER by price DESC ");
+                            " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 AND city '%" + input + "%' ORDER BY price DESC;");
                 break;
 
             case "Name":
