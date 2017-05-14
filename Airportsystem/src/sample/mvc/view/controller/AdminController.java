@@ -50,10 +50,6 @@ public class AdminController implements Initializable {
     @FXML
     private void newEmployee(ActionEvent ae) {
 
-
-        NewUserController.setCustomer(false);
-
-
         sw.GoTo(ae, "NewUser.fxml");
 
 
@@ -111,6 +107,6 @@ public class AdminController implements Initializable {
 
     @FXML
     private void browseTrips(ActionEvent ae) {
-        sw.GoTo(ae, "ViewTrip.fxml");
+        sw.GoTo(ae, "SearchLocation.fxml");
     }
 }

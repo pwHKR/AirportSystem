@@ -79,7 +79,7 @@ public class LoginController implements Initializable {
             }
 
             if (sentPassword.equals(Password) && isAdmin == true) {
-
+                dbh.setUserOnline(UserName);
                 sw.GoTo(ae, "Admin.fxml");
             }
         }
@@ -104,7 +104,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void newUser(ActionEvent ae) {
-        NewUserController.setCustomer(true);
+
 
         sw.goToUnLogged(ae, "NewUser.fxml");
     }

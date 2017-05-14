@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Tobias Åkesson on 2017-05-11.
  */
-public class flightStatusController implements Initializable {
+public class FlightStatusController implements Initializable {
     @FXML
     private Button returnButton;
     @FXML

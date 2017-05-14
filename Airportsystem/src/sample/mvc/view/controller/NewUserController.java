@@ -1,6 +1,5 @@
 package sample.mvc.view.controller;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +19,10 @@ public class NewUserController implements Initializable {
 
     private MyAlert myAlert = new MyAlert();
     private SwitchScene sw = new SwitchScene();
+    DataStorage dbh = new DBHandler();
+    LocalFileStorage local = new LocalFileStorage();
+    private String typeOfUser = dbh.printUserType(local.getCurrentUsersUserName());
+    private boolean isUserOnline = dbh.isUserOnline(local.getCurrentUsersUserName());
 
     @FXML
     private TextField firstName;
@@ -41,16 +44,6 @@ public class NewUserController implements Initializable {
     private CheckBox female;
     @FXML
     private CheckBox male;
-
-    public static boolean isCustomer;
-
-    public static void setCustomer(boolean customer) {
-        isCustomer = customer;
-    }
-
-
-    private String typeOfUser;
-
 
     @FXML
     private void addUser(ActionEvent ae) {
@@ -92,29 +85,29 @@ public class NewUserController implements Initializable {
 
                                     if (!password.getText().isEmpty()) {
 
-                                        DataStorage dbh = new DBHandler();
-
-                                        if (isCustomer == true) {
+                                        //Checks if it's an employee making the account or if it's not online
+                                        if (typeOfUser.matches("Employee") || !isUserOnline) {
+                                            System.out.println("hej");
                                             User customer = new Customer(stringFirstName,
                                                     stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
-                                            dbh.insertUser(customer, typeOfUser);
-                                        } else if (isCustomer == false) {
+                                            dbh.insertUser(customer, "Customer");
+                                            if (isUserOnline) {
+                                                sw.GoTo(ae, "Employee.fxml");
+                                            } else {
+                                                sw.goToUnLogged(ae, "Login.fxml");
+                                            }
+                                        }
 
-                                            User customer = new Employee(stringFirstName,
+                                        //Checks if it's an admin making the account
+                                        else if (typeOfUser.matches("Admin") && isUserOnline) {
+
+                                            User employee = new Employee(stringFirstName,
                                                     stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
 
-                                            dbh.insertUser(customer, typeOfUser);
-                                        }
-
-
-                                        if (isCustomer == true) {
-
-                                            sw.goToUnLogged(ae, "Login.fxml");
-                                        }
-
-                                        if (isCustomer == false) {
+                                            dbh.insertUser(employee, "Employee");
                                             sw.GoTo(ae, "Admin.fxml");
                                         }
+
                                     } else {
                                         myAlert.passwordErr();
                                     }
@@ -169,23 +162,8 @@ public class NewUserController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        String SelectedCountry = country.getValue();
-
-
-        DataStorage dbh = new DBHandler();
-
-
         ObservableList<String> countryList = dbh.getCountries();
 
         country.setItems(countryList);
-
-
-        if (isCustomer == true) {
-            typeOfUser = "Customer";
-        }
-
-        if (isCustomer == false) {
-            typeOfUser = "Employee";
-        }
     }
 }

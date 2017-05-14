@@ -11,7 +11,6 @@ import javafx.scene.control.TextArea;
 import sample.mvc.model.*;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -65,7 +64,15 @@ public class ViewBookingsController implements Initializable {
 
     @FXML
     private void goBack(ActionEvent ae) {
-        sw.gotoCheckUserType(ae, "Admin.fxml", "Customer.fxml", "Employee.fxml");
+        if (userType.matches("Admin")) {
+            sw.GoTo(ae, "Admin.fxml");
+        }
+        if (userType.matches("Customer")) {
+            sw.GoTo(ae, "Customer.fxml");
+        }
+        if (userType.matches("Employee")) {
+            sw.GoTo(ae, "Employee.fxml");
+        }
     }
 
     @FXML

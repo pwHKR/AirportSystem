@@ -35,6 +35,8 @@ public class EmployeeController implements Initializable {
     private Button helpButton;
     @FXML
     private Button changeStatusButton;
+    @FXML
+    private Button addPersonButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -74,12 +76,17 @@ public class EmployeeController implements Initializable {
     @FXML
     private void helpFunction(ActionEvent ae) {
         MyAlert alert = new MyAlert();
-        alert.helpChangeFlightStatus();
+        alert.helpEmployee();
     }
 
     @FXML
     private void changeFlightStatus(ActionEvent ae) {
         sw.GoTo(ae, "ChangeFlightStatus.fxml");
 
+    }
+
+    @FXML
+    private void addPerson(ActionEvent ae) {
+        sw.GoTo(ae, "NewUser.fxml");
     }
 }
