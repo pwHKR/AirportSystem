@@ -250,7 +250,7 @@ public class LocalFileStorage {
     }
 
 
-    public Booking readTripIdFromBookingFile() {
+    public Booking readBookingObjectFromFile() {
 
         ObjectInputStream input = null;
 

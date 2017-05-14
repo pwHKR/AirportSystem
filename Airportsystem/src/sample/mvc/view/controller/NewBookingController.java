@@ -64,7 +64,7 @@ public class NewBookingController implements Initializable {
         childTicket.setValue(0);
         adultTicket.setValue(1);
 
-        booking = local.readTripIdFromBookingFile();
+        booking = local.readBookingObjectFromFile();
         tripId = booking.getTripId();
 
         String stringTripId = String.valueOf(tripId);

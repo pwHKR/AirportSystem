@@ -117,6 +117,8 @@ public interface DataStorage {
 
     String getBookingInfo(int bookingId);
 
+    Booking getBookingObject(int bookingId);
+
 }
 
 

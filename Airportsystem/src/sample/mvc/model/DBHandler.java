@@ -3,6 +3,7 @@ package sample.mvc.model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.awt.print.Book;
 import java.io.FileInputStream;
 import java.sql.*;
 import java.util.Properties;
@@ -1721,17 +1722,18 @@ public class DBHandler implements DataStorage {
         String info = "";
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            String query = ("select Booking.* from Person_has_Booking , User, Booking, Trip, Trip_has_Location, Location \n" +
+            String query = ("select * from Flight, Person_has_Booking , User, Booking, Trip, Trip_has_Location, Location \n" +
                     "                    where Person_has_Booking.Person_systemId = User.Person_systemId and Person_has_Booking.Booking_bookingId = Booking.bookingId and Trip.tripId = Booking.Trip_tripId \n" +
-                    "                    and Trip_has_Location.Trip_tripId = Trip.tripId and Trip_has_Location.Location_locationId = Location.locationId and bookingId =  '" + bookingId + "'  and isStart = 0;");
+                    "                    and Trip_has_Location.Trip_tripId = Trip.tripId and Trip_has_Location.Location_locationId = Location.locationId and bookingId =  '" + bookingId + "'  and isStart = 1;");
 
             Statement stmt = conn.createStatement();
             stmt.addBatch(query);
             ResultSet resultSet = stmt.executeQuery(query);
 
             while (resultSet.next()) {
-                info = (resultSet.getString("date") + "\n" + resultSet.getDouble("totalPrice") +
-                        "\n" + resultSet.getInt("passengerAmount"));
+                info = ("Date: " + resultSet.getString("date") + "\nTotal Price: " + resultSet.getDouble("totalPrice") + "SEK " +
+                        "\nTickets Booked: " + resultSet.getInt("passengerAmount") + "\n\nFrom: " + resultSet.getString("city") + "   Airport: " +
+                        resultSet.getString("airportName") + "\nGate: " + resultSet.getString("gate") + "\nFlight Status: " + resultSet.getString("flightStatus"));
             }
 
 
@@ -1741,6 +1743,30 @@ public class DBHandler implements DataStorage {
 
         return info;
 
+    }
+
+    public Booking getBookingObject(int bookingId) {
+
+        Booking booking = null;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = ("SELECT distinct date, totalPrice, passengerAmount, Trip_tripId FROM AirportSystemdb.Booking where bookingId = " + bookingId + ";");
+
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                booking = new Booking(resultSet.getInt("Trip_tripId"), resultSet.getString("Date"), resultSet.getDouble("totalPrice"),
+                        resultSet.getInt("passengerAmount"));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return booking;
 
     }
 

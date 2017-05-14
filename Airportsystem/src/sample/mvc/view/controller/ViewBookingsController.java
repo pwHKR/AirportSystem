@@ -29,9 +29,9 @@ public class ViewBookingsController implements Initializable {
     @FXML
     private ListView<String> idBookingList;
 
-    private ObservableList<String> trips = FXCollections.observableArrayList();
-    private ArrayList<Integer> bookingIds;
+    private ObservableList<String> bookingIds = FXCollections.observableArrayList();
 
+    SwitchScene sw = new SwitchScene();
     DataStorage dbh = new DBHandler();
     LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
@@ -39,15 +39,22 @@ public class ViewBookingsController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        trips = dbh.getUserBookings(local.getCurrentUsersUserName());
+        bookingIds = dbh.getUserBookings(local.getCurrentUsersUserName());
 
 
         //  .replaceAll("[^0-9.]", "");
-        idBookingList.setItems(trips);
+        idBookingList.setItems(bookingIds);
     }
 
     @FXML
     private void editBooking(ActionEvent ae) {
+        String choiceInput = idBookingList.getSelectionModel().getSelectedItems().toString().replaceAll(("\\D+"), "");
+
+        Booking booking = dbh.getBookingObject(Integer.parseInt(choiceInput));
+
+        local.saveBookingIdToFile(booking);
+
+        sw.GoTo(ae, "EditBooking.fxml");
     }
 
     @FXML
@@ -58,8 +65,6 @@ public class ViewBookingsController implements Initializable {
 
     @FXML
     private void goBack(ActionEvent ae) {
-        SwitchScene sw = new SwitchScene();
-
         sw.gotoCheckUserType(ae, "Admin.fxml", "Customer.fxml", "Employee.fxml");
     }
 
