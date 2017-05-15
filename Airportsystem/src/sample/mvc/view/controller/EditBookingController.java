@@ -47,6 +47,7 @@ public class EditBookingController implements Initializable {
 
         if (choice == true) {
             dbh.cancelBookingId(booking.getTripId());
+            dbh.setBalance(Double.parseDouble(dbh.getBalanceFromId(dbh.getIdFromUserName(local.getCurrentUsersUserName()))) + booking.getPrice(), dbh.getIdFromUserName(local.getCurrentUsersUserName()));
             sw.GoTo(ae, "ViewBookings.fxml");
         }
 

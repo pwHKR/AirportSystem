@@ -1789,7 +1789,6 @@ public class DBHandler implements DataStorage {
             //String query = ("DELETE FROM AirportSystemdb.User, AirportSystemdb.Person WHERE AirportSystemdb.User.Person_systemId = " + sysId + "");
 
 
-            // FIXME: 2017-05-14 siiiiten får mysql syntax error
             String q1 = "DELETE FROM Booking WHERE AirportSystemdb.Booking.bookingId = ?;";
             String q2 = "DELETE FROM AirportSystemdb.Person_has_Booking WHERE AirportSystemdb.Person_has_Booking.Booking_bookingId = ?;";
 

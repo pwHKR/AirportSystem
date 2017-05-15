@@ -81,13 +81,12 @@ public class NewBookingController implements Initializable {
         airplane = dbh.getAirplaneObject(flight.getRegNumber());
 
         tripInfoList.add("Date: " + trip.getDate() + "\nTicket price: " + trip.getTripPrice() +
-                "\nLuggage Max (kilo): " + airplane.getMaxLuggageWeight());
+                "\nLuggage Max (kilo): " + airplane.getMaxLuggageWeight() + "\nChild 0-10 50% of ticket billing");
 
-
-        totalPriceArea.setText("Child 0-10 50% of ticket billing");
 
         systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName()); // Get systemID of the current user
         balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
+
 
 
     }
@@ -116,7 +115,7 @@ public class NewBookingController implements Initializable {
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
                 "\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + " X " + String.valueOf(trip.getTripPrice()) + "= "
-                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()));
+                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + "\nLuggage price: " +);
     }
 
 

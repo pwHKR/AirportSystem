@@ -99,14 +99,14 @@
                 <Font size="18.0"/>
             </font>
         </Label>
-        <ListView fx:id="bookingListView" layoutX="342.0" layoutY="300.0" prefHeight="98.0" prefWidth="200.0"/>
+        <ListView fx:id="bookingListView" layoutX="329.0" layoutY="300.0" prefHeight="98.0" prefWidth="219.0"/>
         <TextArea fx:id="totalPriceArea" layoutX="42.0" layoutY="300.0" onMouseClicked="#seeTotalPrice"
-                  prefHeight="98.0" prefWidth="226.0"/>
-        <ComboBox fx:id="adultTicket" layoutX="37.0" layoutY="226.0" onMouseReleased="#showBookingInfo"
-                  prefHeight="27.0" prefWidth="76.0" promptText="0"/>
-        <ComboBox fx:id="childTicket" layoutX="193.0" layoutY="226.0" onMouseReleased="#showBookingInfo"
-                  prefHeight="27.0" prefWidth="76.0" promptText="0"/>
-        <Label layoutX="354.0" layoutY="259.0" text="Your booking" textFill="WHITE">
+                  onMouseMoved="#showBookingInfo" prefHeight="98.0" prefWidth="226.0"/>
+        <ComboBox fx:id="adultTicket" layoutX="37.0" layoutY="226.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
+                  prefWidth="76.0" promptText="0"/>
+        <ComboBox fx:id="childTicket" layoutX="193.0" layoutY="226.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
+                  prefWidth="76.0" promptText="0"/>
+        <Label layoutX="355.0" layoutY="259.0" text="Booking Info" textFill="WHITE">
             <font>
                 <Font size="28.0"/>
             </font>
