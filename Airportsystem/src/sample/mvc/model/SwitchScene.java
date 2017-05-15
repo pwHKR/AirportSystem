@@ -40,6 +40,7 @@ public class SwitchScene {
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlFile + ""));
+        stage.setResizable(false);
         Parent root = null;
         try {
             root = loader.load();
@@ -104,6 +105,7 @@ public class SwitchScene {
 
         Node node = (Node) ae.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
+        stage.setResizable(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/" + "" + fxmlFile + ""));
         Parent root = null;
         try {

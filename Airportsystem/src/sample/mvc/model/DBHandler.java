@@ -1713,8 +1713,8 @@ public class DBHandler implements DataStorage {
             ResultSet resultSet = stmt.executeQuery(query);
 
             while (resultSet.next()) {
-                trips.add(resultSet.getString("Location.city") + "             " + resultSet.getString("Location.country") + "             " +
-                        "             " + resultSet.getInt("Booking.bookingId"));
+                trips.add(resultSet.getString("Location.city") + " " + resultSet.getString("Location.country") + " " +
+                        " ID: " + resultSet.getInt("Booking.bookingId"));
             }
 
 
@@ -1742,8 +1742,8 @@ public class DBHandler implements DataStorage {
             ResultSet resultSet = stmt.executeQuery(query);
 
             while (resultSet.next()) {
-                info = ("Date: " + resultSet.getString("date") + "\nTotal Price: " + resultSet.getDouble("totalPrice") + "SEK " +
-                        "\nTickets Booked: " + resultSet.getInt("passengerAmount") + "\n\nFrom: " + resultSet.getString("city") + "   Airport: " +
+                info = ("Booking Date: " + resultSet.getString("date") + "\nTotal Price: " + resultSet.getDouble("totalPrice") + "SEK " +
+                        "\nTickets Booked: " + resultSet.getInt("passengerAmount") + "\n\nFlight Date: " + resultSet.getString("Trip.date") + "\nFrom: " + resultSet.getString("city") + "   Airport: " +
                         resultSet.getString("airportName") + "\nGate: " + resultSet.getString("gate") + "\nFlight Status: " + resultSet.getString("flightStatus"));
             }
 
