@@ -24,11 +24,11 @@
             stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewBookingController">
     <children>
-        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-65.0" layoutY="44.0"
+        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-4.0" layoutY="-1.0"
                    opacity="0.11" pickOnBounds="true" preserveRatio="true">
             <image>
                 <!--suppress XmlPathReference, XmlPathReference -->
-                <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
+                <Image url="@resources/Suitcases-Airportr-e1476652510442.jpg"/>
             </image>
         </ImageView>
         <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;"/>

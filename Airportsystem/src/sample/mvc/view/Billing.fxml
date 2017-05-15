@@ -15,21 +15,21 @@
 
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0"
-            prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0"
+            prefWidth="404.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.BillingController">
     <children>
-        <ImageView fitHeight="404.0" fitWidth="592.0" layoutX="1.0" opacity="0.11" pickOnBounds="true"
+        <ImageView fitHeight="404.0" fitWidth="592.0" layoutX="-1.0" layoutY="73.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">
             <image>
                 <!--suppress XmlPathReference, XmlPathReference -->
-                <Image url="@resources/Suitcases-Airportr-e1476652510442.jpg"/>
+                <Image url="@resources/Accounting.jpg"/>
             </image>
         </ImageView>
-        <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
+        <Pane layoutY="-2.0" prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
             <children>
-                <Button fx:id="helpbutton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="294.0"
-                        layoutY="-170.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
+                <Button fx:id="helpbutton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="212.0"
+                        layoutY="-168.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
                         prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>
@@ -43,9 +43,9 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0"
-                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="back"/>
-        <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
+        <Button layoutX="147.0" layoutY="327.0" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0"
+                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Go Back"/>
+        <Text fill="WHITE" layoutX="140.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0"/>
@@ -63,13 +63,13 @@
             </effect>
         </Line>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button fx:id="depositButton" layoutX="42.0" layoutY="166.0" mnemonicParsing="false" onAction="#deposit"
+        <Button fx:id="depositButton" layoutX="140.0" layoutY="198.0" mnemonicParsing="false" onAction="#deposit"
                 prefHeight="40.0" prefWidth="126.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Deposit"/>
-        <TextField fx:id="amountTextField" layoutX="42.0" layoutY="131.0" prefHeight="27.0" prefWidth="125.0"/>
-        <Label fx:id="balanceLabel" layoutX="371.0" layoutY="123.0" prefHeight="17.0" prefWidth="87.0"
+        <TextField fx:id="amountTextField" layoutX="140.0" layoutY="127.0" prefHeight="27.0" prefWidth="125.0"/>
+        <Label fx:id="balanceLabel" layoutX="178.0" layoutY="167.0" prefHeight="17.0" prefWidth="95.0" text="0"
                textFill="#8bff32"/>
-        <Button fx:id="withdrawButton" layoutX="42.0" layoutY="230.0" mnemonicParsing="false" onAction="#withdraw"
+        <Button fx:id="withdrawButton" layoutX="140.0" layoutY="250.0" mnemonicParsing="false" onAction="#withdraw"
                 prefHeight="40.0" prefWidth="126.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Withdraw"/>
     </children>

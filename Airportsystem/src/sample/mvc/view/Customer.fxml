@@ -19,11 +19,11 @@
             prefWidth="589.0" style="-fx-background-color: #0b4386;" xmlns="http://javafx.com/javafx/8.0.111"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mvc.view.controller.CustomerController">
     <children>
-        <ImageView fitHeight="404.0" fitWidth="592.0" layoutX="1.0" opacity="0.11" pickOnBounds="true"
+        <ImageView fitHeight="447.0" fitWidth="723.0" layoutX="-134.0" layoutY="1.0" opacity="0.11" pickOnBounds="true"
                    preserveRatio="true">
             <image>
                 <!--suppress XmlPathReference, XmlPathReference -->
-                <Image url="@resources/Suitcases-Airportr-e1476652510442.jpg"/>
+                <Image url="@resources/161118102423-ohare-airport-strike-1024x576.jpg"/>
             </image>
         </ImageView>
         <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
@@ -43,9 +43,9 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
+        <Button layoutX="243.0" layoutY="337.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
                 prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Log Out"/>
-        <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
+        <Text fill="WHITE" layoutX="414.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0"/>
@@ -79,15 +79,15 @@
             </effect>
         </Label>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="28.0" layoutY="179.0" mnemonicParsing="false" onAction="#goToViewTrips" prefHeight="67.0"
-                prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Book Trip"/>
+        <Button layoutX="217.0" layoutY="204.0" mnemonicParsing="false" onAction="#goToViewTrips" prefHeight="90.0"
+                prefWidth="161.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Book Trip"/>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button fx:id="viewBookingButton" layoutX="370.0" layoutY="179.0" mnemonicParsing="false"
-                onAction="#viewBookings" prefHeight="67.0" prefWidth="196.0" styleClass="rich-blue"
+        <Button fx:id="viewBookingButton" layoutX="14.0" layoutY="204.0" mnemonicParsing="false"
+                onAction="#viewBookings" prefHeight="90.0" prefWidth="161.0" styleClass="rich-blue"
                 stylesheets="@stylesheet.css" text="View bookings"/>
-        <Button layoutX="370.0" layoutY="269.0" mnemonicParsing="false" onAction="#goToBilling" prefHeight="67.0"
-                prefWidth="196.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Billing"/>
-        <Label fx:id="onlineLabel" layoutX="468.0" layoutY="122.0" prefHeight="22.0" prefWidth="69.0" text="Online: "
+        <Button layoutX="414.0" layoutY="204.0" mnemonicParsing="false" onAction="#goToBilling" prefHeight="90.0"
+                prefWidth="161.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Billing"/>
+        <Label fx:id="onlineLabel" layoutX="414.0" layoutY="346.0" prefHeight="22.0" prefWidth="69.0" text="Online: "
                textFill="GREY"/>
     </children>
 </AnchorPane>
