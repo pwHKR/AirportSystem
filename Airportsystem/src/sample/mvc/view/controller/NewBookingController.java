@@ -115,7 +115,7 @@ public class NewBookingController implements Initializable {
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
                 "\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + " X " + String.valueOf(trip.getTripPrice()) + "= "
-                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + "\nLuggage price: " +);
+                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + "\nLuggage price: ");
     }
 
 
@@ -143,19 +143,31 @@ public class NewBookingController implements Initializable {
     @FXML
     private void confirmBooking(ActionEvent ae) {
 
+
+        boolean luggageMax = true;
         boolean choice; //boolean from confirm dialog
         boolean isBalance;
         int newTotalTicketAmount; // The remaning ticket amount after the booking
+        int luggageMaxTot;
 
         setBilling();
 
         choice = myAlert.confirmBooking(billing.getTotalPrice());
 
+        luggageMaxTot = Integer.parseInt(luggageField.getText()) * billing.getTicketAmount();
+
         if (choice) {
 
             isBalance = checkBalance();
 
-            if (isBalance) {
+            if (luggageMaxTot > airplane.getMaxLuggageWeight()) {
+                luggageMax = false;
+                myAlert.luggageMaxMsg(String.valueOf(airplane.getMaxLuggageWeight() * billing.getTicketAmount()));
+
+            }
+
+
+            if (isBalance && luggageMax) {
 
 
                 newTotalTicketAmount = dbh.getTicketAmount(tripId) - billing.getTicketAmount();
@@ -170,8 +182,7 @@ public class NewBookingController implements Initializable {
                 myAlert.bookingConfirmed();
                 returnToSearchLocation(ae);
 
-            }
-            else {
+            } else {
 
             }
 

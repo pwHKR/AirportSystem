@@ -87,7 +87,7 @@ public class NewUserController implements Initializable {
 
                                         //Checks if it's an employee making the account or if it's not online
                                         if (typeOfUser.matches("Employee") || !isUserOnline) {
-                                            System.out.println("hej");
+
                                             User customer = new Customer(stringFirstName,
                                                     stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
                                             dbh.insertUser(customer, "Customer");

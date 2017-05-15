@@ -5,7 +5,7 @@ package sample.mvc.model;
  */
 public class Customer extends User {
 
-    private String bonusLevel;
+    private int initialBonus;
 
     public Customer(String firstName, String lastName, boolean isMale, String country, String ssn, String address, String eMail, String userName, String password) {
         super(firstName, lastName, isMale, country, ssn, address, eMail, userName, password);
@@ -14,17 +14,11 @@ public class Customer extends User {
 
     // Constructor with a bonus parameter
 
-    public Customer(String firstName, String lastName, boolean isMale, String country, String ssn, String address, String eMail, String userName, String password, String bonusLevel) {
+    public Customer(String firstName, String lastName, boolean isMale, String country, String ssn, String address, String eMail, String userName, String password, int initialBonus) {
         super(firstName, lastName, isMale, country, ssn, address, eMail, userName, password);
-        this.bonusLevel = bonusLevel;
+        this.initialBonus = initialBonus;
     }
 
 
-    public String getBonusLevel() {
-        return bonusLevel;
-    }
 
-    public void setBonusLevel(String bonusLevel) {
-        this.bonusLevel = bonusLevel;
-    }
 }

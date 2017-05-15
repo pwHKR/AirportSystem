@@ -337,4 +337,13 @@ public class MyAlert {
                 "on the airplane then press confirm when you are done.");
         msg.showAndWait();
     }
+
+    public void luggageMaxMsg(String maxWeight) {
+        msg.setHeaderText("The max weight for a passenger is :" + maxWeight);
+        msg.setTitle("Please edit luggage weight");
+        msg.setContentText("Please edit the luggage weight in order to confirm your booking!");
+        msg.showAndWait();
+    }
+
+
 }

@@ -33,7 +33,7 @@ public class EditBookingController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Booking booking = local.readBookingObjectFromFile();
-        System.out.println(booking.getTripId());
+
         bookingInfoArea.setText("");
 
 
