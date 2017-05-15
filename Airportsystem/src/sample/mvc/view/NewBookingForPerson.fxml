@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseMoved="#showBookingInfo" prefHeight="451.0" prefWidth="591.0" style="-fx-background-color: #0b4386;"
+            stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.mvc.view.controller.NewBookingForPersonController">
+    <children>
+        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-65.0" layoutY="44.0"
+                   opacity="0.11" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <!--suppress XmlPathReference, XmlPathReference -->
+                <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
+            </image>
+        </ImageView>
+        <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;"/>
+        <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <!--suppress XmlPathReference, XmlPathReference -->
+                <Image url="@resources/logga.png"/>
+            </image>
+        </ImageView>
+        <!--suppress XmlPathReference, XmlPathReference -->
+        <Button layoutX="12.0" layoutY="399.0" mnemonicParsing="false" onAction="#returnToSearchLocation"
+                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Cancel"/>
+        <Text fill="WHITE" layoutX="453.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Developed by PSTR-Software AB">
+            <font>
+                <Font size="8.0"/>
+            </font>
+        </Text>
+        <Line disable="false" endX="487.0" endY="-1.0" fill="#3354ff" layoutX="101.0" layoutY="97.0" startX="-100.0"
+              stroke="#003d99" strokeMiterLimit="10.0" strokeWidth="3.2">
+            <effect>
+                <Reflection bottomOpacity="0.3174603174603175" fraction="0.9325396825396824"
+                            topOpacity="0.8095238095238095">
+                    <input>
+                        <Glow level="0.7088050314465408"/>
+                    </input>
+                </Reflection>
+            </effect>
+        </Line>
+        <Label layoutX="164.0" layoutY="110.0" prefHeight="34.0" prefWidth="298.0" text="Booking confirmation"
+               textFill="WHITE">
+            <font>
+                <Font size="28.0"/>
+            </font>
+            <effect>
+                <Bloom threshold="0.0"/>
+            </effect>
+        </Label>
+        <Label layoutX="267.0" layoutY="150.0" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="279.0" layoutY="216.0" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <!--suppress XmlPathReference, XmlPathReference -->
+        <Button layoutX="127.0" layoutY="399.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="41.0"
+                prefWidth="134.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="Confirm"/>
+        <Label layoutX="48.0" layoutY="171.0" text="Adults" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="72.0" layoutY="247.0" onMouseMoved="#showBookingInfo" text="Total Price" textFill="WHITE">
+            <font>
+                <Font size="28.0"/>
+            </font>
+            <effect>
+                <Bloom threshold="0.0"/>
+            </effect>
+        </Label>
+        <Label layoutX="137.0" layoutY="171.0" prefHeight="23.0" prefWidth="76.0" text="Children" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <ListView fx:id="bookingListView" layoutX="334.0" layoutY="293.0" prefHeight="98.0" prefWidth="219.0"/>
+        <TextArea fx:id="totalPriceArea" editable="false" layoutX="38.0" layoutY="293.0" onMouseMoved="#showBookingInfo"
+                  prefHeight="98.0" prefWidth="226.0"/>
+        <ComboBox fx:id="adultTicket" layoutX="38.0" layoutY="194.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
+                  prefWidth="76.0" promptText="0"/>
+        <ComboBox fx:id="childTicket" layoutX="126.0" layoutY="194.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
+                  prefWidth="76.0" promptText="0"/>
+        <Label layoutX="364.0" layoutY="247.0" text="Booking Info" textFill="WHITE">
+            <font>
+                <Font size="28.0"/>
+            </font>
+            <effect>
+                <Bloom threshold="0.0"/>
+            </effect>
+        </Label>
+        <Label fx:id="balanceLabel" layoutX="292.0" layoutY="411.0" prefHeight="17.0" prefWidth="219.0" text="Balance: "
+               textFill="#50fc06"/>
+        <TextField fx:id="luggageField" layoutX="443.0" layoutY="194.0" prefHeight="27.0" prefWidth="76.0"/>
+        <Label layoutX="410.0" layoutY="151.0" text="Lugguage" textFill="WHITE">
+            <font>
+                <Font size="28.0"/>
+            </font>
+            <effect>
+                <Bloom threshold="0.0"/>
+            </effect>
+        </Label>
+        <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="313.0" layoutY="-166.0"
+                mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
+                style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
+                textAlignment="CENTER"/>
+        <Label layoutX="527.0" layoutY="199.0" text="Kg" textFill="WHITE"/>
+        <TextField fx:id="ssnField" layoutX="235.0" layoutY="195.0" prefHeight="25.0" prefWidth="150.0"/>
+        <Label layoutX="235.0" layoutY="171.0" prefHeight="27.0" prefWidth="159.0" text="Assign to ssn"
+               textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

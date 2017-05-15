@@ -1805,7 +1805,6 @@ public class DBHandler implements DataStorage {
             st.executeUpdate();
 
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -1841,9 +1840,76 @@ public class DBHandler implements DataStorage {
     }
 
 
+    public String getAdress(String ssn) {
+        String adress = null;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement checkSsnStatement = conn.createStatement();
+            String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + ssn + "'";
+            ResultSet ssnResultSet = checkSsnStatement.executeQuery(checkSSNQuery);
+            if (ssnResultSet.next()) {
+                String query = ("SELECT adress FROM Person WHERE ssn = " + ssn + ";");
+
+                Statement stmt = conn.createStatement();
+                stmt.addBatch(query);
+                ResultSet resultSet = stmt.executeQuery(query);
+
+                while (resultSet.next()) {
+                    adress = resultSet.getString("adress");
+                }
+            } else {
+                myAlert.ssnDoesNotExist();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return adress;
+    }
+
+
+    public int getSystemIdFromSsn(String ssn) {
+        int systemId = 0;
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement stmt = conn.createStatement();
+            String checkSSNQuery = "SELECT systemId FROM Person WHERE ssn= '" + ssn + "'";
+            ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
+            while (resultSet.next()) {
+                systemId = resultSet.getInt("systemId");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return systemId;
+    }
+
+    public void insertPerson(Person person) {
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement stmt = conn.createStatement();
+            String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + person.getSsn() + "'";
+            ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
+            if (!resultSet.next()) {
+                String query = "INSERT INTO Person (firstName, lastName,isMale , country, ssn, adress) "
+                        + " VALUES (?,?,? ,?,?,?);";
+
+                PreparedStatement preparedStmt = conn.prepareStatement(query);
+                preparedStmt.setString(1, person.getFirstName());
+                preparedStmt.setString(2, person.getLastName());
+                preparedStmt.setBoolean(3, person.isMale());
+                preparedStmt.setString(4, person.getCountry());
+                preparedStmt.setString(5, person.getSsn());
+                preparedStmt.setString(6, person.getAdress());
+
+                preparedStmt.execute();
+
+
+            } else {
+                myAlert.ssnExistsErr();
+            }
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+    }
+
 
 }
-
-
-
-

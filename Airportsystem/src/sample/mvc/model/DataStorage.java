@@ -121,7 +121,14 @@ public interface DataStorage {
 
     void cancelBookingId(int bookingId);
 
+    void insertPerson(Person person);
+
+
     boolean userNameExists(String userName);
+
+    String getAdress(String ssn);
+
+    int getSystemIdFromSsn(String ssn);
 }
 
 

@@ -360,5 +360,14 @@ public class MyAlert {
         msg.showAndWait();
     }
 
+    public void billingSent(String adress) {
+        msg.setHeaderText("The billing has been sent to " + adress);
+        msg.setTitle("Booking confirmed");
+        msg.showAndWait();
+    }
 
+    public void ssnDoesNotExist() {
+        err.setTitle("The ssn you input does not exist");
+        err.showAndWait();
+    }
 }

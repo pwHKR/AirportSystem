@@ -64,7 +64,7 @@ public class EmployeeController implements Initializable {
 
     @FXML
     private void browseTrips(ActionEvent ae) {
-        sw.GoTo(ae, "ViewTrip.fxml");
+        sw.GoTo(ae, "SearchLocation.fxml");
     }
 
     @Override
@@ -87,6 +87,6 @@ public class EmployeeController implements Initializable {
 
     @FXML
     private void addPerson(ActionEvent ae) {
-        sw.GoTo(ae, "NewUser.fxml");
+        sw.GoTo(ae, "NewPerson.fxml");
     }
 }

@@ -58,7 +58,7 @@ public class SearchLocationController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         comboBox.setItems(choices);
         trips = dbh.getTripList();
-
+        System.out.println(userType);
         removeIndexNum = Integer.parseInt(trips.get(0));
 
         System.out.println(removeIndexNum);
@@ -142,10 +142,14 @@ public class SearchLocationController implements Initializable {
 
             Booking booking = new Booking(tripId);
 
-
+            System.out.println(userType);
             local.saveBookingIdToFile(booking);
-
-            switchScene.GoTo(ae, "NewBooking.fxml");
+            if (userType.matches("Employee")) {
+                switchScene.GoTo(ae, "NewBookingForPerson.fxml");
+            }
+            if (userType.matches("Admin") || userType.matches("Customer")) {
+                switchScene.GoTo(ae, "NewBooking.fxml");
+            }
 
         } else {
             myAlert.soldOutMsg();
