@@ -345,5 +345,13 @@ public class MyAlert {
         msg.showAndWait();
     }
 
+    public void soldOutMsg() {
+        msg.setHeaderText("Trip is sold out!");
+        msg.setTitle("Sorry");
+        msg.setContentText("Please choose a new trip");
+        msg.showAndWait();
+    }
+
+
 
 }

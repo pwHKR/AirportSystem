@@ -25,6 +25,8 @@ public class SearchLocationController implements Initializable {
     private SwitchScene switchScene = new SwitchScene();
     private DataStorage dbh = new DBHandler();
 
+    private MyAlert myAlert = new MyAlert();
+
     private LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
@@ -134,14 +136,20 @@ public class SearchLocationController implements Initializable {
 
         trip = dbh.getTripObject(stringChoice);
 
-        tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
+        if (trip.getTicketAmount() > 1) {
 
-        Booking booking = new Booking(tripId);
+            tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
+
+            Booking booking = new Booking(tripId);
 
 
-        local.saveBookingIdToFile(booking);
+            local.saveBookingIdToFile(booking);
 
-        switchScene.GoTo(ae, "NewBooking.fxml");
+            switchScene.GoTo(ae, "NewBooking.fxml");
+
+        } else {
+            myAlert.soldOutMsg();
+        }
 
     }
 }
