@@ -20,11 +20,11 @@
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            onMouseMoved="#showBookingInfo" prefHeight="486.0" prefWidth="590.0" style="-fx-background-color: #0b4386;"
+            onMouseMoved="#showBookingInfo" prefHeight="451.0" prefWidth="591.0" style="-fx-background-color: #0b4386;"
             stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewBookingController">
     <children>
-        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0"
+        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-65.0" layoutY="44.0"
                    opacity="0.11" pickOnBounds="true" preserveRatio="true">
             <image>
                 <!--suppress XmlPathReference, XmlPathReference -->
@@ -40,9 +40,9 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#returnToSearchLocation"
-                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
-        <Text fill="WHITE" layoutX="452.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0"
+        <Button layoutX="12.0" layoutY="399.0" mnemonicParsing="false" onAction="#returnToSearchLocation"
+                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Cancel"/>
+        <Text fill="WHITE" layoutX="453.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0"/>
@@ -79,14 +79,14 @@
             </font>
         </Label>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="126.0" layoutY="431.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="41.0"
+        <Button layoutX="127.0" layoutY="399.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="41.0"
                 prefWidth="134.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css" text="Confirm"/>
-        <Label layoutX="47.0" layoutY="203.0" text="Adults" textFill="WHITE">
+        <Label layoutX="48.0" layoutY="171.0" text="Adults" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
             </font>
         </Label>
-        <Label layoutX="66.0" layoutY="259.0" onMouseMoved="#showBookingInfo" text="Total Price" textFill="WHITE">
+        <Label layoutX="67.0" layoutY="227.0" onMouseMoved="#showBookingInfo" text="Total Price" textFill="WHITE">
             <font>
                 <Font size="28.0"/>
             </font>
@@ -94,19 +94,19 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <Label layoutX="193.0" layoutY="203.0" prefHeight="23.0" prefWidth="76.0" text="Children" textFill="WHITE">
+        <Label layoutX="194.0" layoutY="171.0" prefHeight="23.0" prefWidth="76.0" text="Children" textFill="WHITE">
             <font>
                 <Font size="18.0"/>
             </font>
         </Label>
-        <ListView fx:id="bookingListView" layoutX="329.0" layoutY="300.0" prefHeight="98.0" prefWidth="219.0"/>
-        <TextArea fx:id="totalPriceArea" layoutX="42.0" layoutY="300.0" onMouseClicked="#seeTotalPrice"
-                  onMouseMoved="#showBookingInfo" prefHeight="98.0" prefWidth="226.0"/>
-        <ComboBox fx:id="adultTicket" layoutX="37.0" layoutY="226.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
+        <ListView fx:id="bookingListView" layoutX="330.0" layoutY="268.0" prefHeight="98.0" prefWidth="219.0"/>
+        <TextArea fx:id="totalPriceArea" editable="false" layoutX="43.0" layoutY="268.0" onMouseMoved="#showBookingInfo"
+                  prefHeight="98.0" prefWidth="226.0"/>
+        <ComboBox fx:id="adultTicket" layoutX="38.0" layoutY="194.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
                   prefWidth="76.0" promptText="0"/>
-        <ComboBox fx:id="childTicket" layoutX="193.0" layoutY="226.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
+        <ComboBox fx:id="childTicket" layoutX="194.0" layoutY="194.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
                   prefWidth="76.0" promptText="0"/>
-        <Label layoutX="355.0" layoutY="259.0" text="Booking Info" textFill="WHITE">
+        <Label layoutX="356.0" layoutY="227.0" text="Booking Info" textFill="WHITE">
             <font>
                 <Font size="28.0"/>
             </font>
@@ -114,10 +114,10 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <Label fx:id="balanceLabel" layoutX="313.0" layoutY="443.0" prefHeight="17.0" prefWidth="103.0"
+        <Label fx:id="balanceLabel" layoutX="292.0" layoutY="411.0" prefHeight="17.0" prefWidth="219.0" text="Balance: "
                textFill="#50fc06"/>
-        <TextField fx:id="luggageField" layoutX="365.0" layoutY="226.0" prefHeight="27.0" prefWidth="76.0"/>
-        <Label layoutX="350.0" layoutY="186.0" text="Lugguage" textFill="WHITE">
+        <TextField fx:id="luggageField" layoutX="401.0" layoutY="194.0" prefHeight="27.0" prefWidth="76.0"/>
+        <Label layoutX="374.0" layoutY="154.0" text="Lugguage" textFill="WHITE">
             <font>
                 <Font size="28.0"/>
             </font>
@@ -125,12 +125,10 @@
                 <Bloom threshold="0.0"/>
             </effect>
         </Label>
-        <Button fx:id="cancelButton" layoutX="313.0" layoutY="431.0" mnemonicParsing="false" onAction="#cancelBooking"
-                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css"
-                text="Cancel"/>
         <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="313.0" layoutY="-166.0"
                 mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
                 style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                 textAlignment="CENTER"/>
+        <Label layoutX="477.0" layoutY="199.0" text="Kg" textFill="WHITE"/>
     </children>
 </AnchorPane>
