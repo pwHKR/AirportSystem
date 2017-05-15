@@ -120,6 +120,8 @@ public interface DataStorage {
     Booking getBookingObject(int bookingId);
 
     void cancelBookingId(int bookingId);
+
+    boolean userNameExists(String userName);
 }
 
 

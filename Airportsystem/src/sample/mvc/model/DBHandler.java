@@ -1811,6 +1811,36 @@ public class DBHandler implements DataStorage {
         }
     }
 
+    public boolean userNameExists(String userName) {
+
+        boolean isUserName = false;
+        String dbUsername = ""; // The String will contain this if no username is found in DB
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = "SELECT userName FROM AirportSystemdb.User where userName = '" + userName + "';";
+            Statement stmt = conn.createStatement();
+            stmt.addBatch(query);
+            ResultSet resultSet = stmt.executeQuery(query);
+
+            while (resultSet.next()) {
+                dbUsername = resultSet.getString("userName");
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        if (dbUsername.matches(userName)) {
+
+            isUserName = true;
+
+        }
+        return isUserName;
+    }
+
+
 
 }
 

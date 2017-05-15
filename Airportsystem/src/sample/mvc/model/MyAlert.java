@@ -353,5 +353,12 @@ public class MyAlert {
     }
 
 
+    public void nameNotFound() {
+        msg.setHeaderText("Username not found");
+        msg.setTitle("Sorry");
+        msg.setContentText("Please write your username again");
+        msg.showAndWait();
+    }
+
 
 }
