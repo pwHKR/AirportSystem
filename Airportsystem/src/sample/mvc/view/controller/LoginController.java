@@ -46,11 +46,11 @@ public class LoginController implements Initializable {
     @FXML
     private void login(ActionEvent ae) throws SQLNonTransientConnectionException {
 
-        String UserName = userName.getText();
-        String Password = password.getText();
-        local.saveUser(UserName, Password); //saves username and password to localfile
+        String stringUserName = userName.getText();
+        String stringPassword = password.getText();
+        local.saveUser(stringUserName, stringPassword); //saves username and password to localfile
 
-        String sentPassword = dbh.matchPassword(UserName);
+        String sentPassword = dbh.matchPassword(stringUserName);
 
         String typeOfUser; // Variable for holding typeOfUser information from resultset(DB)
 
@@ -58,44 +58,49 @@ public class LoginController implements Initializable {
         boolean isAdmin = false;
         boolean isEmployee = false;
 
-        typeOfUser = dbh.printUserType(UserName);
+        if (!dbh.userNameExists(stringUserName)) {
+            myAlert.nameNotFound();
+        }
+
+        typeOfUser = dbh.printUserType(stringUserName);
 
         if (typeOfUser.equals("Employee")) {
             isEmployee = true;
         }
 
-        if (UserName.equals("admin")) {
+        if (stringUserName.equals("admin")) {
             isAdmin = true;
         }
-        if (UserName.isEmpty()) {
+        if (stringUserName.isEmpty()) {
             myAlert.emptyUserName();
         }
 
-        if (UserName.isEmpty() == false) {
 
-            if (sentPassword.equals(Password) == false) {
+        if (stringUserName.isEmpty() == false) {
+
+            if (sentPassword.equals(stringPassword) == false) {
 
                 myAlert.loginFail();
             }
 
-            if (sentPassword.equals(Password) && isAdmin == true) {
-                dbh.setUserOnline(UserName);
+            if (sentPassword.equals(stringPassword) && isAdmin == true) {
+                dbh.setUserOnline(stringUserName);
                 sw.GoTo(ae, "Admin.fxml");
             }
         }
 
 
-        if (sentPassword.equals(Password) && isAdmin == false && isEmployee == false) {
+        if (sentPassword.equals(stringPassword) && isAdmin == false && isEmployee == false) {
 
-            dbh.setUserOnline(UserName);
+            dbh.setUserOnline(stringUserName);
             sw.GoTo(ae, "Customer.fxml");
 
         }
 
 
-        if (sentPassword.equals(Password) && isAdmin == false && isEmployee == true) {
+        if (sentPassword.equals(stringPassword) && isAdmin == false && isEmployee == true) {
 
-            dbh.setUserOnline(UserName);
+            dbh.setUserOnline(stringUserName);
             sw.GoTo(ae, "Employee.fxml");
 
         }
