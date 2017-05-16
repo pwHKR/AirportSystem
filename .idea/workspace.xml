@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="Fixed a lot of errors. Login does not give you an exception now. Together with Rasmus">
+    <list default="true" id="3018c15a-bdc4-4e4f-b3dc-7f6c41769414" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Admin.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/Admin.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/NewBooking.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/FlightStatusController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/FlightStatusController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewBookingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/NewUserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/SearchLocationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewBookingsController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewBookingsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewWorkersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" afterPath="$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/logInLog.bin" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +70,8 @@
             <state relative-caret-position="404">
               <caret line="95" column="22" lean-forward="false" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
               <folding>
-                <element signature="e#3359#3360#0" expanded="true" />
-                <element signature="e#3422#3423#0" expanded="true" />
+                <element signature="e#3327#3328#0" expanded="true" />
+                <element signature="e#3390#3391#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="386" column="0" lean-forward="false" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
+              <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,10 +101,10 @@
         <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewBookingsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="833">
-              <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+              <caret line="60" column="45" lean-forward="false" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
               <folding>
-                <element signature="e#1905#1906#0" expanded="true" />
-                <element signature="e#1947#1948#0" expanded="true" />
+                <element signature="e#1922#1923#0" expanded="true" />
+                <element signature="e#1964#1965#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -717,13 +705,6 @@
       <workItem from="1494152314494" duration="3437000" />
       <workItem from="1494266051876" duration="41786000" />
     </task>
-    <task id="LOCAL-00004" summary="deleting unused files">
-      <created>1492662902637</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1492662902637</updated>
-    </task>
     <task id="LOCAL-00005" summary="deleting unused files">
       <created>1492664093755</created>
       <option name="number" value="00005" />
@@ -1060,7 +1041,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494874641364</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Fixed a lot of errors. Login does not give you an exception now. Together with Rasmus.">
+      <created>1494958323371</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1494958323372</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1149,7 +1137,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Improved AddDestinationController" />
     <MESSAGE value="Added code to LogInController" />
     <MESSAGE value="Added SwitchScene Class" />
     <MESSAGE value="DB table name change" />
@@ -1174,7 +1161,8 @@
     <MESSAGE value="Bug fixes + added method for changing scene that also checks if user online and userType." />
     <MESSAGE value="Fixed the create new user issue. Static boolean is now removed." />
     <MESSAGE value="Made it so employees can make bookings for persons witout internet or account. Together with Rasmus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made it so employees can make bookings for persons witout internet or account. Together with Rasmus" />
+    <MESSAGE value="Fixed a lot of errors. Login does not give you an exception now. Together with Rasmus." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a lot of errors. Login does not give you an exception now. Together with Rasmus." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1514,10 +1502,10 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/view/controller/ViewBookingsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
-          <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+          <caret line="60" column="45" lean-forward="false" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
           <folding>
-            <element signature="e#1905#1906#0" expanded="true" />
-            <element signature="e#1947#1948#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#1964#1965#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1541,7 +1529,7 @@
     <entry file="file://$PROJECT_DIR$/Airportsystem/src/sample/mvc/model/MyAlert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="386" column="0" lean-forward="false" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1551,8 +1539,8 @@
         <state relative-caret-position="404">
           <caret line="95" column="22" lean-forward="false" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
           <folding>
-            <element signature="e#3359#3360#0" expanded="true" />
-            <element signature="e#3422#3423#0" expanded="true" />
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#3390#3391#0" expanded="true" />
           </folding>
         </state>
       </provider>
