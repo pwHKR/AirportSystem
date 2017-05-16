@@ -20,7 +20,7 @@ public class SearchLocationController implements Initializable {
 
 
     private ObservableList<String> trips = FXCollections.observableArrayList();
-    private ObservableList<String> choices = FXCollections.observableArrayList("", "Date", "Name", "Price Descending", "Price Ascending");
+    private ObservableList<String> choices = FXCollections.observableArrayList("", "Name", "Price Descending", "Price Ascending");
 
     private SwitchScene switchScene = new SwitchScene();
     private DataStorage dbh = new DBHandler();
@@ -57,6 +57,7 @@ public class SearchLocationController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         comboBox.setItems(choices);
+        comboBox.setValue(choices.get(0));
         trips = dbh.getTripList();
         System.out.println(userType);
         removeIndexNum = Integer.parseInt(trips.get(0));
