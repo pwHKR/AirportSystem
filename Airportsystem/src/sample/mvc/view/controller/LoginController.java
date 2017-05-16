@@ -46,13 +46,15 @@ public class LoginController implements Initializable {
     @FXML
     private void login(ActionEvent ae) throws SQLNonTransientConnectionException {
 
+        boolean isPassword = false;
+
         String stringUserName = userName.getText();
         String stringPassword = password.getText();
         local.saveUser(stringUserName, stringPassword); //saves username and password to localfile
 
         String sentPassword = dbh.matchPassword(stringUserName);
 
-        String typeOfUser; // Variable for holding typeOfUser information from resultset(DB)
+        String typeOfUser = ""; // Variable for holding typeOfUser information from resultset(DB)
 
 
         boolean isAdmin = false;
@@ -60,49 +62,46 @@ public class LoginController implements Initializable {
 
         if (!dbh.userNameExists(stringUserName)) {
             myAlert.nameNotFound();
-        }
-
-        typeOfUser = dbh.printUserType(stringUserName);
-
-        if (typeOfUser.equals("Employee")) {
-            isEmployee = true;
-        }
-
-        if (stringUserName.equals("admin")) {
-            isAdmin = true;
-        }
-        if (stringUserName.isEmpty()) {
-            myAlert.emptyUserName();
+        } else {
+            typeOfUser = dbh.printUserType(stringUserName);
         }
 
 
-        if (stringUserName.isEmpty() == false) {
+        if (sentPassword != null) {
 
-            if (sentPassword.equals(stringPassword) == false) {
+            if (sentPassword.matches(stringPassword)) {
 
-                myAlert.loginFail();
+                if (stringUserName.isEmpty() == false) {
+
+                    if (typeOfUser.matches("Admin")) {
+                        dbh.setUserOnline(stringUserName);
+                        sw.GoTo(ae, "Admin.fxml");
+                    }
+
+
+                    //if (sentPassword != null) {
+                    if (typeOfUser.matches("Customer")) {
+                        dbh.setUserOnline(stringUserName);
+                        sw.GoTo(ae, "Customer.fxml");
+                    }
+                    /*} else {
+                        myAlert.userNameErr();
+                    }*/
+
+                    //if (sentPassword != null) {
+                    if (typeOfUser.matches("Employee")) {
+                        dbh.setUserOnline(stringUserName);
+                        sw.GoTo(ae, "Employee.fxml");
+                    }
+                    //}
+                } else {
+                    myAlert.loginFail();
+                }
+            } else {
+                myAlert.invalidPasswordError();
             }
-
-            if (sentPassword.equals(stringPassword) && isAdmin == true) {
-                dbh.setUserOnline(stringUserName);
-                sw.GoTo(ae, "Admin.fxml");
-            }
-        }
-
-
-        if (sentPassword.equals(stringPassword) && isAdmin == false && isEmployee == false) {
-
-            dbh.setUserOnline(stringUserName);
-            sw.GoTo(ae, "Customer.fxml");
-
-        }
-
-
-        if (sentPassword.equals(stringPassword) && isAdmin == false && isEmployee == true) {
-
-            dbh.setUserOnline(stringUserName);
-            sw.GoTo(ae, "Employee.fxml");
-
+        } else {
+            myAlert.userNameErr();
         }
     }
 
@@ -110,7 +109,7 @@ public class LoginController implements Initializable {
     @FXML
     private void newUser(ActionEvent ae) {
 
-
+        local.saveUser("", "");
         sw.goToUnLogged(ae, "NewUser.fxml");
     }
 

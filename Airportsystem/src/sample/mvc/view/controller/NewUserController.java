@@ -79,27 +79,22 @@ public class NewUserController implements Initializable {
 
                         if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
 
-                            //if (country.getValue().matches("^[a-öA-Ö]+$")) {
-
                                 if (!userName.getText().isEmpty()) {
 
                                     if (!password.getText().isEmpty()) {
 
                                         //Checks if it's an employee making the account or if it's not online
-                                        if (!isUserOnline) {
+                                        if (typeOfUser == null) {
 
                                             User customer = new Customer(stringFirstName,
                                                     stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
                                             dbh.insertUser(customer, "Customer");
-                                            if (isUserOnline) {
-                                                sw.GoTo(ae, "Employee.fxml");
-                                            } else {
                                                 sw.goToUnLogged(ae, "Login.fxml");
                                             }
-                                        }
+
 
                                         //Checks if it's an admin making the account
-                                        else if (typeOfUser.matches("Admin") && isUserOnline) {
+                                        else {
 
                                             User employee = new Employee(stringFirstName,
                                                     stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
@@ -114,9 +109,6 @@ public class NewUserController implements Initializable {
                                 } else {
                                     myAlert.userNameErr();
                                 }
-                            /*} else {
-                                myAlert.countryNameErr();
-                            }*/
                         } else {
                             myAlert.addressNameErr();
                         }
@@ -155,12 +147,18 @@ public class NewUserController implements Initializable {
 
     @FXML
     private void returnToLoginScreen(ActionEvent ae) {
-        sw.goToUnLogged(ae, "Login.fxml");
+        if (typeOfUser == null) {
+            sw.goToUnLogged(ae, "Login.fxml");
+
+        } else {
+            sw.GoTo(ae, "Admin.fxml");
+        }
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
 
         ObservableList<String> countryList = dbh.getCountries();
 

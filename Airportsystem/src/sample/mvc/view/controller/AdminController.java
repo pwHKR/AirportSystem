@@ -31,6 +31,8 @@ public class AdminController implements Initializable {
     private Button addFlightButton;
     @FXML
     private Button browseTripsButton;
+    @FXML
+    private Button changeFlightStatusButton;
 
     @FXML
     private void logout(ActionEvent ae) {
@@ -108,5 +110,10 @@ public class AdminController implements Initializable {
     @FXML
     private void browseTrips(ActionEvent ae) {
         sw.GoTo(ae, "SearchLocation.fxml");
+    }
+
+    @FXML
+    private void changeFlightStatus(ActionEvent ae) {
+        sw.GoTo(ae, "ChangeFlightStatus.fxml");
     }
 }

@@ -103,7 +103,7 @@
         <TextArea fx:id="totalPriceArea" editable="false" layoutX="43.0" layoutY="268.0" onMouseMoved="#showBookingInfo"
                   prefHeight="98.0" prefWidth="226.0"/>
         <ComboBox fx:id="adultTicket" layoutX="38.0" layoutY="194.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
-                  prefWidth="76.0" promptText="0"/>
+                  prefWidth="76.0" promptText="0" visibleRowCount="9"/>
         <ComboBox fx:id="childTicket" layoutX="194.0" layoutY="194.0" onMouseMoved="#showBookingInfo" prefHeight="27.0"
                   prefWidth="76.0" promptText="0"/>
         <Label layoutX="356.0" layoutY="227.0" text="Booking Info" textFill="WHITE">

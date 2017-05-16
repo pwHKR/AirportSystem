@@ -23,6 +23,7 @@ public class ViewWorkersController implements Initializable {
 
     private MyAlert myAlert = new MyAlert();
     private SwitchScene sw = new SwitchScene();
+    DataStorage dbHandler = new DBHandler();
 
     private ObservableList<String> workerlist = FXCollections.observableArrayList();
     private ObservableList<String> infolist = FXCollections.observableArrayList();
@@ -38,7 +39,6 @@ public class ViewWorkersController implements Initializable {
 
     @FXML
     private void getWorkerInfo() {
-        DataStorage dbHandler = new DBHandler();
 
         String choice = workers.getSelectionModel().getSelectedItem();
         infolist = dbHandler.getWorkerinfo(choice);
@@ -48,15 +48,14 @@ public class ViewWorkersController implements Initializable {
 
     @FXML
     private void kickWorker() {
-
-        DataStorage dbHandler = new DBHandler();
         String id = workers.getSelectionModel().getSelectedItem();
 
         dbHandler.removeWorker(id);
-
-        workerlist = dbHandler.getWorkers();
-        workers.setItems(workerlist);
-        workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
+        if (workers.getSelectionModel().getSelectedItem() != null) {
+            workerlist = dbHandler.getWorkers();
+            workers.setItems(workerlist);
+            workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
+        }
 
     }
 

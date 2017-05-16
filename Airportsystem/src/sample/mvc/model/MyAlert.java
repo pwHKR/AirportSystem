@@ -370,4 +370,22 @@ public class MyAlert {
         err.setTitle("The ssn you input does not exist");
         err.showAndWait();
     }
+
+    public void noBookingSelectedError() {
+        err.setHeaderText("No booking selected");
+        err.setContentText("You must select a specific booking to edit.");
+        err.showAndWait();
+    }
+
+    public void noLocationSelectedError() {
+        err.setHeaderText("No location selected");
+        err.setContentText("You must select a specific location.");
+        err.showAndWait();
+    }
+
+    public void invalidPasswordError() {
+        err.setHeaderText("Invalid Password");
+        err.setContentText("Your password is incorrect");
+        err.showAndWait();
+    }
 }

@@ -35,6 +35,8 @@ public class ViewBookingsController implements Initializable {
     LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
+    private MyAlert myAlert = new MyAlert();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -47,18 +49,21 @@ public class ViewBookingsController implements Initializable {
 
     @FXML
     private void editBooking(ActionEvent ae) {
-        String choiceInput = idBookingList.getSelectionModel().getSelectedItems().toString().replaceAll(("\\D+"), "");
+        if (idBookingList.getSelectionModel().getSelectedItem() != null) {
+            String choiceInput = idBookingList.getSelectionModel().getSelectedItems().toString().replaceAll(("\\D+"), "");
 
-        Booking booking = dbh.getBookingObject(Integer.parseInt(choiceInput));
+            Booking booking = dbh.getBookingObject(Integer.parseInt(choiceInput));
 
-        local.saveBookingIdToFile(booking);
+            local.saveBookingIdToFile(booking);
 
-        sw.GoTo(ae, "EditBooking.fxml");
+            sw.GoTo(ae, "EditBooking.fxml");
+        } else {
+            myAlert.noBookingSelectedError();
+        }
     }
 
     @FXML
     private void setHelpButton(ActionEvent ae) {
-        MyAlert myAlert = new MyAlert();
         myAlert.viewBookingsHelp();
     }
 

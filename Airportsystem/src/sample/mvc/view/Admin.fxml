@@ -72,28 +72,31 @@
                 prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Add worker"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#addAirplane" prefHeight="40.0"
+        <Button layoutX="28.0" layoutY="217.0" mnemonicParsing="false" onAction="#addAirplane" prefHeight="40.0"
                 prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Add Plane"/>
         <!--suppress XmlPathReference -->
         <Button layoutX="223.0" layoutY="159.0" mnemonicParsing="false" onAction="#viewWorkers" prefHeight="40.0"
                 prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="View Workers"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="223.0" layoutY="225.0" mnemonicParsing="false" onAction="#viewPSTR" prefHeight="40.0"
+        <Button layoutX="223.0" layoutY="217.0" mnemonicParsing="false" onAction="#viewPSTR" prefHeight="40.0"
                 prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="PSTR"/>
         <!--suppress XmlPathReference -->
-        <Button layoutX="408.0" layoutY="225.0" mnemonicParsing="false" onAction="#addPSTR" prefHeight="41.0"
+        <Button layoutX="408.0" layoutY="217.0" mnemonicParsing="false" onAction="#addPSTR" prefHeight="41.0"
                 prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="New PSTR"/>
         <Button layoutX="408.0" layoutY="159.0" mnemonicParsing="false" onAction="#viewServer" prefHeight="41.0"
                 prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Server"/>
         <Label fx:id="online" layoutX="278.0" layoutY="348.0" textFill="WHITE"/>
-        <Button fx:id="addTripButton" layoutX="28.0" layoutY="295.0" mnemonicParsing="false" onAction="#addTrip"
+        <Button fx:id="addTripButton" layoutX="28.0" layoutY="275.0" mnemonicParsing="false" onAction="#addTrip"
                 prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Add Trip"/>
-        <Button fx:id="addFlightButton" layoutX="223.0" layoutY="296.0" mnemonicParsing="false" onAction="#addFlight"
+        <Button fx:id="addFlightButton" layoutX="223.0" layoutY="275.0" mnemonicParsing="false" onAction="#addFlight"
                 prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Add Flight"/>
-        <Button fx:id="browseTripsButton" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" onAction="#browseTrips"
+        <Button fx:id="browseTripsButton" layoutX="28.0" layoutY="328.0" mnemonicParsing="false" onAction="#browseTrips"
                 prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Browse Trips"/>
+        <Button fx:id="changeFlightStatusButton" layoutX="210.0" layoutY="328.0" mnemonicParsing="false"
+                onAction="#changeFlightStatus" prefHeight="41.0" prefWidth="168.0" styleClass="rich-blue"
+                stylesheets="@stylesheet.css" text="Change flight status"/>
     </children>
 </AnchorPane>

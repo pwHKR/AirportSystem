@@ -51,9 +51,6 @@ public class FlightStatusController implements Initializable {
         if (userType.matches("Admin")) {
             sw.GoTo(actionEvent, "Admin.fxml");
         }
-        if (userType.matches("Customer")) {
-            sw.GoTo(actionEvent, "Customer.fxml");
-        }
         if (userType.matches("Employee")) {
             sw.GoTo(actionEvent, "Employee.fxml");
         }
@@ -75,10 +72,11 @@ public class FlightStatusController implements Initializable {
     @FXML
     private void changeStatus(ActionEvent ae) {
         MyAlert myAlert = new MyAlert();
-        int id = flightsView.getSelectionModel().getSelectedItem();
+
         if (flightsView.getSelectionModel().getSelectedItem() == null || statusField.getText().isEmpty()) {
             myAlert.errorChangingFlightStatus();
         } else {
+            int id = flightsView.getSelectionModel().getSelectedItem();
             dbh.changeFlightStatus(statusField.getText(), id);
             flightInformation = dbh.getFlightinformation(choice);
             flightInformationArea.setText(flightInformation.toString().replace("[", "").replace("]", ""));

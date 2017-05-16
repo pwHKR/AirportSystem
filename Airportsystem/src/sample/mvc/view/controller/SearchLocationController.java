@@ -129,30 +129,35 @@ public class SearchLocationController implements Initializable {
 
         int tripId;
 
-        int choice = listView.getSelectionModel().getSelectedIndex() + removeIndexNum;
-        System.out.println(choice);
+        if (listView.getSelectionModel().getSelectedItem() != null) {
 
-        String stringChoice = String.valueOf(choice);
+            int choice = listView.getSelectionModel().getSelectedIndex() + removeIndexNum;
+            System.out.println(choice);
 
-        trip = dbh.getTripObject(stringChoice);
+            String stringChoice = String.valueOf(choice);
 
-        if (trip.getTicketAmount() > 1) {
+            trip = dbh.getTripObject(stringChoice);
 
-            tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
+            if (trip.getTicketAmount() > 1) {
 
-            Booking booking = new Booking(tripId);
+                tripId = dbh.getTripId(String.valueOf(trip.getFlightID()));
 
-            System.out.println(userType);
-            local.saveBookingIdToFile(booking);
-            if (userType.matches("Employee")) {
-                switchScene.GoTo(ae, "NewBookingForPerson.fxml");
+                Booking booking = new Booking(tripId);
+
+                System.out.println(userType);
+                local.saveBookingIdToFile(booking);
+                if (userType.matches("Employee")) {
+                    switchScene.GoTo(ae, "NewBookingForPerson.fxml");
+                }
+                if (userType.matches("Admin") || userType.matches("Customer")) {
+                    switchScene.GoTo(ae, "NewBooking.fxml");
+                }
+
+            } else {
+                myAlert.soldOutMsg();
             }
-            if (userType.matches("Admin") || userType.matches("Customer")) {
-                switchScene.GoTo(ae, "NewBooking.fxml");
-            }
-
         } else {
-            myAlert.soldOutMsg();
+            myAlert.noLocationSelectedError();
         }
 
     }
