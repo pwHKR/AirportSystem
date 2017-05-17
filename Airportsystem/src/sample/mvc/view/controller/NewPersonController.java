@@ -102,7 +102,8 @@ public class NewPersonController implements Initializable {
 
     @FXML
     private void returnToLoginScreen(ActionEvent ae) {
-        sw.goToUnLogged(ae, "Login.fxml");
+
+        sw.GoTo(ae, "Employee.fxml");
     }
 
 

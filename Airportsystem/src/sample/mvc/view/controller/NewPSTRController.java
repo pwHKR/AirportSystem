@@ -41,19 +41,23 @@ public class NewPSTRController implements Initializable {
         String idPSTR;
 
 
-        Location location = new Location(airport.getValue(), city.getValue(), country.getValue());
+        if (airport.getValue() != null) {
+            Location location = new Location(airport.getValue(), city.getValue(), country.getValue());
 
-        locationId = dbh.getLocationId(location);
+            locationId = dbh.getLocationId(location);
 
-        idPSTR = LabelIdPSTR.getText();
+            idPSTR = LabelIdPSTR.getText();
 
-        dbh.AddLocationPSTR(idPSTR, locationId);
-
-
-        myAlert.requestSent();
+            dbh.AddLocationPSTR(idPSTR, locationId);
 
 
-        sw.GoTo(ae, "/Admin.fxml");
+            myAlert.requestSent();
+
+
+            sw.GoTo(ae, "/Admin.fxml");
+        } else {
+            myAlert.noAirportCityCountryError();
+        }
 
 
     }

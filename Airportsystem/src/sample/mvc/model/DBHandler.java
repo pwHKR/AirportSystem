@@ -88,8 +88,11 @@ public class DBHandler implements DataStorage {
             ps.setInt(4, airplane.getMaxLuggageWeight());
             ps.setString(5, airplane.getRegNumber());
             ps.setInt(6, intSelect);
-
-            ps.execute();
+            try {
+                ps.execute();
+            } catch (Exception e) {
+                myAlert.planeRegNumberExists();
+            }
 
 
         } catch (SQLException e) {
@@ -1306,12 +1309,13 @@ public class DBHandler implements DataStorage {
         switch (choice) {
 
             case "Price Ascending":
-                if (input.isEmpty())
+                if (input.isEmpty()) {
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
                             " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 ORDER BY price ASC;");
-                else
+                } else {
                     query = ("SELECT * FROM AirportSystemdb.Trip_has_Location, AirportSystemdb.Location, AirportSystemdb.Trip" +
                             " WHERE Trip.tripId = Trip_has_Location.Trip_tripId AND Location.locationId = Trip_has_Location.Location_locationId AND Trip_has_Location.isStart = 0 AND city LIKE '%" + input + "%' ORDER BY price ASC;");
+                }
                 break;
 
             case "Price Descending":

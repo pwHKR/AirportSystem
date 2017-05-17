@@ -75,33 +75,44 @@ public class AddTripController implements Initializable {
 
         int from;
         int to;
-        if (toAirportField.toString().matches("Airport")) {
+        if (toAirportField.getSelectionModel().getSelectedItem() != null) {
             if (pstrLocation.getSelectionModel().getSelectedItem() != null) {
-        if (dateField.getValue() != null) {
-            if (priceField.getText().matches("^\\d+$")) {
+
+                if (dateField.getValue() != null) {
+
+                    if (priceField.getText().matches("^\\d+$")) {
 
 
-        Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(),
-                dbh.getLastFlightId() + 1, airplane.getPassengerCapacity());
+                        Trip trip = new Trip(Double.parseDouble(priceField.getText()), dateField.getValue().toString(), dbh.getLastFlightId() + 1,
+                                airplane.getPassengerCapacity());
 
-        String choiceFrom = pstrLocation.getSelectionModel().getSelectedItem();
-        from = dbh.getLocationIdFromPstrId(Integer.parseInt(choiceFrom));
+                        String choiceFrom = pstrLocation.getSelectionModel().getSelectedItem();
+                        from = dbh.getLocationIdFromPstrId(Integer.parseInt(choiceFrom));
 
-        Location location = new Location(toAirportField.getValue(), toCityField.getValue(), toCountryField.getValue());
+                        Location location = new Location(toAirportField.getValue(), toCityField.getValue(), toCountryField.getValue());
 
-        String choiceTo = dbh.getLocationId(location);
-        to = Integer.parseInt(choiceTo);
+                        String choiceTo = dbh.getLocationId(location);
+                        to = Integer.parseInt(choiceTo);
 
 
-                dbh.insertFlight(local.readFlightFromFile(), false);
-            dbh.insertTrip(trip, from, to);
+                        dbh.insertFlight(local.readFlightFromFile(), false);
+                        dbh.insertTrip(trip, from, to);
+                        if (userType.matches("Admin")) {
+                            sw.GoTo(ae, "Admin.fxml");
+                        }
+                        if (userType.matches("Customer")) {
+                            sw.GoTo(ae, "Customer.fxml");
+                        }
+                        if (userType.matches("Employee")) {
+                            sw.GoTo(ae, "Employee.fxml");
+                        }
 
-            } else {
-                myAlert.noPriceError();
-            }
-        } else {
-            myAlert.noDateError();
-        }
+                    } else {
+                        myAlert.noPriceError();
+                    }
+                } else {
+                    myAlert.noDateError();
+                }
             } else {
                 myAlert.noOriginEror();
             }
@@ -110,15 +121,6 @@ public class AddTripController implements Initializable {
         }
 
 
-        if (userType.matches("Admin")) {
-            sw.GoTo(ae, "Admin.fxml");
-        }
-        if (userType.matches("Customer")) {
-            sw.GoTo(ae, "Customer.fxml");
-        }
-        if (userType.matches("Employee")) {
-            sw.GoTo(ae, "Employee.fxml");
-        }
     }
 
     @FXML
@@ -143,8 +145,6 @@ public class AddTripController implements Initializable {
         pstrLocation.setItems(pstrLocationList);
 
     }
-
-
 
 
     @FXML
@@ -184,7 +184,6 @@ public class AddTripController implements Initializable {
         locationInfo.setText(infoList.toString().replace("[", "").replace
                 ("]", ""));
     }
-
 
 
 }

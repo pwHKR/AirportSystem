@@ -52,12 +52,12 @@ public class NewBookingForPersonController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i < 10; i++) {
 
             zeroToTenList.add(i);
         }
 
-        luggageField.setText("0");
+        luggageField.setText("1");
         childTicket.setItems(zeroToTenList);
         adultTicket.setItems(zeroToTenList);
         balanceLabel.setText("Balance: " + (dbh.getBalanceFromId(dbh.getIdFromUserName(local.getCurrentUsersUserName()))) + " SEK");

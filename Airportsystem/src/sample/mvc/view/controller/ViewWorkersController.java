@@ -55,6 +55,9 @@ public class ViewWorkersController implements Initializable {
             workerlist = dbHandler.getWorkers();
             workers.setItems(workerlist);
             workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
+            workerInfo.clear();
+        } else {
+            myAlert.noEmployeeSelectedError();
         }
 
     }

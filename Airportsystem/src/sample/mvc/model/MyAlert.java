@@ -35,12 +35,6 @@ public class MyAlert {
         err.show();
     }
 
-    public void countryNameErr() {
-        err.setTitle("Error");
-        err.setHeaderText("Invalid info");
-        err.setContentText("Your country name can only contain letters.");
-        err.showAndWait();
-    }
 
     public void addressNameErr() {
         err.setTitle("Error");
@@ -386,6 +380,66 @@ public class MyAlert {
     public void invalidPasswordError() {
         err.setHeaderText("Invalid Password");
         err.setContentText("Your password is incorrect");
+        err.showAndWait();
+    }
+
+    public void noGateOrPlaneError() {
+        err.setHeaderText("no gate or airplane selected");
+        err.setContentText("You have to select a gate and a airplane for your flight.");
+        err.showAndWait();
+    }
+
+    public void noEmployeeSelectedError() {
+        err.setHeaderText("No employee selected");
+        err.setContentText("You have to select an employeeId before you can remove them from the database");
+        err.showAndWait();
+    }
+
+    public void planeRegNumberExists() {
+        err.setHeaderText("Invalid reg number");
+        err.setContentText("The reg number already exists in the database.");
+        err.showAndWait();
+    }
+
+    public void noPstrIdSelectedError() {
+        err.setHeaderText("No id selected");
+        err.setContentText("Select a pstrId in order to make an airplane.");
+        err.showAndWait();
+    }
+
+    public void noLuggageWeightError() {
+        err.setHeaderText("No luggage weight");
+        err.setContentText("Specify the max luggage weight per passenger.");
+        err.showAndWait();
+    }
+
+    public void noRegNumberError() {
+        err.setHeaderText("No red number");
+        err.setContentText("Specify the reg number for the plane.");
+        err.showAndWait();
+    }
+
+    public void noMaxSpeedError() {
+        err.setHeaderText("No max speed");
+        err.setContentText("Specify the max speed of the plane.");
+        err.showAndWait();
+    }
+
+    public void noPassengerAmountError() {
+        err.setHeaderText("No max passenger amount");
+        err.setContentText("Specify how many passengers can be aboard the plane.");
+        err.showAndWait();
+    }
+
+    public void noPlaneModelError() {
+        err.setHeaderText("No plane model");
+        err.setContentText("Input a plane model.");
+        err.showAndWait();
+    }
+
+    public void noAirportCityCountryError() {
+        err.setHeaderText("Specify information");
+        err.setContentText("You have to select a country city and airport.");
         err.showAndWait();
     }
 }
