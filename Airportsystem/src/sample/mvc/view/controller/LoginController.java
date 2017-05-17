@@ -71,7 +71,7 @@ public class LoginController implements Initializable {
 
             if (sentPassword.matches(stringPassword)) {
 
-                if (stringUserName.isEmpty() == false) {
+                if (!stringUserName.isEmpty()) {
 
                     if (typeOfUser.matches("Admin")) {
                         dbh.setUserOnline(stringUserName);

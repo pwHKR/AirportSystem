@@ -126,7 +126,7 @@ public interface DataStorage {
 
     boolean userNameExists(String userName);
 
-    String getAdress(String ssn);
+    String getAddress(String ssn);
 
     int getSystemIdFromSsn(String ssn);
 }

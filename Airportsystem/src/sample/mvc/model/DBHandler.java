@@ -1355,7 +1355,7 @@ public class DBHandler implements DataStorage {
 
 
                 trips.add(resultSet.getString("city") + " "
-                        + resultSet.getString("country"));
+                        + resultSet.getString("country") + "                                                    id:" + resultSet.getInt("tripId"));
             }
 
 
@@ -1836,7 +1836,7 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public String getAdress(String ssn) {
+    public String getAddress(String ssn) {
         String adress = null;
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {

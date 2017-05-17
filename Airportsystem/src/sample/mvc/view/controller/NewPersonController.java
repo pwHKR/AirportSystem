@@ -20,7 +20,7 @@ public class NewPersonController implements Initializable {
 
     private MyAlert myAlert = new MyAlert();
     private SwitchScene sw = new SwitchScene();
-    DataStorage dbh = new DBHandler();
+    private DataStorage dbh = new DBHandler();
 
     @FXML
     private TextField firstName;

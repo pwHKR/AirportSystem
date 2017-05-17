@@ -163,7 +163,7 @@ public class NewBookingForPersonController implements Initializable {
                 dbh.insertBooking(booking);
                 int systemId = dbh.getSystemIdFromSsn(ssn);
                 dbh.insertPersonHasBooking(systemId, dbh.getMaxBookingId());
-                myAlert.billingSent(dbh.getAdress(ssn));
+                myAlert.billingSent(dbh.getAddress(ssn));
                 returnToSearchLocation(ae);
 
             } else {

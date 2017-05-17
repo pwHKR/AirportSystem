@@ -43,14 +43,24 @@ public class SearchLocationController implements Initializable {
     @FXML
     private TextArea textArea;
     private int removeIndexNum;
+    private boolean isSearch = false;
 
     @FXML
     private void filterSearch() {
 
+        isSearch = true;
+
+
         trips = dbh.getFilteredResults(textField.getText(), comboBox.getValue());
 
+        //removeIndexNum = Integer.parseInt(trips.get(0));
+
+        //System.out.println(removeIndexNum);
+
+        //trips.remove(0, 1);
 
         listView.setItems(trips);
+
     }
 
 
@@ -99,16 +109,26 @@ public class SearchLocationController implements Initializable {
     private void checkSelected(MouseEvent me) {
 
 
+        int choice;
         int tripId;
+        String stringChoice = "";
 
 
         //String choice = listView.getSelectionModel().getSelectedItems().toString()
         //  .replaceAll("[^0-9.]", "");
 
-        int choice = listView.getSelectionModel().getSelectedIndex() + removeIndexNum;
+        if (!isSearch) {
+            choice = listView.getSelectionModel().getSelectedIndex() + removeIndexNum;
         System.out.println(choice);
 
-        String stringChoice = String.valueOf(choice);
+            stringChoice = String.valueOf(choice);
+        }
+
+        if (isSearch) {
+            stringChoice = listView.getSelectionModel().getSelectedItems().toString().replaceAll(("\\D+"), "");
+        }
+
+
 
         trip = dbh.getTripObject(stringChoice);
 
