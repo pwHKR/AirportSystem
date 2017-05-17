@@ -1735,7 +1735,7 @@ public class DBHandler implements DataStorage {
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
             String query = ("select * from Flight, Person_has_Booking , User, Booking, Trip, Trip_has_Location, Location \n" +
                     "                    where Person_has_Booking.Person_systemId = User.Person_systemId and Person_has_Booking.Booking_bookingId = Booking.bookingId and Trip.tripId = Booking.Trip_tripId \n" +
-                    "                    and Trip_has_Location.Trip_tripId = Trip.tripId and Trip_has_Location.Location_locationId = Location.locationId and bookingId =  '" + bookingId + "'  and isStart = 1;");
+                    "                    and Trip_has_Location.Trip_tripId = Trip.tripId and Trip_has_Location.Location_locationId = Location.locationId and Flight.flightId = Trip.Flight_flightId and bookingId =  '" + bookingId + "'  and isStart = 1;");
 
             Statement stmt = conn.createStatement();
             stmt.addBatch(query);
