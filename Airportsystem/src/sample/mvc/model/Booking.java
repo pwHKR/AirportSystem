@@ -11,12 +11,14 @@ public class Booking implements Serializable {
     private String date;
     private double price;
     private int passengers;
+    private boolean hasFood;
 
-    public Booking(int tripId, String date, double price, int passengers) {
+    public Booking(int tripId, String date, double price, int passengers, boolean hasFood) {
         this.tripId = tripId;
         this.date = date;
         this.price = price;
         this.passengers = passengers;
+        this.hasFood = hasFood;
     }
 
     public Booking(int tripId) {
@@ -49,5 +51,13 @@ public class Booking implements Serializable {
 
     public void setPassengers(int passengers) {
         this.passengers = passengers;
+    }
+
+    public void setHasFood(boolean hasFood) {
+        this.hasFood = hasFood;
+    }
+
+    public boolean isHasFood() {
+        return hasFood;
     }
 }

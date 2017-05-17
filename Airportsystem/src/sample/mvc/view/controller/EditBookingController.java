@@ -16,14 +16,12 @@ import java.util.ResourceBundle;
  */
 public class EditBookingController implements Initializable {
 
+
     @FXML
-    private TextArea totalPriceArea;
-    @FXML
-    private TextArea bookingInfoArea;
-    @FXML
-    private TextField luggageField;
-    @FXML
-    private Label balanceLabel;
+    private CheckBox foodCheckBox;
+
+    int boolToTinyInt;
+
 
     SwitchScene sw = new SwitchScene();
     LocalFileStorage local = new LocalFileStorage();
@@ -34,9 +32,22 @@ public class EditBookingController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         Booking booking = local.readBookingObjectFromFile();
 
-        bookingInfoArea.setText("");
+        foodCheckBox.setSelected(booking.isHasFood());
 
+    }
 
+    @FXML
+    private void updateBookingInfo(ActionEvent ae) {
+        Booking booking = local.readBookingObjectFromFile();
+
+        if (foodCheckBox.isSelected() == true)
+            boolToTinyInt = 1;
+        else
+            boolToTinyInt = 0;
+
+        sw.GoTo(ae, "ViewBookings.fxml");
+
+        dbh.updateHasFood(foodCheckBox.isSelected(), booking.getTripId());
     }
 
     @FXML

@@ -129,6 +129,8 @@ public interface DataStorage {
     String getAddress(String ssn);
 
     int getSystemIdFromSsn(String ssn);
+
+    void updateHasFood(boolean tOf, int bookingId);
 }
 
 

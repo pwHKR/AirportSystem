@@ -1642,13 +1642,14 @@ public class DBHandler implements DataStorage {
     public void insertBooking(Booking booking) {
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 
-            String query = "INSERT INTO AirportSystemdb.Booking (date, totalPrice, passengerAmount, Trip_tripId)VALUES (curdate(), ?, ?, ?)";
+            String query = "INSERT INTO AirportSystemdb.Booking (date, totalPrice, passengerAmount, Trip_tripId, hasFood)VALUES (curdate(), ?, ?, ?,?)";
             java.lang.System.out.println(query);
 
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setDouble(1, booking.getPrice());
             ps.setInt(2, booking.getPassengers());
             ps.setInt(3, booking.getTripId());
+            ps.setBoolean(4, booking.isHasFood());
 
             ps.execute();
         } catch (SQLException e) {
@@ -1743,7 +1744,7 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
                 info = ("Booking Date: " + resultSet.getString("date") + "\nTotal Price: " + resultSet.getDouble("totalPrice") + "SEK " +
-                        "\nTickets Booked: " + resultSet.getInt("passengerAmount") + "\n\nFlight Date: " + resultSet.getString("Trip.date") + "\nFrom: " + resultSet.getString("city") + "   Airport: " +
+                        "\nTickets Booked: " + resultSet.getInt("passengerAmount") + "\nFood desired: " + resultSet.getBoolean("hasFood") + "\n\nFlight Date: " + resultSet.getString("Trip.date") + "\nFrom: " + resultSet.getString("city") + "   Airport: " +
                         resultSet.getString("airportName") + "\nGate: " + resultSet.getString("gate") + "\nFlight Status: " + resultSet.getString("flightStatus"));
             }
 
@@ -1761,7 +1762,7 @@ public class DBHandler implements DataStorage {
         Booking booking = null;
 
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
-            String query = ("SELECT distinct date, totalPrice, passengerAmount, Trip_tripId FROM AirportSystemdb.Booking where bookingId = " + bookingId + ";");
+            String query = ("SELECT distinct date, totalPrice, passengerAmount, Trip_tripId, hasFood FROM AirportSystemdb.Booking where bookingId = " + bookingId + ";");
 
             Statement stmt = conn.createStatement();
             stmt.addBatch(query);
@@ -1769,7 +1770,7 @@ public class DBHandler implements DataStorage {
 
             while (resultSet.next()) {
                 booking = new Booking(bookingId, resultSet.getString("Date"), resultSet.getDouble("totalPrice"),
-                        resultSet.getInt("passengerAmount"));
+                        resultSet.getInt("passengerAmount"), resultSet.getBoolean("hasFood"));
             }
 
 
@@ -1908,6 +1909,21 @@ public class DBHandler implements DataStorage {
             }
         } catch (SQLException e1) {
             e1.printStackTrace();
+        }
+    }
+
+    public void updateHasFood(boolean tOf, int tripId) {
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            String query = "UPDATE AirportSystemdb.Booking SET Booking.hasFood = ? WHERE Booking.bookingId = ?;";
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ps.setBoolean(1, tOf);
+            ps.setInt(2, tripId);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

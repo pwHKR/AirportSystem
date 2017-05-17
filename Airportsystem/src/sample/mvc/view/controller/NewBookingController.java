@@ -38,7 +38,8 @@ public class NewBookingController implements Initializable {
     @FXML
     private TextField luggageField;
     @FXML
-    private Button cancelButton;
+    private CheckBox foodCheckBox;
+
     private Booking booking;
     private Trip trip;
     private Flight flight;
@@ -50,7 +51,6 @@ public class NewBookingController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
 
         for (int i = 1; i < 10; i++) {
 
@@ -108,6 +108,7 @@ public class NewBookingController implements Initializable {
     @FXML
     private void showBookingInfo() {
         setBilling();
+        System.out.println(foodCheckBox);
         totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nPrice: " + getAdultTicket() + " X " +
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
@@ -159,6 +160,11 @@ public class NewBookingController implements Initializable {
 
                 booking.setPassengers(billing.getTicketAmount());
                 booking.setPrice(billing.getTotalPrice());
+
+                if (foodCheckBox.isSelected() == true)
+                    booking.setHasFood(true);
+                else
+                    booking.setHasFood(false);
 
                 dbh.insertBooking(booking);
                 dbh.insertPersonHasBooking(dbh.getIdFromUserName(local.getCurrentUsersUserName()), dbh.getMaxBookingId());

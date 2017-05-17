@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
@@ -15,27 +14,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0"
-            prefWidth="590.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0"
+            prefWidth="592.0" style="-fx-background-color: #0b4386;" stylesheets="@stylesheet.css"
             xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.EditBookingController">
     <children>
-        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-66.0" layoutY="76.0"
+        <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-110.0" layoutY="-50.0"
                    opacity="0.11" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
             </image>
         </ImageView>
-        <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;"/>
+        <Pane layoutY="-7.0" prefHeight="110.0" prefWidth="592.0" style="-fx-background-color: #ffffff;"/>
         <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true"
                    preserveRatio="true">
             <image>
                 <Image url="@resources/logga.png"/>
             </image>
         </ImageView>
-        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#returnToViewBooking" prefHeight="40.0"
+        <Button layoutX="11.0" layoutY="256.0" mnemonicParsing="false" onAction="#returnToViewBooking" prefHeight="40.0"
                 prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
-        <Text fill="WHITE" layoutX="452.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0"
+        <Text fill="WHITE" layoutX="443.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
                 <Font size="8.0"/>
@@ -52,7 +51,7 @@
                 </Reflection>
             </effect>
         </Line>
-        <Label layoutX="210.0" layoutY="110.0" prefHeight="40.0" prefWidth="157.0" text="Edit Booking" textFill="WHITE">
+        <Label layoutX="218.0" layoutY="104.0" prefHeight="27.0" prefWidth="157.0" text="Edit Booking" textFill="WHITE">
             <font>
                 <Font size="28.0"/>
             </font>
@@ -70,43 +69,21 @@
                 <Font size="18.0"/>
             </font>
         </Label>
-        <Button layoutX="126.0" layoutY="431.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="134.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Confirm"/>
-        <Label layoutX="72.0" layoutY="249.0" text="Total Price" textFill="WHITE">
-            <font>
-                <Font size="28.0"/>
-            </font>
-            <effect>
-                <Bloom threshold="0.0"/>
-            </effect>
-        </Label>
-        <TextArea fx:id="totalPriceArea" layoutX="24.0" layoutY="289.0" prefHeight="98.0" prefWidth="226.0"/>
-        <Label layoutX="370.0" layoutY="249.0" text="Your booking" textFill="WHITE">
-            <font>
-                <Font size="28.0"/>
-            </font>
-            <effect>
-                <Bloom threshold="0.0"/>
-            </effect>
-        </Label>
+        <Button layoutX="433.0" layoutY="256.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="134.0"
+                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Confirm" onAction="#updateBookingInfo"/>
         <Label layoutX="313.0" layoutY="443.0" prefHeight="17.0" prefWidth="103.0" textFill="#50fc06"/>
-        <TextField fx:id="luggageField" layoutX="257.0" layoutY="216.0" prefHeight="27.0" prefWidth="76.0"/>
-        <Label layoutX="232.0" layoutY="164.0" prefHeight="40.0" prefWidth="126.0" text="Lugguage" textFill="WHITE">
-            <font>
-                <Font size="28.0"/>
-            </font>
-            <effect>
-                <Bloom threshold="0.0"/>
-            </effect>
-        </Label>
-        <Button fx:id="cancelButton" onAction="#cancelBooking" layoutX="276.0" layoutY="431.0" mnemonicParsing="false"
+        <Button fx:id="cancelButton" layoutX="259.0" layoutY="256.0" mnemonicParsing="false" onAction="#cancelBooking"
                 prefHeight="41.0" prefWidth="157.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Cancel Booking"/>
         <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="313.0" layoutY="-166.0"
                 mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
                 style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                 textAlignment="CENTER"/>
-        <TextArea fx:id="bookingInfoArea" layoutX="342.0" layoutY="289.0" prefHeight="98.0" prefWidth="226.0"/>
-        <Label fx:id="balanceLabel" layoutX="14.0" layoutY="122.0" text="Balance: " textFill="#2fff00"/>
+        <CheckBox fx:id="foodCheckBox" layoutX="175.0" layoutY="161.0" mnemonicParsing="false" prefHeight="60.0"
+                  prefWidth="276.0" text="Food desired" textFill="WHITE">
+            <font>
+                <Font size="29.0"/>
+            </font>
+        </CheckBox>
     </children>
 </AnchorPane>
