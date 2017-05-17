@@ -82,7 +82,7 @@ public class AddFlightController implements Initializable {
 
         if (gateField.getText().isEmpty() || regField.getSelectionModel().isEmpty()) {
 
-            myAlert.generalError();
+            myAlert.noGateOrPlaneError();
 
             noError = false;
         }

@@ -6,10 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import sample.mvc.model.Airplane;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.SwitchScene;
+import sample.mvc.model.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +17,8 @@ import java.util.ResourceBundle;
 public class AddAirplaneController implements Initializable {
 
     private SwitchScene sw = new SwitchScene();
+
+    private MyAlert myAlert = new MyAlert();
 
     @FXML
     private ListView pstrId;
@@ -56,8 +55,6 @@ public class AddAirplaneController implements Initializable {
 
     @FXML
     private void addAirplane(ActionEvent ae) {
-
-
         int MaxKG;
         int Passenger;
         String Speed;
@@ -66,18 +63,49 @@ public class AddAirplaneController implements Initializable {
 
         DataStorage dbh = new DBHandler();
 
-        String choice = pstrId.getSelectionModel().getSelectedItem().toString();
+        if (!model.getText().isEmpty()) {
+            if (passenger.getText().matches("^\\d+$")) {
+                if (speed.getText().matches("^\\d+$")) {
+                    if (!reg.getText().isEmpty()) {
+                        if (maxKG.getText().matches("^\\d+$")) {
+                            if (pstrId.getSelectionModel().getSelectedItem() != null) {
 
 
-        Model = model.getText();
-        Passenger = Integer.parseInt(passenger.getText());
-        Speed = speed.getText();
-        Reg = reg.getText();
-        MaxKG = Integer.parseInt(maxKG.getText());
+                                String choice = pstrId.getSelectionModel().getSelectedItem().toString();
 
-        Airplane airplane = new Airplane(Passenger, MaxKG, Speed, Reg, Model);
 
-        dbh.insertAirplane(airplane, choice);
+                                Model = model.getText();
+                                Passenger = Integer.parseInt(passenger.getText());
+                                Speed = speed.getText();
+                                Reg = reg.getText();
+                                MaxKG = Integer.parseInt(maxKG.getText());
+
+
+                                Airplane airplane = new Airplane(Passenger, MaxKG, Speed, Reg, Model);
+
+                                dbh.insertAirplane(airplane, choice);
+
+                                sw.GoTo(ae, "Admin.fxml");
+
+
+                            } else {
+                                myAlert.noPstrIdSelectedError();
+                            }
+                        } else {
+                            myAlert.noLuggageWeightError();
+                        }
+                    } else {
+                        myAlert.noRegNumberError();
+                    }
+                } else {
+                    myAlert.noMaxSpeedError();
+                }
+            } else {
+                myAlert.noPassengerAmountError();
+            }
+        } else {
+            myAlert.noPlaneModelError();
+        }
 
 
     }

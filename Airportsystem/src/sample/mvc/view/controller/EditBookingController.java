@@ -48,6 +48,9 @@ public class EditBookingController implements Initializable {
         if (choice == true) {
             dbh.cancelBookingId(booking.getTripId());
             dbh.setBalance(Double.parseDouble(dbh.getBalanceFromId(dbh.getIdFromUserName(local.getCurrentUsersUserName()))) + booking.getPrice(), dbh.getIdFromUserName(local.getCurrentUsersUserName()));
+
+            dbh.setTicketAmount((dbh.getTicketAmount(booking.getTripId()) + booking.getPassengers()), booking.getTripId()); //Adds the canceled tickets to total amount of tickets for the trip
+
             sw.GoTo(ae, "ViewBookings.fxml");
         }
 
