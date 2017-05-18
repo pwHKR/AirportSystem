@@ -362,7 +362,9 @@ public class MyAlert {
     }
 
     public void ssnDoesNotExist() {
+        err.setHeaderText("Invalid ssn");
         err.setTitle("The ssn you input does not exist");
+        err.setContentText("You must input a valid ssn");
         err.showAndWait();
     }
 
@@ -409,6 +411,7 @@ public class MyAlert {
     }
 
     public void noLuggageWeightError() {
+        err.setTitle("Error");
         err.setHeaderText("No luggage weight");
         err.setContentText("Specify the max luggage weight per passenger.");
         err.showAndWait();

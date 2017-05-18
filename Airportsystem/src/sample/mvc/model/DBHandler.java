@@ -1928,4 +1928,23 @@ public class DBHandler implements DataStorage {
     }
 
 
+    public String checkSsn(String ssn) {
+        String passed = null;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            Statement stmt = conn.createStatement();
+
+            String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + ssn + "'";
+            ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
+            if (resultSet.next()) {
+                passed = "passed";
+                return passed;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return passed;
+    }
 }

@@ -26,8 +26,6 @@ public class AdminController implements Initializable {
     @FXML
     private Button helpButton;
     @FXML
-    private Button addTripButton;
-    @FXML
     private Button addFlightButton;
     @FXML
     private Button browseTripsButton;
@@ -95,11 +93,6 @@ public class AdminController implements Initializable {
         DataStorage dbhandler = new DBHandler();
 
         online.setText("Online: " + String.valueOf(dbhandler.getUsersOnlineCount()));
-    }
-
-    @FXML
-    private void addTrip(ActionEvent ae) {
-        sw.GoTo(ae, "AddTrip.fxml");
     }
 
     @FXML

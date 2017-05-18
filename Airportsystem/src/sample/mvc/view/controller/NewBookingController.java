@@ -51,6 +51,8 @@ public class NewBookingController implements Initializable {
     private int systemId;
     private int flightId;
     protected boolean isPerson; // Always false in superclass (this)
+    protected boolean isConfirmed; //true if confirm dialog for booking is ok. False if confirm dialog is canceled.
+    String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
 
     @Override
@@ -87,7 +89,7 @@ public class NewBookingController implements Initializable {
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
                 " SEK\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + " X " + String.valueOf(trip.getTripPrice()) + "= "
-                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + " SEK\nLuggage price: " + String.valueOf(billing.calcLuggagePrice(Double.parseDouble(luggageField.getText()))) + " SEK");
+                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + " SEK\nLuggage price: " + String.valueOf(billing.getLuggagePrice()) + " SEK");
     }
 
 
@@ -113,9 +115,8 @@ public class NewBookingController implements Initializable {
         choice = myAlert.confirmBooking(billing.getTotalPrice());
 
         luggageMaxTot = Integer.parseInt(luggageField.getText()) * billing.getTicketAmount();
-
         if (choice) {
-
+            isConfirmed = true;
             isBalance = checkBalance();
 
             if (luggageMaxTot > airplane.getMaxLuggageWeight()) {
@@ -149,19 +150,25 @@ public class NewBookingController implements Initializable {
 
             }
 
-            // pay booking
         } else {
-
-            //return to booking screen
-
+            isConfirmed = false;
         }
+
 
 
     }
 
     protected void setBilling() {
 
-        billing.setLuggagePrice(Double.parseDouble(luggageField.getText()));
+        try {
+            billing.setLuggagePrice(Double.parseDouble(luggageField.getText()));
+        } catch (NumberFormatException e) {
+
+        } catch (Exception e) {
+            billing.setLuggagePrice(0.0);
+        }
+
+
         billing.setTripPrice(trip.getTripPrice());
         billing.setAdultAmount(adultTicket.getValue());
         billing.setChildAmount(childTicket.getValue());
@@ -193,7 +200,7 @@ public class NewBookingController implements Initializable {
     @FXML
     protected void cancelBooking(ActionEvent ae) {
         SwitchScene sw = new SwitchScene();
-        String userType = dbh.printUserType(local.getCurrentUsersUserName());
+
 
         if (userType.matches("Employee")) {
             sw.GoTo(ae, "Employee.fxml");
@@ -257,12 +264,15 @@ public class NewBookingController implements Initializable {
 
     @FXML
     private void confirmBookingSuper(ActionEvent ae) {
+        if (luggageField.getText().matches("^\\d+$")) {
+            confirmBooking(ae);
+            insertLinkTblSuper();
+            returnToSearchLocation(ae);
+        } else {
+            myAlert.noLuggageWeightError();
+        }
 
-        confirmBooking(ae);
 
-
-        insertLinkTblSuper();
-        returnToSearchLocation(ae);
 
 
     }

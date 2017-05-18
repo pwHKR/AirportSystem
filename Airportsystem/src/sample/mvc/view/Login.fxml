@@ -91,5 +91,7 @@
                 </Reflection>
             </effect>
         </Line>
+        <Button fx:id="exitButton" layoutX="10.0" layoutY="297.0" mnemonicParsing="false" onAction="#exit"
+                prefHeight="39.0" prefWidth="104.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Exit"/>
     </children>
 </AnchorPane>

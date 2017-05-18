@@ -16,7 +16,8 @@ public class NewBookingForPersonController extends NewBookingController implemen
 
     @FXML
     private TextField ssnField;
-
+    @FXML
+    private TextField luggageField;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -28,15 +29,29 @@ public class NewBookingForPersonController extends NewBookingController implemen
 
     @FXML
     protected void bookingConfirmed(ActionEvent ae) {
-        confirmBooking(ae);
+
 
         String ssn = ssnField.getText();
-        int systemId = dbh.getSystemIdFromSsn(ssn);
-        dbh.insertPersonHasBooking(systemId, dbh.getMaxBookingId());
-        myAlert.billingSent(dbh.getAddress(ssn));
+        //String checkssn = dbh.checkSsn(ssn);
 
-        returnToSearchLocation(ae);
+        if (luggageField.getText().matches("^\\d+$")) {
+            if (!ssnField.getText().isEmpty() && dbh.checkSsn(ssnField.getText()) != null) {
 
+                confirmBooking(ae);
 
+                if (isConfirmed) {
+                    int systemId = dbh.getSystemIdFromSsn(ssn);
+                    dbh.insertPersonHasBooking(systemId, dbh.getMaxBookingId());
+                    myAlert.billingSent(dbh.getAddress(ssn));
+                    returnToSearchLocation(ae);
+                }
+
+            } else {
+                myAlert.ssnDoesNotExist();
+            }
+        } else {
+            myAlert.noLuggageWeightError();
+        }
+        //&& dbh.checkSsn(ssnField.getText()) != null
     }
 }

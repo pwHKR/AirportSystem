@@ -42,7 +42,7 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference -->
-        <Button layoutX="465.0" layoutY="316.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
+        <Button layoutX="44.0" layoutY="336.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0"
                 prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Log Out"/>
         <Text fill="WHITE" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
@@ -86,16 +86,13 @@
         <Button layoutX="408.0" layoutY="159.0" mnemonicParsing="false" onAction="#viewServer" prefHeight="41.0"
                 prefWidth="148.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Server"/>
         <Label fx:id="online" layoutX="278.0" layoutY="348.0" textFill="WHITE"/>
-        <Button fx:id="addTripButton" layoutX="28.0" layoutY="275.0" mnemonicParsing="false" onAction="#addTrip"
+        <Button fx:id="addFlightButton" layoutX="28.0" layoutY="275.0" mnemonicParsing="false" onAction="#addFlight"
                 prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Add Trip"/>
-        <Button fx:id="addFlightButton" layoutX="223.0" layoutY="275.0" mnemonicParsing="false" onAction="#addFlight"
-                prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
-                text="Add Flight"/>
-        <Button fx:id="browseTripsButton" layoutX="28.0" layoutY="328.0" mnemonicParsing="false" onAction="#browseTrips"
-                prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
-                text="Browse Trips"/>
-        <Button fx:id="changeFlightStatusButton" layoutX="210.0" layoutY="328.0" mnemonicParsing="false"
+        <Button fx:id="browseTripsButton" layoutX="223.0" layoutY="275.0" mnemonicParsing="false"
+                onAction="#browseTrips" prefHeight="40.0" prefWidth="141.0" styleClass="rich-blue"
+                stylesheets="@stylesheet.css" text="Browse Trips"/>
+        <Button fx:id="changeFlightStatusButton" layoutX="398.0" layoutY="275.0" mnemonicParsing="false"
                 onAction="#changeFlightStatus" prefHeight="41.0" prefWidth="168.0" styleClass="rich-blue"
                 stylesheets="@stylesheet.css" text="Change flight status"/>
     </children>

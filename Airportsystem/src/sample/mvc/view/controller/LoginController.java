@@ -28,6 +28,9 @@ public class LoginController implements Initializable {
     @FXML
     private Button recoverPasswordButton;
 
+    @FXML
+    private Button exitButton;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         local.saveAirplaneToFile(dbh.getAirplaneObject("1254"));
@@ -116,5 +119,10 @@ public class LoginController implements Initializable {
     @FXML
     private void recoverPassword(ActionEvent event) {
         sw.goToUnLogged(event, "passwordRecovery.fxml");
+    }
+
+    @FXML
+    private void exit(ActionEvent ae) {
+        System.exit(0);
     }
 }

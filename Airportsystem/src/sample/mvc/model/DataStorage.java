@@ -131,6 +131,8 @@ public interface DataStorage {
     int getSystemIdFromSsn(String ssn);
 
     void updateHasFood(boolean tOf, int bookingId);
+
+    String checkSsn(String ssn);
 }
 
 

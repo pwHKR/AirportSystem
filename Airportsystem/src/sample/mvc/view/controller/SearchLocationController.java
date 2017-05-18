@@ -167,10 +167,10 @@ public class SearchLocationController implements Initializable {
 
                 System.out.println(userType);
                 local.saveBookingIdToFile(booking);
-                if (userType.matches("Employee")) {
+                if (userType.matches("Employee") || userType.matches("Admin")) {
                     switchScene.GoTo(ae, "NewBookingForPerson.fxml");
                 }
-                if (userType.matches("Admin") || userType.matches("Customer")) {
+                if (userType.matches("Customer")) {
                     switchScene.GoTo(ae, "NewBooking.fxml");
                 }
 
