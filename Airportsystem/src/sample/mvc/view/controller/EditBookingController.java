@@ -3,10 +3,8 @@ package sample.mvc.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.control.Label;
+import javafx.scene.control.CheckBox;
 import sample.mvc.model.*;
-
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,13 +18,13 @@ public class EditBookingController implements Initializable {
     @FXML
     private CheckBox foodCheckBox;
 
-    int boolToTinyInt;
+    private int boolToTinyInt;
 
 
-    SwitchScene sw = new SwitchScene();
-    LocalFileStorage local = new LocalFileStorage();
-    DataStorage dbh = new DBHandler();
-    MyAlert myAlert = new MyAlert();
+    private SwitchScene sw = new SwitchScene();
+    private LocalFileStorage local = new LocalFileStorage();
+    private DataStorage dbh = new DBHandler();
+    private MyAlert myAlert = new MyAlert();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

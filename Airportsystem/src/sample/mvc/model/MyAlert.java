@@ -355,8 +355,9 @@ public class MyAlert {
     }
 
     public void billingSent(String adress) {
-        msg.setHeaderText("The billing has been sent to " + adress);
-        msg.setTitle("Booking confirmed");
+        msg.setHeaderText("Booking confirmed");
+        msg.setTitle("Success");
+        msg.setContentText("An invoice has been sent to " + adress);
         msg.showAndWait();
     }
 
