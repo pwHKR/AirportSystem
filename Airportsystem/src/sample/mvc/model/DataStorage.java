@@ -127,6 +127,10 @@ public interface DataStorage {
     void updateHasFood(boolean tOf, int bookingId);
 
     String checkSsn(String ssn);
+
+    Customer getBonusPoint(int systemId);
+
+    void addBonusPoint(String userName, int point);
 }
 
 

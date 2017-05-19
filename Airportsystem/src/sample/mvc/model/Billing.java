@@ -3,6 +3,9 @@ package sample.mvc.model;
 /**
  * Created by woojen on 2017-05-11.
  */
+
+// Use this class with the SetBilling interface
+
 public class Billing {
 
     private double totalPrice;
@@ -15,6 +18,30 @@ public class Billing {
 
     private int adultAmount;
 
+    private double discount;
+
+    private int pointMultiplier;
+
+    public Billing() {
+
+        discount = 1;
+        pointMultiplier = 1;
+
+    }
+
+
+    public void setDiscount(Double discount) {
+
+        if (discount > 0 && discount < 1)
+            this.discount = discount;
+    }
+
+    public double getDiscount() {
+
+        return discount;
+    }
+
+    
 
     public double getChildPrice(Double tripPrice) {
 
@@ -58,7 +85,7 @@ public class Billing {
 
     public double calcLuggagePrice(Double kg) {
 
-        double price = 0;
+        double price;
 
         if (kg <= 1) {
             price = 0;
@@ -120,8 +147,10 @@ public class Billing {
     // Call this method only if you have already set the needed instance variables
     public void calcAndSetTotalPrice() {
 
-        setTotalPrice(getChildTotalPrice(getTripPrice(), getChildAmount()) +
-                getAdultTotalPrice(getTripPrice(), getAdultAmount()) + calcLuggagePrice(getLuggagePrice()));
+
+        setTotalPrice((getChildTotalPrice(getTripPrice(), getChildAmount()) +
+                getAdultTotalPrice(getTripPrice(), getAdultAmount()) + getLuggagePrice()) * discount);
+
 
 
     }
@@ -138,5 +167,32 @@ public class Billing {
 
     }
 
+    public double getPriceNoDiscount() {
 
+        double noDiscountPrice;
+        noDiscountPrice = (getChildTotalPrice(getTripPrice(), getChildAmount()) +
+                getAdultTotalPrice(getTripPrice(), getAdultAmount()) + getLuggagePrice());
+
+        return noDiscountPrice;
+
+
+    }
+
+    public double getDiscountSum() {
+
+        double discountSum;
+
+        discountSum = getTotalPrice() - getPriceNoDiscount();
+
+        return discountSum;
+
+    }
+
+    public int getPointMultiplier() {
+        return pointMultiplier;
+    }
+
+    public void setPointMultiplier(int pointMultiplier) {
+        this.pointMultiplier = pointMultiplier;
+    }
 }

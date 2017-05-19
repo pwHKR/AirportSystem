@@ -21,6 +21,9 @@ public abstract class User extends Person {
         this.password = password;
     }
 
+    public User() {
+    }
+
 
     public String getEmail() {
         return eMail;

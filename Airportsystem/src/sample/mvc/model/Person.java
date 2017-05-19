@@ -24,6 +24,9 @@ public class Person {
         this.adress = adress;
     }
 
+    public Person() {
+    }
+
 
     public String getFirstName() {
         return firstName;

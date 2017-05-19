@@ -52,7 +52,7 @@ public class NewBookingController implements Initializable {
     private int flightId;
     protected boolean isPerson; // Always false in superclass (this)
     protected boolean isConfirmed; //true if confirm dialog for booking is ok. False if confirm dialog is canceled.
-    String userType = dbh.printUserType(local.getCurrentUsersUserName());
+    private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
 
     @Override
@@ -60,6 +60,8 @@ public class NewBookingController implements Initializable {
 
         ini();
         isPerson = false;
+
+        billing.setPointMultiplier(3); // Default value is 1 if not set
 
 
     }
@@ -85,11 +87,15 @@ public class NewBookingController implements Initializable {
     @FXML
     protected void showBookingInfo() {
         setBilling();
-        totalPriceArea.setText("Adult tickets: " + getAdultTicket() + "\nPrice: " + getAdultTicket() + " X " +
+        totalPriceArea.setText("Total Price: " + billing.getTotalPrice() +
+                "\n Discount:  " + String.valueOf(billing.getDiscountSum()) + "\nAdult tickets: " + getAdultTicket() + "\nPrice: "
+                + getAdultTicket() + " X " +
                 String.valueOf(trip.getTripPrice()) + "= " +
                 billing.getAdultTotalPrice(trip.getTripPrice(), getAdultTicket()) +
-                " SEK\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket() + " X " + String.valueOf(trip.getTripPrice()) + "= "
-                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + " SEK\nLuggage price: " + String.valueOf(billing.getLuggagePrice()) + " SEK");
+                " SEK\nChild tickets: " + getChildTicket() + "\nPrice: " + getChildTicket()
+                + " X " + String.valueOf(trip.getTripPrice()) + "= "
+                + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + " SEK\nLuggage price: "
+                + String.valueOf(billing.getLuggagePrice()) + " SEK");
     }
 
 
@@ -113,6 +119,8 @@ public class NewBookingController implements Initializable {
         setBilling();
 
         choice = myAlert.confirmBooking(billing.getTotalPrice());
+
+        java.lang.System.out.println(choice);
 
         luggageMaxTot = Integer.parseInt(luggageField.getText()) * billing.getTicketAmount();
         if (choice) {
@@ -143,8 +151,6 @@ public class NewBookingController implements Initializable {
                 }
 
                 dbh.insertBooking(booking);
-
-
             } else {
 
 
@@ -155,17 +161,51 @@ public class NewBookingController implements Initializable {
         }
 
 
+        if (!isPerson && dbh.printUserType(local.getCurrentUsersUserName()).matches("Customer") && isConfirmed) {
+
+            // typecast is needed because booking.getPrice returns a double value
+            addBonusPoint((int) booking.getPrice());
+
+        }
+
 
     }
 
+    private void addBonusPoint(int bookingPrice) {
+
+        Customer customer = dbh.getBonusPoint(dbh.getIdFromUserName(local.getCurrentUsersUserName()));
+
+        int setPointAmount = customer.getPoint() + (bookingPrice * billing.getPointMultiplier());
+
+        dbh.addBonusPoint(local.getCurrentUsersUserName(), setPointAmount);
+
+    }
+
+
     protected void setBilling() {
 
+        Customer customer;
+
+        customer = dbh.getBonusPoint(dbh.getIdFromUserName(local.getCurrentUsersUserName()));
+
         try {
-            billing.setLuggagePrice(Double.parseDouble(luggageField.getText()));
+            billing.setLuggagePrice(billing.calcLuggagePrice(Double.parseDouble(luggageField.getText())));
         } catch (NumberFormatException e) {
 
         } catch (Exception e) {
             billing.setLuggagePrice(0.0);
+        }
+
+        if (customer.getPoint() >= 3000 && customer.getPoint() <= 10000) {
+
+            billing.setDiscount(0.9); // Silver level
+
+        }
+
+        if (customer.getPoint() >= 10000) {
+
+            billing.setDiscount(0.85);
+
         }
 
 
@@ -264,15 +304,18 @@ public class NewBookingController implements Initializable {
 
     @FXML
     private void confirmBookingSuper(ActionEvent ae) {
+
+
         if (luggageField.getText().matches("^\\d+$")) {
             confirmBooking(ae);
-            insertLinkTblSuper();
-            returnToSearchLocation(ae);
+            if (isConfirmed) {
+
+                insertLinkTblSuper();
+                returnToSearchLocation(ae);
+            }
         } else {
             myAlert.noLuggageWeightError();
         }
-
-
 
 
     }

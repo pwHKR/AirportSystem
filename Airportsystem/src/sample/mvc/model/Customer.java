@@ -5,20 +5,25 @@ package sample.mvc.model;
  */
 public class Customer extends User {
 
-    private int initialBonus;
+
+    private int point;
 
     public Customer(String firstName, String lastName, boolean isMale, String country, String ssn, String address, String eMail, String userName, String password) {
         super(firstName, lastName, isMale, country, ssn, address, eMail, userName, password);
 
     }
 
-    // Constructor with a bonus parameter
 
-    public Customer(String firstName, String lastName, boolean isMale, String country, String ssn, String address, String eMail, String userName, String password, int initialBonus) {
-        super(firstName, lastName, isMale, country, ssn, address, eMail, userName, password);
-        this.initialBonus = initialBonus;
+    public Customer(int point) {
+
+        this.point = point;
+
+
     }
 
+    public int getPoint() {
+        return point;
+    }
 
 
 }

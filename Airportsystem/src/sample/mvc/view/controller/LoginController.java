@@ -63,49 +63,51 @@ public class LoginController implements Initializable {
         boolean isAdmin = false;
         boolean isEmployee = false;
 
-        if (!dbh.userNameExists(stringUserName)) {
-            myAlert.nameNotFound();
-        } else {
+        if (dbh.userNameExists(stringUserName)) {
             typeOfUser = dbh.printUserType(stringUserName);
-        }
 
 
-        if (sentPassword != null) {
+            if (sentPassword != null) {
 
-            if (sentPassword.matches(stringPassword)) {
+                if (sentPassword.matches(stringPassword)) {
 
-                if (!stringUserName.isEmpty()) {
+                    if (!stringUserName.isEmpty()) {
 
-                    if (typeOfUser.matches("Admin")) {
-                        dbh.setUserOnline(stringUserName);
-                        sw.GoTo(ae, "Admin.fxml");
-                    }
+                        if (typeOfUser.matches("Admin")) {
+                            dbh.setUserOnline(stringUserName);
+                            sw.GoTo(ae, "Admin.fxml");
+                        }
 
 
-                    //if (sentPassword != null) {
-                    if (typeOfUser.matches("Customer")) {
-                        dbh.setUserOnline(stringUserName);
-                        sw.GoTo(ae, "Customer.fxml");
-                    }
+                        //if (sentPassword != null) {
+                        if (typeOfUser.matches("Customer")) {
+                            dbh.setUserOnline(stringUserName);
+                            sw.GoTo(ae, "Customer.fxml");
+                        }
                     /*} else {
                         myAlert.userNameErr();
                     }*/
 
-                    //if (sentPassword != null) {
-                    if (typeOfUser.matches("Employee")) {
-                        dbh.setUserOnline(stringUserName);
-                        sw.GoTo(ae, "Employee.fxml");
+                        //if (sentPassword != null) {
+                        if (typeOfUser.matches("Employee")) {
+                            dbh.setUserOnline(stringUserName);
+                            sw.GoTo(ae, "Employee.fxml");
+                        }
+                        //}
+                    } else {
+                        myAlert.loginFail();
                     }
-                    //}
                 } else {
-                    myAlert.loginFail();
+                    myAlert.invalidPasswordError();
                 }
             } else {
-                myAlert.invalidPasswordError();
+                myAlert.userNameErr();
             }
         } else {
-            myAlert.userNameErr();
+            myAlert.nameNotFound();
+
         }
+
     }
 
 
@@ -123,6 +125,6 @@ public class LoginController implements Initializable {
 
     @FXML
     private void exit(ActionEvent ae) {
-        System.exit(0);
+        java.lang.System.exit(0);
     }
 }

@@ -1652,6 +1652,8 @@ public class DBHandler implements DataStorage {
             ps.setBoolean(4, booking.isHasFood());
 
             ps.execute();
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -1935,8 +1937,8 @@ public class DBHandler implements DataStorage {
 
             Statement stmt = conn.createStatement();
 
-            String checkSSNQuery = "SELECT * FROM Person WHERE ssn= '" + ssn + "'";
-            ResultSet resultSet = stmt.executeQuery(checkSSNQuery);
+            String query = "SELECT * FROM Person WHERE ssn= '" + ssn + "'";
+            ResultSet resultSet = stmt.executeQuery(query);
             if (resultSet.next()) {
                 passed = "passed";
                 return passed;
@@ -1947,4 +1949,53 @@ public class DBHandler implements DataStorage {
 
         return passed;
     }
+
+    @Override
+    public Customer getBonusPoint(int systemId) {
+        Customer bonusPoint = null;
+
+        String stringSystemId = String.valueOf(systemId);
+
+        int pointAmount = 0;
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            Statement stmt = conn.createStatement();
+
+            String query = "SELECT Bonus FROM AirportSystemdb.User WHERE User.Person_systemId = '" + stringSystemId + "'";
+            ResultSet resultSet = stmt.executeQuery(query);
+            if (resultSet.next()) {
+                pointAmount = resultSet.getInt("Bonus");
+
+            }
+
+            bonusPoint = new Customer(pointAmount);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return bonusPoint;
+    }
+
+
+    public void addBonusPoint(String userName, int point) {
+
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+
+            String query = "UPDATE AirportSystemdb.User SET Bonus =  " + point + " WHERE userName = '" + userName + "'";
+
+            Statement statement = conn.prepareStatement(query);
+
+            statement.executeUpdate(query);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }
+
+
