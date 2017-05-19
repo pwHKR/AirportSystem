@@ -12,12 +12,8 @@ import java.net.URL;
 import java.sql.SQLNonTransientConnectionException;
 import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
+public class LoginController extends ControllerModelObject implements Initializable {
 
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
-    private DataStorage dbh = new DBHandler();
-    private LocalFileStorage local = new LocalFileStorage();
 
     @FXML
     private PasswordField password;

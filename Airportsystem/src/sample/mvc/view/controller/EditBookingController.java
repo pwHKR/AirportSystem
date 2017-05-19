@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Stefan on 2017-05-13.
  */
-public class EditBookingController implements Initializable {
+public class EditBookingController extends ControllerModelObject implements Initializable {
 
 
     @FXML
@@ -20,11 +20,6 @@ public class EditBookingController implements Initializable {
 
     private int boolToTinyInt;
 
-
-    private SwitchScene sw = new SwitchScene();
-    private LocalFileStorage local = new LocalFileStorage();
-    private DataStorage dbh = new DBHandler();
-    private MyAlert myAlert = new MyAlert();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

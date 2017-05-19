@@ -16,18 +16,13 @@ import java.util.ResourceBundle;
 /**
  * Created by Stefan on 2017-04-20.
  */
-public class SearchLocationController implements Initializable {
+public class SearchLocationController extends ControllerModelObject implements Initializable {
 
 
     private ObservableList<String> trips = FXCollections.observableArrayList();
     private ObservableList<String> choices = FXCollections.observableArrayList("", "Name", "Price Descending", "Price Ascending");
 
-    private SwitchScene switchScene = new SwitchScene();
-    private DataStorage dbh = new DBHandler();
 
-    private MyAlert myAlert = new MyAlert();
-
-    private LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
     private Trip trip;
@@ -77,8 +72,6 @@ public class SearchLocationController implements Initializable {
         trips.remove(0, 1);
 
 
-
-
         listView.setItems(trips);
 
 
@@ -88,13 +81,13 @@ public class SearchLocationController implements Initializable {
     private void goBack(ActionEvent ae) {
 
         if (userType.matches("Admin")) {
-            switchScene.GoTo(ae, "Admin.fxml");
+            sw.GoTo(ae, "Admin.fxml");
         }
         if (userType.matches("Customer")) {
-            switchScene.GoTo(ae, "Customer.fxml");
+            sw.GoTo(ae, "Customer.fxml");
         }
         if (userType.matches("Employee")) {
-            switchScene.GoTo(ae, "Employee.fxml");
+            sw.GoTo(ae, "Employee.fxml");
         }
     }
 
@@ -119,7 +112,7 @@ public class SearchLocationController implements Initializable {
 
         if (!isSearch) {
             choice = listView.getSelectionModel().getSelectedIndex() + removeIndexNum;
-        System.out.println(choice);
+            System.out.println(choice);
 
             stringChoice = String.valueOf(choice);
         }
@@ -127,7 +120,6 @@ public class SearchLocationController implements Initializable {
         if (isSearch) {
             stringChoice = listView.getSelectionModel().getSelectedItems().toString().replaceAll(("\\D+"), "");
         }
-
 
 
         trip = dbh.getTripObject(stringChoice);
@@ -168,10 +160,10 @@ public class SearchLocationController implements Initializable {
                 System.out.println(userType);
                 local.saveBookingObjectToFile(booking);
                 if (userType.matches("Employee") || userType.matches("Admin")) {
-                    switchScene.GoTo(ae, "NewBookingForPerson.fxml");
+                    sw.GoTo(ae, "NewBookingForPerson.fxml");
                 }
                 if (userType.matches("Customer")) {
-                    switchScene.GoTo(ae, "NewBooking.fxml");
+                    sw.GoTo(ae, "NewBooking.fxml");
                 }
 
             } else {

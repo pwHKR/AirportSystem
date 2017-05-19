@@ -20,6 +20,7 @@ import java.util.ResourceBundle;
 public class ViewPSTRController implements Initializable {
 
     private SwitchScene sw = new SwitchScene();
+    private DataStorage dbHandler = new DBHandler();
 
     @FXML
     private ListView<String> pstrLocations;
@@ -32,7 +33,7 @@ public class ViewPSTRController implements Initializable {
 
     @FXML
     private void getLocationInfo() {
-        DataStorage dbHandler = new DBHandler();
+
 
         String choice = pstrLocations.getSelectionModel().getSelectedItem();
         ObservableList<String> infoList = dbHandler.getPSTRLocationInfo(choice);
@@ -43,7 +44,6 @@ public class ViewPSTRController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        DataStorage dbHandler = new DBHandler();
 
         ObservableList<String> pstrLocationList = dbHandler.getPSTR();
 

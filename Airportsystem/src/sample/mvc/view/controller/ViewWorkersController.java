@@ -8,10 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.MyAlert;
-import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,11 +15,9 @@ import java.util.ResourceBundle;
 /**
  * Created by Stefan on 2017-04-22.
  */
-public class ViewWorkersController implements Initializable {
+public class ViewWorkersController extends ControllerModelObject implements Initializable {
 
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
-    DataStorage dbHandler = new DBHandler();
+    ;
 
     private ObservableList<String> workerlist = FXCollections.observableArrayList();
     private ObservableList<String> infolist = FXCollections.observableArrayList();
@@ -41,7 +35,7 @@ public class ViewWorkersController implements Initializable {
     private void getWorkerInfo() {
 
         String choice = workers.getSelectionModel().getSelectedItem();
-        infolist = dbHandler.getWorkerinfo(choice);
+        infolist = dbh.getWorkerinfo(choice);
         workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
 
     }
@@ -50,9 +44,9 @@ public class ViewWorkersController implements Initializable {
     private void kickWorker() {
         String id = workers.getSelectionModel().getSelectedItem();
 
-        dbHandler.removeWorker(id);
+        dbh.removeWorker(id);
         if (workers.getSelectionModel().getSelectedItem() != null) {
-            workerlist = dbHandler.getWorkers();
+            workerlist = dbh.getWorkers();
             workers.setItems(workerlist);
             workerInfo.setText(infolist.toString().replace("[", "").replace("]", ""));
             workerInfo.clear();
@@ -65,9 +59,8 @@ public class ViewWorkersController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        DataStorage dbHandler = new DBHandler();
 
-        workerlist = dbHandler.getWorkers();
+        workerlist = dbh.getWorkers();
 
 
         workers.setItems(workerlist);

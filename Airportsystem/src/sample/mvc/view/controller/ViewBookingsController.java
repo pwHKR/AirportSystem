@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Tobias Åkesson on 2017-05-09.
  */
-public class ViewBookingsController implements Initializable {
+public class ViewBookingsController extends ControllerModelObject implements Initializable {
     @FXML
     private Button returnButton;
     @FXML
@@ -30,12 +30,9 @@ public class ViewBookingsController implements Initializable {
 
     private ObservableList<String> bookingIds = FXCollections.observableArrayList();
 
-    SwitchScene sw = new SwitchScene();
-    DataStorage dbh = new DBHandler();
-    LocalFileStorage local = new LocalFileStorage();
+
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
-    private MyAlert myAlert = new MyAlert();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

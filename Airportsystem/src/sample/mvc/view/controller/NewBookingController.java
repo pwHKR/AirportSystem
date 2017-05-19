@@ -14,13 +14,10 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-05-11.
  */
-public class NewBookingController implements Initializable {
+public class NewBookingController extends ControllerModelObject implements Initializable {
 
-    private LocalFileStorage local = new LocalFileStorage();
-    protected DataStorage dbh = new DBHandler();
+
     private Billing billing = new Billing();
-    private SwitchScene sw = new SwitchScene();
-    protected MyAlert myAlert = new MyAlert();
 
 
     private ObservableList<String> tripInfoList = FXCollections.observableArrayList();

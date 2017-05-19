@@ -14,11 +14,8 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-25.
  */
-public class AddAirplaneController implements Initializable {
+public class AddAirplaneController extends ControllerModelObject implements Initializable {
 
-    private SwitchScene sw = new SwitchScene();
-
-    private MyAlert myAlert = new MyAlert();
 
     @FXML
     private ListView pstrId;
@@ -37,7 +34,6 @@ public class AddAirplaneController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        DataStorage dbh = new DBHandler();
 
         ObservableList<String> pstrLocationList = dbh.getPSTR();
 
@@ -55,13 +51,12 @@ public class AddAirplaneController implements Initializable {
 
     @FXML
     private void addAirplane(ActionEvent ae) {
-        int MaxKG;
-        int Passenger;
-        String Speed;
-        String Reg;
-        String Model;
+        int intMaxKG;
+        int intPassenger;
+        String stringSpeed;
+        String stringReg;
+        String stringModel;
 
-        DataStorage dbh = new DBHandler();
 
         if (!model.getText().isEmpty()) {
             if (passenger.getText().matches("^\\d+$")) {
@@ -74,14 +69,14 @@ public class AddAirplaneController implements Initializable {
                                 String choice = pstrId.getSelectionModel().getSelectedItem().toString();
 
 
-                                Model = model.getText();
-                                Passenger = Integer.parseInt(passenger.getText());
-                                Speed = speed.getText();
-                                Reg = reg.getText();
-                                MaxKG = Integer.parseInt(maxKG.getText());
+                                stringModel = model.getText();
+                                intPassenger = Integer.parseInt(passenger.getText());
+                                stringSpeed = speed.getText();
+                                stringReg = reg.getText();
+                                intMaxKG = Integer.parseInt(maxKG.getText());
 
 
-                                Airplane airplane = new Airplane(Passenger, MaxKG, Speed, Reg, Model);
+                                Airplane airplane = new Airplane(intPassenger, intMaxKG, stringSpeed, stringReg, stringModel);
 
                                 dbh.insertAirplane(airplane, choice);
 

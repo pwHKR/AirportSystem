@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import sample.mvc.model.*;
 
 import java.net.URL;
 import java.util.InputMismatchException;
@@ -15,13 +14,7 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-05-04.
  */
-public class BillingController implements Initializable {
-
-
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
-    private LocalFileStorage lfs = new LocalFileStorage();
-    private DataStorage dbh = new DBHandler();
+public class BillingController extends ControllerModelObject implements Initializable {
 
 
     private int systemId;
@@ -38,7 +31,7 @@ public class BillingController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        systemId = dbh.getIdFromUserName(lfs.getCurrentUsersUserName()); // Get systemID of the current user
+        systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName()); // Get systemID of the current user
         balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
     }
 

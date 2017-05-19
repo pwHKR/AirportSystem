@@ -15,12 +15,8 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-14.
  */
-public class NewUserController implements Initializable {
+public class NewUserController extends ControllerModelObject implements Initializable {
 
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
-    DataStorage dbh = new DBHandler();
-    LocalFileStorage local = new LocalFileStorage();
     private String typeOfUser = dbh.printUserType(local.getCurrentUsersUserName());
     private boolean isUserOnline = dbh.isUserOnline(local.getCurrentUsersUserName());
 
@@ -79,36 +75,44 @@ public class NewUserController implements Initializable {
 
                         if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
 
-                                if (!userName.getText().isEmpty()) {
+                            //if (country.getValue().matches("^[a-öA-Ö]+$")) {
 
-                                    if (!password.getText().isEmpty()) {
+                            if (!userName.getText().isEmpty()) {
 
-                                        //Checks if it's an employee making the account or if it's not online
-                                        if (typeOfUser == null) {
+                                if (!password.getText().isEmpty()) {
 
-                                            User customer = new Customer(stringFirstName,
-                                                    stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
-                                            dbh.insertUser(customer, "Customer");
-                                                sw.goToUnLogged(ae, "Login.fxml");
-                                            }
+                                    //Checks if it's an employee making the account or if it's not online
+                                    if (!isUserOnline) {
 
-
-                                        //Checks if it's an admin making the account
-                                        else {
-
-                                            User employee = new Employee(stringFirstName,
-                                                    stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
-
-                                            dbh.insertUser(employee, "Employee");
-                                            sw.GoTo(ae, "Admin.fxml");
+                                        User customer = new Customer(stringFirstName,
+                                                stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
+                                        dbh.insertUser(customer, "Customer");
+                                        if (isUserOnline) {
+                                            sw.GoTo(ae, "Employee.fxml");
+                                        } else {
+                                            sw.goToUnLogged(ae, "Login.fxml");
                                         }
-
-                                    } else {
-                                        myAlert.passwordErr();
                                     }
+
+                                    //Checks if it's an admin making the account
+                                    else if (typeOfUser.matches("Admin") && isUserOnline) {
+
+                                        User employee = new Employee(stringFirstName,
+                                                stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
+
+                                        dbh.insertUser(employee, "Employee");
+                                        sw.GoTo(ae, "Admin.fxml");
+                                    }
+
                                 } else {
-                                    myAlert.userNameErr();
+                                    myAlert.passwordErr();
                                 }
+                            } else {
+                                myAlert.userNameErr();
+                            }
+                            /*} else {
+                                myAlert.countryNameErr();
+                            }*/
                         } else {
                             myAlert.addressNameErr();
                         }
@@ -147,18 +151,12 @@ public class NewUserController implements Initializable {
 
     @FXML
     private void returnToLoginScreen(ActionEvent ae) {
-        if (typeOfUser == null) {
-            sw.goToUnLogged(ae, "Login.fxml");
-
-        } else {
-            sw.GoTo(ae, "Admin.fxml");
-        }
+        sw.goToUnLogged(ae, "Login.fxml");
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
 
         ObservableList<String> countryList = dbh.getCountries();
 

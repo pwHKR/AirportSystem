@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Tobias Åkesson on 2017-05-11.
  */
-public class FlightStatusController implements Initializable {
+public class FlightStatusController extends ControllerModelObject implements Initializable {
     @FXML
     private Button returnButton;
     @FXML
@@ -32,8 +32,7 @@ public class FlightStatusController implements Initializable {
     @FXML
     private TextField statusField;
 
-    private DataStorage dbh = new DBHandler();
-    private LocalFileStorage local = new LocalFileStorage();
+
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
     private ObservableList<String> flightInformation = FXCollections.observableArrayList();
     private int choice;
@@ -46,7 +45,7 @@ public class FlightStatusController implements Initializable {
 
     @FXML
     private void goBack(ActionEvent actionEvent) {
-        SwitchScene sw = new SwitchScene();
+
 
         if (userType.matches("Admin")) {
             sw.GoTo(actionEvent, "Admin.fxml");

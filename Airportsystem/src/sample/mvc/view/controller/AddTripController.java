@@ -15,20 +15,15 @@ import java.util.ResourceBundle;
 /**
  * Created by Stefan on 2017-04-20.
  */
-public class AddTripController implements Initializable {
+public class AddTripController extends ControllerModelObject implements Initializable {
 
-    private SwitchScene sw = new SwitchScene();
-
-    private MyAlert myAlert = new MyAlert();
-
-    private LocalFileStorage local = new LocalFileStorage();
 
     private Airplane airplane;
     private Flight flight;
 
 
     private ObservableList<String> pstrCountryList = FXCollections.observableArrayList();
-    private DataStorage dbh = new DBHandler();
+
     private String choice;
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 

@@ -13,12 +13,9 @@ import java.util.ResourceBundle;
 /**
  * Created by Tobias Åkesson on 2017-05-02.
  */
-public class AddFlightController implements Initializable {
+public class AddFlightController extends ControllerModelObject implements Initializable {
 
-    private MyAlert myAlert = new MyAlert();
-    private DataStorage dbh = new DBHandler();
-    private SwitchScene sw = new SwitchScene();
-    private LocalFileStorage local = new LocalFileStorage();
+
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
     @FXML
@@ -55,7 +52,7 @@ public class AddFlightController implements Initializable {
     private void getAirplaneInfo() {
         String choice = regField.getSelectionModel().getSelectedItem();
         //airPlaneInfoList = dbh.getAirplaneInfo(choice);
-        //airplaneList = dbHandler.getAirplaneRegNumber(choice);
+        //airplaneList = dbh.getAirplaneRegNumber(choice);
         ObservableList<String> airPlaneInfoList = dbh.getAirplaneInfo(choice);
         informationField.setText(airPlaneInfoList.toString().replace("[", "").replace("]", "")
                 + airPlaneInfoList.toString().replace("[", "").replace("]", ""));
