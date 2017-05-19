@@ -166,7 +166,7 @@ public class SearchLocationController implements Initializable {
                 Booking booking = new Booking(tripId);
 
                 System.out.println(userType);
-                local.saveBookingIdToFile(booking);
+                local.saveBookingObjectToFile(booking);
                 if (userType.matches("Employee") || userType.matches("Admin")) {
                     switchScene.GoTo(ae, "NewBookingForPerson.fxml");
                 }

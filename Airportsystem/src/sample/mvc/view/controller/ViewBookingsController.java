@@ -54,7 +54,7 @@ public class ViewBookingsController implements Initializable {
 
             Booking booking = dbh.getBookingObject(Integer.parseInt(choiceInput));
 
-            local.saveBookingIdToFile(booking);
+            local.saveBookingObjectToFile(booking);
 
             sw.GoTo(ae, "EditBooking.fxml");
         } else {

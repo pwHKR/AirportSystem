@@ -45,8 +45,6 @@ public interface DataStorage {
 
     ObservableList<String> getPSTRLocationInfo(String selected);
 
-    ObservableList<String> getSystemVariables();
-
     ObservableList<String> getUsersOnline();
 
     void updateTimeStampUser(String userName); // Last activity by user
@@ -61,9 +59,6 @@ public interface DataStorage {
 
     ObservableList<Integer> getAllFlightIds();
 
-    ObservableList<String> getCountriesWithPstr();
-
-    ObservableList<String> matchCityWithCountry(String country);
 
     void setBalance(double balance, int systemId);
 
@@ -97,9 +92,8 @@ public interface DataStorage {
 
     Flight getFlightObject(int flightId);
 
-    //ObservableList<String> matchBookingWithPerson(int systemid);
 
-    ObservableList<String> getFlightinformation(int flightId);
+    ObservableList<String> getFlightInformation(int flightId);
 
     void changeFlightStatus(String newStatus, int flightId);
 

@@ -15,10 +15,26 @@ import java.util.List;
  * Created by Tobias Åkesson on 2017-04-29.
  */
 public class LocalFileStorage {
-    private Path path = Paths.get("logInLog.bin");
-    private Path pathAirplane = Paths.get("obj.ser");
-    private Path pathFlight = Paths.get("obj2.ser");
-    private Path pathBooking = Paths.get("obj3.ser");
+
+    private Path[] pathList = new Path[4];
+
+
+    public LocalFileStorage() {
+
+        Path path = Paths.get("logInLog.bin"); //path 0
+        Path pathAirplane = Paths.get("obj.ser"); //path1
+        Path pathFlight = Paths.get("obj2.ser");    //path 2
+        Path pathBooking = Paths.get("obj3.ser");   //path3
+
+
+        pathList[0] = path;
+        pathList[1] = pathAirplane;
+        pathList[2] = pathFlight;
+        pathList[3] = pathBooking;
+
+
+    }
+
 
     public void saveUser(String userName, String password) {
 
@@ -27,7 +43,7 @@ public class LocalFileStorage {
         saveList.add(password);
 
         try {
-            Files.write(path, saveList, StandardOpenOption.CREATE);
+            Files.write(pathList[0], saveList, StandardOpenOption.CREATE);
         } catch (IOException ioe) {
             ioe.printStackTrace();
         } catch (Exception e) {
@@ -38,7 +54,7 @@ public class LocalFileStorage {
     public String getCurrentUsersUserName() {
         String userName = "";
         try {
-            List<String> textLines = Files.readAllLines(path);
+            List<String> textLines = Files.readAllLines(pathList[0]);
             userName = textLines.get(0);
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -49,7 +65,7 @@ public class LocalFileStorage {
     public String getCurrentUsersPassword() {
         String password = "";
         try {
-            List<String> textLines = Files.readAllLines(path);
+            List<String> textLines = Files.readAllLines(pathList[0]);
             password = textLines.get(1);
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -66,7 +82,7 @@ public class LocalFileStorage {
         try {
 
 
-            output = new ObjectOutputStream(Files.newOutputStream(pathAirplane));
+            output = new ObjectOutputStream(Files.newOutputStream(pathList[1]));
         } catch (IOException e) {
 
         }
@@ -98,7 +114,7 @@ public class LocalFileStorage {
 
 
         try {
-            input = new ObjectInputStream(Files.newInputStream(pathAirplane));
+            input = new ObjectInputStream(Files.newInputStream(pathList[1]));
 
 
         } catch (IOException e) {
@@ -148,7 +164,7 @@ public class LocalFileStorage {
         try {
 
 
-            output = new ObjectOutputStream(Files.newOutputStream(pathFlight));
+            output = new ObjectOutputStream(Files.newOutputStream(pathList[2]));
         } catch (IOException e) {
 
         }
@@ -180,7 +196,7 @@ public class LocalFileStorage {
 
 
         try {
-            input = new ObjectInputStream(Files.newInputStream(pathFlight));
+            input = new ObjectInputStream(Files.newInputStream(pathList[2]));
 
 
         } catch (IOException e) {
@@ -216,7 +232,7 @@ public class LocalFileStorage {
         return record;
     }
 
-    public void saveBookingIdToFile(Booking booking) {
+    public void saveBookingObjectToFile(Booking booking) {
 
         ObjectOutputStream output = null;
 
@@ -224,7 +240,7 @@ public class LocalFileStorage {
         try {
 
 
-            output = new ObjectOutputStream(Files.newOutputStream(pathBooking));
+            output = new ObjectOutputStream(Files.newOutputStream(pathList[3]));
         } catch (IOException e) {
 
         }
@@ -256,7 +272,7 @@ public class LocalFileStorage {
 
 
         try {
-            input = new ObjectInputStream(Files.newInputStream(pathBooking));
+            input = new ObjectInputStream(Files.newInputStream(pathList[3]));
 
 
         } catch (IOException e) {

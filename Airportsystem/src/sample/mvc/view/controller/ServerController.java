@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
 import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
@@ -21,6 +20,8 @@ public class ServerController implements Initializable {
     private SwitchScene sw = new SwitchScene();
 
     private ObservableList<String> OnlineUsersList = FXCollections.observableArrayList();
+
+    private DBHandler dbh = new DBHandler();
 
     @FXML
     private TextArea serverVariables;
@@ -38,17 +39,16 @@ public class ServerController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        DataStorage dbHandler = new DBHandler();
 
         // Server status
-        ObservableList<String> serverVariablesList = dbHandler.getSystemVariables();
+        ObservableList<String> serverVariablesList = dbh.getSystemVariables();
 
 
         serverVariables.setText(serverVariablesList.toString().
                 replace("[", "").replace("]", ""));
 
         // Online users
-        OnlineUsersList = dbHandler.getUsersOnline();
+        OnlineUsersList = dbh.getUsersOnline();
         onlineUsers.setText(OnlineUsersList.toString().replace("[", "").replace("]",
                 ""));
 
@@ -58,9 +58,8 @@ public class ServerController implements Initializable {
     @FXML
     private void updateOnlineUsers(ActionEvent ae) {
 
-        DataStorage dbHandler = new DBHandler();
 
-        OnlineUsersList = dbHandler.getUsersOnline();
+        OnlineUsersList = dbh.getUsersOnline();
         onlineUsers.setText(OnlineUsersList.toString().replace("[", "").replace("]",
                 ""));
 

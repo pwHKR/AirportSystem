@@ -1560,7 +1560,7 @@ public class DBHandler implements DataStorage {
 
 
     @Override
-    public ObservableList<String> getFlightinformation(int flightId) {
+    public ObservableList<String> getFlightInformation(int flightId) {
         ObservableList<String> flights = FXCollections.observableArrayList();
         try (Connection conn = DriverManager.getConnection(connectionURL)) {
 

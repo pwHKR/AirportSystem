@@ -32,8 +32,8 @@ public class FlightStatusController implements Initializable {
     @FXML
     private TextField statusField;
 
-    DataStorage dbh = new DBHandler();
-    LocalFileStorage local = new LocalFileStorage();
+    private DataStorage dbh = new DBHandler();
+    private LocalFileStorage local = new LocalFileStorage();
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
     private ObservableList<String> flightInformation = FXCollections.observableArrayList();
     private int choice;
@@ -65,7 +65,7 @@ public class FlightStatusController implements Initializable {
     @FXML
     private void getFlightInfo(MouseEvent me) {
         int choice = flightsView.getSelectionModel().getSelectedItem();
-        flightInformation = dbh.getFlightinformation(choice);
+        flightInformation = dbh.getFlightInformation(choice);
         flightInformationArea.setText(flightInformation.toString().replace("[", "").replace("]", ""));
     }
 
@@ -78,7 +78,7 @@ public class FlightStatusController implements Initializable {
         } else {
             int id = flightsView.getSelectionModel().getSelectedItem();
             dbh.changeFlightStatus(statusField.getText(), id);
-            flightInformation = dbh.getFlightinformation(choice);
+            flightInformation = dbh.getFlightInformation(choice);
             flightInformationArea.setText(flightInformation.toString().replace("[", "").replace("]", ""));
             myAlert.flighStatusChanged();
         }
