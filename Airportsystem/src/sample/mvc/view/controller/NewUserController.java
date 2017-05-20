@@ -15,10 +15,14 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-14.
  */
-public class NewUserController extends ControllerModelObject implements Initializable {
+public class NewUserController extends NewPersonController implements Initializable {
 
+    private LocalFileStorage local = new LocalFileStorage();
     private String typeOfUser = dbh.printUserType(local.getCurrentUsersUserName());
     private boolean isUserOnline = dbh.isUserOnline(local.getCurrentUsersUserName());
+    private String stringPassword;
+    private String stringUserName;
+    private String stringEmail;
 
     @FXML
     private TextField firstName;
@@ -43,16 +47,6 @@ public class NewUserController extends ControllerModelObject implements Initiali
 
     @FXML
     private void addUser(ActionEvent ae) {
-        String stringFirstName;
-        String stringLastName;
-        String stringSSN;
-        String stringPassword;
-        String stringUserName;
-        String stringEmail;
-        String stringAddress;
-        String stringCountry;
-        boolean IsMale;
-
 
         stringFirstName = firstName.getText();
         stringLastName = lastName.getText();
@@ -65,88 +59,45 @@ public class NewUserController extends ControllerModelObject implements Initiali
 
         IsMale = !female.isSelected();
 
-        if (firstName.getText().matches("^[a-öA-Ö]+$")) {
+        if (email.getText().contains("@")) {
 
-            if (lastName.getText().matches("^[a-öA-Ö]+$")) {
+            if (!userName.getText().isEmpty()) {
 
-                if (ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")) {
+                if (!password.getText().isEmpty()) {
 
-                    if (email.getText().contains("@")) {
-
-                        if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
-
-                            //if (country.getValue().matches("^[a-öA-Ö]+$")) {
-
-                            if (!userName.getText().isEmpty()) {
-
-                                if (!password.getText().isEmpty()) {
-
-                                    //Checks if it's an employee making the account or if it's not online
-                                    if (!isUserOnline) {
-
-                                        User customer = new Customer(stringFirstName,
-                                                stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
-                                        dbh.insertUser(customer, "Customer");
-                                        if (isUserOnline) {
-                                            sw.GoTo(ae, "Employee.fxml");
-                                        } else {
-                                            sw.goToUnLogged(ae, "Login.fxml");
-                                        }
-                                    }
-
-                                    //Checks if it's an admin making the account
-                                    else if (typeOfUser.matches("Admin") && isUserOnline) {
-
-                                        User employee = new Employee(stringFirstName,
-                                                stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
-
-                                        dbh.insertUser(employee, "Employee");
-                                        sw.GoTo(ae, "Admin.fxml");
-                                    }
-
-                                } else {
-                                    myAlert.passwordErr();
-                                }
-                            } else {
-                                myAlert.userNameErr();
-                            }
-                            /*} else {
-                                myAlert.countryNameErr();
-                            }*/
-                        } else {
-                            myAlert.addressNameErr();
+                    //Checks if it's an employee making the account or if it's not online
+                    if (!isUserOnline) {
+                        addPerson(ae);
+                        if (readyToInsertUser) {
+                            User customer = new Customer(stringFirstName,
+                                    stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
+                            dbh.insertOnlyUser(customer, "Customer");
+                            sw.goToUnLogged(ae, "Login.fxml");
                         }
-                    } else {
-                        myAlert.eMailNameErr();
                     }
+
+                    //Checks if it's an admin making the account
+                    else if (typeOfUser.matches("Admin") && isUserOnline) {
+                        addPerson(ae);
+                        if (readyToInsertUser) {
+                            User employee = new Employee(stringFirstName,
+                                    stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
+                            dbh.insertOnlyUser(employee, "Employee");
+                            sw.GoTo(ae, "Admin.fxml");
+                        }
+                    }
+
                 } else {
-                    myAlert.ssnInputErr();
+                    myAlert.passwordErr();
                 }
             } else {
-                myAlert.lastNameErr();
+                myAlert.userNameErr();
             }
+
         } else {
-            myAlert.firstNameErr();
+            myAlert.eMailNameErr();
         }
-    }
 
-    @FXML
-    private void help() {
-
-        myAlert.helpNewCustomer();
-    }
-
-    @FXML
-    private void maleToFemale() {  ///for the male and female checkboxes, two boxes can't be checked at the same time
-        if (female.isSelected()) {
-            male.setSelected(false);
-        }
-    }
-
-    @FXML
-    private void femaleToMale() {
-        if (male.isSelected())
-            female.setSelected(false);
     }
 
     @FXML

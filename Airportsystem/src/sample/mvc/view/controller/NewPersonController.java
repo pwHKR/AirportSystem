@@ -16,8 +16,19 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-14.
  */
-public class NewPersonController extends ControllerModelObject implements Initializable {
+public class NewPersonController implements Initializable {
 
+    protected MyAlert myAlert = new MyAlert();
+    protected SwitchScene sw = new SwitchScene();
+    protected DataStorage dbh = new DBHandler();
+    protected String stringFirstName;
+    protected String stringLastName;
+    protected String stringSSN;
+    protected String stringAddress;
+    protected String stringCountry;
+    protected boolean IsMale;
+    private boolean passed = false;
+    protected boolean readyToInsertUser = false;
 
     @FXML
     private TextField firstName;
@@ -37,15 +48,7 @@ public class NewPersonController extends ControllerModelObject implements Initia
     private Button addButton;
 
     @FXML
-    private void addUser(ActionEvent ae) {
-        String stringFirstName;
-        String stringLastName;
-        String stringSSN;
-        String stringAddress;
-        String stringCountry;
-        boolean IsMale;
-
-
+    protected void addPerson(ActionEvent ae) {
         stringFirstName = firstName.getText();
         stringLastName = lastName.getText();
         stringSSN = ssn.getText();
@@ -53,52 +56,62 @@ public class NewPersonController extends ControllerModelObject implements Initia
         stringCountry = country.getValue();
 
         IsMale = !female.isSelected();
+        if (female.isSelected() || male.isSelected()) {
 
-        if (firstName.getText().matches("^[a-öA-Ö]+$")) {
+            if (country.getSelectionModel().getSelectedItem() != null) {
 
-            if (lastName.getText().matches("^[a-öA-Ö]+$")) {
+                if (firstName.getText().matches("^[a-öA-Ö]+$")) {
 
-                if (ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")) {
+                    if (lastName.getText().matches("^[a-öA-Ö]+$")) {
 
-                    if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
-                        Person person = new Person(stringFirstName, stringLastName, IsMale, stringCountry, stringSSN, stringAddress);
-                        dbh.insertPerson(person);
-                        sw.GoTo(ae, "Employee.fxml");
+                        if (ssn.getText().matches("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")) {
+
+                            if (adress.getText().matches("^[a-öA-Ö]+ \\d+$")) {
+                                Person person = new Person(stringFirstName, stringLastName, IsMale, stringCountry, stringSSN, stringAddress);
+                                dbh.insertPerson(person);
+                                passed = true;
+                                readyToInsertUser = true;
+                            } else {
+                                myAlert.addressNameErr();
+                            }
+                        } else {
+                            myAlert.ssnInputErr();
+                        }
                     } else {
-                        myAlert.addressNameErr();
+                        myAlert.lastNameErr();
                     }
                 } else {
-                    myAlert.ssnInputErr();
+                    myAlert.firstNameErr();
                 }
             } else {
-                myAlert.lastNameErr();
+                myAlert.noCountrySelected();
             }
         } else {
-            myAlert.firstNameErr();
+            myAlert.genderIsNotSelected();
         }
     }
 
     @FXML
-    private void help() {
+    protected void help() {
 
         myAlert.helpNewCustomer();
     }
 
     @FXML
-    private void maleToFemale() {  ///for the male and female checkboxes, two boxes can't be checked at the same time
+    protected void maleToFemale() {  ///for the male and female checkboxes, two boxes can't be checked at the same time
         if (female.isSelected()) {
             male.setSelected(false);
         }
     }
 
     @FXML
-    private void femaleToMale() {
+    protected void femaleToMale() {
         if (male.isSelected())
             female.setSelected(false);
     }
 
     @FXML
-    private void returnToLoginScreen(ActionEvent ae) {
+    private void returnToEmployeeScreen(ActionEvent ae) {
 
         sw.GoTo(ae, "Employee.fxml");
     }
@@ -110,5 +123,14 @@ public class NewPersonController extends ControllerModelObject implements Initia
         ObservableList<String> countryList = dbh.getCountries();
 
         country.setItems(countryList);
+    }
+
+    @FXML
+    public void superAddPerson(ActionEvent ae) {
+        addPerson(ae);
+        if (passed) {
+
+            sw.GoTo(ae, "Employee.fxml");
+        }
     }
 }

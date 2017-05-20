@@ -19,9 +19,9 @@ public class MyAlert {
         javafx.scene.control.Alert err = new javafx.scene.control.Alert(Alert.AlertType.ERROR);
         Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
 
-        alertType[0] = msg;
-        alertType[1] = err;
-        alertType[2] = confirm;
+        alertType[0] = msg; //This one is used for normal messages
+        alertType[1] = err; //This one is used for error messages
+        alertType[2] = confirm; //This one is used as confirm dialogues
 
 
     }
@@ -41,12 +41,6 @@ public class MyAlert {
                 " if you have lost it by pressing the Recover Password button.");
         alertType[0].show();
     }
-
-    public void emptyUserName() {
-        alertType[1].setContentText("You must enter a user name!");
-        alertType[1].show();
-    }
-
 
     public void addressNameErr() {
         alertType[1].setTitle("Error");
@@ -456,6 +450,51 @@ public class MyAlert {
     public void noAirportCityCountryError() {
         alertType[1].setHeaderText("Specify information");
         alertType[1].setContentText("You have to select a country city and airport.");
+        alertType[1].showAndWait();
+    }
+
+    public void newPSTRHelp() {
+        alertType[0].setHeaderText("This is where you assign a new PSTR location");
+        alertType[0].setTitle("New PSRT location");
+        alertType[0].setContentText("A PSTR location is defined as an airport where you can fly from. " +
+                "You assign a new location by choosing a country, ciy and airport below and clicking ADD.");
+        alertType[0].showAndWait();
+    }
+
+    public void serverHelp() {
+        alertType[0].setHeaderText("This is where you can see the server status");
+        alertType[0].setTitle("Server help");
+        alertType[0].setContentText("On this page you will be able to read some interesting information about the server that " +
+                "is currently up and running. In the left text area you can see all the users that are currently online.");
+        alertType[0].showAndWait();
+    }
+
+    public void noCountrySelected() {
+        alertType[1].setHeaderText("Error");
+        alertType[1].setTitle("No country selected.");
+        alertType[1].setContentText("Please select a country in the choicebox below.");
+        alertType[1].showAndWait();
+    }
+
+    public void genderIsNotSelected() {
+        alertType[1].setHeaderText("Error");
+        alertType[1].setTitle("No gender selected");
+        alertType[1].setContentText("Please choose one of the two genders below");
+        alertType[1].showAndWait();
+    }
+
+    public void eMailExistsError() {
+        alertType[1].setHeaderText("Error");
+        alertType[1].setTitle("eMail already exists");
+        alertType[1].setContentText("The eMail you input already exists");
+        alertType[1].showAndWait();
+    }
+
+    public void createAccountInformation() {
+        alertType[1].setHeaderText("Error");
+        alertType[1].setTitle("This information is already in our database");
+        alertType[1].setContentText("You can only have one account. " +
+                "You will now be returned to the login screen");
         alertType[1].showAndWait();
     }
 }

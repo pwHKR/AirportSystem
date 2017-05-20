@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import sample.mvc.model.DBHandler;
-import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,9 +14,7 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-25.
  */
-public class ServerController implements Initializable {
-
-    private SwitchScene sw = new SwitchScene();
+public class ServerController extends ControllerModelObject implements Initializable {
 
     private ObservableList<String> OnlineUsersList = FXCollections.observableArrayList();
 
@@ -38,7 +35,6 @@ public class ServerController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
 
         // Server status
         ObservableList<String> serverVariablesList = dbh.getSystemVariables();
@@ -64,5 +60,10 @@ public class ServerController implements Initializable {
                 ""));
 
 
+    }
+
+    @FXML
+    private void serverHelpFunction(ActionEvent ae) {
+        myAlert.serverHelp();
     }
 }

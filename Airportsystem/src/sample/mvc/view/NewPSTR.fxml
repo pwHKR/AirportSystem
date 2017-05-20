@@ -94,5 +94,9 @@
         </Label>
         <TextField fx:id="LabelIdPSTR" editable="false" layoutX="432.0" layoutY="239.0" prefHeight="27.0"
                    prefWidth="41.0"/>
+        <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="313.0" layoutY="-166.0"
+                mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0" prefWidth="278.0"
+                style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
+                textAlignment="CENTER"/>
     </children>
 </AnchorPane>

@@ -161,7 +161,10 @@ public class NewPSTRController extends ControllerModelObject implements Initiali
 
     }
 
-
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        myAlert.newPSTRHelp();
+    }
 }
 
 

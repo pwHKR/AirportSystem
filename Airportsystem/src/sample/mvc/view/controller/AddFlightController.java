@@ -27,18 +27,10 @@ public class AddFlightController extends ControllerModelObject implements Initia
     @FXML
     private TextField gateField;
     @FXML
-    private TextField statusField;
-    @FXML
     private ListView<String> regField;
 
     @FXML
-    private CheckBox statusCheckBox;
-
-    @FXML
     TextField ticketAmount;
-
-
-    private String choice;
 
 
     @Override
@@ -51,8 +43,6 @@ public class AddFlightController extends ControllerModelObject implements Initia
     @FXML
     private void getAirplaneInfo() {
         String choice = regField.getSelectionModel().getSelectedItem();
-        //airPlaneInfoList = dbh.getAirplaneInfo(choice);
-        //airplaneList = dbh.getAirplaneRegNumber(choice);
         ObservableList<String> airPlaneInfoList = dbh.getAirplaneInfo(choice);
         informationField.setText(airPlaneInfoList.toString().replace("[", "").replace("]", "")
                 + airPlaneInfoList.toString().replace("[", "").replace("]", ""));
@@ -84,42 +74,16 @@ public class AddFlightController extends ControllerModelObject implements Initia
             noError = false;
         }
 
-        boolean newFlightStatus;
-
-        newFlightStatus = statusCheckBox.isSelected();
-
         if (noError) {
 
-            Flight flight = new Flight(statusField.getText(), gateField.getText(), regField.getSelectionModel().getSelectedItem());
-            //dbh.insertFlight(flight, newFlightStatus);
+            Flight flight = new Flight("On Time", gateField.getText(), regField.getSelectionModel().getSelectedItem());
             local.saveFlightToFile(flight);
             Airplane airplane = dbh.getAirplaneObject(flight.getRegNumber());
             local.saveAirplaneToFile(airplane);
 
             sw.GoTo(ae, "AddTrip.fxml");
         }
-
-        statusField.clear();
         gateField.clear();
-    }
-
-    @FXML
-    private void checkBoxInteraction(ActionEvent ae) {
-
-
-        if (statusCheckBox.isSelected()) {
-
-
-            statusField.setEditable(true);
-
-        } else {
-
-            statusField.clear();
-
-            statusField.setEditable(false);
-        }
-
-
     }
 
 }

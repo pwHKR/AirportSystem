@@ -11,7 +11,7 @@ public interface DataStorage {
 
     void insertAirplane(Airplane airplane, String select);
 
-    void insertUser(User customer, String typeOfUser);
+    //void insertUserAndPerson(User customer, String typeOfUser);
 
     String matchPassword(String UserName);
 
@@ -117,7 +117,6 @@ public interface DataStorage {
 
     void insertPerson(Person person);
 
-
     boolean userNameExists(String userName);
 
     String getAddress(String ssn);
@@ -131,6 +130,8 @@ public interface DataStorage {
     Customer getBonusPoint(int systemId);
 
     void addBonusPoint(String userName, int point);
+
+    void insertOnlyUser(User user, String typeOfUser);
 }
 
 

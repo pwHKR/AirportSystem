@@ -30,7 +30,7 @@
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
             </image>
         </ImageView>
-        <Pane onDragDetected="#addUser" prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
+        <Pane onDragDetected="#addPerson" prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
             <children>
                 <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="303.0" layoutY="-176.0"
                         mnemonicParsing="false" onAction="#help" prefHeight="404.0" prefWidth="278.0"
@@ -46,8 +46,8 @@
             </image>
         </ImageView>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#returnToLoginScreen" prefHeight="40.0"
-                prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
+        <Button layoutX="11.0" layoutY="431.0" mnemonicParsing="false" onAction="#returnToEmployeeScreen"
+                prefHeight="40.0" prefWidth="110.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Return"/>
         <Text fill="WHITE" layoutX="452.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Developed by PSTR-Software AB">
             <font>
@@ -85,7 +85,7 @@
                   text="Female" textFill="WHITE"/>
         <Label layoutX="138.0" layoutY="303.0" text="Gender" textFill="WHITE"/>
         <!--suppress XmlPathReference, XmlPathReference -->
-        <Button fx:id="addButton" layoutX="117.0" layoutY="351.0" mnemonicParsing="false" onAction="#addUser"
+        <Button fx:id="addButton" layoutX="117.0" layoutY="351.0" mnemonicParsing="false" onAction="#superAddPerson"
                 prefHeight="33.0" prefWidth="82.0" styleClass="rich-blue" stylesheets="@sample/mvc/view/buttons.css"
                 text="OK"/>
         <TextField fx:id="adress" layoutX="293.0" layoutY="167.0" prefHeight="25.0" prefWidth="226.0"/>

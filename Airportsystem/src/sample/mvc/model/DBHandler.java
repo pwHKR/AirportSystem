@@ -10,7 +10,7 @@ import java.util.Properties;
 public class DBHandler implements DataStorage {
 
     private MyAlert myAlert = new MyAlert();
-
+    SwitchScene sw = new SwitchScene();
     private final String connectionURL;
 
     public DBHandler() {
@@ -132,7 +132,7 @@ public class DBHandler implements DataStorage {
     }
 
 
-    public void insertUser(User customer, String typeOfUser) {
+    public void insertUserAndPerson(User customer, String typeOfUser) {
 
         String si = null;
 
@@ -1950,7 +1950,7 @@ public class DBHandler implements DataStorage {
         return passed;
     }
 
-    @Override
+
     public Customer getBonusPoint(int systemId) {
         Customer bonusPoint = null;
 
@@ -1995,7 +1995,57 @@ public class DBHandler implements DataStorage {
 
     }
 
+    public void insertOnlyUser(User user, String typeOfUer) {
+        String si = null;
 
+
+        try (Connection conn = DriverManager.getConnection(connectionURL)) {
+            Statement stmt = conn.createStatement();
+
+            String checkEmailQuery = "SELECT * FROM User WHERE eMail= '" + user.getEmail() + "'";
+            ResultSet resultSet = stmt.executeQuery(checkEmailQuery);
+            if (!resultSet.next()) {
+
+
+                Statement stm = conn.createStatement();
+
+                String checkUserNameQuery = "SELECT * FROM User WHERE userName= '" + user.getUserName() + "'";
+                ResultSet resultSet1 = stm.executeQuery(checkUserNameQuery);
+                if (!resultSet1.next()) {
+
+                    String sysId = "SELECT systemId FROM Person WHERE ssn = '" + user.getSsn() + "'";
+
+                    String query = " INSERT INTO User (userName, password, eMail,Person_systemId,typeOfUser) " +
+                            " VALUES (?,?,?,?,?) ";
+
+                    PreparedStatement ps = conn.prepareStatement(sysId);
+                    ResultSet rs = ps.executeQuery();
+                    while (rs.next()) {
+                        si = rs.getString("systemId");
+                    }
+
+                    PreparedStatement preparedStmt = conn.prepareStatement(query);
+                    preparedStmt.setString(1, user.getUserName());
+                    preparedStmt.setString(2, user.getPassword());
+                    preparedStmt.setString(3, user.getEmail());
+                    preparedStmt.setString(4, si);
+                    preparedStmt.setString(5, typeOfUer);
+
+                    //ps.execute();
+
+                    preparedStmt.execute();
+                } else {
+                    myAlert.createAccountInformation();
+                }
+            } else {
+                myAlert.createAccountInformation();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 }
 
 

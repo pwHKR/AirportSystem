@@ -28,7 +28,8 @@
         <Pane layoutY="1.0" prefHeight="107.0" prefWidth="815.0" style="-fx-background-color: #ffffff;">
             <children>
                 <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="534.0"
-                        layoutY="-171.0" mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
+                        layoutY="-171.0" mnemonicParsing="false" onAction="#serverHelpFunction" prefHeight="404.0"
+                        prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>
                 <Line disable="false" endX="712.0" endY="-1.0" fill="#3354ff" layoutX="102.0" layoutY="93.0"
