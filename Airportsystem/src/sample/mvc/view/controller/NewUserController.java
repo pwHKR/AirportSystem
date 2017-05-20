@@ -1,13 +1,12 @@
 package sample.mvc.view.controller;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import sample.mvc.model.*;
+import sample.mvc.model.Customer;
+import sample.mvc.model.Employee;
+import sample.mvc.model.User;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,33 +16,20 @@ import java.util.ResourceBundle;
  */
 public class NewUserController extends NewPersonController implements Initializable {
 
-    private LocalFileStorage local = new LocalFileStorage();
     private String typeOfUser = dbh.printUserType(local.getCurrentUsersUserName());
     private boolean isUserOnline = dbh.isUserOnline(local.getCurrentUsersUserName());
     private String stringPassword;
     private String stringUserName;
     private String stringEmail;
 
-    @FXML
-    private TextField firstName;
-    @FXML
-    private TextField lastName;
-    @FXML
-    private TextField ssn;
+
     @FXML
     private TextField password;
     @FXML
     private TextField userName;
     @FXML
     private TextField email;
-    @FXML
-    private TextField adress;
-    @FXML
-    private ChoiceBox<String> country = new ChoiceBox<>();
-    @FXML
-    private CheckBox female;
-    @FXML
-    private CheckBox male;
+
 
     @FXML
     private void addUser(ActionEvent ae) {
@@ -79,7 +65,7 @@ public class NewUserController extends NewPersonController implements Initializa
                     //Checks if it's an admin making the account
                     else if (typeOfUser.matches("Admin") && isUserOnline) {
                         addPerson(ae);
-                        if (readyToInsertUser) {
+                        if (readyToInsertUser && typeOfUser.matches("Admin")) {
                             User employee = new Employee(stringFirstName,
                                     stringLastName, IsMale, stringCountry, stringSSN, stringAddress, stringEmail, stringUserName, stringPassword);
                             dbh.insertOnlyUser(employee, "Employee");
@@ -102,15 +88,17 @@ public class NewUserController extends NewPersonController implements Initializa
 
     @FXML
     private void returnToLoginScreen(ActionEvent ae) {
-        sw.goToUnLogged(ae, "Login.fxml");
+        if (typeOfUser.matches("Admin")) {
+            sw.GoTo(ae, "Admin.fxml");
+        } else {
+            sw.goToUnLogged(ae, "Login.fxml");
+        }
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        ObservableList<String> countryList = dbh.getCountries();
-
-        country.setItems(countryList);
+        ini();
     }
 }

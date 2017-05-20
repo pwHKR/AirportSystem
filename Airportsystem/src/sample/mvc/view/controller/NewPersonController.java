@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import sample.mvc.model.*;
+import sample.mvc.model.Person;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,11 +16,9 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-14.
  */
-public class NewPersonController implements Initializable {
+public class NewPersonController extends ControllerModelObject implements Initializable {
 
-    protected MyAlert myAlert = new MyAlert();
-    protected SwitchScene sw = new SwitchScene();
-    protected DataStorage dbh = new DBHandler();
+
     protected String stringFirstName;
     protected String stringLastName;
     protected String stringSSN;
@@ -31,21 +29,21 @@ public class NewPersonController implements Initializable {
     protected boolean readyToInsertUser = false;
 
     @FXML
-    private TextField firstName;
+    protected TextField firstName;
     @FXML
-    private TextField lastName;
+    protected TextField lastName;
     @FXML
-    private TextField ssn;
+    protected TextField ssn;
     @FXML
-    private TextField adress;
+    protected TextField adress;
     @FXML
-    private ChoiceBox<String> country = new ChoiceBox<>();
+    protected ChoiceBox<String> country = new ChoiceBox<>();
     @FXML
-    private CheckBox female;
+    protected CheckBox female;
     @FXML
-    private CheckBox male;
+    protected CheckBox male;
     @FXML
-    private Button addButton;
+    protected Button addButton;
 
     @FXML
     protected void addPerson(ActionEvent ae) {
@@ -119,18 +117,23 @@ public class NewPersonController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        ini();
 
-        ObservableList<String> countryList = dbh.getCountries();
-
-        country.setItems(countryList);
     }
 
     @FXML
-    public void superAddPerson(ActionEvent ae) {
+    private void superAddPerson(ActionEvent ae) {
         addPerson(ae);
         if (passed) {
 
             sw.GoTo(ae, "Employee.fxml");
         }
+    }
+
+    protected void ini() {
+
+        ObservableList<String> countryList = dbh.getCountries();
+
+        country.setItems(countryList);
     }
 }

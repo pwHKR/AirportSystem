@@ -28,9 +28,8 @@
         </ImageView>
         <Pane layoutY="-2.0" prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
             <children>
-                <Button fx:id="helpbutton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="212.0"
-                        layoutY="-168.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
-                        prefWidth="278.0"
+                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="132.0" layoutY="-170.0"
+                        mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0" prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>
             </children>
@@ -72,5 +71,7 @@
         <Button fx:id="withdrawButton" layoutX="140.0" layoutY="250.0" mnemonicParsing="false" onAction="#withdraw"
                 prefHeight="40.0" prefWidth="126.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Withdraw"/>
+        <Label fx:id="pointLabel" layoutX="280.0" layoutY="120.0" prefHeight="27.0" prefWidth="103.0"
+               textFill="#dcfc0d"/>
     </children>
 </AnchorPane>

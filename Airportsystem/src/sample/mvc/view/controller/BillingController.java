@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import sample.mvc.model.Customer;
 
 import java.net.URL;
 import java.util.InputMismatchException;
@@ -26,13 +27,13 @@ public class BillingController extends ControllerModelObject implements Initiali
     @FXML
     private Button withdrawButton;
     @FXML
-    private Button helpButton;
+    private Label pointLabel;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName()); // Get systemID of the current user
-        balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
+        getBalance();
+        getBonus();
     }
 
     @FXML
@@ -159,5 +160,19 @@ public class BillingController extends ControllerModelObject implements Initiali
     @FXML
     private void helpFunction(ActionEvent ae) {
         myAlert.billingHelp();
+    }
+
+    private void getBalance() {
+
+        systemId = dbh.getIdFromUserName(local.getCurrentUsersUserName()); // Get systemID of the current user
+        balanceLabel.setText(dbh.getBalanceFromId(systemId) + "  sek");
+    }
+
+    private void getBonus() {
+
+        Customer customer;
+        customer = dbh.getBonusPoint(dbh.getIdFromUserName(local.getCurrentUsersPassword()));
+
+        pointLabel.setText("Bonus: " + String.valueOf(customer.getPoint()));
     }
 }

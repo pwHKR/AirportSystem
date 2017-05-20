@@ -128,6 +128,11 @@
         </Label>
         <ListView fx:id="pstrLocation" layoutX="63.0" layoutY="237.0" onMouseClicked="#getLocationInfo"
                   prefHeight="90.0" prefWidth="62.0"/>
-        <TextArea fx:id="locationInfo" layoutX="10.0" layoutY="334.0" prefHeight="90.0" prefWidth="200.0"/>
+        <TextArea fx:id="locationInfo" editable="false" layoutX="10.0" layoutY="334.0" prefHeight="90.0"
+                  prefWidth="200.0"/>
+        <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="295.0" layoutY="-166.0"
+                mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0" prefWidth="278.0"
+                style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
+                textAlignment="CENTER"/>
     </children>
 </AnchorPane>

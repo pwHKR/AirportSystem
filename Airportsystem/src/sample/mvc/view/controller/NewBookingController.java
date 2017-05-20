@@ -18,6 +18,7 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
 
     private Billing billing = new Billing();
+    private boolean balanceCheck;
 
 
     private ObservableList<String> tripInfoList = FXCollections.observableArrayList();
@@ -109,7 +110,7 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
         boolean luggageMax = true;
         boolean choice; //boolean from confirm dialog
-        boolean isBalance;
+        boolean isBalance = false;
         int newTotalTicketAmount; // The remaining ticket amount after the booking
         int luggageMaxTot;
 
@@ -123,7 +124,7 @@ public class NewBookingController extends ControllerModelObject implements Initi
         if (choice) {
             isConfirmed = true;
             isBalance = checkBalance();
-
+            System.out.println(isBalance);
             if (luggageMaxTot > airplane.getMaxLuggageWeight()) {
                 luggageMax = false;
                 myAlert.luggageMaxMsg(String.valueOf(airplane.getMaxLuggageWeight() * billing.getTicketAmount()));
@@ -149,7 +150,7 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
                 dbh.insertBooking(booking);
             } else {
-
+                myAlert.withdrawErr();
 
             }
 
@@ -165,7 +166,7 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
         }
 
-
+        balanceCheck = isBalance;
     }
 
     private void addBonusPoint(int bookingPrice) {
@@ -305,7 +306,8 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
         if (luggageField.getText().matches("^\\d+$")) {
             confirmBooking(ae);
-            if (isConfirmed) {
+            System.out.println(balanceCheck);
+            if (isConfirmed && balanceCheck) {
 
                 insertLinkTblSuper();
                 returnToSearchLocation(ae);
@@ -321,7 +323,6 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
         dbh.insertPersonHasBooking(dbh.getIdFromUserName(local.getCurrentUsersUserName()), dbh.getMaxBookingId());
         myAlert.bookingConfirmed();
-
     }
 
 

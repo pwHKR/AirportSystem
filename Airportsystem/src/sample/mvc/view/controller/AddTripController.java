@@ -120,7 +120,7 @@ public class AddTripController extends ControllerModelObject implements Initiali
 
     @FXML
     private void returnToAdmin(ActionEvent ae) {
-        sw.GoTo(ae, "admin.fxml");
+        sw.GoTo(ae, "AddFlight.fxml");
     }
 
     @Override
@@ -180,5 +180,8 @@ public class AddTripController extends ControllerModelObject implements Initiali
                 ("]", ""));
     }
 
-
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        myAlert.addTripHelp();
+    }
 }

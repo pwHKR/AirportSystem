@@ -94,7 +94,6 @@ public class SearchLocationController extends ControllerModelObject implements I
 
     @FXML
     private void helpFunction(ActionEvent ae) {
-        MyAlert myAlert = new MyAlert();
         myAlert.searchHelp();
     }
 

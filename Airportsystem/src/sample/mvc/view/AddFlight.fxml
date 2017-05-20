@@ -30,7 +30,14 @@
                 <Image url="@resources/19-13-things-your-flight-attendant-wont-tell-you-before-takeoff.jpg"/>
             </image>
         </ImageView>
-        <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;"/>
+        <Pane prefHeight="110.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Button cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="289.0" layoutY="-170.0"
+                        mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0" prefWidth="278.0"
+                        style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
+                        textAlignment="CENTER"/>
+            </children>
+        </Pane>
         <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true"
                    preserveRatio="true">
             <image>

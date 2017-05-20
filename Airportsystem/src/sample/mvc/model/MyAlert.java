@@ -212,8 +212,7 @@ public class MyAlert {
     public void billingHelp() {
         alertType[0].setHeaderText("Manage your account billings");
         alertType[0].setTitle("Withdraw or deposit money to your account");
-        alertType[0].setContentText("Enter the amount of money you wish to withdraw/deposit in the field below then click the button to " +
-                "send your request");
+        alertType[0].setContentText("Frequent bookings are rewarded bonus points that give you discounts on bookings.");
         alertType[0].showAndWait();
     }
 
@@ -496,5 +495,21 @@ public class MyAlert {
         alertType[1].setContentText("You can only have one account. " +
                 "You will now be returned to the login screen");
         alertType[1].showAndWait();
+    }
+
+    public void addTripHelp() {
+        alertType[0].setHeaderText("This is where you can add trips");
+        alertType[0].setTitle("Add trip");
+        alertType[0].setContentText("On this page you will be able to add trips. insert all required " +
+                "information in the fields below and press add.");
+        alertType[0].showAndWait();
+    }
+
+    public void addFlightHelp() {
+        alertType[0].setHeaderText("This is where you can add flights");
+        alertType[0].setTitle("Add flights");
+        alertType[0].setContentText("On this page you will be able to add flights. Pick an airplane and a " +
+                "gate then press add and continue to next page.");
+        alertType[0].showAndWait();
     }
 }

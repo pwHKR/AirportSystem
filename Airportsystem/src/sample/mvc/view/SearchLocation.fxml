@@ -31,8 +31,8 @@
         </ImageView>
         <Pane prefHeight="107.0" prefWidth="591.0" style="-fx-background-color: #ffffff;">
             <children>
-                <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="407.0"
-                        layoutY="-148.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
+                <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="299.0"
+                        layoutY="-171.0" mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0"
                         prefWidth="278.0"
                         style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                         textAlignment="CENTER"/>

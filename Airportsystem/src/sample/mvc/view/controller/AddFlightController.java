@@ -86,5 +86,10 @@ public class AddFlightController extends ControllerModelObject implements Initia
         gateField.clear();
     }
 
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        myAlert.addFlightHelp();
+    }
+
 }
 
