@@ -16,10 +16,7 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-20.
  */
-public class NewPSTRController implements Initializable {
-
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
+public class NewPSTRController extends ControllerModelObject implements Initializable {
 
 
     @FXML
@@ -31,8 +28,6 @@ public class NewPSTRController implements Initializable {
     private ComboBox<String> country;
     @FXML
     private ComboBox<String> airport;
-
-    private DataStorage dbh = new DBHandler();
 
 
     @FXML

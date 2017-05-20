@@ -17,10 +17,7 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-20.
  */
-public class AddLocationController implements Initializable {
-
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
+public class AddLocationController extends ControllerModelObject implements Initializable {
 
 
     @FXML
@@ -121,8 +118,6 @@ public class AddLocationController implements Initializable {
 
     private void setCountriesLogic() {
 
-        DataStorage dbh = new DBHandler();
-
 
         ObservableList<String> countryList = dbh.getCountries();
 
@@ -137,9 +132,6 @@ public class AddLocationController implements Initializable {
         String SelectedCountry = country.getValue();
 
 
-        DataStorage dbh = new DBHandler();
-
-
         ObservableList<String> cityList = dbh.getCities(SelectedCountry);
 
         city.setItems(cityList);
@@ -151,9 +143,6 @@ public class AddLocationController implements Initializable {
 
 
         String SelectedCity = city.getValue();
-
-
-        DataStorage dbh = new DBHandler();
 
 
         ObservableList<String> airportList = dbh.getAirports(SelectedCity);

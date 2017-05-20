@@ -7,8 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
-import sample.mvc.model.MyAlert;
-import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,10 +14,8 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-18.
  */
-public class AdminController implements Initializable {
+public class AdminController extends ControllerModelObject implements Initializable {
 
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
 
     @FXML
     private Label online;  ///label för antalet online användare

@@ -8,7 +8,6 @@ import javafx.scene.control.Label;
 import sample.mvc.model.DBHandler;
 import sample.mvc.model.DataStorage;
 import sample.mvc.model.MyAlert;
-import sample.mvc.model.SwitchScene;
 
 import java.io.IOException;
 import java.net.URL;
@@ -21,10 +20,9 @@ import java.util.ResourceBundle;
 /**
  * Created by Stefan on 2017-04-25.
  */
-public class EmployeeController implements Initializable {
+public class EmployeeController extends ControllerModelObject implements Initializable {
 
-    private DataStorage dbh = new DBHandler();
-    private SwitchScene sw = new SwitchScene();
+
     private Path path = Paths.get("logInLog.bin");
 
     @FXML

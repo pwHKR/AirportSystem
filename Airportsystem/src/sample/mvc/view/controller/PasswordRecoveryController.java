@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import sample.mvc.model.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,7 +14,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Tobias Åkesson on 2017-04-29.
  */
-public class PasswordRecoveryController implements Initializable {
+public class PasswordRecoveryController extends ControllerModelObject implements Initializable {
 
     @FXML
     private Button recoverButton;
@@ -30,10 +29,6 @@ public class PasswordRecoveryController implements Initializable {
     @FXML
     private Button helpButton;
 
-    private DataStorage dbhandler = new DBHandler();
-    private SwitchScene sw = new SwitchScene();
-    private LocalFileStorage localFileStorage = new LocalFileStorage();
-    private MyAlert alert = new MyAlert();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -43,14 +38,14 @@ public class PasswordRecoveryController implements Initializable {
     @FXML
     private void passwordRecovery(ActionEvent ae) {
         if (!idText.getText().isEmpty()) {
-            ObservableList<String> userInformation = dbhandler.searchForPassword(idText.getText());
+            ObservableList<String> userInformation = dbh.searchForPassword(idText.getText());
             if (userInformation.size() > 0)
                 informationArea.setText(userInformation.get(0).toString());
             else {
-                alert.noInformationInDatabase();
+                myAlert.noInformationInDatabase();
             }
         } else {
-            alert.userNameErr();
+            myAlert.userNameErr();
         }
 
     }
@@ -63,13 +58,13 @@ public class PasswordRecoveryController implements Initializable {
     @FXML
     private void save(ActionEvent ae) {
         if (!informationArea.getText().isEmpty()) {
-            localFileStorage.saveUser(idText.getText(), informationArea.getText());
-            alert.informationSaved();
+            local.saveUser(idText.getText(), informationArea.getText());
+            myAlert.informationSaved();
         }
     }
 
     @FXML
     private void helpFunction(ActionEvent ae) {
-        alert.recoverPasswordHelp();
+        myAlert.recoverPasswordHelp();
     }
 }

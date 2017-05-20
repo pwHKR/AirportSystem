@@ -4,7 +4,7 @@ package sample.mvc.model;
  * Created by woojen on 2017-05-11.
  */
 
-// Use this class with the SetBilling interface
+// Use this class with a SetBilling interface
 
 public class Billing {
 

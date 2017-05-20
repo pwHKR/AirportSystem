@@ -7,9 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import sample.mvc.model.DBHandler;
-import sample.mvc.model.DataStorage;
-import sample.mvc.model.SwitchScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,10 +14,9 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-25.
  */
-public class ViewPSTRController implements Initializable {
+public class ViewPSTRController extends ControllerModelObject implements Initializable {
 
-    private SwitchScene sw = new SwitchScene();
-    private DataStorage dbHandler = new DBHandler();
+
 
     @FXML
     private ListView<String> pstrLocations;
@@ -36,8 +32,8 @@ public class ViewPSTRController implements Initializable {
 
 
         String choice = pstrLocations.getSelectionModel().getSelectedItem();
-        ObservableList<String> infoList = dbHandler.getPSTRLocationInfo(choice);
-        ObservableList<String> airplaneList = dbHandler.getAirplaneRegNumber(choice);
+        ObservableList<String> infoList = dbh.getPSTRLocationInfo(choice);
+        ObservableList<String> airplaneList = dbh.getAirplaneRegNumber(choice);
         locationInfo.setText(infoList.toString().replace("[", "").replace("]", "")
                 + airplaneList.toString().replace("[", "").replace("]", ""));
     }
@@ -45,7 +41,7 @@ public class ViewPSTRController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        ObservableList<String> pstrLocationList = dbHandler.getPSTR();
+        ObservableList<String> pstrLocationList = dbh.getPSTR();
 
 
         pstrLocations.setItems(pstrLocationList);

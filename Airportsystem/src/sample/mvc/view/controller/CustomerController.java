@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class CustomerController implements Initializable {
+public class CustomerController extends ControllerModelObject implements Initializable {
 
     private boolean isOnline;
 

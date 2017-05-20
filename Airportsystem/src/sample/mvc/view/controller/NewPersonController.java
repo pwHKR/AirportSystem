@@ -16,11 +16,8 @@ import java.util.ResourceBundle;
 /**
  * Created by woojen on 2017-04-14.
  */
-public class NewPersonController implements Initializable {
+public class NewPersonController extends ControllerModelObject implements Initializable {
 
-    private MyAlert myAlert = new MyAlert();
-    private SwitchScene sw = new SwitchScene();
-    private DataStorage dbh = new DBHandler();
 
     @FXML
     private TextField firstName;
