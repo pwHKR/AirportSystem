@@ -83,15 +83,15 @@ public class Billing {
 
     }
 
-    public double calcLuggagePrice(Double kg) {
+    public double calcLuggagePrice(double kg, int ticketAmount) {
 
         double price;
 
-        if (kg <= 1) {
+        if (kg <= ticketAmount) {
             price = 0;
         } else
 
-            price = (kg * 20) - 20;
+            price = (kg * 20) - (ticketAmount * 20);
 
         return price;
 

@@ -94,6 +94,8 @@ public class NewBookingController extends ControllerModelObject implements Initi
                 + " X " + String.valueOf(trip.getTripPrice()) + "= "
                 + billing.getChildTotalPrice(trip.getTripPrice(), getChildTicket()) + " SEK\nLuggage price: "
                 + String.valueOf(billing.getLuggagePrice()) + " SEK");
+
+        updateTripList();
     }
 
 
@@ -124,7 +126,7 @@ public class NewBookingController extends ControllerModelObject implements Initi
         if (choice) {
             isConfirmed = true;
             isBalance = checkBalance();
-            System.out.println(isBalance);
+            java.lang.System.out.println(isBalance);
             if (luggageMaxTot > airplane.getMaxLuggageWeight()) {
                 luggageMax = false;
                 myAlert.luggageMaxMsg(String.valueOf(airplane.getMaxLuggageWeight() * billing.getTicketAmount()));
@@ -187,7 +189,8 @@ public class NewBookingController extends ControllerModelObject implements Initi
         customer = dbh.getBonusPoint(dbh.getIdFromUserName(local.getCurrentUsersUserName()));
 
         try {
-            billing.setLuggagePrice(billing.calcLuggagePrice(Double.parseDouble(luggageField.getText())));
+            billing.setLuggagePrice(billing.calcLuggagePrice(Double.parseDouble(luggageField.getText()),
+                    billing.getTicketAmount()));
         } catch (NumberFormatException e) {
 
         } catch (Exception e) {
@@ -304,16 +307,18 @@ public class NewBookingController extends ControllerModelObject implements Initi
     private void confirmBookingSuper(ActionEvent ae) {
 
 
-        if (luggageField.getText().matches("^\\d+$")) {
+        if (luggageField.getText().matches("^\\d+$") && checkLuggageWeight()) {
             confirmBooking(ae);
-            System.out.println(balanceCheck);
+            java.lang.System.out.println(balanceCheck);
             if (isConfirmed && balanceCheck) {
 
                 insertLinkTblSuper();
                 returnToSearchLocation(ae);
             }
-        } else {
-            myAlert.noLuggageWeightError();
+        }
+        if (!checkLuggageWeight()) {
+            myAlert.luggageMaxMsg(String.valueOf(airplane.getMaxLuggageWeight()));
+
         }
 
 
@@ -325,5 +330,47 @@ public class NewBookingController extends ControllerModelObject implements Initi
         myAlert.bookingConfirmed();
     }
 
+    private void updateTripList() {
 
+        int luggageMax = luggageMax();
+
+
+        tripInfoList.clear();
+
+
+        tripInfoList.add("Date: " + trip.getDate() + "\nTicket price: " + trip.getTripPrice() +
+                "\nLuggage Max (kilo): " + luggageMax + "\nChild 0-10 50% of ticket billing");
+
+
+    }
+
+    private int luggageMax() {
+
+        int luggageMax;
+
+        luggageMax = airplane.getMaxLuggageWeight() * billing.getTicketAmount();
+
+        return luggageMax;
+
+    }
+
+    private boolean checkLuggageWeight() {
+
+        boolean weightOk;
+
+        int weightLimit;
+
+        weightLimit = luggageMax();
+
+        if (Double.parseDouble(luggageField.getText()) > weightLimit) {
+
+            weightOk = false;
+        } else {
+            weightOk = true;
+        }
+
+        return weightOk;
+
+
+    }
 }
