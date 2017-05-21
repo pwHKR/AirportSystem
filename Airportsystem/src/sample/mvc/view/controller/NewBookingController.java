@@ -50,6 +50,7 @@ public class NewBookingController extends ControllerModelObject implements Initi
     private int flightId;
     protected boolean isPerson; // Always false in superclass (this)
     protected boolean isConfirmed; //true if confirm dialog for booking is ok. False if confirm dialog is canceled.
+    protected boolean checkForPersonBooking = false;
     private String userType = dbh.printUserType(local.getCurrentUsersUserName());
 
 
@@ -127,14 +128,10 @@ public class NewBookingController extends ControllerModelObject implements Initi
             isConfirmed = true;
             isBalance = checkBalance();
             java.lang.System.out.println(isBalance);
-            if (luggageMaxTot > airplane.getMaxLuggageWeight()) {
-                luggageMax = false;
-                myAlert.luggageMaxMsg(String.valueOf(airplane.getMaxLuggageWeight() * billing.getTicketAmount()));
-
-            }
-
+            if (luggageMaxTot < airplane.getMaxLuggageWeight()) {
 
             if (isBalance && luggageMax || isPerson && luggageMax) {
+                checkForPersonBooking = true;
 
 
                 newTotalTicketAmount = dbh.getTicketAmount(tripId) - billing.getTicketAmount();
@@ -154,6 +151,10 @@ public class NewBookingController extends ControllerModelObject implements Initi
             } else {
                 myAlert.withdrawErr();
 
+            }
+            } else {
+                luggageMax = false;
+                myAlert.luggageMaxMsg(String.valueOf(airplane.getMaxLuggageWeight() * billing.getTicketAmount()));
             }
 
         } else {

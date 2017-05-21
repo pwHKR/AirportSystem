@@ -34,16 +34,20 @@ public class NewBookingForPersonController extends NewBookingController implemen
         String ssn = ssnField.getText();
         //String checkssn = dbh.checkSsn(ssn);
 
+
         if (luggageField.getText().matches("^\\d+$")) {
             if (!ssnField.getText().isEmpty() && dbh.checkSsn(ssnField.getText()) != null) {
+
 
                 confirmBooking(ae);
 
                 if (isConfirmed) {
-                    int systemId = dbh.getSystemIdFromSsn(ssn);
-                    dbh.insertPersonHasBooking(systemId, dbh.getMaxBookingId());
-                    myAlert.billingSent(dbh.getAddress(ssn));
-                    returnToSearchLocation(ae);
+                    if (checkForPersonBooking) {
+                        int systemId = dbh.getSystemIdFromSsn(ssn);
+                        dbh.insertPersonHasBooking(systemId, dbh.getMaxBookingId());
+                        myAlert.billingSent(dbh.getAddress(ssn));
+                        returnToSearchLocation(ae);
+                    }
                 }
 
             } else {
