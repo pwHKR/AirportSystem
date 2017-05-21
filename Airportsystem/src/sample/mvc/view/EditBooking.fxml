@@ -69,14 +69,14 @@
                 <Font size="18.0"/>
             </font>
         </Label>
-        <Button layoutX="433.0" layoutY="256.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="134.0"
-                styleClass="rich-blue" stylesheets="@stylesheet.css" text="Confirm" onAction="#updateBookingInfo"/>
+        <Button layoutX="433.0" layoutY="256.0" mnemonicParsing="false" onAction="#updateBookingInfo" prefHeight="41.0"
+                prefWidth="134.0" styleClass="rich-blue" stylesheets="@stylesheet.css" text="Confirm"/>
         <Label layoutX="313.0" layoutY="443.0" prefHeight="17.0" prefWidth="103.0" textFill="#50fc06"/>
         <Button fx:id="cancelButton" layoutX="259.0" layoutY="256.0" mnemonicParsing="false" onAction="#cancelBooking"
                 prefHeight="41.0" prefWidth="157.0" styleClass="rich-blue" stylesheets="@stylesheet.css"
                 text="Cancel Booking"/>
         <Button fx:id="helpButton" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="313.0" layoutY="-166.0"
-                mnemonicParsing="false" prefHeight="404.0" prefWidth="278.0"
+                mnemonicParsing="false" onAction="#helpFunction" prefHeight="404.0" prefWidth="278.0"
                 style="-fx-graphic: url('https://vignette3.wikia.nocookie.net/strife521/images/6/60/Question_Mark.png/revision/latest?cb=20130830001223'); -fx-scale-x: 0.1; -fx-scale-y: 0.1;"
                 textAlignment="CENTER"/>
         <CheckBox fx:id="foodCheckBox" layoutX="175.0" layoutY="161.0" mnemonicParsing="false" prefHeight="60.0"

@@ -85,7 +85,9 @@ public class ViewBookingsController extends ControllerModelObject implements Ini
 
 
         //String choice = idBookingList.getSelectionModel().getSelectedItem().toString();
-        String info = dbh.getBookingInfo(Integer.parseInt(choiceInput));
-        detailArea.setText(info);
+        if (idBookingList.getSelectionModel().getSelectedItem() != null) {
+            String info = dbh.getBookingInfo(Integer.parseInt(choiceInput));
+            detailArea.setText(info);
+        }
     }
 }

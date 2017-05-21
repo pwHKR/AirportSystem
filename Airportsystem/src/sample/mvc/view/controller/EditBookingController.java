@@ -64,4 +64,9 @@ public class EditBookingController extends ControllerModelObject implements Init
     private void returnToViewBooking(ActionEvent ae) {
         sw.GoTo(ae, "ViewBookings.fxml");
     }
+
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        myAlert.editBookingHelp();
+    }
 }

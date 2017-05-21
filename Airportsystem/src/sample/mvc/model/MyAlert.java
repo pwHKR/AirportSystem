@@ -212,7 +212,8 @@ public class MyAlert {
     public void billingHelp() {
         alertType[0].setHeaderText("Manage your account billings");
         alertType[0].setTitle("Withdraw or deposit money to your account");
-        alertType[0].setContentText("Frequent bookings are rewarded bonus points that give you discounts on bookings.");
+        alertType[0].setContentText("Frequent bookings are rewarded bonus points " +
+                "that give you discounts on bookings.");
         alertType[0].showAndWait();
     }
 
@@ -510,6 +511,30 @@ public class MyAlert {
         alertType[0].setTitle("Add flights");
         alertType[0].setContentText("On this page you will be able to add flights. Pick an airplane and a " +
                 "gate then press add and continue to next page.");
+        alertType[0].showAndWait();
+    }
+
+    public void editBookingHelp() {
+        alertType[0].setHeaderText("Select if you want food on the plane");
+        alertType[0].setTitle("Edit booking");
+        alertType[0].setContentText("On this page you are able to select if you want to have food on the plane. " +
+                "You can also cancel you booking and get all your money refunded.");
+        alertType[0].showAndWait();
+    }
+
+    public void viewPstrHelp() {
+        alertType[0].setHeaderText("This is where you view pstr locations");
+        alertType[0].setTitle("Edit booking");
+        alertType[0].setContentText("Here you are able to view all of our offices and see information about those. " +
+                "You can also see all airplanes are available at those airports.");
+        alertType[0].showAndWait();
+    }
+
+    public void addAirPlaneHelp() {
+        alertType[0].setHeaderText("This is where you add airplanes");
+        alertType[0].setTitle("Add aiplane");
+        alertType[0].setContentText("Enter all information in the textfields below and assign the plane to one of the " +
+                "pstr airports.");
         alertType[0].showAndWait();
     }
 }

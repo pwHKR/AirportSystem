@@ -105,5 +105,10 @@ public class AddAirplaneController extends ControllerModelObject implements Init
 
     }
 
+    @FXML
+    private void helpFunction(ActionEvent ae) {
+        myAlert.addAirPlaneHelp();
+    }
+
 
 }

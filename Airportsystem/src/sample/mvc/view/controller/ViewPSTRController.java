@@ -30,12 +30,13 @@ public class ViewPSTRController extends ControllerModelObject implements Initial
     @FXML
     private void getLocationInfo() {
 
-
-        String choice = pstrLocations.getSelectionModel().getSelectedItem();
-        ObservableList<String> infoList = dbh.getPSTRLocationInfo(choice);
-        ObservableList<String> airplaneList = dbh.getAirplaneRegNumber(choice);
-        locationInfo.setText(infoList.toString().replace("[", "").replace("]", "")
-                + airplaneList.toString().replace("[", "").replace("]", ""));
+        if (pstrLocations.getSelectionModel().getSelectedItem() != null) {
+            String choice = pstrLocations.getSelectionModel().getSelectedItem();
+            ObservableList<String> infoList = dbh.getPSTRLocationInfo(choice);
+            ObservableList<String> airplaneList = dbh.getAirplaneRegNumber(choice);
+            locationInfo.setText(infoList.toString().replace("[", "").replace("]", "")
+                    + airplaneList.toString().replace("[", "").replace("]", ""));
+        }
     }
 
     @Override
@@ -52,10 +53,11 @@ public class ViewPSTRController extends ControllerModelObject implements Initial
 
     @FXML
     private void returnToAdmin(ActionEvent ae) {
-
         sw.GoTo(ae, "Admin.fxml");
-
     }
 
-
+    @FXML
+    private void setHelpButton(ActionEvent ae) {
+        myAlert.viewPstrHelp();
+    }
 }
