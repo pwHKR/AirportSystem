@@ -88,10 +88,10 @@ public class NewUserController extends NewPersonController implements Initializa
 
     @FXML
     private void returnToLoginScreen(ActionEvent ae) {
-        if (typeOfUser.matches("Admin")) {
-            sw.GoTo(ae, "Admin.fxml");
-        } else {
+        if (!isUserOnline) {
             sw.goToUnLogged(ae, "Login.fxml");
+        } else {
+            sw.GoTo(ae, "Admin.fxml");
         }
     }
 
