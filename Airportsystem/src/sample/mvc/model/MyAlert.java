@@ -339,7 +339,7 @@ public class MyAlert {
     }
 
     public void luggageMaxMsg(String maxWeight) {
-        alertType[0].setHeaderText("The max weight for a passenger is :" + maxWeight);
+        alertType[0].setHeaderText("The max weight is that you can book is :" + maxWeight + " kg");
         alertType[0].setTitle("Please edit luggage weight");
         alertType[0].setContentText("Please edit the luggage weight in order to confirm your booking!");
         alertType[0].showAndWait();

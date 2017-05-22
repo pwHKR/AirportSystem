@@ -2,17 +2,27 @@
 
 <!--suppress XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference, XmlPathReference -->
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             onMouseMoved="#showBookingInfo" prefHeight="451.0" prefWidth="591.0" style="-fx-background-color: #0b4386;"
-            stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewBookingController">
     <children>
         <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-4.0" layoutY="-1.0"
@@ -109,9 +119,9 @@
         <Label fx:id="balanceLabel" layoutX="292.0" layoutY="411.0" prefHeight="17.0" prefWidth="219.0" text="Balance: "
                textFill="#50fc06"/>
         <TextField fx:id="luggageField" layoutX="401.0" layoutY="194.0" prefHeight="27.0" prefWidth="76.0"/>
-        <Label layoutX="374.0" layoutY="154.0" text="Lugguage" textFill="WHITE">
+        <Label layoutX="368.0" layoutY="164.0" text="Lugguage per person" textFill="WHITE">
             <font>
-                <Font size="28.0"/>
+                <Font size="18.0"/>
             </font>
             <effect>
                 <Bloom threshold="0.0"/>

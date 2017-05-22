@@ -125,12 +125,13 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
         luggageMaxTot = Integer.parseInt(luggageField.getText()) * billing.getTicketAmount();
         if (choice) {
-            isConfirmed = true;
+
             isBalance = checkBalance();
             java.lang.System.out.println(isBalance);
-            if (luggageMaxTot < airplane.getMaxLuggageWeight()) {
+            if (luggageMaxTot < airplane.getMaxLuggageWeight() * billing.getTicketAmount()) {
 
             if (isBalance && luggageMax || isPerson && luggageMax) {
+                isConfirmed = true;
                 checkForPersonBooking = true;
 
 
@@ -316,10 +317,8 @@ public class NewBookingController extends ControllerModelObject implements Initi
                 insertLinkTblSuper();
                 returnToSearchLocation(ae);
             }
-        }
-        if (!checkLuggageWeight()) {
+        } else {
             myAlert.luggageMaxMsg(String.valueOf(airplane.getMaxLuggageWeight()));
-
         }
 
 
@@ -347,9 +346,11 @@ public class NewBookingController extends ControllerModelObject implements Initi
 
     private int luggageMax() {
 
+
         int luggageMax;
 
         luggageMax = airplane.getMaxLuggageWeight() * billing.getTicketAmount();
+
 
         return luggageMax;
 

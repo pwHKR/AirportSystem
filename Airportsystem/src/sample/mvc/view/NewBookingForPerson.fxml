@@ -22,7 +22,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             onMouseMoved="#showBookingInfo" prefHeight="451.0" prefWidth="591.0" style="-fx-background-color: #0b4386;"
-            stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.mvc.view.controller.NewBookingForPersonController">
     <children>
         <ImageView accessibleRole="COMBO_BOX" fitHeight="481.0" fitWidth="777.0" layoutX="-65.0" layoutY="44.0"
@@ -118,9 +118,10 @@
         <Label fx:id="balanceLabel" layoutX="292.0" layoutY="411.0" prefHeight="17.0" prefWidth="219.0" text="Balance: "
                textFill="#50fc06"/>
         <TextField fx:id="luggageField" layoutX="443.0" layoutY="194.0" prefHeight="27.0" prefWidth="76.0"/>
-        <Label layoutX="410.0" layoutY="151.0" text="Lugguage" textFill="WHITE">
+        <Label layoutX="395.0" layoutY="171.0" prefHeight="27.0" prefWidth="172.0" text="Lugguage per person"
+               textFill="WHITE">
             <font>
-                <Font size="28.0"/>
+                <Font size="18.0"/>
             </font>
             <effect>
                 <Bloom threshold="0.0"/>
